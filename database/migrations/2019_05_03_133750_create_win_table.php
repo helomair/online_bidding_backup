@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateWinTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->string('username')->unique()->primary();
-            $table->string('password');
+        Schema::create('wins', function (Blueprint $table) {
+            $table->string('username');
+            $table->integer('auction_id');
+            $table->integer('cost');
             $table->string('name');
             $table->string('phone');
             $table->string('email');
-            $table->string('address');
-            $table->integer('balance');
-            $table->boolean('onuse');
-            $table->boolean('admin');
+            $table->string('address')  ;
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('wins');
     }
 }
