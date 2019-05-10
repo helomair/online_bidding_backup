@@ -34,4 +34,30 @@ class User extends Authenticatable
      * protected casts
      * @var array
      */
+
+
+
+    /**
+     * get Payment , 1 to many
+     */
+    public function payments()
+    {
+        return $this->hasMany('App\Payment','uid');
+    }
+
+    /**
+     * get Product, many to many, using relationship Auction
+     * @param mode, 1 is auto, 0 is not
+     */
+    public function product($mode)
+    {
+        if($mode)
+            return $this->belongsToMany('App\Product','auction_auto','uid','pid')
+                        ->withPivot('start_cost','end_cost','times')
+                        ->withTimestamps();
+        else
+            return $this->belongsToMany('App\Product','auction','uid','pid')
+                        ->withPivot('cost','lasted_cost')
+                        ->withTimestamps();
+    }
 }
