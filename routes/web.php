@@ -24,6 +24,23 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register')->name('register.post');
 
+////顯示使用者頁面，登入後直接導到這個頁面
+//之後改用controller來帶，順便帶資料進來
+//Route::get('user', 'PostsController@index')->name('posts.index'); 
+Route::get('/user', function () {
+    return view('user/interface');
+})->name('user_interface');
+
+////顯示管理者頁面
+//之後改用controller來帶，順便帶資料進來
+//Route::get('user', 'PostsController@index')->name('posts.index'); 
+Route::get('/adm', function () {
+    return view('adm/Product');
+})->name('adm_Product');
+Route::get('/adm/account', function () {
+    return view('adm/Account');
+})->name('adm_Account');
+
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

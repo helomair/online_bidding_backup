@@ -1,0 +1,47 @@
+/*!
+ * Start Bootstrap - Shop Item (https://startbootstrap.com/template-overviews/shop-item)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.thumbnails {
+  height: 100px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.margin-top-150 {
+  margin-top: 150px;
+}
+
+.margin-top-350 {
+  margin-top: 350px;
+}
+
+
+
+.width-35-percent {
+  width: 35%;
+
+}
+.no_product {
+  margin-top: 100px;
+  margin-left: 150px;
+}
+
+.table td {
+  vertical-align: middle!important;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
