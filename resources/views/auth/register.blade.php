@@ -1,8 +1,16 @@
 @extends('layouts.master')
 @section('title', '註冊會員') <!-- 單行記錄 -->
 
+@section('css')
+	<!-- Bootstrap core CSS -->
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
-  <div class="container-fluid container-fluid_login">
+  <div class="container container-fluid_login">
 	<div class="row">
 		<div class="col-md-12">
 			<img title="register_logo" src="{{ asset('images/booked.png') }}"/>

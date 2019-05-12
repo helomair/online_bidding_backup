@@ -1,8 +1,16 @@
 @extends('layouts.master')
 @section('title', '登入帳戶') <!-- 單行記錄 -->
 
+@section('css')
+	<!-- Bootstrap core CSS -->
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
-  <div class="container-fluid  container-fluid_login">
+  <div class="container  container-fluid_login">
 	<div class="row">
 		<div class="col-md-12">
 			<form method="POST" action="{{ route('login') }}">

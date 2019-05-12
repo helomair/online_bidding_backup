@@ -10,11 +10,12 @@
         <title>@yield('title') | {{env('APP_NAME')}}</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<link href="{{ asset('css/style.css') }}" rel="stylesheet">
-		<!-- Bootstrap core CSS -->
+		@yield('css')
+		<!-- Bootstrap core CSS
 		<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
-
-		<!-- Custom styles for this template -->
-		<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
+ -->
+		<!-- Custom styles for this template 
+		<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">-->
 	</head>
 	
     <body>

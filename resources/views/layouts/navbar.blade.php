@@ -16,21 +16,16 @@
 	  @endguest
 	  @auth
 	  <!--比較安全的登出方式不然直接把Route裡面logout從POST改成GET就好了-->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ auth()->user()->name }}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{ route('logout') }}"
-	          onclick="event.preventDefault();
-			  document.getElementById('logout-form').submit();">
-		  登出
-		  </a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="#" >{{ auth()->user()->name }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('logout') }}"
+		onclick="event.preventDefault();document.getElementById('logout-form').submit();">登出</a>
 	    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 		@csrf
 	    </form>
-      </li>
+	  </li>
 	  <li class="nav-item">
 		<a class="nav-link" href="#">會員專區</a>
 	  </li>
