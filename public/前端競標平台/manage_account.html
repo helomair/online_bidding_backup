@@ -23,14 +23,14 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">競標平台</a>
+      <a class="navbar-brand" href="user_interface.html">競標平台</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">管理</a>
+            <a class="nav-link" href="manage.html">管理</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">會員專區</a>
@@ -48,17 +48,17 @@
 
     <div class="row">
 
-      <div class="col-lg-3">
+      <div class="col-lg-2">
 
         <div class="list-group margin-top-50">
-          <a href="#" class="list-group-item active">商品管理</a>
-          <a href="#" class="list-group-item">會員管理</a>
-          <a href="#" class="list-group-item">公告管理</a>
+          <a href="manage.html" class="list-group-item ">商品管理</a>
+          <a href="manage_account.html" class="list-group-item active">會員管理</a>
+          <a href="manage_news.html" class="list-group-item">公告管理</a>
         </div>
       </div>
       <!-- /.col-lg-3 -->
 
-      <div class="col-lg-9">
+      <div class="col-lg-10">
 
         <!--div class="card margin-top-50 width-35-percent">
           <img class="card-img-top img-fluid" src="images/product.jpeg" alt="">
@@ -81,21 +81,18 @@
         </div-->
         <!-- /.card -->
         <div class="table-responsive margin-top-50">
-          <table class="table table-striped ">
+          <input type="text" class="form-control" placeholder="請輸入關鍵字">
+          <table class="table table-striped margin-top-50 ">
             <thead>
               <tr>
-                <th>圖片</th>
-                  <th>名稱</th>
-                  <th>狀態</th>
-                  <th>公佈時間</th>
+                <th>會員名稱</th>
+                <th>會員資料</th>
+                <th>操作</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <img src="images/product2.jpg" class="img-thumbnail thumbnails" />
-                  </td>
-                  <td>Macbook</td>
+                  <td>MengRu-Lin</td>
                   <td><a href="" class="btn btn-danger">編輯</a></td>
                   <!--td>
                     <div class="btn-group display-flex flex-direction-col">
@@ -104,16 +101,11 @@
                       <a href="" class="btn btn-danger">删除</a>
                     </div>
                   </td-->
-                  <td>
-                    <div><p>公佈時間</p></div>
-                  </td>
+                  <td><a href="" class="btn btn-danger">刪除</a></td>
                 </tr>
 
                 <tr>
-                  <td>
-                    <img src="images/product2.jpg" class="img-thumbnail thumbnails" />
-                  </td>
-                  <td>Macbook</td>
+                  <td>Li You-Cheng</td>
                   <td><a href="" class="btn btn-danger">編輯</a></td>
                   <!--td>
                     <div class="btn-group display-flex flex-direction-col">
@@ -122,16 +114,12 @@
                       <a href="" class="btn btn-danger">删除</a>
                     </div>
                   </td-->
-                  <td>
-                    <div><p>公佈時間</p></div>
-                  </td>
+
+                  <td><a href="" class="btn btn-danger">刪除</a></td>
                 </tr>
 
                 <tr>
-                  <td>
-                    <img src="images/product2.jpg" class="img-thumbnail thumbnails" />
-                  </td>
-                  <td>Macbook</td>
+                  <td>Wang Han i</td>
                   <td><a href="" class="btn btn-danger">編輯</a></td>
                   <!--td>
                     <div class="btn-group display-flex flex-direction-col">
@@ -140,10 +128,8 @@
                       <a href="" class="btn btn-danger">删除</a>
                     </div>
                   </td-->
-                  <td>
-                    <div><p>公佈時間</p></div>
-                  </td>
-                </tr>                
+                  <td><a href="" class="btn btn-danger">刪除</a></td>
+                </tr>
             </tbody>
           </table>
         </div>
