@@ -11,14 +11,16 @@ class AdminProductController extends Controller
     //auth驗證是否登入 , is_adm驗證是否為Admin
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
 //        $this->middleware('is_adm');
     }
 
     // @return All Products
     public function index()
     {
-        $products = Product::all();
+		//$products = Product::all();
+		//為了自動切分頁，更改了controller
+        $products = Product::paginate(2);
         //先假設路徑為admin/index.blade.php
         return view('adm.Product', compact('products')); 
     }
@@ -28,9 +30,16 @@ class AdminProductController extends Controller
      * @param the product's pid
      * @return one product with id
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        $product = Product::find($id)->get();
-        return view('adm.Product', compact('product'));        
+		//dd($products);
+        //$products = Product::find($id)->get();
+		////尚未有新增or編輯頁面，都先以原本的view為主
+		//原本的view是吃$products 所以先將$product替換成$products 
+		//link()的方法也會有問題，所以還是得等之後的頁面，目前暫且放置
+		$products = [
+		'product'=>$product
+		];
+        return view('adm.Product', compact('products'));        
     }
 }

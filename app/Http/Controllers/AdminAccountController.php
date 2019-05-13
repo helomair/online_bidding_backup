@@ -12,7 +12,7 @@ class AdminAccountController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth'); 
+        //$this->middleware('auth'); 
     //    $this->middleware('is_adm');
     }
 
@@ -22,7 +22,9 @@ class AdminAccountController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        //$users = User::all();
+		//為了自動切分頁，更改了controller
+        $users = User::paginate(2);
         return view('adm.Account', compact('users'));
     }
 
@@ -31,10 +33,17 @@ class AdminAccountController extends Controller
      * @param id, is the user's uid
      * @return adm.Account, with one user
      */
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::find($id)->get(); 
-        return view('adm.Account', compact('user'));         
+        //$user = User::find($id)->get(); 
+		////尚未有新增or編輯頁面，都先以原本的view為主
+		//原本的view是吃$users所以先將$user替換成$users
+		//link()的方法也會有問題，所以還是得等之後的頁面，目前暫且放置
+		$users = [
+		'user'=>$user
+		];
+		
+        return view('adm.Account', compact('users'));         
     }
 
     /*
@@ -63,7 +72,9 @@ class AdminAccountController extends Controller
      */
     public function destroy($id)
     {
+		//dd($id);
         $user = User::find($id)->update(['on' => 0]);
+		//$user->update(['on' => 0]);
         return redirect('/adm');
     }
 
