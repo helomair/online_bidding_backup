@@ -49,7 +49,7 @@ class User extends Authenticatable
      * get Product, many to many, using relationship Auction
      * @param mode, 1 is auto, 0 is not
      */
-    public function product($mode)
+    public function products($mode)
     {
         if($mode)
             return $this->belongsToMany('App\Product','auction_auto','uid','pid')

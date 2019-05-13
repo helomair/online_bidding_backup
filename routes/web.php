@@ -34,12 +34,9 @@ Route::get('/user', function () {
 ////顯示管理者頁面
 //之後改用controller來帶，順便帶資料進來
 //Route::get('user', 'PostsController@index')->name('posts.index'); 
-Route::get('/adm', function () {
-    return view('adm/Product');
-})->name('adm_Product');
-Route::get('/adm/account', function () {
-    return view('adm/Account');
-})->name('adm_Account');
+Route::get('/adm', 'AdminProductController@index' )->name('adm_Product'); 
+
+Route::get('/adm/account','AdminAccountController@index' )->name('adm_Account');
 
 //Auth::routes();
 
