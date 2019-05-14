@@ -59,41 +59,73 @@
       <!-- /.col-lg-3 -->
 
       <div class="col-lg-10">
-        <div class="table-responsive margin-top-50">
-          <table class="table table-striped ">
+        <div id="news" class="table-responsive margin-top-50">
+          <table id="news_table" class="table table-striped text-align-center">
             <thead>
               <tr>
-                <th class="text-align-center">
-                  <span>公告</span>
-                  <a href=""><img src="images/add.png" class="button" style="float:right; width:20px; height:20px;" /></a>
+                <th>
+                  <span style="position: relative; right:20px;">公告</span>
+                  <img onclick="add_news()" src="images/add.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <p class="margin-bottom-04-rem text-align-center">後天要期末考唷～</p>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
                 </td>
               </tr>
 
-                <tr>
-                  <td>
-                    <p class="margin-bottom-04-rem text-align-center">明天要第二次期中考唷～</p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <p class="margin-bottom-04-rem text-align-center">今天要期中考唷～</p>
-                  </td>
-                </tr>
-
+              <tr>
+                <td>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="margin-bottom-04-rem">後天要期末考唷～</span>
+                  <img onclick="" src="images/delete.png" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                  <img onclick="" src="images/edit.png" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
 
         <!-- /.card -->
-          <nav class="margin-top-350 " aria-label="Page navigation example ">
+          <nav id="pagination" class=" " aria-label="Page navigation example ">
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -113,7 +145,7 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark margin-top-50">
+  <footer id="footer" class="py-5 bg-dark ">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
     </div>
@@ -121,6 +153,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="js/scripts.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
