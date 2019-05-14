@@ -11,8 +11,8 @@ class AdminProductController extends Controller
     //auth驗證是否登入 , is_adm驗證是否為Admin
     public function __construct()
     {
-        //$this->middleware('auth');
-//        $this->middleware('is_adm');
+        $this->middleware('auth');
+        $this->middleware('is_adm');
     }
 
     // @return All Products

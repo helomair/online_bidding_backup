@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use App\User; 
-use App\ Product; 
+use App\Product; 
 
 
 class AdminAccountController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth'); 
-    //    $this->middleware('is_adm');
+        $this->middleware('auth'); 
+        $this->middleware('is_adm');
     }
 
     /*
@@ -24,7 +24,7 @@ class AdminAccountController extends Controller
     {
         //$users = User::all();
 		//為了自動切分頁，更改了controller
-        $users = User::paginate(2);
+        $users = User::where('on','1')->paginate(2);
         return view('adm.Account', compact('users'));
     }
 
@@ -40,7 +40,7 @@ class AdminAccountController extends Controller
 		//原本的view是吃$users所以先將$user替換成$users
 		//link()的方法也會有問題，所以還是得等之後的頁面，目前暫且放置
 		$users = [
-		'user'=>$user
+    		'user' => $user
 		];
 		
         return view('adm.Account', compact('users'));         
@@ -75,7 +75,7 @@ class AdminAccountController extends Controller
 		//dd($id);
         $user = User::find($id)->update(['on' => 0]);
 		//$user->update(['on' => 0]);
-        return redirect('/adm');
+        return redirect('/adm/account');
     }
 
 }

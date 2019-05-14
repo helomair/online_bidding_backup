@@ -17,7 +17,7 @@ class CreateProductTable extends Migration
             $table->bigIncrements('id');
             $table->string('name'); 
             $table->string('detail'); 
-            $table->integer('cost'); 
+            $table->integer('cost');
             $table->integer('cur_cost'); 
             $table->timestamp('view_time')->nullable();
             $table->timestamp('start_time')->nullable();

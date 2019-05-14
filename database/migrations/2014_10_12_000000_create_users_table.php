@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique(); 
             $table->string('code'); 
             $table->boolean('is_adm'); 
-            $table->boolean('on'); 
+            $table->boolean('on')->default('1'); 
             $table->integer('balance');
             $table->rememberToken();
             $table->timestamps();

@@ -48,9 +48,7 @@ Route::delete('/adm/account/{id}', 'AdminAccountController@destroy')->name('adm_
 
 ////公告管理
 //之後改用controller來帶，順便帶資料進來
-Route::get('/bulletin', function () {
-    return view('adm/Bulletin');
-})->name('adm_Bulletin');
+Route::get('/bulletin', 'BulletinController@index')->name('adm_Bulletin');
 
 //Auth::routes();
 
