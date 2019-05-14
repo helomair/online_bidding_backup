@@ -59,29 +59,8 @@
       <!-- /.col-lg-3 -->
 
       <div class="col-lg-10">
-
-        <!--div class="card margin-top-50 width-35-percent">
-          <img class="card-img-top img-fluid" src="images/product.jpeg" alt="">
-          <div class="card-body">
-            <h3 class="card-title">Product Name</h3>
-            <h4>$24.99</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-
-          </div>
-        </div>
-
-        <div class="card margin-top-50 width-35-percent">
-          <img class="card-img-top img-fluid" src="images/product.jpeg" alt="">
-          <div class="card-body">
-            <h3 class="card-title">Product Name</h3>
-            <h4>$24.99</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-
-          </div>
-        </div-->
-        <!-- /.card -->
-        <div class="table-responsive margin-top-50">
-          <table class="table table-striped ">
+        <div id="products" class="table-responsive margin-top-50">
+          <table id="products_table" class="table table-striped ">
             <thead>
               <tr>
                 <th>圖片</th>
@@ -90,7 +69,7 @@
                   <th>開始時間</th>
                   <th>結束時間</th>
                   <th>狀態</th>
-                  <th><a href=""><img src="images/add.png" class="button" style="width:20px; height:20px;" /></a></th>
+                  <th><a href="add_products.html"><img src="images/add.png" class="button cursor-pointer" style="width:20px; height:20px;" /></a></th>
                 </tr>
               </thead>
               <tbody>
@@ -177,7 +156,7 @@
         </div>
 
         <!-- /.card -->
-          <nav class="margin-top-350 " aria-label="Page navigation example ">
+          <nav id="pagination" class="margin-top-350 " aria-label="Page navigation example ">
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -197,7 +176,7 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark margin-top-50">
+  <footer id="footer" class="py-5 bg-dark margin-top-50">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
     </div>
@@ -205,6 +184,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="js/scripts.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
