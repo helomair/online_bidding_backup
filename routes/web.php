@@ -31,12 +31,26 @@ Route::get('/user', function () {
     return view('user/interface');
 })->name('user_interface');
 
-////顯示管理者頁面
-//之後改用controller來帶，順便帶資料進來
-//Route::get('user', 'PostsController@index')->name('posts.index'); 
+//////顯示管理者頁面
+////商品管理
+//首頁
 Route::get('/adm', 'AdminProductController@index' )->name('adm_Product'); 
+//顯示
+Route::get('/adm/{product}/show', 'AdminProductController@show' )->name('adm_Product.show'); 
 
+////帳號管理
+//首頁
 Route::get('/adm/account','AdminAccountController@index' )->name('adm_Account');
+//顯示
+Route::get('/adm/account/{user}/show', 'AdminAccountController@show' )->name('adm_Account.show');
+//刪除
+Route::delete('/adm/account/{id}', 'AdminAccountController@destroy')->name('adm_Account.destroy');
+
+////公告管理
+//之後改用controller來帶，順便帶資料進來
+Route::get('/bulletin', function () {
+    return view('adm/Bulletin');
+})->name('adm_Bulletin');
 
 //Auth::routes();
 

@@ -27,10 +27,10 @@
 	    </form>
 	  </li>
 	  <li class="nav-item">
-		<a class="nav-link" href="#">會員專區</a>
+		<a class="nav-link" href="{{ route('user_interface') }}">會員專區</a>
 	  </li>
 	  <li class="nav-item">
-		<a class="nav-link" href="#">管理</a>
+		<a class="nav-link" href="{{ route('adm_Product') }}">管理</a>
 	  </li>
 	  @endauth
 	  <li class="nav-item">
