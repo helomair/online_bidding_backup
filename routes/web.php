@@ -37,6 +37,14 @@ Route::get('/user', function () {
 Route::get('/adm', 'AdminProductController@index' )->name('adm_Product'); 
 //顯示
 Route::get('/adm/{product}/show', 'AdminProductController@show' )->name('adm_Product.show'); 
+//新增表單
+Route::get('/adm/create', 'AdminProductController@create')->name('adm_Product.create');
+//傳送新增表單 
+Route::post('/adm/store', 'AdminProductController@store')->name('adm_Product.store'); 
+//開啟指定表單
+Route::get('/adm/{product}/edit', 'AdminProductController@edit')->name('adm_Product.edit');
+//傳送修改表單 
+Route::patch('/adm/{product}', 'AdminProductController@update')->name('adm_Product.update');
 
 ////帳號管理
 //首頁
@@ -47,8 +55,21 @@ Route::get('/adm/account/{user}/show', 'AdminAccountController@show' )->name('ad
 Route::delete('/adm/account/{id}', 'AdminAccountController@destroy')->name('adm_Account.destroy');
 
 ////公告管理
-//之後改用controller來帶，順便帶資料進來
-Route::get('/bulletin', 'BulletinController@index')->name('adm_Bulletin');
+//首頁
+Route::get('/adm/bulletin', 'BulletinController@index')->name('adm_Bulletin');
+//顯示
+Route::get('/adm/bulletin/{bulletin}/show', 'BulletinController@show' )->name('adm_Bulletin.show'); 
+//新增表單
+Route::get('/adm/bulletin/create', 'BulletinController@create')->name('adm_Bulletin.create');
+//傳送新增表單 
+Route::post('/adm/bulletin/store', 'BulletinController@store')->name('adm_Bulletin.store'); 
+//開啟指定表單
+Route::get('/adm/bulletin/{bulletin}/edit', 'BulletinController@edit')->name('adm_Bulletin.edit');
+//傳送修改表單 
+Route::patch('/adm/bulletin/{bulletin}', 'BulletinController@update')->name('adm_Bulletin.update');
+//刪除
+Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('adm_Bulletin.destroy');
+
 
 //Auth::routes();
 

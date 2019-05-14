@@ -12,50 +12,33 @@
     <div class="row">
 	@include('layouts.adm_left_button')
 	<div class="col-lg-10">
-        <div class="table-responsive margin-top-50">
-          <table class="table table-striped">
+        <div id="news" class="table-responsive margin-top-50">
+          <table id="news_table" class="table table-striped text-align-center">
             <thead>
               <tr>
                 <th class="text-align-center">
-                  <span>公告</span>
-                  <a href=""><img src="images/add.png" class="button" style="float:right; width:20px; height:20px;" /></a>
+                  <span style="position: relative; right:20px;">公告</span>
+                  <a href="{{ route('adm_Bulletin.create') }}"><img src="{{ asset('images/add.png') }}" class="button" style="float:right; width:20px; height:20px;" /></a>
                 </th>
               </tr>
             </thead>
             <tbody>
+			  @foreach($bulletins as $bulletin)
               <tr>
                 <td>
-                  <p class="margin-bottom-04-rem text-align-center">後天要期末考唷～</p>
+                  <span class="margin-bottom-04-rem">{{ $bulletin->content }}</span>
+                    <img onclick="document.getElementById('delete_{{$bulletin->id}}').submit()" src="{{ asset('images/delete.png') }}" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                    <img onclick="window.location='{{ route('adm_Bulletin.edit',$bulletin->id) }}'" src="{{ asset('images/edit.png') }}" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
                 </td>
+				<form method="post" action="{{ route('adm_Bulletin.destroy',$bulletin->id) }}" id="delete_{{$bulletin->id}}">
+					@csrf
+					{{ method_field('DELETE') }}
+				</form>
               </tr>
-
-                <tr>
-                  <td>
-                    <p class="margin-bottom-04-rem text-align-center">明天要第二次期中考唷～</p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <p class="margin-bottom-04-rem text-align-center">今天要期中考唷～</p>
-                  </td>
-                </tr>
-
+			  @endforeach 
             </tbody>
-			<!--尚未有 bulletin 資料庫 
-				foreach放置處
-              <tbody>
-                <tr>
-                  <td>
-				    <p class="margin-bottom-04-rem text-align-center"></p>
-				  </td>
-                </tr>
-            </tbody>
-			-->
           </table>
-			<!--尚未有 bulletin 資料庫
-			    link放置處
-			-->
+			{{ $bulletins->links() }}
         </div>
 	</div>
 	<!-- /.col-lg-9 -->
