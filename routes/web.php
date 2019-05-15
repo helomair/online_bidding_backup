@@ -45,6 +45,8 @@ Route::post('/adm/store', 'AdminProductController@store')->name('adm_Product.sto
 Route::get('/adm/{product}/edit', 'AdminProductController@edit')->name('adm_Product.edit');
 //傳送修改表單 
 Route::patch('/adm/{product}', 'AdminProductController@update')->name('adm_Product.update');
+//刪除
+Route::delete('/adm/{product}', 'AdminProductController@destroy')->name('adm_Product.destroy');
 
 ////帳號管理
 //首頁

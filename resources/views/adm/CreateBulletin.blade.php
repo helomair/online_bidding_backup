@@ -16,6 +16,9 @@
           <form method="post" action="{{ route('adm_Bulletin.store') }}" role="form" class="width-75-percent padding-left-50">
 			@csrf
             <h2>新增公告</h2>
+			<label>標題</label>
+            <input id="title" name="title" type="text" class="form-control">
+			<label>內容</label>
             <textarea id="content" name="content" style="width:100%; height: 150px;"></textarea>
             <button type="submit">submit</button>
             <button type="button" onclick="window.location='{{ route('adm_Bulletin') }}'">cancel</button>

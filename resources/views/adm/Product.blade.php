@@ -35,7 +35,14 @@
                   <td>{{ $product->view_time }}</td>
                   <td>{{ $product->start_time }}</td>
                   <td>{{ $product->end_time }}</td>
-                  <td><a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger">編輯</a></td>
+                  <td>
+				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger">編輯</a>
+					<a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger">刪除</a>
+				  </td>
+				  <form method="post" action="{{ route('adm_Product.destroy',$product->id) }}" id="delete_{{$product->id}}">
+					@csrf
+					{{ method_field('DELETE') }}
+				  </form>
                   <td></td>
                 </tr>
 				@endforeach  
