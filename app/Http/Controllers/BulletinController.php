@@ -39,7 +39,24 @@ class BulletinController extends Controller
     {
         return view('adm.CreateBulletin');
     }
-	
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function store(Request $request)
+    {
+        $att['title'] = $request->input('title');
+        $att['content'] = $request->input('content');
+        
+        Bulletin::create($att);
+        return redirect()->route('adm_Bulletin');
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -49,5 +66,34 @@ class BulletinController extends Controller
     public function edit(Bulletin $bulletin)
     {
         return view('adm.EditBulletin', compact('bulletin')); 
+    }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Bulletin $bulletin)
+    {
+        $att['title'] = $request->input('title');
+        $att['content'] = $request->input('content');
+        
+        $bulletin->update($att);
+
+        return redirect()->route('adm_Bulletin'); 
+    }
+
+    /**
+     * Delete the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Bulletin $bulletin)
+    {
+        $bulletin->update( ['on' => '0'] );
+
+        return redirect()->route('adm_Bulletin');
     }
 }

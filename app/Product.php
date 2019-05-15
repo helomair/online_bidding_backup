@@ -10,6 +10,9 @@ class Product extends Model
         'name', 'detail', 'cost', 'cur_cost', 'view_time', 'start_time', 'end_time'
     ]; 
     
+    protected $dates = ['view_time', 'start_time', 'end_time']; 
+
+
     /*
      * get User, many to many, using relationship Auction
      * @param mode, 1 is auto, 0 is not

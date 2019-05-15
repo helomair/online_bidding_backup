@@ -23,15 +23,15 @@
             </div>
 			<div class="form-group">
 			  <label>公布時間</label>
-    		  <input name="view_time" id="view_time" type="date" class="form-control" value="{{ $product->view_time }}">
+              <input name="view_time" id="view_time" type="date" class="form-control" value="{{ $product->view_time->format('Y-m-d') }}">
     		</div>
 			<div class="form-group">
 			  <label>開始時間</label>
-    		  <input name="start_time" id="start_time" type="date" class="form-control" value="{{ $product->start_time }}">
+    		  <input name="start_time" id="start_time" type="date" class="form-control" value="{{ $product->start_time->format('Y-m-d') }}">
     		</div>
 			<div class="form-group">
 			  <label>結束時間</label>
-			  <input name="end_time" id="end_time" type="date" class="form-control" value="{{ $product->end_time }}">
+			  <input name="end_time" id="end_time" type="date" class="form-control" value="{{ $product->end_time->format('Y-m-d') }}">
 			</div>
 			<div class="form-group">
 			  <label>簡介</label><br>

@@ -70,11 +70,11 @@ class AdminAccountController extends Controller
      * @param id, id for user
      * @return result
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
 		//dd($id);
-        $user = User::find($id)->update(['on' => 0]);
-		//$user->update(['on' => 0]);
+        //$user = User::find($id)->update(['on' => 0]);
+		$user->update(['on' => 0]);
         return redirect('/adm/account');
     }
 
