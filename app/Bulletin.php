@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Bulletin extends Model
 {
     protected $fillable = [
-        'title', 'content'
+        'title', 'content', 'on'
     ]; 
 }
