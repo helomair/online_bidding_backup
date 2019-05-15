@@ -3,26 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Product;
+use App\Bulletin; 
 
-class AdminProductController extends Controller
+class BulletinController extends Controller
 {
-    //auth驗證是否登入 , is_adm驗證是否為Admin
     public function __construct()
     {
         $this->middleware('auth');
         $this->middleware('is_adm');
     }
 
-    // @return All Products
+
     public function index()
     {
-		//$products = Product::all();
-		//為了自動切分頁，更改了controller
-        $products = Product::paginate(2);
-        //先假設路徑為admin/index.blade.php
-        return view('adm.Product', compact('products')); 
+        $bulletins = Bulletin::where('on','1')->paginate(2); 
+        return view('adm.Bulletin', compact('bulletins'));
     }
 
     /*
@@ -30,10 +25,9 @@ class AdminProductController extends Controller
      * @param the product's pid
      * @return one product with id
      */
-    public function show(Product $product)
+    public function show(Bulletin $bulletin)
     {
-		//dd($products);
-        return view('adm.Product', compact('product'));        
+        return view('adm.Bulletin', compact('bulletin'));        
     }
 
     /**
@@ -43,7 +37,7 @@ class AdminProductController extends Controller
      */
     public function create()
     {
-        return view('adm.CreateProduct');
+        return view('adm.CreateBulletin');
     }
 	
     /**
@@ -52,8 +46,8 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Bulletin $bulletin)
     {
-        return view('adm.EditProduct', compact('product')); 
+        return view('adm.EditBulletin', compact('bulletin')); 
     }
 }
