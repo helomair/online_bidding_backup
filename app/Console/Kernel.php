@@ -13,6 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        Commands\Auto::class
         //
     ];
 
@@ -24,6 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('auction:auto')->withoutOverlapping();
         // $schedule->command('inspire')
         //          ->hourly();
     }

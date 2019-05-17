@@ -7,6 +7,12 @@ route我有改一些東西, 記得跑一次migrate by 吳則熹
 3.route增加bulletin，再麻煩你新增有關的資料表及controller
 by 黃魚190513
 
+#自動下標使用
+**auto-in-seconds.sh**
+會每秒執行一次schedule:run, 並執行auction:auto指令
+請設置CronTab執行此shell script
+    EX: * * * * * sh auto_in_seconds.sh
+
 # 管理者頁面
 **AdminAccountController** 
 
