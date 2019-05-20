@@ -50,6 +50,7 @@
 			  <button>上傳圖片</button>
     		</div>
 			<button type="submit" class="btn-primary btn -sm">修改</button>
+			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn -sm">取消</button>
 			</form>
         </div>
 	</div>

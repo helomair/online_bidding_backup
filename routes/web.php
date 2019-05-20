@@ -37,19 +37,19 @@ Route::get('/closed', function () {
 //////顯示管理者頁面
 ////商品管理
 //首頁
-Route::get('/adm', 'AdminProductController@index' )->name('adm_Product'); 
+Route::get('/adm/product', 'AdminProductController@index' )->name('adm_Product'); 
 //顯示
-Route::get('/adm/{product}/show', 'AdminProductController@show' )->name('adm_Product.show'); 
+Route::get('/adm/product/{product}/show', 'AdminProductController@show' )->name('adm_Product.show'); 
 //新增表單
-Route::get('/adm/create', 'AdminProductController@create')->name('adm_Product.create');
+Route::get('/adm/product/create', 'AdminProductController@create')->name('adm_Product.create');
 //傳送新增表單 
-Route::post('/adm/store', 'AdminProductController@store')->name('adm_Product.store'); 
+Route::post('/adm/product/store', 'AdminProductController@store')->name('adm_Product.store'); 
 //開啟指定表單
-Route::get('/adm/{product}/edit', 'AdminProductController@edit')->name('adm_Product.edit');
+Route::get('/adm/product/{product}/edit', 'AdminProductController@edit')->name('adm_Product.edit');
 //傳送修改表單 
-Route::patch('/adm/{product}', 'AdminProductController@update')->name('adm_Product.update');
+Route::patch('/adm/product/{product}', 'AdminProductController@update')->name('adm_Product.update');
 //刪除
-Route::delete('/adm/{product}', 'AdminProductController@destroy')->name('adm_Product.destroy');
+Route::delete('/adm/product/{product}', 'AdminProductController@destroy')->name('adm_Product.destroy');
 
 ////帳號管理
 //首頁
@@ -77,7 +77,7 @@ Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('a
 
 //加值紀錄
 //首頁
-Route::get('/save', function () {
+Route::get('/adm/save', function () {
     return view('adm/Save');
 })->name('adm_Save');
 
