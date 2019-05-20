@@ -22,7 +22,7 @@
                   <th>開始時間</th>
                   <th>結束時間</th>
                   <th>狀態</th>
-                  <th><a href="{{ route('adm_Product.create') }}"><img src="images/add.png" class="button" style="width:20px; height:20px;" /></a></th>
+                  <th><a href="{{ route('adm_Product.create') }}"><img src="{{ asset('images/add.png') }}" class="button" style="width:20px; height:20px;" /></a></th>
                 </tr>
               </thead>
               <tbody>
