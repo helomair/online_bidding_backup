@@ -1,8 +1,7 @@
-<div class="col-lg-2">
+<nav class="nav nav-pills nav-fill margin-top-100 mx-auto width-75-percent border">
 	<?php $url = URL::current(); ?>
-	<div class="list-group margin-top-50">
-	  <a href="{{ route('adm_Product') }}" class="list-group-item <?php if(substr($url,-3) == 'adm') echo "active";?>">商品管理</a>
-	  <a href="{{ route('adm_Account') }}" class="list-group-item <?php if(substr($url,-3) == 'unt') echo "active";?>">會員管理</a>
-	  <a href="{{ route('adm_Bulletin') }}" class="list-group-item <?php if(substr($url,-3) == 'tin') echo "active";?>">公告管理</a>
-	</div> 
-</div>
+	<a class="nav-item nav-link <?php if(substr($url,-3) == 'adm') echo "active";?>" href="{{ route('adm_Product') }}">商品管理</a>
+	<a class="nav-item nav-link <?php if(substr($url,-3) == 'unt') echo "active";?>" href="{{ route('adm_Account') }}">會員管理</a>
+	<a class="nav-item nav-link <?php if(substr($url,-3) == 'tin') echo "active";?>" href="{{ route('adm_Bulletin') }}">公告管理</a>
+	<a class="nav-item nav-link <?php if(substr($url,-3) == 'ave') echo "active";?>" href="{{ route('adm_Save') }}">加值紀錄</a>
+</nav>

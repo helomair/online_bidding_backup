@@ -30,6 +30,9 @@ Route::post('register', 'Auth\RegisterController@register')->name('register.post
 Route::get('/user', function () {
     return view('user/interface');
 })->name('user_interface');
+Route::get('/closed', function () {
+    return view('user/closed');
+})->name('closed');
 
 //////顯示管理者頁面
 ////商品管理
@@ -72,7 +75,17 @@ Route::patch('/adm/bulletin/{bulletin}', 'BulletinController@update')->name('adm
 //刪除
 Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('adm_Bulletin.destroy');
 
+//加值紀錄
+//首頁
+Route::get('/save', function () {
+    return view('adm/Save');
+})->name('adm_Save');
 
+
+//結標填寫資料
+Route::get('/winner', function () {
+    return view('EndBiddingDetail');
+})->name('winner');
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

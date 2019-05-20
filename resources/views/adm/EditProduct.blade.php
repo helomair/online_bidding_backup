@@ -21,6 +21,14 @@
               <label>名稱</label>
               <input name="name" id="name" type="text" class="form-control" value="{{ $product->name }}">
             </div>
+            <div class="form-group">
+              <label>原價</label>
+              <input name="cost" id="cost" id="text" type="text" class="form-control"value="{{ $product->cost }}">
+			 </div>
+            <div class="form-group">
+              <label>起標價</label>
+              <input name="cur_cost" id="cur_cost" id="text" type="text" class="form-control"value="{{ $product->cur_cost }}">
+            </div>
 			<div class="form-group">
 			  <label>公布時間</label>
               <input name="view_time" id="view_time" type="date" class="form-control" value="{{ $product->view_time->format('Y-m-d') }}">

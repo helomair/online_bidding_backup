@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '管理者主頁') <!-- 單行記錄 -->
+@section('title', '公告管理') <!-- 單行記錄 -->
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
 	@include('layouts.adm_left_button')
-	<div class="col-lg-10">
+	<div class="col-lg-12">
         <div id="news" class="table-responsive margin-top-50">
           <table id="news_table" class="table table-striped text-align-center">
             <thead>

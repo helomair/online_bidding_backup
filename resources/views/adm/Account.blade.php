@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '管理者主頁') <!-- 單行記錄 -->
+@section('title', '會員管理') <!-- 單行記錄 -->
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
 	@include('layouts.adm_left_button')
-	<div class="col-lg-10">
+	<div class="col-lg-12">
         <div class="table-responsive margin-top-50">
           <input type="text" class="form-control" placeholder="請輸入關鍵字">
           <table class="table table-striped margin-top-50">

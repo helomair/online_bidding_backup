@@ -1,7 +1,7 @@
-<div class="col-lg-3">
-        <div class="list-group margin-top-50">
-		<a href="#" class="list-group-item active">進行中拍賣</a>
-		<a href="#" class="list-group-item">已結標拍賣</a>
-		<a href="#" class="list-group-item">帳戶狀態</a>
-	</div>
-</div>
+<?php $url = URL::current(); ?>
+<nav class="nav nav-pills nav-fill margin-top-100 mx-auto width-75-percent border">
+    <a class="nav-item nav-link <?php if(substr($url,-3) == 'ace') echo "active";?>" href="user_interface.html">進行中拍賣</a>
+    <a class="nav-item nav-link <?php if(substr($url,-3) == 'sed') echo "active";?>" href="history.html">已結標拍賣</a>
+    <a class="nav-item nav-link <?php if(substr($url,-3) == 'adm') echo "active";?>" href="#">帳戶狀態</a>
+    <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+</nav>
