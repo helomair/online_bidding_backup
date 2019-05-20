@@ -48,17 +48,45 @@
 
     <div class="row">
 
-      <div class="col-lg-3">
-        <div class="list-group margin-top-50">
-          <a href="user_interface.html" class="list-group-item active">進行中拍賣</a>
-          <a href="history.html" class="list-group-item">已結標拍賣</a>
-          <a href="#" class="list-group-item">帳戶狀態</a>
+      <nav class="nav nav-pills nav-fill margin-top-100 mx-auto width-75-percent border">
+        <a class="nav-item nav-link" href="user_interface.html">進行中拍賣</a>
+        <a class="nav-item nav-link active" href="history.html">已結標拍賣</a>
+        <a class="nav-item nav-link" href="#">帳戶狀態</a>
+        <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </nav>
+
+      <div class="col-lg-12">
+        <div id="products" class="table-responsive margin-top-50">
+            <h1>下標頁面</h1>
+
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">下標金額</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1">
+
+                  <h1 class="text-align-center margin-top-50">OR</h1>
+
+                  <h2 class="margin-top-50">自動下標設定</h2>
+
+                  <label for="exampleInputEmail1">開始價格</label>
+                  <input type="text" class="form-control" placeholder="ex:5000元">
+
+                  <label for="exampleInputEmail1">停止價格</label>
+                  <input type="text" class="form-control" placeholder="ex:15000元">
+
+                  <label for="exampleInputEmail1">每次金額</label>
+                  <input type="text" class="form-control" placeholder="ex:1000元">
+
+                  <label for="exampleInputEmail1">次數</label>
+                  <input type="text" class="form-control" placeholder="ex:10次">
+
+                  <button type="submit" class="btn btn-primary margin-top-50">Submit</button>
+                </div>
+              </form>
+
         </div>
+
       </div>
-        <h1>拍賣進行中之沒有商品的頁面</h1>
-      <p class="no_product">
-        目前沒有任何商品
-      </p>
 
     </div>
 
