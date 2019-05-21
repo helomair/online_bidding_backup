@@ -32,7 +32,7 @@
 			<div class="card-body">
 				<h5 class="card-title">目前競標價：37500元</h5>
 				<p class="card-text">目前最高出價者：You-Cheng Li</p>
-				<a href="#" class="btn btn-primary">下標</a>
+				<a href="{{ route('bidding') }}" class="btn btn-primary">下標</a>
 			</div>
 		</div>
 
