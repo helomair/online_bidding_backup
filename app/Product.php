@@ -17,7 +17,13 @@ class Product extends Model
      * get User, many to many, using relationship Auction
      * @param mode, 1 is auto, 0 is not
      */
-    public function users($mode)
+    
+    public function auctions()
+    {
+        return $this->hasMany('App\Auction','pid');
+    }
+
+    public function users($mode = NULL)
     {
         if($mode)
             return $this->belongsToMany('App\User','auction_auto','pid','uid')

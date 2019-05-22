@@ -27,15 +27,13 @@ Route::post('register', 'Auth\RegisterController@register')->name('register.post
 ////顯示使用者頁面，登入後直接導到這個頁面
 //之後改用controller來帶，順便帶資料進來
 //Route::get('user', 'PostsController@index')->name('posts.index'); 
-Route::get('/user', function () {
-    return view('user/interface');
-})->name('user_interface');
-Route::get('/closed', function () {
-    return view('user/closed');
-})->name('closed');
-Route::get('/bidding', function () {
-    return view('user/bidding');
-})->name('bidding');
+Route::get('/user', 'InterfaceController@index')->name('user_interface');
+Route::get('/closed','ClosedController@index')->name('closed');
+///////下標頁面
+///表單
+Route::get('/bidding','BiddingController@index')->name('bidding');
+///儲存表單
+Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding.store');
 
 //////顯示管理者頁面
 ////商品管理
@@ -80,9 +78,7 @@ Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('a
 
 //加值紀錄
 //首頁
-Route::get('/adm/save', function () {
-    return view('adm/Save');
-})->name('adm_Save');
+Route::get('/adm/save', 'SaveController@index')->name('adm_Save');
 
 
 //結標填寫資料

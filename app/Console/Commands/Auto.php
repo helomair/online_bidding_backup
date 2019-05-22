@@ -48,12 +48,15 @@ class Auto extends Command
             $time = Carbon::now();
             $product = Product::find($auto->pid);
             $auto_start = $time->diffInSeconds($product->end_time,false);
-            if( ($auto_start >= 0 && $auto_start <= 10) && $time->gte($product->start_time) )
+            if( ($auto_start < 0 && $auto_start >= (-10)) && $time->gte($product->start_time) )
             {
                 if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost <= $auto->end_cost) )
                 {
                     $auto->update( ['times' => ($auto->times - 1) ] );
-                    $product->update( ['cur_cost' => ($product->cur_cost + 10)] );
+                    $product->update([
+                        'cur_cost' => ($product->cur_cost + 10),
+                        'end_time' => $product->end_time->addMinutes(10)
+                    ]);
                 }
             }
         }

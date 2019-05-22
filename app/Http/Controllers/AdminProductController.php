@@ -62,8 +62,8 @@ class AdminProductController extends Controller
 		$att['start_time'] = $request->input('start_time');
 		$att['end_time'] = $request->input('end_time');
 		$att['detail'] = $request->input('detail');
-		$att['cost'] = 0;
-		$att['cur_cost'] = 0;
+		$att['cost'] = $request->input('cost');
+		$att['cur_cost'] = $request->input('cur_cost');
 		
 		Product::create($att);
 		return redirect()->route('adm_Product');
@@ -96,7 +96,6 @@ class AdminProductController extends Controller
 		$att['detail'] = $request->input('detail');
 		
 		$product->update($att);
-		
 		return redirect()->route('adm_Product');
     }
 
