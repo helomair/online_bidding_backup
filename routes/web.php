@@ -27,7 +27,6 @@ Route::post('register', 'Auth\RegisterController@register')->name('register.post
 ////顯示使用者頁面，登入後直接導到這個頁面
 //之後改用controller來帶，順便帶資料進來
 //Route::get('user', 'PostsController@index')->name('posts.index'); 
-<<<<<<< HEAD
 Route::get('/user', 'InterfaceController@index')->name('user_interface');
 Route::get('/closed','ClosedController@index')->name('closed');
 ///////下標頁面
@@ -35,20 +34,10 @@ Route::get('/closed','ClosedController@index')->name('closed');
 Route::get('/bidding','BiddingController@index')->name('bidding');
 ///儲存表單
 Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding.store');
-=======
-Route::get('/user', function () {
-    return view('user/interface');
-})->name('user_interface');
-Route::get('/closed', function () {
-    return view('user/closed');
-})->name('closed');
-Route::get('/bidding', function () {
-    return view('user/bidding');
-})->name('bidding');
+
 Route::get('/account', function () {
     return view('user/account');
 })->name('account');
->>>>>>> 1b063e82c26b09ca0a23938634ac49ac029f4854
 
 //////顯示管理者頁面
 ////商品管理
