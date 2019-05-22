@@ -18,6 +18,8 @@
               <tr>
                 <th>圖片</th>
                   <th>名稱</th>
+                  <th>原價</th>
+                  <th>起標價</th>
                   <th>公佈時間</th>
                   <th>開始時間</th>
                   <th>結束時間</th>
@@ -32,6 +34,8 @@
                     <img src="{{ asset('images/product2.jpg') }}" class="img-thumbnail thumbnails" />
                   </td>
                   <td>{{ $product->name }}</td>
+                  <td>{{ $product->cost }}元</td>
+                  <td>{{ $product->cur_cost }}元</td>
                   <td>{{ $product->view_time }}</td>
                   <td>{{ $product->start_time }}</td>
                   <td>{{ $product->end_time }}</td>
