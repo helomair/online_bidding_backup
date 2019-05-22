@@ -36,6 +36,9 @@ Route::get('/closed', function () {
 Route::get('/bidding', function () {
     return view('user/bidding');
 })->name('bidding');
+Route::get('/account', function () {
+    return view('user/account');
+})->name('account');
 
 //////顯示管理者頁面
 ////商品管理
