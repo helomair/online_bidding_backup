@@ -28,6 +28,7 @@ Route::post('register', 'Auth\RegisterController@register')->name('register.post
 //之後改用controller來帶，順便帶資料進來
 //Route::get('user', 'PostsController@index')->name('posts.index'); 
 Route::get('/user', 'InterfaceController@index')->name('user_interface');
+Route::get('/user/{product}/show', 'InterfaceController@show')->name('user_interface.show');
 Route::get('/closed','ClosedController@index')->name('closed');
 ///////下標頁面
 ///表單

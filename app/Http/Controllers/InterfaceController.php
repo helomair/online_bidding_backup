@@ -15,6 +15,8 @@ class InterfaceController extends Controller
 	}
     public function show(Product $product)
     {
-    	return view('user.interface', compact('product'));
+    	$auctions = $product->users()->orderBy('auction.created_at', 'desc')->paginate(3);
+    	$top_auction = $auctions[0];
+    	return view('user.interface', compact('product','top_auction','auctions'));
     }
 }
