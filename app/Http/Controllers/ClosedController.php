@@ -11,7 +11,7 @@ class ClosedController extends Controller
     public function index()
     {
     	$now_time = Carbon::now();
-    	$closed_product = Product::where('end_time', '<', $now_time)->get();
-    	return view('user.closed', compact('closed_product'));
+    	$closed_products = Product::where('end_time', '<', $now_time)->paginate(3);;
+    	return view('user.closed', compact('closed_products'));
     }
 }

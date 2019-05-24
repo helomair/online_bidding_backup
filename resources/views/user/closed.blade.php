@@ -23,16 +23,19 @@
                   <th>結標金額</th>
                 </tr>
               </thead>
-              <tbody>
+            <tbody>
+			@foreach($closed_products as $closed_product)
                 <tr>
                   <td>
                     <img src="images/product2.jpg" class="img-thumbnail thumbnails" />
                   </td>
-                  <td>Macbook</td>
-                  <td>40000</td>
+                  <td>{{ $closed_product->name }}</td>
+                  <td>{{ $closed_product->cur_cost }}</td>
                 </tr>
+			@endforeach
             </tbody>
           </table>
+		  {{ $closed_products->links() }}
         </div>
 	</div>
 	<!-- /.col-lg-9 -->
