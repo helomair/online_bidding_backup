@@ -20,27 +20,18 @@
                 <th>加值時間</th>
                 <th>額度</th>
                 </tr>
-              </thead>
-              <tbody>
+            </thead>
+            <tbody>
+			@foreach($payments as $payment)
                 <tr>
-                  <td>MengRu-Lin</td>
-                  <td>2019/05/28</td>
-                  <td>500</td>
+                  <td>{{ $payment->users->name }}</td>
+                  <td>{{ $payment->created_at }}</td>
+                  <td>{{ $payment->amount }}</td>
                 </tr>
-
-                <tr>
-                  <td>Li You-Cheng</td>
-                  <td>2019/05/28</td>
-                  <td>500</td>
-                </tr>
-
-                <tr>
-                  <td>Wang Han i</td>
-                  <td>2019/05/28</td>
-                  <td>500</td>
-                </tr>
+			@endforeach
             </tbody>
           </table>
+		  {{ $payments->links() }}
         </div>
 	</div>
 	<!-- /.col-lg-9 -->

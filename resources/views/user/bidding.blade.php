@@ -16,11 +16,11 @@
 	<div class="col-lg-12">
         <div id="products" class="table-responsive margin-top-50">
             <h1>下標頁面</h1>
-            <form method="post" action="#" role="form">
+            <form method="post" action="{{ route('bidding.store',$product->id) }}" role="form">
 			@csrf 
                 <div class="form-group">
                   <label for="exampleInputEmail1">下標金額</label>
-                  <input name="bid_cost" id="bid_cost" type="text" class="form-control" id="exampleInputEmail1">
+                  <input name="bid_cost" id="bid_cost" type="text" class="form-control" id="exampleInputEmail1" >
 
                   <h1 class="text-align-center margin-top-50">OR</h1>
 

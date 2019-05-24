@@ -39,11 +39,8 @@ class AdminAccountController extends Controller
 		////尚未有新增or編輯頁面，都先以原本的view為主
 		//原本的view是吃$users所以先將$user替換成$users
 		//link()的方法也會有問題，所以還是得等之後的頁面，目前暫且放置
-		$users = [
-    		'user' => $user
-		];
 		
-        return view('adm.Account', compact('users'));         
+        return view('adm.EditAccount', compact('user'));         
     }
 
     /*

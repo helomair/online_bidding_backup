@@ -11,7 +11,12 @@ class InterfaceController extends Controller
 {
 	public function index()
 	{
-		return view('user.interface');
+		$product = Product::find(1);
+    	$auctions = $product->users()->orderBy('auction.created_at', 'desc')->paginate(3);
+    	$top_auction = $auctions[0];
+		//print_r($top_auction);
+    	return view('user.interface', compact('product','top_auction','auctions'));
+		//return view('user.interface');
 	}
     public function show(Product $product)
     {

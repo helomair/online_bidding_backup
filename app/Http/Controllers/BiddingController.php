@@ -9,9 +9,9 @@ use Carbon\Carbon;
 
 class BiddingController extends Controller
 {
-    public function index()
+    public function index(Product $product)
     {
-    	return view('user.bidding');
+    	return view('user.bidding',compact('product'));
     }
 
     public function store(Request $request, Product $product)

@@ -26,7 +26,7 @@
 			  @foreach($users as $user)
               <tr>
                 <td>{{ $user->name }}</td>
-                <td><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger">編輯</a></td>
+                <td><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger">檢視</a></td>
                 <td>
 				  <a href="#" class="btn btn-danger" onclick="document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
 				  <form method="post" action="{{ route('adm_Account.destroy',$user->id) }}" id="delete_{{$user->id}}">
