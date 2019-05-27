@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use App\User; 
@@ -48,9 +49,23 @@ class AdminAccountController extends Controller
      * @param search, search for what
      * @return search result
      */
-    public function search($search)
+    public function search(Request $request)
     {
-        $columns = Schema::getColumnListing('users');
+		$columns = Schema::getColumnListing('users');
+		$search = $request->input('keyword');
+		
+		//更改成有分頁寫法的模式
+		$user = new User;
+        $where = $user;
+        //搜詢條件判斷
+        foreach($columns as $column) 
+        {
+            $where = $where->orWhere($column,'LIKE','%'.$search.'%');
+        }
+        //分頁
+        $users = $where->paginate(3);
+		
+		/*
         $query = User::query();
 
         foreach($columns as $column) 
@@ -58,8 +73,8 @@ class AdminAccountController extends Controller
             $query->orWhere($column,'LIKE','%'.$search.'%');
         }
 
-        $users = $query->get();
-        return view('adm,Account', compact('users'));
+        $users = $query->get();*/
+        return view('adm.Account', compact('users'));
     }
 
     /*
