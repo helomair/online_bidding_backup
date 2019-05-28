@@ -30,7 +30,7 @@
 		<div class="card text-center my-4">
 			<div class="card-header">下標1</div>
 			<div class="card-body">
-				<h5 class="card-title">目前競標價：{{ $top_auction->pivot->lasted_cost }}元</h5>
+				<h5 class="card-title">目前競標價：{{ $product->cur_cost }}元</h5>
 				<p class="card-text">目前最高出價者：{{ $top_auction->name }}</p>
 				<a href="{{ route('bidding',$product->id) }}" class="btn btn-primary">下標</a>
 			</div>
