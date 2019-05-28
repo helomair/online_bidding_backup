@@ -60,6 +60,8 @@ Route::delete('/adm/product/{product}', 'AdminProductController@destroy')->name(
 ////帳號管理
 //首頁
 Route::get('/adm/account','AdminAccountController@index' )->name('adm_Account');
+//搜尋
+Route::post('/adm/account','AdminAccountController@search' )->name('adm_Search');
 //顯示
 Route::get('/adm/account/{user}/show', 'AdminAccountController@show' )->name('adm_Account.show');
 //刪除

@@ -13,7 +13,13 @@
 	@include('layouts.adm_left_button')
 	<div class="col-lg-12">
         <div class="table-responsive margin-top-50">
-          <input type="text" class="form-control" placeholder="請輸入關鍵字">
+          <form method="post" action="{{ route('adm_Search') }}" role="form" >
+		    @csrf
+			<table style="width:100%">
+              <td><input name="keyword" id="keyword" type="text" class="form-control " placeholder="請輸入關鍵字"></td>
+              <td style="width:10%"><button type="submit" class="btn-danger btn">搜尋</button></td>
+			</table>
+          </form>
           <table class="table table-striped margin-top-50">
             <thead>
               <tr>
