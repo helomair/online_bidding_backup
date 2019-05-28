@@ -36,9 +36,18 @@ Route::get('/bidding/{product}','BiddingController@index')->name('bidding');
 ///儲存表單
 Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding.store');
 
+//帳號狀態
 Route::get('/account', function () {
     return view('user/account');
 })->name('account');
+//結標填寫資料
+Route::get('/winner', function () {
+    return view('EndBiddingDetail');
+})->name('winner');
+//儲值頁面
+Route::get('/coin', function () {
+    return view('user/coin');
+})->name('coin');
 
 //////顯示管理者頁面
 ////商品管理
@@ -88,10 +97,6 @@ Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('a
 Route::get('/adm/save', 'SaveController@index')->name('adm_Save');
 
 
-//結標填寫資料
-Route::get('/winner', function () {
-    return view('EndBiddingDetail');
-})->name('winner');
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

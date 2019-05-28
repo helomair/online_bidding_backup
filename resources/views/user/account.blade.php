@@ -111,7 +111,7 @@
                                               50P
                                           </div>
                                           <div class="col-md-2 col-6">
-                                              <a href="add_coin.html" class="btn btn-danger">儲值</a>
+                                              <a href="{{ route('coin') }}" class="btn btn-danger">儲值</a>
                                           </div>
                                       </div>
                                       <hr />

@@ -26,6 +26,7 @@ class InterfaceController extends Controller
             $top_auction = new \stdClass();
             $top_auction->name = '';
         }
+		//dd($top_auction);
         //echo $top_auction;
     	return view('user.interface', compact('product','top_auction','auctions'));
     }
