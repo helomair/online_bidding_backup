@@ -65,6 +65,8 @@ Route::get('/adm/product/{product}/edit', 'AdminProductController@edit')->name('
 Route::patch('/adm/product/{product}', 'AdminProductController@update')->name('adm_Product.update');
 //刪除
 Route::delete('/adm/product/{product}', 'AdminProductController@destroy')->name('adm_Product.destroy');
+//顯示圖片
+Route::get('img/{file_path}', 'AdminProductController@getImg')->name('img');
 
 ////帳號管理
 //首頁

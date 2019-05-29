@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\User;
@@ -21,9 +22,15 @@ class AdminProductController extends Controller
     {
 		//$products = Product::all();
 		//為了自動切分頁，更改了controller
-        $products = Product::paginate(2);
+        $products = Product::paginate(3);
+		//將所有圖片取出
+		//dd($products);
+		foreach($products as $product){
+			$files = get_files(storage_path('app/public/products/'.$product->id));
+			$pics[$product->id] = $files;
+		}
         //先假設路徑為admin/index.blade.php
-        return view('adm.Product', compact('products')); 
+        return view('adm.Product', compact('products','pics')); 
     }
 
     /*
@@ -65,7 +72,24 @@ class AdminProductController extends Controller
 		$att['cost'] = $request->input('cost');
 		$att['cur_cost'] = $request->input('cur_cost');
 		
-		Product::create($att);
+		$product = Product::create($att);
+		
+		//處理圖片上傳
+		if ($request->hasFile('pics')) {
+			$pics = $request->file('pics');
+			foreach($pics as $pic){
+				if(!in_array($pic->getClientOriginalExtension(),array('jpg','jpeg','png'))) continue;
+				$info = [
+					'mime-type' => $pic->getMimeType(),
+					'original_filename' => $pic->getClientOriginalName(),
+					'extension' => $pic->getClientOriginalExtension(),
+					'size' => $pic->getClientSize(),
+				];
+				$pic->storeAs('public/products/'.$product->id, $info['original_filename']);
+			}
+		}
+
+
 		return redirect()->route('adm_Product');
 	}
 	
@@ -111,4 +135,14 @@ class AdminProductController extends Controller
         $product->delete(); 
         return redirect()->route('adm_Product'); 
     }
+	
+	public function getImg($file_path)
+	{
+		$file_path = str_replace('&','/',$file_path); //斜線不可以在URL中傳
+		$file = File::get($file_path);
+		$type = File::mimeType($file_path);
+
+		return response($file)->header("Content-Type", $type);
+	}
+
 }

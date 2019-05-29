@@ -14,7 +14,7 @@
 	<div class="col-lg-10">
         <div id="products" class="table-responsive margin-top-50">
           <h2>修改商品</h2>
-          <form  method="post" action="{{ route('adm_Product.update',$product->id) }}" role="form" class="width-75-percent padding-left-50">
+          <form  method="post" action="{{ route('adm_Product.update',$product->id) }}" role="form" class="width-75-percent padding-left-50" enctype="multipart/form-data">
 			@csrf
 			{{ method_field('PATCH') }}
 			<div class="form-group">
