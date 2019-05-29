@@ -68,6 +68,10 @@ body {
   width: 75%;
 }
 
+.width-75-percent-nav {
+  width: 75%;
+}
+
 .no_product {
   margin-top: 100px;
   margin-left: 150px;
@@ -148,4 +152,10 @@ body {
 
 .image-container:hover .middle {
   opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .width-75-percent-nav {
+    width: 45%;
+  }
 }
