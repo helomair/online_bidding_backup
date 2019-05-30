@@ -19,18 +19,9 @@
                 <div class="card">
                   <div class="card-body">
                         <div class="card-title mb-4">
-                            <div class="d-flex justify-content-start">
-                                <div class="image-container">
-                                    <img src="http://placehold.it/150x150" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
-                                    <div class="middle">
-                                        <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
-                                        <input type="file" style="display: none;" id="profilePicture" name="file" />
-                                    </div>
-                                </div>
+                            <div class="d-flex justify-content-start"> 
                                 <div class="userData ml-3">
-                                    <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">林孟儒</a></h2>
-                                    <h6 class="d-block"><a href="javascript:void(0)">1,500</a> Video Uploads</h6>
-                                    <h6 class="d-block"><a href="javascript:void(0)">300</a> Blog Posts</h6>
+                                    <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">{{ $user->name }}</a></h2>
                                 </div>
                                 <div class="ml-auto">
                                     <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
@@ -57,46 +48,17 @@
                                                 <label style="font-weight:bold;">姓名</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                林孟儒
+                                                {{ $user->name }}
                                             </div>
                                         </div>
-                                        <hr />
+                                        <hr /> 
 
-                                        <div class="row">
-                                            <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">生日</label>
-                                            </div>
-                                            <div class="col-md-8 col-6">
-                                                1994/05/26
-                                            </div>
-                                        </div>
-                                        <hr />
-
-
-                                        <div class="row">
-                                            <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">地址</label>
-                                            </div>
-                                            <div class="col-md-8 col-6">
-                                                嘉義縣民雄鄉三興二街6號
-                                            </div>
-                                        </div>
-                                        <hr />
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
                                                 <label style="font-weight:bold;">電話</label>
                                             </div>
                                             <div class="col-md-8 col-6">
-                                                0966666666
-                                            </div>
-                                        </div>
-                                        <hr />
-                                        <div class="row">
-                                            <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">Something</label>
-                                            </div>
-                                            <div class="col-md-8 col-6">
-                                                Something
+                                                {{ $user->phone }}
                                             </div>
                                         </div>
                                         <hr />
@@ -108,7 +70,7 @@
                                               <label style="font-weight:bold;">剩餘代幣</label>
                                           </div>
                                           <div class="col-md-8 col-6">
-                                              50P
+                                              {{ $user->balance }}P
                                           </div>
                                           <div class="col-md-2 col-6">
                                               <a href="{{ route('coin') }}" class="btn btn-danger">儲值</a>

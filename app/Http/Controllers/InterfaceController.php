@@ -11,7 +11,7 @@ class InterfaceController extends Controller
 {
 	public function index()
 	{
-        $products = Product::paginate(3);
+        $products = Product::where('view_time','<=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
         return view('user.all', compact('products')); 
 	}

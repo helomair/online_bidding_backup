@@ -34,4 +34,11 @@ class Product extends Model
                         ->withPivot('cost','lasted_cost')
                         ->withTimestamps();
     }
+
+    public function winner()
+    {
+        return $this->belongsToMany('App\User','winner','pid','uid')
+                    ->withPivot('address')
+                    ->withTimestamps(); 
+    }
 }

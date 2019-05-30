@@ -21,6 +21,7 @@
                   <th>圖片</th>
                   <th>名稱</th>
                   <th>結標金額</th>
+                  <th>得標人</th>
                 </tr>
               </thead>
             <tbody>
@@ -31,6 +32,7 @@
                   </td>
                   <td>{{ $closed_product->name }}</td>
                   <td>{{ $closed_product->cur_cost }}</td>
+                  <td>{{ $closed_product->user->name}}</td>
                 </tr>
 			@endforeach
             </tbody>

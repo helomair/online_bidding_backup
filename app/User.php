@@ -60,4 +60,11 @@ class User extends Authenticatable
                         ->withPivot('cost','lasted_cost')
                         ->withTimestamps();
     }
+
+    public function winner_product()
+    {
+        return $this->belongsToMany('App\Product','winner','uid','pid')
+                    ->withPivot('address')
+                    ->withTimestamps(); 
+    }
 }

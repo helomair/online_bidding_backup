@@ -37,9 +37,7 @@ Route::get('/bidding/{product}','BiddingController@index')->name('bidding');
 Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding.store');
 
 //帳號狀態
-Route::get('/account', function () {
-    return view('user/account');
-})->name('account');
+Route::get('/account', 'UserAccountController@index')->name('account');
 //結標填寫資料
 Route::get('/winner', function () {
     return view('EndBiddingDetail');

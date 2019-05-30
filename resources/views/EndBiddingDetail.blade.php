@@ -18,15 +18,19 @@
 		    @csrf
             <div class="form-group">
               <label>姓名</label>
-              <input id="name" type="text" class="form-control">
+              <input id="name" name="name" type="text" class="form-control">
             </div>
             <div class="form-group">
               <label>電話</label>
-              <input id="phone" type="text" class="form-control">
+              <input id="phone" name="phone" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>地址</label>
+              <input id="address" name="address" type="text" class="form-control">
             </div>
             <div class="form-group">
               <label>留言</label>
-              <textarea id="message" style="width:100%; height: 100px;"></textarea>
+              <textarea id="message" name="message" style="width:100%; height: 100px;"></textarea>
             </div>
             <input type="submit" value="分享" class="form-control my-4" style="width:15%; float:right;">
             <input type="button" value="提交" class="form-control my-4" style="width:15%; float:right;">
