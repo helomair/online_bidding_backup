@@ -29,8 +29,8 @@
 		</div>
 	  </a>
 	  @endforeach  
-	  {{ $products->links() }}
 	</div>
+	  {{ $products->links() }}
 	<!-- /.col-lg-9 -->
 </div>
 @endsection

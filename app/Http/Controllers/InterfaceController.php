@@ -18,7 +18,7 @@ class InterfaceController extends Controller
     public function show(Product $product)
     {
         $auctions = $product->users()->orderBy('auction.created_at', 'desc')->paginate(3);
-
+		//dd($auctions);
         if($this->check_auction_exist($product))  {
         	$top_auction = $auctions[0];
         }

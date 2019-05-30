@@ -32,7 +32,7 @@
                   </td>
                   <td>{{ $closed_product->name }}</td>
                   <td>{{ $closed_product->cur_cost }}</td>
-                  <td>{{ $closed_product->winner->name}}</td>
+                  <td>{{ $winners[$closed_product->id] }}</td>
                 </tr>
 			@endforeach
             </tbody>
