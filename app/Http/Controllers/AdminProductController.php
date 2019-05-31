@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\User;
 use App\Product;
+use Storage;
 
 class AdminProductController extends Controller
 {
@@ -26,11 +27,17 @@ class AdminProductController extends Controller
 		//將所有圖片取出
 		//dd($products);
 		foreach($products as $product){
+			//先取得商品名
 			$files = get_files(storage_path('app/public/products/'.$product->id));
-			$pics[$product->id] = $files;
+			//$pics[$product->id] = $files;
+			//取得完整路徑，並將路徑改寫，url會把 / 判定錯誤
+			if($files != NULL)
+			  $file_path[$product->id] = str_replace('/','&',storage_path('app/public/products/'.$product["id"].'/'.$files[0]));
+			else
+			  $file_path[$product->id] = '';
 		}
         //先假設路徑為admin/index.blade.php
-        return view('adm.Product', compact('products','pics')); 
+        return view('adm.Product', compact('products','file_path')); 
     }
 
     /*
@@ -101,7 +108,15 @@ class AdminProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('adm.EditProduct', compact('product')); 
+		$files = get_files(storage_path('app/public/products/'.$product->id));
+		$pics[$product->id] = $files;
+		
+		if($pics[$product["id"]] != NULL)
+		  $file_path = str_replace('/','&',storage_path('app/public/products/'.$product["id"].'/'.$pics[$product["id"]][0]));
+		else
+		  $file_path = '';
+	  
+        return view('adm.EditProduct', compact('product','file_path')); 
     }
 
     /**
@@ -120,6 +135,25 @@ class AdminProductController extends Controller
 		$att['detail'] = $request->input('detail');
 		
 		$product->update($att);
+		
+		//處理圖片上傳
+		if ($request->hasFile('pics')) {
+			//如果有圖片，先刪掉舊的，然後再上傳新的
+			Storage::deleteDirectory("public/products/".$product->id);
+		
+			$pics = $request->file('pics');
+			foreach($pics as $pic){
+				if(!in_array($pic->getClientOriginalExtension(),array('jpg','jpeg','png'))) continue;
+				$info = [
+					'mime-type' => $pic->getMimeType(),
+					'original_filename' => $pic->getClientOriginalName(),
+					'extension' => $pic->getClientOriginalExtension(),
+					'size' => $pic->getClientSize(),
+				];
+				$pic->storeAs('public/products/'.$product->id, $info['original_filename']);
+			}
+		}
+		
 		return redirect()->route('adm_Product');
     }
 
@@ -132,6 +166,7 @@ class AdminProductController extends Controller
 
     public function destroy(Product $product)
     {
+		Storage::deleteDirectory("public/products/".$product->id);
         $product->delete(); 
         return redirect()->route('adm_Product'); 
     }

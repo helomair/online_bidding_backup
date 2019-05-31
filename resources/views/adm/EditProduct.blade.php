@@ -43,11 +43,23 @@
 			</div>
 			<div class="form-group">
 			  <label>簡介</label><br>
-			  <textarea name="detail" id="detail" style="width:100%; height: 150px;">{{ $product->detail }}</textarea>
+			  <textarea name="detail" id="detail"  style="width:100%; height: 150px;">{{ $product->detail }}</textarea>
     		</div>
 			<div class="form-group">
+			  @if($file_path=='')
 			  <label>圖片</label><br>
-			  <button>上傳圖片</button>
+			  <input type="file" class="form-group" name="pics[]" id="pics" multipart>
+			  @else
+			  <div id="showgraph" > 
+			    <label>圖片</label><br>
+                <img src="{{ url('img',$file_path) }}" width="200px" />
+			    <button type="button" onclick="hide_graph();">刪除</button>
+			  </div>
+			  <div id="editgraph" style="display:none;" > 
+			    <label>圖片 (沒上傳新的，還是以舊的為主)</label><br>
+			    <input type="file" class="form-group" name="pics[]" id="pics" multipart>
+			  </div>
+			  @endif
     		</div>
 			<button type="submit" class="btn-primary btn -sm">修改</button>
 			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn -sm">取消</button>
@@ -58,3 +70,10 @@
     </div>
 </div>
 @endsection
+
+<script>
+	function hide_graph() {
+		document.getElementById('showgraph').style.display='none';
+		document.getElementById('editgraph').style.display='';
+	}
+</script>

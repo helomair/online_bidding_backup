@@ -17,7 +17,7 @@
 
 		<h1>拍賣進行中的頁面</h1>
         <div class="card margin-top-50">
-          <img class="card-img-top img-fluid" src="{{ asset('images/macbook.jpg') }}" alt="">
+          <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
             <h3 class="card-title">{{ $product->name }}</h3>
             <h4>NT${{ $product->cost }}</h4>

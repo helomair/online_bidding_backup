@@ -13,7 +13,18 @@ class InterfaceController extends Controller
 	{
         $products = Product::where('view_time','<=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
-        return view('user.all', compact('products')); 
+		
+		foreach($products as $product){
+			//先取得商品名
+			$files = get_files(storage_path('app/public/products/'.$product->id));
+			//$pics[$product->id] = $files;
+			//取得完整路徑，並將路徑改寫，url會把 / 判定錯誤
+			if($files != NULL)
+			  $file_path[$product->id] = str_replace('/','&',storage_path('app/public/products/'.$product["id"].'/'.$files[0]));
+			else
+			  $file_path[$product->id] = '';
+		}
+        return view('user.all', compact('products','file_path')); 
 	}
     public function show(Product $product)
     {
@@ -26,9 +37,18 @@ class InterfaceController extends Controller
             $top_auction = new \stdClass();
             $top_auction->name = '';
         }
+		
+		//取得圖片
+		$files = get_files(storage_path('app/public/products/'.$product->id));
+		//$pics[$product->id] = $files;
+		//取得完整路徑，並將路徑改寫，url會把 / 判定錯誤
+		if($files != NULL)
+		  $file_path = str_replace('/','&',storage_path('app/public/products/'.$product["id"].'/'.$files[0]));
+		else
+		  $file_path = '';
 		//dd($top_auction);
         //echo $top_auction;
-    	return view('user.interface', compact('product','top_auction','auctions'));
+    	return view('user.interface', compact('product','top_auction','auctions','file_path'));
     }
 
     private function check_auction_exist(Product $product)

@@ -31,13 +31,7 @@
 				@foreach($products as $product)
                 <tr>
                   <td>
-				    <?php
-					  if($pics[$product["id"]] != NULL)
-						  $file_path = str_replace('/','&',storage_path('app/public/products/'.$product["id"].'/'.$pics[$product["id"]][0]));
-				      else
-						  $file_path = '';
-					?>
-                    <img src="{{ url('img',$file_path) }}" class="img-thumbnail thumbnails" />
+                    <img src="{{ url('img',$file_path[$product->id]) }}" class="img-thumbnail thumbnails" />
                   </td>
                   <td>{{ $product->name }}</td>
                   <td>{{ $product->cost }}元</td>
