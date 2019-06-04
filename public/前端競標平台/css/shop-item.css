@@ -3,9 +3,7 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
  */
-body {
-  padding-top: 56px;
-}
+
 
 .thumbnails {
   height: 50px;
@@ -70,6 +68,10 @@ body {
 
 .width-75-percent-nav {
   width: 75%;
+}
+
+.height-100-px{
+  height:100px;
 }
 
 .table td {
@@ -153,6 +155,10 @@ body {
   font-size:25px;
 }
 
+.font-size-40{
+  font-size:40px;
+}
+
 .font-weight-500{
   font-weight:500;
 }
@@ -203,4 +209,12 @@ body {
   .coin-box{
     margin-top: 1.5rem;
   }
+}
+
+.black{
+  color: black!important;
+}
+
+.bg-blue{
+  background-color: #00a1ffd9;
 }
