@@ -16,20 +16,62 @@
       <div class="col-lg-12">
         <div id="products" class="table-responsive margin-top-50">
             <h1>儲值頁面</h1>
-          <form role="form" class="width-75-percent padding-left-50">
-		  @csrf
-            <div class="form-group">
-              <label>
-                儲值額度
-              </label>
-              <input id="money" type="text" class="form-control" placeholder="提示:NT$300=1P">
-
-            </div>
-            <input  type="button" onclick="window.location='{{ route('account') }}'" value="取消" class="form-control my-4" style="width:15%; float:right;">
-            <input type="submit" value="提交" class="form-control my-4" style="width:15%; float:right;">
-          </form>
         </div>
+		<div class="row col-lg-12 space-around mx-auto">
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">10P</h5>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">30P</h5>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">50P</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="row col-lg-12 space-around  mx-auto">
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">100P</h5>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">150P</h5>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">200P</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="row col-lg-12 space-around mx-auto">
+        <div class="card col-lg-3 col-md-3 coin-box">
+          <div class="card-body text-align-center">
+            <h5 class="">300P</h5>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-3 coin-box" style="visibility:hidden;">
+          <div class="card-body text-align-center">
+            <h5 class=""></h5>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-3 coin-box" style="visibility:hidden;">
+          <div class="card-body text-align-center">
+            <h5 class=""></h5>
+          </div>
+        </div>
+      </div>
 	<!-- /.col-lg-9 -->
     </div>
+</div>
 </div>
 @endsection

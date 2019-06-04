@@ -3,9 +3,7 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
  */
-body {
-  padding-top: 56px;
-}
+
 
 .thumbnails {
   height: 50px;
@@ -68,9 +66,12 @@ body {
   width: 75%;
 }
 
-.no_product {
-  margin-top: 100px;
-  margin-left: 150px;
+.width-75-percent-nav {
+  width: 75%;
+}
+
+.height-100-px{
+  height:100px;
 }
 
 .table td {
@@ -118,95 +119,102 @@ body {
 
 /*---profile---*/
 
-.emp-profile{
-    padding: 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 0.5rem;
-    background: #fff;
+.image-container {
+  position: relative;
 }
-.profile-img{
-    text-align: center;
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
-.profile-img img{
-    width: 70%;
-    height: 100%;
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: 70%;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
+
+.image-container:hover .image {
+  opacity: 0.3;
 }
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
+
+.image-container:hover .middle {
+  opacity: 1;
 }
-.profile-head h5{
-    color: #333;
+
+.font-size-25{
+  font-size:25px;
 }
-.profile-head h6{
-    color: #0062cc;
+
+.font-size-40{
+  font-size:40px;
 }
-.profile-edit-btn{
-    border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
-    cursor: pointer;
+
+.font-weight-500{
+  font-weight:500;
 }
-.proile-rating{
-    font-size: 12px;
-    color: #818182;
-    margin-top: 5%;
+
+.space-between{
+  justify-content: space-between;
 }
-.proile-rating span{
-    color: #495057;
-    font-size: 15px;
-    font-weight: 600;
+
+.space-around{
+  justify-content: space-around;
 }
-.profile-head .nav-tabs{
-    margin-bottom:5%;
+
+.paginations{
+  display:inline-block;
 }
-.profile-head .nav-tabs .nav-link{
-    font-weight:600;
-    border: none;
+
+.paginations li {
+  display: inline;
 }
-.profile-head .nav-tabs .nav-link.active{
-    border: none;
-    border-bottom:2px solid #0062cc;
+
+.paginations li a {
+    color: black;
 }
-.profile-work{
-    padding: 14%;
-    margin-top: -15%;
+
+.card-img{
+  width:auto;
 }
-.profile-work p{
-    font-size: 12px;
-    color: #818182;
-    font-weight: 600;
-    margin-top: 10%;
+
+.card-img>img{
+  width:100%;
 }
-.profile-work a{
-    text-decoration: none;
-    color: #495057;
-    font-weight: 600;
-    font-size: 14px;
+
+.finished{
+  color:#59d659;
+  vertical-align: middle;
+  margin-top: 0.5rem!important;
+  margin-bottom: 0.5rem!important;
 }
-.profile-work ul{
-    list-style: none;
+
+.coin-box{
+  margin-top: 50px;
 }
-.profile-tab label{
-    font-weight: 600;
+
+@media screen and (max-width: 992px) {
+  .width-75-percent-nav {
+    width: 45%;
+  }
+  .coin-box{
+    margin-top: 1.5rem;
+  }
 }
-.profile-tab p{
-    font-weight: 600;
-    color: #0062cc;
+
+.black{
+  color: black!important;
+}
+
+.bg-blue{
+  background-color: #00a1ffd9;
 }
