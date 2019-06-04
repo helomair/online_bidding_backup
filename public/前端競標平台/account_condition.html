@@ -62,17 +62,10 @@
                   <div class="card-body">
                         <div class="card-title mb-4">
                             <div class="d-flex justify-content-start">
-                                <div class="image-container">
-                                    <img src="http://placehold.it/150x150" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
-                                    <div class="middle">
-                                        <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
-                                        <input type="file" style="display: none;" id="profilePicture" name="file" />
-                                    </div>
-                                </div>
+
                                 <div class="userData ml-3">
-                                    <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">林孟儒</a></h2>
-                                    <h6 class="d-block"><a href="javascript:void(0)">1,500</a> Video Uploads</h6>
-                                    <h6 class="d-block"><a href="javascript:void(0)">300</a> Blog Posts</h6>
+                                    <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold;"><a href="javascript:void(0);">林孟儒</a></h2>
+
                                 </div>
                                 <div class="ml-auto">
                                     <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
@@ -84,10 +77,16 @@
                             <div class="col-12">
                                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">基本資料</a>
+                                        <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo"
+                                        role="tab" aria-controls="basicInfo" aria-selected="true">基本資料</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">競標操作</a>
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices"
+                                        role="tab" aria-controls="connectedServices" aria-selected="false">競標操作</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#getBind"
+                                        role="tab" aria-controls="connectedServices" aria-selected="false">得標區</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -157,6 +156,74 @@
                                           </div>
                                       </div>
                                       <hr />
+
+                                      <p class="font-size-25 font-weight-500 margin-top-50 text-align-center">出價紀錄</p>
+                                      <table class="table">
+                                        <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">商品</th>
+                                            <th scope="col">時間</th>
+                                            <th scope="col">額度</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Macbook</td>
+                                            <td>2019-03-26 8點30分35秒</td>
+                                            <td>4000P</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Watch</td>
+                                            <td>2019-03-26 8點30分35秒</td>
+                                            <td>500P</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Rose</td>
+                                            <td>2019-03-26 8點30分35秒</td>
+                                            <td>300P</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="getBind" role="tabpanel" aria-labelledby="ConnectedServices-tab">
+                                      <table class="table">
+                                        <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">商品</th>
+                                            <th scope="col">金額</th>
+                                            <th scope="col">操作</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Macbook</td>
+                                            <td>5000P</td>
+                                            <td>
+                                              <a href="add_coin.html" class="btn btn-danger">資料填寫</a>
+                                              <a href="add_coin.html" class="btn btn-danger">檢視</a>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Watch</td>
+                                            <td>800P</td>
+                                            <td>
+                                              <a href="add_coin.html" class="btn btn-danger">資料填寫</a>
+                                              <a href="add_coin.html" class="btn btn-danger">檢視</a>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Rose</td>
+                                            <td>500P</td>
+                                            <td>
+                                              <a href="add_coin.html" class="btn btn-danger">資料填寫</a>
+                                              <a href="add_coin.html" class="btn btn-danger">檢視</a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <hr />
                                     </div>
                                 </div>
                             </div>
@@ -184,9 +251,9 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark margin-top-50">
+  <footer class="py-5 margin-top-50">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center">Copyright &copy; Your Website 2019</p>
     </div>
     <!-- /.container -->
   </footer>
