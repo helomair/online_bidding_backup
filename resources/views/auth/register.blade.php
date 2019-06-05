@@ -39,8 +39,8 @@
 
 			<div class="form-group">
 				<label for="name">姓名</label>
-				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="truename" name="truename">
-				@error('truename')
+				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="realname" name="realname">
+				@error('realname')
 					<span class="invalid-feedback" role="alert">
 						<strong>{{ $message }}</strong>
 					</span>

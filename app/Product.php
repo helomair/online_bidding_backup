@@ -38,7 +38,7 @@ class Product extends Model
     public function winner()
     {
         return $this->belongsToMany('App\User','winner','pid','uid')
-                    ->withPivot('address')
+                    ->withPivot('address','message')
                     ->withTimestamps(); 
     }
 }
