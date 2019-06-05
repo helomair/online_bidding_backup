@@ -38,6 +38,16 @@
 			</div>
 
 			<div class="form-group">
+				<label for="name">姓名</label>
+				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="truename" name="truename">
+				@error('truename')
+					<span class="invalid-feedback" role="alert">
+						<strong>{{ $message }}</strong>
+					</span>
+				@enderror
+			</div>
+			
+			<div class="form-group">
 				<label for="password">密碼</label>
 				<input type="password" class="form-control @error('password') is-invalid @enderror form-control-register" id="password" name="password">
 				@error('password')

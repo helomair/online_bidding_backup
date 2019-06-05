@@ -8,9 +8,9 @@
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.adm_left_button')
 <div class="container">
     <div class="row">
-	@include('layouts.adm_left_button')
 	<div class="col-lg-10">
         <div id="products" class="table-responsive margin-top-50">
           <form method="post" action="{{ route('adm_Bulletin.store') }}" role="form" class="width-75-percent padding-left-50">
@@ -20,8 +20,8 @@
             <input id="title" name="title" type="text" class="form-control">
 			<label>內容</label>
             <textarea id="content" name="content" style="width:100%; height: 150px;"></textarea>
-            <button type="submit">submit</button>
-            <button type="button" onclick="window.location='{{ route('adm_Bulletin') }}'">cancel</button>
+            <button type="submit">提交</button>
+            <button type="button" onclick="window.location='{{ route('adm_Bulletin') }}'">取消</button>
 		  </form>
         </div>
 	</div>

@@ -8,9 +8,9 @@
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.adm_left_button')
 <div class="container">
     <div class="row">
-	@include('layouts.adm_left_button')
 	<div class="col-lg-10">
         <div id="products" class="table-responsive margin-top-50">
           <h2>新增商品</h2>

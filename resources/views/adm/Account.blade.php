@@ -8,9 +8,9 @@
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.adm_left_button')
 <div class="container">
     <div class="row">
-	@include('layouts.adm_left_button')
 	<div class="col-lg-12">
         <div class="table-responsive margin-top-50">
           <form method="post" action="{{ route('adm_Search') }}" role="form" >
