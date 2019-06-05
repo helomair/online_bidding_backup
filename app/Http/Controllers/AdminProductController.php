@@ -24,6 +24,8 @@ class AdminProductController extends Controller
 		//$products = Product::all();
 		//為了自動切分頁，更改了controller
         $products = Product::paginate(3);
+		//取出現在時間
+		$nowtime = Carbon::now();
 		//將所有圖片取出
 		//dd($products);
 		foreach($products as $product){
@@ -37,7 +39,7 @@ class AdminProductController extends Controller
 			  $file_path[$product->id] = '';
 		}
         //先假設路徑為admin/index.blade.php
-        return view('adm.Product', compact('products','file_path')); 
+        return view('adm.Product', compact('products','file_path','nowtime')); 
     }
 
     /*

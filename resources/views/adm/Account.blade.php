@@ -23,17 +23,17 @@
           <table class="table table-striped margin-top-50">
             <thead>
               <tr>
-                <th>會員名稱</th>
-                <th>會員資料</th>
-                <th>操作</th>
+                <th style="text-align:center;">會員名稱</th>
+                <th style="text-align:center;">會員資料</th>
+                <th style="text-align:center;">操作</th>
               </tr>
             </thead>
             <tbody>
 			  @foreach($users as $user)
               <tr>
-                <td>{{ $user->name }}</td>
-                <td><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger">檢視</a></td>
-                <td>
+                <td style="text-align:center;">{{ $user->name }}</td>
+                <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger">檢視</a></td>
+                <td style="text-align:center;">
 				  <a href="#" class="btn btn-danger" onclick="document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
 				  <form method="post" action="{{ route('adm_Account.destroy',$user->id) }}" id="delete_{{$user->id}}">
 					@csrf

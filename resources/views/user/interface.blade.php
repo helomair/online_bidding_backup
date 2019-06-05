@@ -15,12 +15,12 @@
     <div class="row">
 	<div class="col-lg-12">
 
-		<h1>拍賣進行中的頁面</h1>
         <div class="card margin-top-50">
+			<h1>拍賣進行中的頁面</h1>
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
             <h3 class="card-title">{{ $product->name }}</h3>
-            <h4>NT${{ $product->cost }}</h4>
+            <h4>{{ $product->cost }}P</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
 
           </div>
@@ -30,8 +30,15 @@
 		<div class="card text-center my-4">
 			<div class="card-header">下標1</div>
 			<div class="card-body">
-				<h5 class="card-title">目前競標價：{{ $product->cur_cost }}元</h5>
-				<p class="card-text">目前最高出價者：{{ $top_auction->name }}</p>
+				<h5 class="card-title">目前競標價：{{ $product->cur_cost }}P</h5>
+				<p class="card-text">
+					目前最高出價者：
+					@if($top_auction->name == "")
+						無人出價
+					@else
+						{{ $top_auction->name }}
+					@endif
+				</p>
 				<a href="{{ route('bidding',$product->id) }}" class="btn btn-primary">下標</a>
 			</div>
 		</div>
@@ -49,68 +56,25 @@
                       <td>金額</td>
                       <td>日期</td>
                     </tr>
-				  @foreach($auctions as $auction)
-                    <tr>
-                      <td>{{ $auction->name }}</td>
-                      <td>{{ $auction->pivot->lasted_cost }}</td>
-                      <td>{{ $auction->pivot->created_at }}</td>
-                    </tr>
-				  @endforeach
+					@if($auctions == "")
+						<tr>
+							<td colspan="3">無人出價</td>
+						</tr>
+					@else
+						@foreach($auctions as $auction)
+							<tr>
+							  <td>{{ $auction->name }}</td>
+							  <td>{{ $auction->pivot->lasted_cost }}</td>
+							  <td>{{ $auction->pivot->created_at }}</td>
+							</tr>
+						@endforeach
+					@endif
                 </tbody>
               </table>
 				{{ $auctions->links() }}
             </div>
           </div>
 
-        </div>
-
-        <div class="row my-4">
-          <div class="col-sm-6">
-            <div class="card text-center">
-              <div class="card-header">
-                下標2
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">目前競標價：37500元</h5>
-                <p class="card-text">目前最高出價者：You-Cheng Li</p>
-                <a href="#" class="btn btn-primary">下標</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card text-center">
-              <div class="card-header">
-                出價紀錄2
-              </div>
-              <div class="card-body">
-
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                      <tbody>
-                        <tr>
-                          <td>MengRu-Lin</td>
-                          <td>9000</td>
-                          <td>19:01</td>
-                        </tr>
-
-                        <tr>
-                          <td>Li You-Cheng</td>
-                          <td>6000</td>
-                          <td>18:41</td>
-                        </tr>
-
-                        <tr>
-                          <td>Wang Han i</td>
-                          <td>3000</td>
-                          <td>18:03</td>
-                        </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-              </div>
-            </div>
-          </div>
         </div>
 
         <div class="card card-outline-secondary my-4">

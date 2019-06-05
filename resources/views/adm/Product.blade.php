@@ -16,31 +16,33 @@
           <table class="table table-striped ">
             <thead>
               <tr>
-                <th>圖片</th>
-                  <th>名稱</th>
-                  <th>原價</th>
-                  <th>起標價</th>
-                  <th>公佈時間</th>
-                  <th>開始時間</th>
-                  <th>結束時間</th>
-                  <th>狀態</th>
-                  <th><a href="{{ route('adm_Product.create') }}"><img src="{{ asset('images/add.png') }}" class="button" style="width:20px; height:20px;" /></a></th>
+                <th style="text-align:center;">圖片</th>
+                  <th width="10%">名稱</th>
+                  <th width="10%">原價</th>
+                  <th width="10%">起標價</th>
+                  <th width="10%">公佈時間</th>
+                  <th width="10%">開始時間</th>
+                  <th width="10%">結束時間</th>
+                  <th style="text-align:center;">狀態</th>
+                  <th><a href="{{ route('adm_Product.create') }}"><img src="{{ asset('images/add.png') }}" class="button cursor-pointer" style="width:20px; height:20px;" /></a></th>
                 </tr>
               </thead>
               <tbody>
 				@foreach($products as $product)
                 <tr>
-                  <td>
-                    <img src="{{ url('img',$file_path[$product->id]) }}" class="img-thumbnail thumbnails" />
+                  <td style="text-align:center;">
+                    <img src="{{ url('img',$file_path[$product->id]) }}" class="img-thumbnail thumbnails" style="width:12vw; height:10vw;"/>
                   </td>
                   <td>{{ $product->name }}</td>
-                  <td>{{ $product->cost }}元</td>
-                  <td>{{ $product->cur_cost }}元</td>
+                  <td>{{ $product->cost }}代幣</td>
+                  <td>{{ $product->cur_cost }}代幣</td>
                   <td>{{ $product->view_time }}</td>
                   <td>{{ $product->start_time }}</td>
                   <td>{{ $product->end_time }}</td>
-                  <td>
+                  <td style="text-align:center;">
+					@if($product->view_time >= $nowtime )
 				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger">編輯</a>
+					@endif
 					<a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger">刪除</a>
 				  </td>
 				  <form method="post" action="{{ route('adm_Product.destroy',$product->id) }}" id="delete_{{$product->id}}">

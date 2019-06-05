@@ -16,19 +16,19 @@
           <table class="table table-striped ">
             <thead>
               <tr>
-                <th>會員名稱</th>
-                <th>加值時間</th>
-                <th>額度</th>
-                <th>發放</th>
+                <th style="text-align:center;">會員名稱</th>
+                <th style="text-align:center;">加值時間</th>
+                <th style="text-align:center;">額度</th>
+                <th style="text-align:center;">發放</th>
                 </tr>
             </thead>
             <tbody>
 			@foreach($payments as $payment)
                 <tr>
-                  <td>{{ $payment->users->name }}</td>
-                  <td>{{ $payment->created_at }}</td>
-                  <td>{{ $payment->amount }}</td>
-                  <td>
+                  <td style="text-align:center;">{{ $payment->users->name }}</td>
+                  <td style="text-align:center;">{{ $payment->created_at }}</td>
+                  <td style="text-align:center;">{{ $payment->amount }}</td>
+                  <td style="text-align:center;">
                     <a href="" class="btn btn-danger">發放</a>
                     <p class="finished">發放完畢</p>
                   </td>

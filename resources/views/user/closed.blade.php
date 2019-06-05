@@ -18,7 +18,7 @@
           <table id="products_table" class="table table-striped ">
             <thead>
               <tr>
-                  <th>圖片</th>
+                  <th style="text-align:center;">圖片</th>
                   <th>名稱</th>
                   <th>結標金額</th>
                   <th>得標人</th>
@@ -27,7 +27,7 @@
             <tbody>
 			@foreach($closed_products as $closed_product)
                 <tr>
-                  <td>
+                  <td style="text-align:center;">
                     <img src="images/product2.jpg" class="img-thumbnail thumbnails" />
                   </td>
                   <td>{{ $closed_product->name }}</td>
