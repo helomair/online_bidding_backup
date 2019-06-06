@@ -97,6 +97,23 @@ Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('a
 //首頁
 Route::get('/adm/save', 'SaveController@index')->name('adm_Save');
 
+//footer
+//關於我們
+Route::get('/aboutus', function () {
+    return view('AboutUs');
+})->name('aboutus');
+//問與答
+Route::get('/fq', function () {
+    return view('FQ');
+})->name('fq');
+//服務條款
+Route::get('/service', function () {
+    return view('Service');
+})->name('service');
+//隱私政策
+Route::get('/privacy', function () {
+    return view('Privacy');
+})->name('privacy');
 
 //Auth::routes();
 
