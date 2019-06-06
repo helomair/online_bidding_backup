@@ -33,7 +33,7 @@ class BiddingController extends Controller
     		$product->update(['cur_cost' => $bid_cost]);
     		$count_down = $now_time->diffInSeconds($product->end_time,false);
             if( ($count_down < 0 && $count_down >= (-10)) && $now_time->gte($product->start_time) )
-            	$product->update(['end_time' => $product->end_time->addMinutes(10)]);
+            	$product->update(['end_time' => $product->end_time->addSeconds(20)]);
     	}
 
     	if($start_cost && $stop_cost && $start_cost < $stop_cost)

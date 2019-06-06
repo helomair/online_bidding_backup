@@ -112,21 +112,13 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <td>Macbook</td>
-                                            <td>2019-03-26 8點30分35秒</td>
-                                            <td>4000P</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Watch</td>
-                                            <td>2019-03-26 8點30分35秒</td>
-                                            <td>500P</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Rose</td>
-                                            <td>2019-03-26 8點30分35秒</td>
-                                            <td>300P</td>
-                                          </tr>
+                                          @foreach($auctions as $auction)
+                                            <tr>
+                                              <td>{{ $auction->name }}</td>
+                                              <td>{{ $auction->pivot->created_at }}</td>
+                                              <td>{{ $auction->pivot->lasted_cost }}</td>
+                                            </tr>
+                                          @endforeach
                                         </tbody>
                                       </table>
                                     </div>

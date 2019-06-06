@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\AuctionAuto; 
+use App\Product;
 use Carbon\Carbon;
 use DB;
 
@@ -43,9 +44,9 @@ class Auto extends Command
     {
     //    DB::table('temp_log')->insert(['echos' => 'Begins']); 
         $autos = AuctionAuto::where('times','>','0')->get();
+        $time = Carbon::now();
         foreach($autos as $auto)
         {
-            $time = Carbon::now();
             $product = Product::find($auto->pid);
             $auto_start = $time->diffInSeconds($product->end_time,false);
             if( ($auto_start < 0 && $auto_start >= (-10)) && $time->gte($product->start_time) )

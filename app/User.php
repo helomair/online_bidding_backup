@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'on', 'nickname',
+        'name', 'email','realname', 'password', 'phone', 'on', 'nickname',
     ];
 
     /**
@@ -49,7 +49,7 @@ class User extends Authenticatable
      * get Product, many to many, using relationship Auction
      * @param mode, 1 is auto, 0 is not
      */
-    public function products($mode)
+    public function products($mode = NULL)
     {
         if($mode)
             return $this->belongsToMany('App\Product','auction_auto','uid','pid')
@@ -64,7 +64,7 @@ class User extends Authenticatable
     public function winner_product()
     {
         return $this->belongsToMany('App\Product','winner','uid','pid')
-                    ->withPivot('address')
+                    ->withPivot('address','message')
                     ->withTimestamps(); 
     }
 }

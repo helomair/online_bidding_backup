@@ -24,6 +24,8 @@ class AdminProductController extends Controller
 		//$products = Product::all();
 		//為了自動切分頁，更改了controller
         $products = Product::paginate(3);
+		//取出現在時間
+		$nowtime = Carbon::now();
 		//將所有圖片取出
 		//dd($products);
 		foreach($products as $product){
@@ -37,7 +39,7 @@ class AdminProductController extends Controller
 			  $file_path[$product->id] = '';
 		}
         //先假設路徑為admin/index.blade.php
-        return view('adm.Product', compact('products','file_path')); 
+        return view('adm.Product', compact('products','file_path','nowtime')); 
     }
 
     /*
@@ -108,6 +110,8 @@ class AdminProductController extends Controller
      */
     public function edit(Product $product)
     {
+    	if($product->view_time <= Carbon::now())
+    		return redirect()->back()->with('has_begin', '已過公布時間，無法編輯');
 		$files = get_files(storage_path('app/public/products/'.$product->id));
 		$pics[$product->id] = $files;
 		
@@ -128,6 +132,8 @@ class AdminProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+    	if($product->view_time >= Carbon::now())
+    		return redirect()->back()->with('has_begin', '已過公布時間，無法編輯');
 		$att['name'] = $request->input('name');
 		$att['view_time'] = $request->input('view_time');
 		$att['start_time'] = $request->input('start_time');
@@ -166,6 +172,8 @@ class AdminProductController extends Controller
 
     public function destroy(Product $product)
     {
+    	if($product->view_time <= Carbon::now())
+    		return redirect()->back()->with('has_begin', '已過公布時間，無法刪除');
 		Storage::deleteDirectory("public/products/".$product->id);
         $product->delete(); 
         return redirect()->route('adm_Product'); 

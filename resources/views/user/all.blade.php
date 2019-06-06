@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '已結標拍賣') <!-- 單行記錄 -->
+@section('title', '進行中拍賣') <!-- 單行記錄 -->
 
 @section('css')
 	<!-- Bootstrap core CSS -->
