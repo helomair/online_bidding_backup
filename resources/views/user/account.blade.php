@@ -55,27 +55,7 @@
                                             </div>
                                         </div>
                                         <hr /> 
-
-                                        <div class="row">
-                                            <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">生日</label>
-                                            </div>
-                                            <div class="col-md-8 col-6">
-                                                1994/05/26
-                                            </div>
-                                        </div>
-                                        <hr />
-
-
-                                        <div class="row">
-                                            <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">地址</label>
-                                            </div>
-                                            <div class="col-md-8 col-6">
-                                                嘉義縣民雄鄉三興二街6號
-                                            </div>
-                                        </div>
-                                        <hr />										
+										
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
                                                 <label style="font-weight:bold;">電話</label>
@@ -133,30 +113,16 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <td>Macbook</td>
-                                            <td>5000P</td>
-                                            <td>
-                                              <a href="add_coin.html" class="btn btn-danger">資料填寫</a>
-                                              <a href="add_coin.html" class="btn btn-danger">檢視</a>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>Watch</td>
-                                            <td>800P</td>
-                                            <td>
-                                              <a href="add_coin.html" class="btn btn-danger">資料填寫</a>
-                                              <a href="add_coin.html" class="btn btn-danger">檢視</a>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>Rose</td>
-                                            <td>500P</td>
-                                            <td>
-                                              <a href="add_coin.html" class="btn btn-danger">資料填寫</a>
-                                              <a href="add_coin.html" class="btn btn-danger">檢視</a>
-                                            </td>
-                                          </tr>
+                                          @foreach($winners as $winner)
+                                            <tr>
+                                              <td>{{ $winner->name }}</td>
+                                              <td>{{ $winner->cur_cost }}</td>
+                                              <td>
+                                                <a href="add_co in.html" class="btn btn-danger">資料填寫</a>
+                                                <a href="add_coin.html" class="btn btn-danger">檢視</a>
+                                              </td>
+                                            </tr>
+                                          @endforeach
                                         </tbody>
                                       </table>
                                       <hr />
