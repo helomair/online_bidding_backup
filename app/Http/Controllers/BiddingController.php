@@ -16,6 +16,7 @@ class BiddingController extends Controller
 
     public function store(Request $request, Product $product)
     {
+        $user = Auth::user();
     	$userID = Auth::id();
     	$bid_cost = $request->input('bid_cost');
     	$start_cost = $request->input('start_cost');
@@ -23,7 +24,7 @@ class BiddingController extends Controller
     	$times = $request->input('times');
     	$now_time = Carbon::now();
 
-    	if($bid_cost > $product->cur_cost)
+    	if( $bid_cost > $product->cur_cost && $user->balance > $bid_cost )
     	{
     		$data = [
     			'cost' => $bid_cost - $product->cur_cost,
@@ -36,7 +37,7 @@ class BiddingController extends Controller
             	$product->update(['end_time' => $product->end_time->addSeconds(20)]);
     	}
 
-    	if($start_cost && $stop_cost && $start_cost < $stop_cost)
+    	if($start_cost && $stop_cost && $start_cost < $stop_cost && $user->balance > $stop_cost)
     	{
     		$data_auto = [
     			'start_cost' => $start_cost,

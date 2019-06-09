@@ -14,7 +14,7 @@
       <div class="col-lg-12">
         <div id="products" class="table-responsive margin-top-50">
             <h1>結標時的頁面</h1>
-          <form method="post" action="#" role="form" class="width-75-percent padding-left-50">
+          <form method="post" action="{{ route('winner.endbidding', 3) }}" role="form" class="width-75-percent padding-left-50">
 		    @csrf
             <div class="form-group">
               <label>姓名</label>
