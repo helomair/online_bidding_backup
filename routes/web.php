@@ -40,7 +40,8 @@ Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding
 //帳號狀態
 Route::get('/account', 'UserAccountController@index')->name('account');
 //結標填寫資料
-Route::get('/winner', 'UserAccountController@create')->name('winner');
+Route::get('/winner', 'UserAccountController@create')->name('winner.create');
+Route::post('/winner/{product}/end', 'UserAccountController@EndBidding')->name('winner.endbidding');
 //儲值頁面
 Route::get('/coin', function () {
     return view('user/coin');

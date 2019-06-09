@@ -24,11 +24,14 @@ class UserAccountController extends Controller
     public function EndBidding(Request $request, Product $product)
     {
     	$user = Auth::user();
-//    	$att['name'] = $request->input('name');
-//    	$att['phone'] = $request->input('phone');
+    	$att['name'] = $request->input('name');
+    	$att['phone'] = $request->input('phone');
     	$att['address'] = $request->input('address');
     	$att['message'] = $request->input('message');
-    	$user->winner_product()->attach($product->id,$att);
+        if($product->winner()->count() > 0)
+    	    $user->winner_product()->updateExistingPivot($product->id,$att);
+        else 
+            $user->winner_product()->attach($product->id,$att);
     	return redirect()->route('account');
     }
 }
