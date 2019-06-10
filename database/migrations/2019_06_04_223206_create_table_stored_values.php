@@ -31,6 +31,6 @@ class CreateTableStoredValues extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_stored_values');
+        Schema::dropIfExists('stored_values');
     }
 }
