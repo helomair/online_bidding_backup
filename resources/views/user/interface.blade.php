@@ -56,7 +56,7 @@
                       <td>金額</td>
                       <td>日期</td>
                     </tr>
-					@if($auctions == "")
+					@if(!$auctions)
 						<tr>
 							<td colspan="3">無人出價</td>
 						</tr>
