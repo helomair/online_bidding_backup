@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Product;
@@ -23,6 +24,7 @@ class InterfaceController extends Controller
 			  $file_path[$product->id] = str_replace('/','&',storage_path('app/public/products/'.$product["id"].'/'.$files[0]));
 			else
 			  $file_path[$product->id] = '';
+		  //echo $file_path[$product->id]."\n";
 		}
         return view('user.all', compact('products','file_path')); 
 	}
@@ -59,4 +61,16 @@ class InterfaceController extends Controller
             return 0;
         return 1;
     }
+
+	public function getImg($file_path)
+	{
+		$file_path = str_replace('&','/',$file_path); //斜線不可以在URL中傳
+		//echo $file_path;
+		$file = File::get($file_path);
+		$type = File::mimeType($file_path);
+		//echo $type;
+
+		return response($file)->header("Content-Type", $type);
+	}
+	
 }
