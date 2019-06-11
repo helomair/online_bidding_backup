@@ -9,6 +9,10 @@ use App\Auction;
 
 class InterfaceController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth'); 
+    }
 	public function index()
 	{
         $products = Product::where('view_time','<=',Carbon::now())->paginate(3);

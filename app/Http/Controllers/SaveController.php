@@ -7,6 +7,11 @@ use App\Payment;
 
 class SaveController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth'); 
+    }
     public function index()
     {
     	$payments = Payment::paginate(2);

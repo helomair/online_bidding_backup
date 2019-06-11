@@ -66,6 +66,7 @@ class RegisterController extends Controller
     {
         // check random nickname
         $nickname = Str::random(8);
+        $new_code = Str::random(6);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -73,6 +74,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'phone' => $data['phone'],
             'nickname'=> $nickname,
+            'code' => $new_code
         ]);
     }
 }

@@ -163,6 +163,20 @@ class AdminProductController extends Controller
 		return redirect()->route('adm_Product');
     }
 
+    public function details(Product $product)
+    {
+        return view('adm.details', compact('product')); 
+    }
+    
+    public function status(Product $product)
+    {
+        if($product->status == 0)
+            $product->update(['status' => '1']);
+        else
+            $product->update(['status' => '0']); 
+        return redirect()->route('adm_Product'); 
+    }
+
     /**
      * Delete the spectified resource in storage.
      *
