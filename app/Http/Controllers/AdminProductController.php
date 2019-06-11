@@ -188,7 +188,7 @@ class AdminProductController extends Controller
     {
     	if($product->view_time <= Carbon::now())
     		return redirect()->back()->with('has_begin', '已過公布時間，無法刪除');
-		Storage::deleteDirectory("public/products/".$product->id);
+		//Storage::deleteDirectory("public/products/".$product->id);
         $product->delete(); 
         return redirect()->route('adm_Product'); 
     }

@@ -16,7 +16,7 @@ class InterfaceController extends Controller
     }
 	public function index()
 	{
-        $products = Product::where('view_time','<=',Carbon::now())->paginate(3);
+        $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
 		
 		foreach($products as $product){
@@ -34,6 +34,7 @@ class InterfaceController extends Controller
 	}
     public function show(Product $product)
     {
+        $nowtime = Carbon::now(); 
         $auctions = $product->users()->orderBy('auction.created_at', 'desc')->paginate(3);
 		//dd($auctions);
 		//print_r($auctions);
@@ -55,7 +56,7 @@ class InterfaceController extends Controller
 		  $file_path = '';
 		//dd($top_auction);
         //echo $top_auction;
-    	return view('user.interface', compact('product','top_auction','auctions','file_path'));
+    	return view('user.interface', compact('product','top_auction','auctions','file_path','nowtime'));
     }
 
     private function check_auction_exist(Product $product)

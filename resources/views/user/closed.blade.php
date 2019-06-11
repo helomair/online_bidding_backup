@@ -28,7 +28,9 @@
 			@foreach($closed_products as $closed_product)
                 <tr>
                   <td style="text-align:center;">
-                    <img src="images/product2.jpg" class="img-thumbnail thumbnails" />
+                    <a href="{{ route('user_interface.show', $closed_product->id ) }}">
+                        <img src=" {{ route('img', $file_path[$closed_product->id])}} " class="img-thumbnail thumbnails" />
+                    </a>
                   </td>
                   <td>{{ $closed_product->name }}</td>
                   <td>{{ $closed_product->cur_cost }}</td>

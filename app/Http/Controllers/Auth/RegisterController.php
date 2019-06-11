@@ -49,11 +49,16 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $message = array(
+            'realname.required' => '姓名 不能留空。'
+        );  
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'realname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'phone' => ['required', 'string', 'unique:users'],
+        ],$message);
     }
 
     /**

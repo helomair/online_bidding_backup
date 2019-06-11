@@ -38,7 +38,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="name">姓名</label>
+				<label for="realname">姓名</label>
 				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="realname" name="realname">
 				@error('realname')
 					<span class="invalid-feedback" role="alert">
@@ -65,12 +65,18 @@
 			<div class="form-group">
 				<label for="phone">手機號碼</label>
 				<input type="text" class="form-control @error('phone') is-invalid @enderror form-control-register" id="phone" name="phone">
-			</div>
+                @error('phone')
+					<span class="invalid-feedback" role="alert">
+						<strong>{{ $message }}</strong>
+					</span>
+                @enderror
+            </div>
 
-			<div class="form-group">
+<!--			<div class="form-group">
 				<label for="code">推薦碼</label>
 				<input type="text" class="form-control @error('code') is-invalid @enderror form-control-register" id="code" name="code">
-			</div>
+            </div> 
+-->
 
 			<button type="submit" class="btn btn-primary register_button">註冊</button>
 		</form>
