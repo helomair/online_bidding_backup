@@ -19,7 +19,7 @@
       <div class="col-lg-3 col-md-3 margin-top-50">
       <a href="{{ route('user_interface.show',$product->id) }}">
         <div class="card" >
-            <img src="{{ url('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
+            <img src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">
 			    商品名：{{ $product->name }}<br>
