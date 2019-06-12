@@ -39,7 +39,7 @@
                   <input name="times" id="times" type="text" class="form-control" placeholder="ex:10次">
 
                   <button type="submit" class="btn btn-primary margin-top-50">Submit</button>
-				  <button type="button" onclick="window.location='{{ route('user_interface') }}'" class="btn btn-primary margin-top-50">cancel</button>
+				  <button type="button" onclick="window.location='{{ route('user_interface.show', $product->id) }}'" class="btn btn-primary margin-top-50">cancel</button>
                 </div>
             </form>
         </div>

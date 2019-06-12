@@ -163,6 +163,20 @@ class AdminProductController extends Controller
 		return redirect()->route('adm_Product');
     }
 
+    public function details(Product $product)
+    {
+        return view('adm.details', compact('product')); 
+    }
+    
+    public function status(Product $product)
+    {
+        if($product->status == 0)
+            $product->update(['status' => '1']);
+        else
+            $product->update(['status' => '0']); 
+        return redirect()->route('adm_Product'); 
+    }
+
     /**
      * Delete the spectified resource in storage.
      *
@@ -174,18 +188,8 @@ class AdminProductController extends Controller
     {
     	if($product->view_time <= Carbon::now())
     		return redirect()->back()->with('has_begin', '已過公布時間，無法刪除');
-		Storage::deleteDirectory("public/products/".$product->id);
+		//Storage::deleteDirectory("public/products/".$product->id);
         $product->delete(); 
         return redirect()->route('adm_Product'); 
     }
-	
-	public function getImg($file_path)
-	{
-		$file_path = str_replace('&','/',$file_path); //斜線不可以在URL中傳
-		$file = File::get($file_path);
-		$type = File::mimeType($file_path);
-
-		return response($file)->header("Content-Type", $type);
-	}
-
 }

@@ -49,11 +49,16 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $message = array(
+            'realname.required' => '姓名 不能留空。'
+        );  
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'realname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'phone' => ['required', 'string', 'unique:users'],
+        ],$message);
     }
 
     /**
@@ -66,6 +71,7 @@ class RegisterController extends Controller
     {
         // check random nickname
         $nickname = Str::random(8);
+        $new_code = Str::random(6);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -73,6 +79,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'phone' => $data['phone'],
             'nickname'=> $nickname,
+            'code' => $new_code
         ]);
     }
 }

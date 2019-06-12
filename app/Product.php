@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'name', 'detail', 'cost', 'cur_cost', 'view_time', 'start_time', 'end_time'
+        'name', 'detail', 'cost', 'cur_cost', 'view_time', 'start_time', 'end_time', 'uid', 'discount', 'status'
     ]; 
     
     protected $dates = ['view_time', 'start_time', 'end_time']; 
@@ -37,8 +37,6 @@ class Product extends Model
 
     public function winner()
     {
-        return $this->belongsToMany('App\User','winner','pid','uid')
-                    ->withPivot('address','message')
-                    ->withTimestamps(); 
+        return $this->belongsTo('App\User','uid'); 
     }
 }

@@ -38,8 +38,12 @@
 					@else
 						{{ $top_auction->name }}
 					@endif
-				</p>
-				<a href="{{ route('bidding',$product->id) }}" class="btn btn-primary">下標</a>
+                </p>
+                @if( $product->end_time >= $nowtime)
+                    <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary">下標</a>
+                @else
+                    <div class="btn btn-primary">已結標</div>
+                @endif
 			</div>
 		</div>
 
@@ -56,7 +60,7 @@
                       <td>金額</td>
                       <td>日期</td>
                     </tr>
-					@if($auctions == "")
+					@if(!$auctions)
 						<tr>
 							<td colspan="3">無人出價</td>
 						</tr>

@@ -118,8 +118,8 @@
                                               <td>{{ $winner->name }}</td>
                                               <td>{{ $winner->cur_cost }}</td>
                                               <td>
-                                                <a href="add_co in.html" class="btn btn-danger">資料填寫</a>
-                                                <a href="add_coin.html" class="btn btn-danger">檢視</a>
+                                                <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger">資料填寫</a>
+                                                <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger">檢視</a>
                                               </td>
                                             </tr>
                                           @endforeach

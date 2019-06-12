@@ -40,10 +40,24 @@
                   <td>{{ $product->start_time }}</td>
                   <td>{{ $product->end_time }}</td>
                   <td style="text-align:center;">
+
 					@if($product->view_time >= $nowtime )
 				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger">編輯</a>
-					@endif
-					<a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger">刪除</a>
+                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger">刪除</a>
+                    @endif
+
+                    @if($product->end_time < $nowtime )
+                        <div>{{ $product->winner->name }}</div>
+                        <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger">詳細</a>
+                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger">
+                            @if($product->status == 0)
+                                未出貨
+                            @else
+                                已出貨
+                            @endif
+                        </a>
+                    @endif
+
 				  </td>
 				  <form method="post" action="{{ route('adm_Product.destroy',$product->id) }}" id="delete_{{$product->id}}">
 					@csrf

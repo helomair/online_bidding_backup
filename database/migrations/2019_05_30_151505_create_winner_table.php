@@ -18,7 +18,7 @@ class CreateWinnerTable extends Migration
             $table->integer('uid'); 
             $table->integer('pid');
             $table->string('address');
-            $table->string('message'); 
+            //$table->string('message'); 
             $table->timestamps();
         });
     }

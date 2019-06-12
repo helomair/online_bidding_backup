@@ -10,6 +10,9 @@
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
 <div class="container">
+    @if($errors->any())
+        <script>alert("{{ $errors->first() }}")</script>
+    @endif
     <div class="row">
 	<div class="col-lg-12">
         <div class="table-responsive margin-top-50">

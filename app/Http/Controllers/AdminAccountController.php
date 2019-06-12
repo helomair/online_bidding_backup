@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use DB;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use App\User; 
-use App\Product; 
+use App\Product;
+use Auth; 
 
 
 class AdminAccountController extends Controller
@@ -84,11 +83,11 @@ class AdminAccountController extends Controller
      */
     public function destroy($id)
     {
-		//dd($id);
-        $user = User::find($id)->update(['on' => 0]);
-        //$dd['on'] = '0'; 
-		//$user->update($dd);
-        return redirect('/adm/account');
+        if($id == Auth::id() && Auth::user()->is_adm)
+            return redirect()->back()->withErrors(['delete user error : 不可刪除自己']); 
+//        $user = User::find($id)->update(['on' => 0]);
+        echo "error"; 
+        //return redirect('/adm/account');
     }
 
 }

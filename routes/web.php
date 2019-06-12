@@ -40,7 +40,7 @@ Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding
 //帳號狀態
 Route::get('/account', 'UserAccountController@index')->name('account');
 //結標填寫資料
-Route::get('/winner', 'UserAccountController@create')->name('winner.create');
+Route::get('/winner/{product}', 'UserAccountController@create')->name('winner.create');
 Route::post('/winner/{product}/end', 'UserAccountController@EndBidding')->name('winner.endbidding');
 //儲值頁面
 Route::get('/coin', function () {
@@ -63,8 +63,12 @@ Route::get('/adm/product/{product}/edit', 'AdminProductController@edit')->name('
 Route::patch('/adm/product/{product}', 'AdminProductController@update')->name('adm_Product.update');
 //刪除
 Route::delete('/adm/product/{product}', 'AdminProductController@destroy')->name('adm_Product.destroy');
+//詳細
+Route::get('/adm/product/{product}/details', 'AdminProductController@details')->name('adm_Product.details');
+//狀態
+Route::get('/adm/product/{product}/status', 'AdminProductController@status')->name('adm_Product.status');
 //顯示圖片
-Route::get('img/{file_path}', 'AdminProductController@getImg')->name('img');
+Route::get('img/{file_path}', 'InterfaceController@getImg')->name('img');
 
 ////帳號管理
 //首頁

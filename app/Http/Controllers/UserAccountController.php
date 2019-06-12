@@ -9,11 +9,16 @@ use App\Product;
 
 class UserAccountController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth'); 
+    }
     public function index()
     {
         $user = Auth::user(); 
         $auctions = $user->products()->orderBy('auction.created_at', 'desc')->paginate(3);
-        $winners = $user->winner_product()->orderBy('winner.created_at', 'desc')->paginate(3);
+        $winners = $user->winner_product()->orderBy('created_at', 'desc')->paginate(3);
         //dd($winners);
 		return view('user.account', compact('user', 'auctions', 'winners') );
     }
