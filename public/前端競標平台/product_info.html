@@ -73,50 +73,127 @@
   </section>
 
   <nav class="nav nav-pills nav-fill margin-top-100" style="background-color:#e5f0f7d9;">
-    <a class="nav-item nav-link col-lg-4" href="all.html">進行中拍賣</a>
-    <a class="nav-item nav-link active col-lg-4" href="history.html">已結標拍賣</a>
-    <a class="nav-item nav-link col-lg-4" href="account_condition.html">帳戶狀態</a>
+    <a class="nav-item nav-link active col-lg-3" href="manage.html">商品管理</a>
+    <a class="nav-item nav-link col-lg-3" href="manage_account.html">會員管理</a>
+    <a class="nav-item nav-link col-lg-3" href="manage_news.html">公告管理</a>
+    <a class="nav-item nav-link col-lg-3" href="historyOfToppingUp.html">加值紀錄</a>
   </nav>
   <!-- Page Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-6 mx-auto">
-        <div id="products" class="table-responsive margin-top-50">
-            <h1>結標時的頁面</h1>
-          <form role="form" class=" padding-left-50">
-            <div class="form-group">
-              <label>
-                姓名
-              </label>
-              <input id="text" type="text" class="form-control">
-
-            </div>
-
-            <div class="form-group">
-              <label>
-                電話
-              </label>
-              <input id="text" type="text" class="form-control">
-
-            </div>
-
-            <div class="form-group">
-              <label>
-                留言
-              </label><br>
-              <textarea style="width:100%; height: 100px;"></textarea>
-            </div>
-
-          </form>
+        <!--Titles-->
+        <div class="title col-lg-12 margin-top-50">
+            <h2 class="text-align-center mbr-fonts-style display-1 ">
+              Product Contents
+            </h2>
         </div>
-      </div>
 
-      <form role="form" class="row col-lg-8 col-md-6 mx-auto margin-top-100 justify-content-center">
-        <input type="submit" value="提交" class="col-lg-2 col-md-3 col-xs-3 btn btn-primary padding-05-2">
-        <input type="submit" value="分享" class="col-lg-2 col-md-3 col-xs-3 btn btn-primary padding-05-2">
-      </form>
+        <div class="col-lg-6 col-md-6 margin-top-50">
+            <div class="left-block wrapper">
+                <div class="row mx-auto my-4">
+                    <h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
+                        商品名稱：
+                    </h5>
+                    <span class="col-md-4 text-align-center padding-top-30 display-5">Macbook pro </span>
+
+
+                </div>
+
+                <div class="row mx-auto my-4">
+                  <h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
+                      原價：
+                  </h5>
+                  <span class="col-md-4 text-align-center padding-top-30 display-5">500P</span>
+
+                </div>
+
+                <div class="row mx-auto my-4">
+                  <h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
+                      起標價：
+                  </h5>
+                  <span class="col-md-4 text-align-center padding-top-30 display-5">400P</span>
+
+
+                </div>
+
+                <div class="row mx-auto my-4">
+                  <h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
+                      公佈時間：
+                  </h5>
+                  <span class="col-md-4 text-align-center padding-top-30 display-5">12:00:00</span>
+                </div>
+
+                <div class="row mx-auto my-4">
+                  <h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
+                      起始時間：
+                  </h5>
+                  <span class="col-md-4 text-align-center padding-top-30 display-5">13:00:00</span>
+                </div>
+
+                <div class="row mx-auto my-4">
+                  <h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
+                      結束時間：
+                  </h5>
+                  <span class="col-md-4 text-align-center padding-top-30 display-5">14:00:00</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 margin-top-50">
+            <h5 class="text-align-center mbr-fonts-style display-5 col-md-12 margin-top-50">
+                簡介
+            </h5>
+            <textarea class="my-4" style="width:100%; height: 350px; border:#000000 1px solid;"></textarea>
+        </div>
+
+        <div class="row col-md-12 margin-top-50 " style="justify-content: flex-end;">
+          <a href="add_products.html" class="btn btn-danger padding-05-2">前往編輯頁面</a>
+        </div>
+
+        <div class="col-md-12">
+          <hr>
+        </div>
+
+        <div class="title col-lg-12 margin-top-50">
+            <h2 class="text-align-center mbr-fonts-style display-1 font-size-40">
+            得 標 者 資 訊
+            </h2>
+
+            <div class="row mx-auto my-4 col-md-6">
+              <h5 class="text-align-center mbr-fonts-style display-1 col-md-4 padding-top-30 font-size-30">
+                  姓名：
+              </h5>
+              <h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-30">
+                  林孟儒
+
+              </h5>
+            </div>
+
+            <div class="row mx-auto my-4 col-md-6">
+              <h5 class="text-align-center mbr-fonts-style display-1 col-md-4 padding-top-30 font-size-30">
+                  電話：
+              </h5>
+              <h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-30">
+                  0966666666
+              </h5>
+
+            </div>
+
+            <div class="row mx-auto my-4 col-md-6">
+              <h5 class="text-align-center mbr-fonts-style display-1 col-md-4 padding-top-30 font-size-30">
+                  留言：
+              </h5>
+
+              <h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-30">
+                  如果我得標了請記得打電話給我唷～
+              </h5>
+            </div>
+
+        </div>
 
     </div>
+</div>
 
   </div>
   <!-- /.container -->
@@ -193,6 +270,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src=""></script>
 
 </body>
 
