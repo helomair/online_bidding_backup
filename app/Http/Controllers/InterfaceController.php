@@ -18,7 +18,7 @@ class InterfaceController extends Controller
 	{
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
-		
+		//dd($products);
 		foreach($products as $product){
 			//先取得商品名
 			$files = get_files(storage_path('app/public/products/'.$product->id));
@@ -30,6 +30,8 @@ class InterfaceController extends Controller
 			  $file_path[$product->id] = '';
 		  //echo $file_path[$product->id]."\n";
 		}
+		//如果沒有進行中拍賣，給file_path一個null防error
+		if(!isset($file_path)) $file_path='';
         return view('user.all', compact('products','file_path')); 
 	}
     public function show(Product $product)

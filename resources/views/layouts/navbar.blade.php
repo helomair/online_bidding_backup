@@ -33,9 +33,11 @@
 				<li class="nav-item">
 					<a class="nav-link link text-black display-4" href="{{ route('user_interface') }}">會員專區</a>
 				</li>
+				@if(auth()->user()->is_adm == 1)
 				<li class="nav-item">
 					<a class="nav-link link text-black display-4" href="{{ route('adm_Product') }}">管理</a>
 				</li>
+				@endif
 				<!--比較安全的登出方式不然直接把Route裡面logout從POST改成GET就好了-->
 				<li class="nav-item">
 					<a class="nav-link link text-black display-4" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">登出</a>
