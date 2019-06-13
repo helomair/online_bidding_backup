@@ -1,3 +1,4 @@
+/*---------新增公告的js---------*/
 function edit_news() {
         var table = document.getElementById("news_table");
         var news = document.getElementById("news");
@@ -54,4 +55,4 @@ function edit_news() {
         footer.classList.add("margin-top-350");
 }
 
-/*原本是呈現新增公告的js*/
+/*---------新增公告的js---------*/
