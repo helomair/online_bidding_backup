@@ -66,7 +66,7 @@ Route::get('/adm/product/{product}/details', 'AdminProductController@details')->
 //狀態
 Route::get('/adm/product/{product}/status', 'AdminProductController@status')->name('adm_Product.status');
 //顯示圖片
-Route::get('img/{file_path}', 'InterfaceController@getImg')->name('img');
+Route::get('img/{file_path}', 'HomeController@getImg')->name('img');
 
 ////帳號管理
 //首頁

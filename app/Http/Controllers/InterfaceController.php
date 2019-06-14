@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Product;
@@ -18,6 +17,7 @@ class InterfaceController extends Controller
     }
 	public function index()
     {
+		//dd("cc");
         if(Auth::user()->is_adm == '1')
             Session::put('adm_on', Auth::id());
         else
@@ -25,7 +25,6 @@ class InterfaceController extends Controller
 
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
-		//dd($products);
 		foreach($products as $product){
 			//先取得商品名
 			$files = get_files(storage_path('app/public/products/'.$product->id));
@@ -75,16 +74,4 @@ class InterfaceController extends Controller
             return 0;
         return 1;
     }
-
-	public function getImg($file_path)
-	{
-		$file_path = str_replace('&','/',$file_path); //斜線不可以在URL中傳
-		//echo $file_path;
-		$file = File::get($file_path);
-		$type = File::mimeType($file_path);
-		//echo $type;
-
-		return response($file)->header("Content-Type", $type);
-	}
-	
 }
