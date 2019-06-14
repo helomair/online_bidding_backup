@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth; 
 use App\User;
 use App\Product;
+use App\Payment;
 
 class UserAccountController extends Controller
 {
@@ -28,6 +29,7 @@ class UserAccountController extends Controller
     {
     	return view('EndBiddingDetail');
     }
+
     public function EndBidding(Request $request, Product $product)
     {
     	$user = Auth::user();
@@ -40,5 +42,21 @@ class UserAccountController extends Controller
         else 
             $user->winner_product()->attach($product->id,$att);
     	return redirect()->route('account');
+    }
+
+    public function createCoin()
+    {
+        return view('user.coin');
+    }
+
+    public function makeCoinPayment(Request $request)
+    {
+        $user  = Auth::user();
+        $coins = $request->input('coins');
+        $code  = $request->input('code');
+        $amount = $coins * 10000; 
+        $bank_account = Payment::find(rand(0,Payment::count()));
+
+     //   return redirect()->route('account');
     }
 }
