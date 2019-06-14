@@ -11,7 +11,7 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
-<div class="container">
+<div class="container fix_content">
     <div class="row">
       <!-- /.col-lg-3 -->
       <div class="row col-lg-12 space-around mx-auto">
@@ -30,9 +30,11 @@
 	  </a>
       </div>
       @endforeach
+
       @for ($i = $products->count(); $i < 3; $i++)
         <div class="col-lg-3 col-md-3 margin-top-50">
-      @endfor 
+      @endfor
+
 	  </div>
 	</div>
 	  {{ $products->links() }}

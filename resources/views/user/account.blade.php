@@ -11,15 +11,15 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
-<div class="container">
-    <div class="row">  
+<div class="container fix_content">
+    <div class="row">
   <div class="container my-4">
         <div class="row">
             <div class="col-12">
                 <div class="card">
                   <div class="card-body">
                         <div class="card-title mb-4">
-                            <div class="d-flex justify-content-start"> 
+                            <div class="d-flex justify-content-start">
                                 <div class="userData ml-3">
                                     <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">{{ $user->name }}</a></h2>
                                 </div>
@@ -54,8 +54,8 @@
                                                 {{ $user->name }}
                                             </div>
                                         </div>
-                                        <hr /> 
-										
+                                        <hr />
+
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
                                                 <label style="font-weight:bold;">電話</label>

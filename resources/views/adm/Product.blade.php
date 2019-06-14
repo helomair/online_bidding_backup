@@ -9,7 +9,7 @@
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
-<div class="container">
+<div class="container fix_content">
     <div class="row">
 	<div class="col-lg-12">
         <div class="table-responsive margin-top-50">
@@ -42,8 +42,8 @@
                   <td style="text-align:center;">
 
 					@if($product->view_time >= $nowtime )
-				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger">編輯</a>
-                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger">刪除</a>
+				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger padding-05-2 font-size-10">編輯</a>
+                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger padding-05-2 font-size-10">刪除</a>
                     @endif
 
                     @if($product->end_time < $nowtime )
@@ -52,8 +52,8 @@
                             <div>{{ $product->winner->name }}</div>
                         @endif
 
-                        <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger">檢視</a>
-                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger">
+                        <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger padding-05-2 font-size-10">詳細</a>
+                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger padding-05-2 font-size-10">
                             @if($product->status == 0)
                                 未出貨
                             @else
@@ -69,7 +69,7 @@
 				  </form>
                   <td></td>
                 </tr>
-				@endforeach  
+				@endforeach
             </tbody>
           </table>
 			{{ $products->links() }}

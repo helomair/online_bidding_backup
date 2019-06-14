@@ -9,7 +9,7 @@
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
-<div class="container">
+<div class="container fix_content">
     <div class="row">
 	<div class="col-lg-10">
         <div id="products" class="table-responsive margin-top-50">
@@ -50,12 +50,12 @@
 			  <label>圖片</label><br>
 			  <input type="file" class="form-group" name="pics[]" id="pics" multipart>
 			  @else
-			  <div id="showgraph" > 
+			  <div id="showgraph" >
 			    <label>圖片</label><br>
                 <img src="{{ url('img',$file_path) }}" width="200px" />
 			    <button type="button" onclick="hide_graph();">刪除</button>
 			  </div>
-			  <div id="editgraph" style="display:none;" > 
+			  <div id="editgraph" style="display:none;" >
 			    <label>圖片 (沒上傳新的，還是以舊的為主)</label><br>
 			    <input type="file" class="form-group" name="pics[]" id="pics" multipart>
 			  </div>
