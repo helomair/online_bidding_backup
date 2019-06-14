@@ -14,6 +14,7 @@ class UserAccountController extends Controller
     {
         $this->middleware('auth'); 
     }
+
     public function index()
     {
         $user = Auth::user(); 
@@ -22,6 +23,7 @@ class UserAccountController extends Controller
         //dd($winners);
 		return view('user.account', compact('user', 'auctions', 'winners') );
     }
+
     public function create()
     {
     	return view('EndBiddingDetail');

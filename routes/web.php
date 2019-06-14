@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', 'HomeController@index')->name('index');
 #登入
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -77,6 +75,8 @@ Route::get('/adm/account','AdminAccountController@index' )->name('adm_Account');
 Route::post('/adm/account','AdminAccountController@search' )->name('adm_Search');
 //顯示
 Route::get('/adm/account/{user}/show', 'AdminAccountController@show' )->name('adm_Account.show');
+//以使用者身份登入
+Route::get('/adm/account/{user}/info', 'AdminAccountController@info' )->name('adm_Account.info'); 
 //刪除
 Route::delete('/adm/account/{id}', 'AdminAccountController@destroy')->name('adm_Account.destroy');
 

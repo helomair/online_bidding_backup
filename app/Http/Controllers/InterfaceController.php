@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Product;
 use App\Auction;
+use Auth;
+use Session; 
 
 class InterfaceController extends Controller
 {
@@ -15,7 +17,12 @@ class InterfaceController extends Controller
         $this->middleware('auth'); 
     }
 	public function index()
-	{
+    {
+        if(Auth::user()->is_adm == '1')
+            Session::put('adm_on', Auth::id());
+        else
+            Session::put('adm_on','0');
+
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
 		

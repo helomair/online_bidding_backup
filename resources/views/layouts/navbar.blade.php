@@ -14,7 +14,7 @@
                     <a href="{{ route('index') }}">{{ env('APP_NAME') }}</a>
                 </span>
             </div>
-        </div>
+        </div> 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
 				@guest
@@ -29,13 +29,21 @@
                     </a>
                 </li>
 				@endguest
-				@auth
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link link text-black display-4">{{ Auth::user()->name }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-black display-4">{{ Auth::user()->balance }}代幣</a>
+                </li>
 				<li class="nav-item">
 					<a class="nav-link link text-black display-4" href="{{ route('user_interface') }}">會員專區</a>
-				</li>
+                </li>
+                @if(Session::get('adm_on') != 0)
 				<li class="nav-item">
 					<a class="nav-link link text-black display-4" href="{{ route('adm_Product') }}">管理</a>
-				</li>
+                </li>
+                @endif
 				<!--比較安全的登出方式不然直接把Route裡面logout從POST改成GET就好了-->
 				<li class="nav-item">
 					<a class="nav-link link text-black display-4" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">登出</a>
@@ -45,7 +53,7 @@
 				</li>
 				@endauth
             </ul>
-
+            
         </div>
     </nav>
 </section>

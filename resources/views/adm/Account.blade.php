@@ -34,7 +34,7 @@
             <tbody>
 			  @foreach($users as $user)
               <tr>
-                <td style="text-align:center;">{{ $user->name }}</td>
+                <td style="text-align:center;"><a href="{{ route('adm_Account.info',$user->id)}}">{{ $user->name }}</a></td>
                 <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger">檢視</a></td>
                 <td style="text-align:center;">
 				  <a href="#" class="btn btn-danger" onclick="document.getElementById('delete_{{$user->id}}').submit()">刪除</a>

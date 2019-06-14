@@ -47,7 +47,9 @@
                     @endif
 
                     @if($product->end_time < $nowtime )
-                        <div>{{ $product->winner->name }}</div>
+                        @if($product->winner()->count() != 0)
+                            <div>{{ $product->winner->name }}</div>
+                        @endif
                         <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger">詳細</a>
                         <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger">
                             @if($product->status == 0)

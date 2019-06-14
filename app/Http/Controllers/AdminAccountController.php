@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User; 
 use App\Product;
 use Auth; 
+use Session; 
 
 
 class AdminAccountController extends Controller
@@ -63,18 +64,21 @@ class AdminAccountController extends Controller
         }
         //分頁
         $users = $where->paginate(3);
-		
-		/*
-        $query = User::query();
-
-        foreach($columns as $column) 
-        {
-            $query->orWhere($column,'LIKE','%'.$search.'%');
-        }
-
-        $users = $query->get();*/
         return view('adm.Account', compact('users'));
     }
+
+
+    // 管理員 以 使用者身份登入
+    public function info(User $user)
+    {
+        $admId = Auth::id(); 
+        Session::put('adm_on', $admId); 
+        Auth::logout();
+        Auth::login($user);
+        return redirect()->route('account'); 
+    }
+
+
 
     /*
      * Delete user, set column "on" to false

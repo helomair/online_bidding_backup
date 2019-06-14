@@ -20,31 +20,16 @@
 			  <div class="card-img">
 				<img src="images/macbook.jpg" class="margin-top-100 mx-auto col-lg-12 ">
 			  </div>
-
+              @foreach($products as $product)
 			  <div class="card-img margin-top-100 col-lg-3">
-				<img src="images/macbook.jpg">
+				<img src="{{ route('img', $file_path[$product->id]) }}">
 			  </div>
-
-			  <div class="card-img margin-top-100 col-lg-3">
-				<img src="images/macbook.jpg">
-			  </div>
-
-			  <div class="card-img margin-top-100 col-lg-3">
-				<img src="images/macbook.jpg" >
-			  </div>
-
+              @endforeach
 			</div>
-
-			<ul class="paginations text-align-center col-lg-12 margin-top-50">
-			  <li>
-				<a class="active" href="#">上一頁</a>
-			  </li>
-			  /
-			  <li>
-				<a href="#">下一頁</a>
-			  </li>
-			</ul>
-		</div>
+        </div>
+		<div class="text-center margin-top-100 col-lg-3 mx-auto">
+            {{ $products->links() }}
+        </div>
     </div>
 </div>
 @endsection
