@@ -21,10 +21,13 @@
 				<img src="images/macbook.jpg" class="margin-top-100 mx-auto col-lg-12 ">
 			  </div>
               @foreach($products as $product)
-			  <div class="card-img margin-top-100 col-lg-3">
-				<img src="{{ route('img', $file_path[$product->id]) }}">
-			  </div>
+              <div class="card-img margin-top-100 col-lg-3">
+                <img src="{{ route('img', $file_path[$product->id]) }}">
+              </div>
               @endforeach
+              @for ($i = $products->count(); $i < 3; $i++)
+                <div class="card-img margin-top-100 col-lg-3">
+              @endfor 
 			</div>
         </div>
 		<div class="text-center margin-top-100 col-lg-3 mx-auto">

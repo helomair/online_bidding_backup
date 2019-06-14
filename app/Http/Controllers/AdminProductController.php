@@ -165,7 +165,7 @@ class AdminProductController extends Controller
 
     public function details(Product $product)
     {
-        return view('adm.details', compact('product')); 
+        return view('adm.Details', compact('product')); 
     }
     
     public function status(Product $product)

@@ -15,7 +15,7 @@
     <div class="row">
       <!-- /.col-lg-3 -->
       <div class="row col-lg-12 space-around mx-auto">
-	  @foreach($products as $product)
+	  @foreach ($products as $product)
       <div class="col-lg-3 col-md-3 margin-top-50">
       <a href="{{ route('user_interface.show',$product->id) }}">
         <div class="card" >
@@ -29,7 +29,10 @@
 		</div>
 	  </a>
       </div>
-	  @endforeach  
+      @endforeach
+      @for ($i = $products->count(); $i < 3; $i++)
+        <div class="col-lg-3 col-md-3 margin-top-50">
+      @endfor 
 	  </div>
 	</div>
 	  {{ $products->links() }}
