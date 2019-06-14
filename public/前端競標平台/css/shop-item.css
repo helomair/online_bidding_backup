@@ -94,6 +94,10 @@
   height:100px;
 }
 
+.height-250{
+  height:250px;
+}
+
 .table td {
   vertical-align: middle!important;
 
@@ -249,6 +253,14 @@
 
 .coin-box{
   margin-top: 50px;
+  cursor: pointer;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+
+.coin-box-after{
+  background-color: #2aaaff!important;
+  border: 1px white solid!important;
 }
 
 @media screen and (max-width: 992px) {
@@ -282,4 +294,15 @@
 
 .fix_content{
   min-height: 500px;
+}
+
+.coin-box input[type="radio"] {
+	display: none!important;
+}
+
+.coin-box input[type="radio"] + label {
+	display: inline-block!important;
+
+	cursor: pointer!important;
+	padding: 20px 10px!important;
 }
