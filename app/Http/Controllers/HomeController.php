@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -29,4 +30,16 @@ class HomeController extends Controller
 		}
         return view('index', compact('products','file_path')); 
     }
+
+	public function getImg($file_path)
+	{
+		//dd($file_path);
+		$file_path = str_replace('&','/',$file_path); //斜線不可以在URL中傳
+		//echo $file_path;
+		$file = File::get($file_path);
+		$type = File::mimeType($file_path);
+		//echo $type;
+
+		return response($file)->header("Content-Type", $type);
+	}
 }

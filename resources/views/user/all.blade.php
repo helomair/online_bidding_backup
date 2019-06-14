@@ -33,11 +33,12 @@
 
       @for ($i = $products->count(); $i < 3; $i++)
         <div class="col-lg-3 col-md-3 margin-top-50">
-      @endfor
 
 	  </div>
+      @endfor
 	</div>
 	  {{ $products->links() }}
 	<!-- /.col-lg-9 -->
+</div>
 </div>
 @endsection
