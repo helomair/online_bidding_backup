@@ -52,11 +52,14 @@ class UserAccountController extends Controller
     public function makeCoinPayment(Request $request)
     {
         $user  = Auth::user();
-        $coins = $request->input('coins');
+        $coins = $request->input('coin');
         $code  = $request->input('code');
         $amount = $coins * 10000; 
         $bank_account = Payment::find(rand(0,Payment::count()));
-
+        echo $coins;
+        echo $code; 
+        echo "111 </br>"; 
+        echo $request; 
      //   return redirect()->route('account');
     }
 }

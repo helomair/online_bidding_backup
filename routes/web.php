@@ -41,9 +41,8 @@ Route::get('/account', 'UserAccountController@index')->name('account');
 Route::get('/winner/{product}', 'UserAccountController@create')->name('winner.create');
 Route::post('/winner/{product}/end', 'UserAccountController@EndBidding')->name('winner.endbidding');
 //儲值頁面
-Route::get('/coin', function () {
-    return view('user/coin');
-})->name('coin');
+Route::get('/coin', 'UserAccountController@createCoin')->name('coin');
+Route::post('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.make');
 
 //////顯示管理者頁面
 ////商品管理
