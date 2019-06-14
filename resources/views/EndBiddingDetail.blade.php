@@ -8,7 +8,7 @@
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
-<div class="container">
+<div class="container fix_content">
 
     <div class="row">
       <div class="col-lg-12">

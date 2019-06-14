@@ -11,7 +11,7 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
-<div class="container">
+<div class="container fix_content">
     <div class="row">
       <!-- /.col-lg-3 -->
       <div class="row col-lg-12 space-around mx-auto">
@@ -29,7 +29,7 @@
 		</div>
 	  </a>
       </div>
-	  @endforeach  
+	  @endforeach
 	  </div>
 	</div>
 	  {{ $products->links() }}

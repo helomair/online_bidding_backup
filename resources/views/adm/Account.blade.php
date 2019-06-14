@@ -9,7 +9,7 @@
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
-<div class="container">
+<div class="container fix_content">
     @if($errors->any())
         <script>alert("{{ $errors->first() }}")</script>
     @endif
@@ -44,7 +44,7 @@
 				  </form>
 				</td>
               </tr>
-			  @endforeach                 
+			  @endforeach
             </tbody>
           </table>
 			{{ $users->links() }}

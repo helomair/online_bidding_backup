@@ -279,3 +279,7 @@
 .line-height-50{
   line-height:50px;
 }
+
+.fix_content{
+  min-height: 500px;
+}

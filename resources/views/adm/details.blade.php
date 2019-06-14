@@ -9,7 +9,7 @@
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
-<div class="container">
+<div class="container fix_content">
 	<div class="row">
 			<!--Titles-->
 			<div class="title col-lg-12 margin-top-50">

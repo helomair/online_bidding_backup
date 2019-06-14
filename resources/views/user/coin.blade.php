@@ -11,8 +11,8 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
-<div class="container">
-    <div class="row">  
+<div class="container fix_content">
+    <div class="row">
       <div class="col-lg-12">
         <div id="products" class="table-responsive margin-top-50">
             <h1>儲值頁面</h1>
