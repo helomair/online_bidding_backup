@@ -57,6 +57,18 @@
   margin-right: 30px;
 }
 
+.padding-05-2{
+  padding:0.5rem 2rem!important;
+}
+
+.padding-top-8 {
+  padding-top:8px;
+}
+
+.padding-top-30 {
+  padding-top:30px;
+}
+
 .padding-left-50 {
   padding-left: 50px;
 }
@@ -101,6 +113,14 @@
 
 .text-align-center {
   text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 .display-none {
@@ -171,6 +191,10 @@
   font-size:30px!important;
 }
 
+.font-size-35{
+  font-size:35px!important;
+}
+
 .font-size-40{
   font-size:40px!important;
 }
@@ -185,6 +209,11 @@
 
 .space-around{
   justify-content: space-around;
+}
+
+.justify-content-center{
+  justify-content: center;
+
 }
 
 .paginations{

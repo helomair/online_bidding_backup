@@ -12,9 +12,9 @@
 @endsection
 
 @section('content')
-  <div class="container  container-fluid_login">
+  <div class="container-fluid margin-top-250">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-6 mx-auto">
 			<form method="POST" action="{{ route('login') }}">
 				@csrf
 				<div class="form-group">
