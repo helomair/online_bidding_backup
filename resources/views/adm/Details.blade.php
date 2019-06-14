@@ -24,7 +24,7 @@
 									<h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
 											商品名稱：
 									</h5>
-									<span class="col-md-4 text-align-center padding-top-30 display-5">Macbook pro </span>
+									<span class="col-md-4 text-align-center padding-top-30 display-5">{{$product->name}} </span>
 
 
 							</div>
@@ -33,7 +33,7 @@
 								<h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
 										原價：
 								</h5>
-								<span class="col-md-4 text-align-center padding-top-30 display-5">500P</span>
+								<span class="col-md-4 text-align-center padding-top-30 display-5">{{$product->origin_price}}</span>
 
 							</div>
 
@@ -41,7 +41,7 @@
 								<h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
 										起標價：
 								</h5>
-								<span class="col-md-4 text-align-center padding-top-30 display-5">400P</span>
+								<span class="col-md-4 text-align-center padding-top-30 display-5">{{$product->cur_cost}}</span>
 
 
 							</div>
@@ -50,21 +50,21 @@
 								<h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
 										公佈時間：
 								</h5>
-								<span class="col-md-4 text-align-center padding-top-30 display-5">12:00:00</span>
+								<span class="col-md-4 text-align-center padding-top-30 display-5">{{$product->view_time}}</span>
 							</div>
 
 							<div class="row mx-auto my-4">
 								<h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
 										起始時間：
 								</h5>
-								<span class="col-md-4 text-align-center padding-top-30 display-5">13:00:00</span>
+								<span class="col-md-4 text-align-center padding-top-30 display-5">{{$product->start_time}}</span>
 							</div>
 
 							<div class="row mx-auto my-4">
 								<h5 class="text-align-center mbr-fonts-style display-5 col-md-4 padding-top-30">
 										結束時間：
 								</h5>
-								<span class="col-md-4 text-align-center padding-top-30 display-5">14:00:00</span>
+								<span class="col-md-4 text-align-center padding-top-30 display-5">{{$product->end_time}}</span>
 
 							</div>
 					</div>
@@ -77,9 +77,9 @@
 					<textarea class="my-4" style="width:100%; height: 350px; border:#000000 1px solid;"></textarea>
 			</div>
 
-			<div class="row col-md-12 margin-top-50 " style="justify-content: flex-end;">
+<!--			<div class="row col-md-12 margin-top-50 " style="justify-content: flex-end;">
 				<a href="add_products.html" class="btn btn-danger padding-05-2">前往編輯頁面</a>
-			</div>
+			</div> -->
 
 			<div class="col-md-12">
 				<hr>
@@ -95,7 +95,7 @@
 								姓名：
 						</h5>
 						<h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-25">
-								林孟儒
+                                {{ ( $product->winner ) ? ($product->winner->name) : "無得標者" }}
 
 						</h5>
 					</div>
@@ -105,10 +105,19 @@
 								電話：
 						</h5>
 						<h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-25">
-								0966666666
+                                {{ ( $product->winner ) ? ($product->winner->phone) : ""  }}
 						</h5>
 
-					</div>
+                    </div>
+
+                    <div class="row mx-auto my-4 col-md-6">
+						<h5 class="text-align-center mbr-fonts-style display-1 col-md-4 padding-top-30 font-size-25">
+								地址：
+						</h5>
+						<h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-25">
+							    {{ $product->address  }}
+						</h5>
+                    </div>
 
 					<div class="row mx-auto my-4 col-md-6">
 						<h5 class="text-align-center mbr-fonts-style display-1 col-md-4 padding-top-30 font-size-25">
@@ -116,7 +125,7 @@
 						</h5>
 
 						<h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-25">
-								如果我得標了請記得打電話給我唷～
+							    {{ $product->message  }}
 						</h5>
 					</div>
 

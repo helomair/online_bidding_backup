@@ -48,8 +48,8 @@
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
             <h3 class="card-title">{{ $product->name }}</h3>
-            <h4>{{ $product->cost }}P</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+            <h4>{{ $product->cost }}元</h4>
+            <p class="card-text">{{ $product->detail }}</p>
 
           </div>
         </div>
