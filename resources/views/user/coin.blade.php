@@ -73,8 +73,8 @@
 
 
 					<div class="row col-lg-10 col-md-8 mx-auto margin-top-150">
-					<input type="submit" value="提交" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary" >
-					<input type="submit" value="取消" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary " >
+					<input type="submit" value="提交" class=" btn btn-primary padding-1-3 font-size-15" >
+					<input type="submit" value="取消" class=" btn btn-primary padding-1-3 font-size-15" >
 				</div>
 			</form>
     </div>

@@ -7,8 +7,8 @@
 
 	<!-- Custom styles for this template -->
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
-	
-	
+
+
 	<!-- 給倒數計時器用的css -->
 	<style type="text/css">
 	.timer{
@@ -40,11 +40,10 @@
 		<div id="andy timer" class="andy timer">
 		</div>
 	</div>
-    <div class="row">
-	<div class="col-lg-12">
-
+    <div class="row space-between" style="padding:0px 10px;">
+			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
         <div class="card margin-top-50">
-			<h1>拍賣進行中的頁面</h1>
+
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
             <h3 class="card-title">{{ $product->name }}</h3>
@@ -53,29 +52,10 @@
 
           </div>
         </div>
+			</div>
 		<!-- /.card -->
 
-		<div class="card text-center my-4">
-			<div class="card-header">下標1</div>
-			<div class="card-body">
-				<h5 class="card-title">目前競標價：{{ $product->cur_cost }}P</h5>
-				<p class="card-text">
-					目前最高出價者：
-					@if($top_auction->name == "")
-						無人出價
-					@else
-						{{ $top_auction->name }}
-					@endif
-                </p>
-                @if( $product->end_time >= $nowtime)
-                    <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary">下標</a>
-                @else
-                    <div class="btn btn-primary">已結標</div>
-                @endif
-			</div>
-		</div>
-
-        <div class="card text-center my-4">
+    <div class="card text-center margin-top-50 col-lg-5" style="padding-left:0px; padding-right:0px;">
           <div class="card-header">
             出價紀錄1
           </div>
@@ -106,29 +86,29 @@
 				{{ $auctions->links() }}
             </div>
           </div>
+      </div>
 
-        </div>
 
-        <div class="card card-outline-secondary my-4">
-          <div class="card-header">
-            Product Reviews
-          </div>
-          <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-            <hr>
-            <a href="#" class="btn btn-success">Leave a Review</a>
-          </div>
-        </div>
-		<!-- /.card -->
-	</div>
-	<!-- /.col-lg-9 -->
+			<div class="card text-center  col-lg-6 height-250 my-4" style="padding-left:0px; padding-right:0px;">
+				<div class="card-header">下標1</div>
+				<div class="card-body">
+					<h5 class="card-title">目前競標價：{{ $product->cur_cost }}P</h5>
+					<p class="card-text">
+						目前最高出價者：
+						@if($top_auction->name == "")
+							無人出價
+						@else
+							{{ $top_auction->name }}
+						@endif
+	                </p>
+	                @if( $product->end_time >= $nowtime)
+	                    <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary">下標</a>
+	                @else
+	                    <div class="btn btn-primary">已結標</div>
+	                @endif
+				</div>
+			</div>
+
     </div>
 </div>
 <!-- 倒數計時器js -->
@@ -163,17 +143,17 @@
 		var second = Math.floor(leftSecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
 		console.log("second="+second);
 		var htmlElement=document.getElementById(divId);
-		htmlElement.innerHTML = 
+		htmlElement.innerHTML =
 		"<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>时<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
 	}
 	window.setInterval(function () { ShowTimer(end_year, end_month, end_day, end_hour, end_minutes, end_second, 'andy timer'); }, interval);
 </script>
-<!-- 
-./倒數計時器js 
---------------------- 
-作者：小巷下起了雨 
-来源：CSDN 
-原文：https://blog.csdn.net/qq_28057577/article/details/75101111 
+<!--
+./倒數計時器js
+---------------------
+作者：小巷下起了雨
+来源：CSDN
+原文：https://blog.csdn.net/qq_28057577/article/details/75101111
 版权声明：本文为博主原创文章，转载请附上博文链接！
 -->
 @endsection
