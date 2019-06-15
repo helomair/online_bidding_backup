@@ -11,10 +11,10 @@
 @include('layouts.adm_left_button')
 <div class="container fix_content">
     <div class="row">
-	<div class="col-lg-10">
+	<div class="col-lg-10 mx-auto">
         <div id="products" class="table-responsive margin-top-50">
           <h2>新增商品</h2>
-          <form  method="post" action="{{ route('adm_Product.store') }}" role="form" class="width-75-percent padding-left-50" enctype="multipart/form-data">
+          <form  method="post" action="{{ route('adm_Product.store') }}" role="form" class="" enctype="multipart/form-data">
 			@csrf
 			<div class="form-group">
               <label>名稱</label>
@@ -48,8 +48,8 @@
 			  <label>圖片</label><br>
 			  <input type="file" class="form-group" name="pics[]" id="pics" multipart>
     		</div>
-			<button type="submit" class="btn-primary btn -sm">儲存</button>
-			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn -sm">取消</button>
+			<button type="submit" class="btn-primary btn-sm">儲存</button>
+			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn-sm">取消</button>
 			</form>
         </div>
 	</div>

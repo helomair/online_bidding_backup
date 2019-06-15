@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-  <div class="container container-fluid_login">
+  <div class="container container-fluid_login fix_content">
 	<div class="row">
 		<div class="col-md-12">
 			<img title="register_logo" src="{{ asset('images/booked.png') }}"/>
@@ -46,7 +46,7 @@
 					</span>
 				@enderror
 			</div>
-			
+
 			<div class="form-group">
 				<label for="password">密碼</label>
 				<input type="password" class="form-control @error('password') is-invalid @enderror form-control-register" id="password" name="password">
@@ -75,7 +75,7 @@
 <!--			<div class="form-group">
 				<label for="code">推薦碼</label>
 				<input type="text" class="form-control @error('code') is-invalid @enderror form-control-register" id="code" name="code">
-            </div> 
+            </div>
 -->
 
 			<button type="submit" class="btn btn-primary register_button">註冊</button>

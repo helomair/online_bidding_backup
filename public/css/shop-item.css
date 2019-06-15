@@ -8,6 +8,9 @@
 .thumbnails {
   height: 50px;
 }
+.margin-top-0{
+  margin-top:0px!important;
+}
 
 .margin-top-50 {
   margin-top: 50px!important;
@@ -33,6 +36,10 @@
   margin-top: 450px!important;
 }
 
+.margin-bottom-0{
+  margin-bottom:0px!important;
+}
+
 .margin-bottom-04-rem {
   margin-bottom: 0.4rem;
 }
@@ -55,6 +62,10 @@
 
 .margin-right-30 {
   margin-right: 30px;
+}
+
+.padding-05-16{
+  padding:0.5rem 1.6rem!important;
 }
 
 .padding-05-2{
@@ -305,4 +316,10 @@
 
 	cursor: pointer!important;
 	padding: 20px 10px!important;
+}
+
+.btn-delete{
+  border-color:#dd514c!important;
+  background-color: #dd514c!important;
+  color: white!important;
 }

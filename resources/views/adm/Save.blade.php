@@ -29,7 +29,7 @@
                   <td style="text-align:center;">{{ $payment->created_at }}</td>
                   <td style="text-align:center;">{{ $payment->amount }}</td>
                   <td style="text-align:center;">
-                    <a href="" class="btn btn-danger">發放</a>
+                    <a href="" class="btn btn-danger padding-05-16 font-size-10">發放</a>
                     <p class="finished">發放完畢</p>
                   </td>
                 </tr>

@@ -11,10 +11,10 @@
 @include('layouts.adm_left_button')
 <div class="container fix_content">
     <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-10 mx-auto">
         <div id="products" class="table-responsive margin-top-50">
             <h1>檢視會員資料的頁面</h1>
-          <form role="form" class="width-75-percent padding-left-50">
+          <form role="form" class="my-4">
             <div class="form-group">
               <label>使用者名稱</label>
               <input id="name" type="text" class="form-control" value="{{$user->name}}" disabled>
@@ -29,7 +29,7 @@
     		</div>
           </form>
 		  <div align="center">
-		  <button type="button" onclick="window.location='{{ route('adm_Account') }}'" class="btn-primary btn -sm">返回</button>
+		  <button type="button" onclick="window.location='{{ route('adm_Account') }}'" class="btn-primary btn-sm">返回</button>
 		  </div>
 		</div>
 	</div>

@@ -11,10 +11,10 @@
 @include('layouts.adm_left_button')
 <div class="container fix_content">
     <div class="row">
-	<div class="col-lg-10">
+	<div class="col-lg-10 mx-auto">
         <div id="products" class="table-responsive margin-top-50">
           <h2>修改商品</h2>
-          <form  method="post" action="{{ route('adm_Product.update',$product->id) }}" role="form" class="width-75-percent padding-left-50" enctype="multipart/form-data">
+          <form  method="post" action="{{ route('adm_Product.update',$product->id) }}" role="form" class="" enctype="multipart/form-data">
 			@csrf
 			{{ method_field('PATCH') }}
 			<div class="form-group">
@@ -61,8 +61,8 @@
 			  </div>
 			  @endif
     		</div>
-			<button type="submit" class="btn-primary btn -sm">修改</button>
-			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn -sm">取消</button>
+			<button type="submit" class="btn-primary btn-sm">修改</button>
+			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn-sm">取消</button>
 			</form>
         </div>
 	</div>

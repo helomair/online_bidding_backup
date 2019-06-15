@@ -43,7 +43,7 @@
 
 					@if($product->view_time >= $nowtime )
 				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger padding-05-2 font-size-10">編輯</a>
-                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-danger padding-05-2 font-size-10">刪除</a>
+                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-delete padding-05-2 font-size-10">刪除</a>
                     @endif
 
                     @if($product->end_time < $nowtime )
@@ -53,7 +53,7 @@
                         @endif
 
                         <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger padding-05-2 font-size-10">詳細</a>
-                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger padding-05-2 font-size-10">
+                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger padding-05-16 font-size-10">
                             @if($product->status == 0)
                                 未出貨
                             @else

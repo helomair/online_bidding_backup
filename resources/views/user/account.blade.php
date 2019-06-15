@@ -76,7 +76,7 @@
                                               {{ $user->balance }}P
                                           </div>
                                           <div class="col-md-2 col-6">
-                                              <a href="{{ route('coin') }}" class="btn btn-danger">儲值</a>
+                                              <a href="{{ route('coin') }}" class="btn btn-danger padding-05-16 font-size-10">儲值</a>
                                           </div>
                                       </div>
                                       <hr />
