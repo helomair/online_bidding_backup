@@ -27,6 +27,15 @@
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in text-align-center">
 					<div class="panel-body">
+						<div class="font-size-20">
+							公告一
+						</div>
+						とろさば料理専門店SABAR（サバー）では、とろさばフルコースや鯖寿司など、<br>「とろさば」の美味しさを世界各国の伝統料理で堪能いただく「とろさば情報発信基地」です。
+					</div><br>
+					<div class="panel-body">
+						<div class="font-size-20">
+							公告二
+						</div>
 						とろさば料理専門店SABAR（サバー）では、とろさばフルコースや鯖寿司など、<br>「とろさば」の美味しさを世界各国の伝統料理で堪能いただく「とろさば情報発信基地」です。
 					</div>
 				</div>
@@ -35,7 +44,7 @@
 		</div>
 		<div class="container fix_content">
 		        <div class="col-12">
-		            <h2 align="center">歡迎光臨 {{ env('APP_NAME') }}</h2>
+		            <!--h2 align="center">歡迎光臨 {{ env('APP_NAME') }}</h2-->
 		            <a href=”#”></a>
 		        </div>
 						<div class="card p-3 col-12 col-md-12 col-lg-12 margin-top-100" style="border:1px solid white;">
