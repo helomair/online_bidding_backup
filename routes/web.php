@@ -41,9 +41,13 @@ Route::get('/account', 'UserAccountController@index')->name('account');
 Route::get('/winner/{product}', 'UserAccountController@create')->name('winner.create');
 Route::post('/winner/{product}/end', 'UserAccountController@EndBidding')->name('winner.endbidding');
 //儲值頁面
-Route::get('/coin', function () {
-    return view('user/coin');
-})->name('coin');
+Route::get('/coin', 'UserAccountController@createCoin')->name('coin');
+//儲值 建立帳單
+Route::post('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.make');
+//儲值 用戶填寫帳戶資料
+Route::post('/coin/{payment}/pay', 'UserAccountController@PaymentPay')->name('coin.pay');
+//儲值 管理員確認
+Route::get('/coin/{payment}/submit', 'SaveController@PaymentSubmit')->name('coin.submit'); 
 
 //////顯示管理者頁面
 ////商品管理

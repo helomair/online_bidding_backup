@@ -53,13 +53,14 @@
                         @endif
 
                         <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger padding-05-2 font-size-10">詳細</a>
-                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger padding-05-16 font-size-10">
-                            @if($product->status == 0)
+
+                        @if ($product->status == 0)
+                        <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger padding-05-2 font-size-10">
                                 未出貨
-                            @else
-                                已出貨
-                            @endif
                         </a>
+                        @else
+                            <p class="finished">已出貨</p>
+                        @endif
                     @endif
 
 				  </td>

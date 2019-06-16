@@ -172,8 +172,7 @@ class AdminProductController extends Controller
     {
         if($product->status == 0)
             $product->update(['status' => '1']);
-        else
-            $product->update(['status' => '0']); 
+
         return redirect()->route('adm_Product'); 
     }
 

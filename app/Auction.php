@@ -14,7 +14,7 @@ class Auction extends Model
     ];
 
 
-    public function auctions()
+    public function product()
     {
         return $this->belongsTo('App\Product','pid');
     }

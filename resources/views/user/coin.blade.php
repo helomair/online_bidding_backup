@@ -4,7 +4,7 @@
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
-	<script src="{{ asset('js/app.js') }}" defer></script>
+<!--	<script src="{{ asset('js/app.js') }}" defer></script> -->
 	<!-- Custom styles for this template -->
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
@@ -14,69 +14,46 @@
 <div class="container fix_content">
     <div class="row">
       <div class="col-lg-12">
-				<form role="form" >
-        <div id="products" class="table-responsive margin-top-50">
 
-        </div>
-				<div class="row col-lg-10 space-around mx-auto">
-					<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-						<input type="radio" id="coin" name="coin" value="10">
-						 <label for="">10</label>
-					</div>
-					<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-						<input type="radio" id="coin" name="coin" value="30">
-						 <label for="">30</label>
-					</div>
-					<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-						<input type="radio" id="coin" name="coin" value="50">
-						 <label for="">50</label>
-					</div>
-		      </div>
+        <form role="form" action="{{ route('coin.make') }}" method="post">
+        @csrf
+            <ul class="donate-now">
+                <li>
+                    <input type="radio" id="10p" name="coin" value="10" />
+                    <label for="10p">10</label>
+                </li>
+                <li>
+                    <input type="radio" id="30p" name="coin" value="30" />
+                    <label for="30p">30</label>
+                </li>
+                <li>
+                    <input type="radio" id="50p" name="coin" value="50" checked="checked" />
+                    <label for="50p">50</label>
+                </li>
+                <li>
+                    <input type="radio" id="100p" name="coin" value="100" />
+                    <label for="100p">100</label>
+                </li>
+                <li>
+                    <input type="radio" id="200p" name="coin" value="200" />
+                    <label for="200p">200</label>
+                </li>
+                <li>
+                    <input type="radio" id="300p" name="coin" value="300" />
+                    <label for="300p">300</label>
+                </li>
+            </ul>   
 
-			      <div class="row col-lg-10 space-around  mx-auto">
-							<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-								<input value="100" type="radio" id="coin" name="coin">
-								 <label for="">100</label>
-							</div>
-							<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-								<input value="150" type="radio" id="coin" name="coin">
-								 <label for="">150</label>
-							</div>
-							<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-								<input value="200" type="radio" id="coin" name="coin">
-								 <label for="">200</label>
-							</div>
-			      </div>
+			<div class="row col-lg-10  mx-auto margin-top-50">
+			  <h5 class="col-lg-2 line-height-35">邀請碼：</h5>
+			    <input type="text" value="" class="col-lg-4 form-control bg-white" name="code" >
+			</div>
 
-			      <div class="row col-lg-10 space-around mx-auto">
-							<div id="coin" class="card col-lg-3 col-md-3 coin-box text-align-center font-size-25">
-			          <input value="300" type="radio" id="coin" name="coin">
-			           <label for="">300</label>
-			        </div>
-			        <div class="card col-lg-3 col-md-3 coin-box" style="visibility:hidden;">
-			          <div class="card-body text-align-center">
-			            <h5 class=""></h5>
-			          </div>
-			        </div>
-			        <div class="card col-lg-3 col-md-3 coin-box" style="visibility:hidden;">
-			          <div class="card-body text-align-center">
-			            <h5 class=""></h5>
-			          </div>
-			        </div>
-			      </div>
-
-
-					<div class="row col-lg-10  mx-auto margin-top-50">
-						<h5 class="col-lg-2 line-height-35">邀請碼：</h5>
-						<input type="text" value="" class="col-lg-4 form-control bg-white" >
-					</div>
-
-
-					<div class="row col-lg-10 col-md-8 mx-auto margin-top-150">
-					<input type="submit" value="提交" class=" btn btn-primary padding-1-3 font-size-15" >
-					<input type="submit" value="取消" class=" btn btn-primary padding-1-3 font-size-15" >
-				</div>
-			</form>
+			<div class="row col-lg-10 col-md-8 mx-auto margin-top-150">
+			  <input type="submit" value="提交" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary" >
+			  <input type="submit" value="取消" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary " >
+            </div>
+		</form>
     </div>
 </div>
 </div>
