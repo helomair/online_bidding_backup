@@ -35,11 +35,13 @@
 @include('layouts.left_button')
 <div class="container fix_content">
 	<br>
+	@if( $product->end_time >= $nowtime)
 	<div align='center'>
 		商品倒數計時：
 		<div id="andy timer" class="andy timer">
 		</div>
 	</div>
+	@endif
     <div class="row space-between" style="padding:0px 10px;">
 			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
         <div class="card margin-top-50">
@@ -115,6 +117,7 @@
 <script type="text/javascript">
 	var product = @json($product->toArray());
 	var endtime = product.end_time;
+	var now=new Date();
 	var end_year = endtime.substr(0,4);
 	var end_month = endtime.substr(5,2);
 	var end_day = endtime.substr(8,2);
@@ -146,7 +149,9 @@
 		htmlElement.innerHTML =
 		"<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>时<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
 	}
+	if(endtime >= now){
 	window.setInterval(function () { ShowTimer(end_year, end_month, end_day, end_hour, end_minutes, end_second, 'andy timer'); }, interval);
+	}
 </script>
 <!--
 ./倒數計時器js
