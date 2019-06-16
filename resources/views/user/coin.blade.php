@@ -14,6 +14,7 @@
 <div class="container fix_content">
     <div class="row">
       <div class="col-lg-12">
+
         <form role="form" action="{{ route('coin.make') }}" method="post">
         @csrf
             <ul class="donate-now">

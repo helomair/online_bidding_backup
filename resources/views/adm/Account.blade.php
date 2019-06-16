@@ -18,10 +18,10 @@
         <div class="table-responsive margin-top-50">
           <form method="post" action="{{ route('adm_Search') }}" role="form" >
 		    @csrf
-			<table style="width:100%">
-              <td><input name="keyword" id="keyword" type="text" class="form-control " placeholder="請輸入關鍵字"></td>
-              <td style="width:10%"><button type="submit" class="btn-danger btn">搜尋</button></td>
-			</table>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="請輸入關鍵字">
+					<a href="" class="btn btn-danger padding-05-2 font-size-10 margin-top-0 margin-bottom-0">搜尋</a>
+				</div>
           </form>
           <table class="table table-striped margin-top-50">
             <thead>
@@ -35,9 +35,9 @@
 			  @foreach($users as $user)
               <tr>
                 <td style="text-align:center;"><a href="{{ route('adm_Account.info',$user->id)}}">{{ $user->name }}</a></td>
-                <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger">檢視</a></td>
+                <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger padding-05-2 font-size-10">檢視</a></td>
                 <td style="text-align:center;">
-				  <a href="#" class="btn btn-danger" onclick="document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
+				  <a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
 				  <form method="post" action="{{ route('adm_Account.destroy',$user->id) }}" id="delete_{{$user->id}}">
 					@csrf
 					{{ method_field('DELETE') }}

@@ -41,11 +41,13 @@
                     <td style="text-align:center;">no</td>
                   @endif
                   <td style="text-align:center;">
+
                     @if ($payment->on)
                         <a href=" {{ route('coin.submit', $payment->id) }} " class="btn btn-danger">發放</a>
                     @else
                         <p class="finished">發放完畢</p>
                     @endif
+
                   </td>
                 </tr>
 			@endforeach

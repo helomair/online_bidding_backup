@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-  <div class="container-fluid margin-top-250">
+  <div class="container-fluid margin-top-150 fix_content">
 	<div class="row">
 		<div class="col-md-6 mx-auto">
 			<form method="POST" action="{{ route('login') }}">
@@ -25,7 +25,7 @@
 							<strong>{{ $message }}</strong>
 						</span>
 					@enderror
-				</div> 
+				</div>
 				<div class="form-group">
 					<label for="password">密碼</label>
 					<input type="password" class="form-control @error('password') is-invalid @enderror form-control_login" id="password" name="password">
