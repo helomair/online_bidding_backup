@@ -33,13 +33,13 @@
                             <div class="col-12">
                                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">基本資料</a>
+                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false">基本資料</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">競標操作</a>
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true">競標操作</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="connectedServices" aria-selected="false">得標區</a>
+                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false">得標區</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -138,4 +138,24 @@
 	<!-- /.col-lg-9 -->
     </div>
 </div>
+<script>
+//alert(document.referrer);
+lasturl = document.referrer;
+lastpara = lasturl.split("/");
+var i = 2;   					//因為用'/'切割，http:// 被切成[0]=http: [1]='' 所以直接從2開始
+var find = 0;					//有沒有找到coin的變數
+while(lastpara[i]){  			//如果不存在，就結束
+	if(lastpara[i] == "coin"){
+		find = 1;
+		break;
+	}
+	i++;
+}
+//alert(find);
+//alert(lasturl.substr(-4));
+if(find == 1){
+	document.getElementById("basicInfo").className = "tab-pane fade";
+	document.getElementById("connectedServices").className = "tab-pane fade show active";
+}
+</script>
 @endsection

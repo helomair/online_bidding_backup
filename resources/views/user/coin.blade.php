@@ -51,7 +51,7 @@
 
 			<div class="row col-lg-10 col-md-8 mx-auto margin-top-150">
 			  <input type="submit" value="提交" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary" >
-			  <input type="submit" value="取消" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary " >
+			  <input type="button" value="取消" onclick="window.location='/account'" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary" >
             </div>
 		</form>
     </div>
