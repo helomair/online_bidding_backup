@@ -20,14 +20,23 @@
               <label>名稱</label>
               <input name="name" id="name" type="text" class="form-control">
             </div>
-            <div class="form-group">
+      <div class="form-group">
               <label>原價</label>
               <input name="cost" id="cost" id="text" type="text" class="form-control">
 			 </div>
-            <div class="form-group">
-              <label>起標價</label>
-              <input name="cur_cost" id="cur_cost" id="text" type="text" class="form-control">
-            </div>
+      <div class="form-group">
+        <label>起標價</label>
+        <input name="cur_cost" id="cur_cost" id="text" type="text" class="form-control">
+      </div>
+			<div class="form-group" style="">
+				<label>標價</label><br>
+					<input type="radio" name="gender" value="1000">
+					<label style="">1000</label>
+					 <input type="radio" name="gender" value="2000">
+					 <label style="">2000</label>
+					 <input type="radio" name="gender" value="3000">
+					 <label style="">3000</label>
+			</div>
 			<div class="form-group">
 			  <label>公布時間</label>
     		  <input name="view_time" id="view_time" type="date" class="form-control">
