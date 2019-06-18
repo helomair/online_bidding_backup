@@ -32,8 +32,8 @@
               <label>留言</label>
               <textarea id="message" name="message" style="width:100%; height: 100px;"></textarea>
             </div>
-            <input type="submit" value="分享" class="form-control my-4" style="width:15%; float:right;">
-            <input type="button" value="提交" class="form-control my-4" style="width:15%; float:right;">
+            <input type="submit" value="提交" class="form-control my-4" style="width:15%; float:left;">
+            <input type="button" value="取消" onclick="window.location='/account'"  class="form-control my-4" style="width:15%; float:left;">
           </form>
         </div>
       </div>

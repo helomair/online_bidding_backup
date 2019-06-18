@@ -59,40 +59,27 @@
 
 
 						<div class="container">
-								<div class="media-container-row margin-top-100">
+                                <div class="media-container-row margin-top-100">
+                                    @foreach ($products as $product)
 										<div class="card p-3 col-12 col-md-6 col-lg-4" style="border:1px solid white;">
 												<div class="card-wrapper">
 														<div class="card-img">
-																<a href="">
-																	<img src="images/macbook.jpg" alt="Mobirise" title="" >
+																<a href="{{ route('user_interface.show', $product->id) }}">
+																	<img src="{{ route('img', $file_path[$product->id]) }}" alt="Mobirise" title="" >
 																</a>
 														</div>
 
 												</div>
 										</div>
-
-										<div class="card p-3 col-12 col-md-6 col-lg-4" style="border:1px solid white;">
-												<div class="card-wrapper">
-														<div class="card-img">
-																<a href="">
-																	<img src="images/macbook.jpg" alt="Mobirise" title="">
-																</a>
-														</div>
-
-												</div>
-										</div>
-
-										<div class="card p-3 col-12 col-md-6 col-lg-4" style="border:1px solid white;">
-												<div class="card-wrapper">
-														<div class="card-img">
-																<a href="album-3.html">
-																	<img src="images/macbook.jpg" alt="Mobirise" title="">
-																</a>
-														</div>
-
-												</div>
-										</div>
-								</div>
+                                    @endforeach 
+                                    @for ($i = $products->count(); $i < 3; $i++)
+                                        <div class="card p-3 col-12 col-md-6 col-lg-4" style="border:1px solid white;">
+                                        </div>
+                                    @endfor 
+                                </div>
+                            <div class="text-center margin-top-100 col-lg-3 mx-auto">
+		                        {{ $products->links() }}
+		                     </div>
 						</div>
 
 		<!---下面是舊代碼---->

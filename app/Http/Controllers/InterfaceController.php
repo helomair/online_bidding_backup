@@ -13,16 +13,11 @@ class InterfaceController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth'); 
+        $this->middleware('auth');  
     }
 	public function index()
     {
-		//dd("cc");
-        if(Auth::user()->is_adm == '1')
-            Session::put('adm_on', Auth::id());
-        else
-            Session::put('adm_on','0');
-
+		//dd("cc"); 
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
         //先假設路徑為admin/index.blade.php
 		foreach($products as $product){
