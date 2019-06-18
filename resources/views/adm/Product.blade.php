@@ -31,7 +31,9 @@
 				@foreach($products as $product)
                 <tr>
                   <td style="text-align:center;">
-                    <img src="{{ url('img',$file_path[$product->id]) }}" class="img-thumbnail thumbnails" style="width:12vw; height:10vw;"/>
+										<div class="frame-thumbnails">
+                    	<img class="shop_img"  src="{{ url('img',$file_path[$product->id]) }}"/>
+										</div>
                   </td>
                   <td>{{ $product->name }}</td>
                   <td>{{ $product->cost }}代幣</td>

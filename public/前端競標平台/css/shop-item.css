@@ -323,10 +323,17 @@
 }
 
 .frame {
-    height: 250px; /*can be anything*/
-    width: 250px; /*can be anything*/
+    height: 250px;
+    width: 250px; 
     position: relative;
 }
+
+.frame-thumbnails {
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+
 .shop_img {
     max-height: 100%;
     max-width: 100%;

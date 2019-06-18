@@ -29,7 +29,9 @@
                 <tr>
                   <td style="text-align:center;">
                     <a href="{{ route('user_interface.show', $closed_product->id ) }}">
-                        <img src=" {{ route('img', $file_path[$closed_product->id])}} " class="img-thumbnail thumbnails" />
+										 	<div class="frame-thumbnails">
+                        <img class="shop_img" src=" {{ route('img', $file_path[$closed_product->id])}} " />
+											</div>
                     </a>
                   </td>
                   <td>{{ $closed_product->name }}</td>
