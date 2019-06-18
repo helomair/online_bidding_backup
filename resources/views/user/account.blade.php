@@ -66,6 +66,18 @@
                                         </div>
                                         <hr />
 
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">信箱</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                {{ $user->email }}
+												<span style='color:red;'>尚未驗證</span>
+												<!--<span style='color:green;'>驗證通過</span>-->
+                                            </div>
+                                        </div>
+                                        <hr />
+
                                     </div>
                                     <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <div class="row">
