@@ -164,6 +164,11 @@
   border-radius: .3rem;
 }
 
+.border-none{
+  border: 1px solid rgba(255,255,255)!important;
+}
+
+
 /*---profile---*/
 
 .image-container {
@@ -387,7 +392,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50px;
+    left: 0;
     right: 0;
     margin: auto;
 }

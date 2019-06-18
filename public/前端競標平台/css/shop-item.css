@@ -149,6 +149,10 @@
   border-radius: .3rem;
 }
 
+.border-none{
+  border: 1px solid rgba(255,255,255)!important;
+}
+
 /*---profile---*/
 
 .image-container {
@@ -315,7 +319,7 @@
 	display:inline-block;
 	height:100%;
 	width:0;
-	vertical-align:middle
+	vertical-align:middle;
 }
 
 .frame {
@@ -331,7 +335,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50px;
+    left: 0;
     right: 0;
     margin: auto;
 }
