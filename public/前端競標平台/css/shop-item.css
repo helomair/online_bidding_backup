@@ -236,13 +236,7 @@
     color: black;
 }
 
-.card-img{
-  width:100%!important;
-}
 
-.card-img>img{
-  width:100%;
-}
 
 .finished{
   color:#59d659;
@@ -305,4 +299,39 @@
 
 	cursor: pointer!important;
 	padding: 20px 10px!important;
+}
+
+.img4 {
+	text-align:center;
+  width:250px;
+  height:300px;
+}
+.img4 img {
+	vertical-align:middle;
+  width: 100%;
+
+}
+.img4 .iblock {
+	display:inline-block;
+	height:100%;
+	width:0;
+	vertical-align:middle
+}
+
+.frame {
+    height: 250px; /*can be anything*/
+    width: 250px; /*can be anything*/
+    position: relative;
+}
+.shop_img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+    margin: auto;
 }

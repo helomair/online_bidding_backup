@@ -255,13 +255,7 @@
     color: black;
 }
 
-.card-img{
-  width:100%!important;
-}
 
-.card-img>img{
-  width:100%;
-}
 
 .finished{
   color:#59d659;
@@ -283,46 +277,46 @@
 }
 
 .donate-now {
-    list-style-type:none; 
-    margin:25px 0 0 0; 
-    padding:0; 
+    list-style-type:none;
+    margin:25px 0 0 0;
+    padding:0;
 }
 
 .donate-now li {
-    float: left; 
-    margin: 0 5px 0 0; 
-    width: 100px; 
-    height: 40px; 
-    position: relative; 
+    float: left;
+    margin: 0 5px 0 0;
+    width: 100px;
+    height: 40px;
+    position: relative;
 }
 
 .donate-now label, .donate-now input {
-    display: block; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .donate-now input[type="radio"] {
-    opacity:0.011; 
-    z-index:100; 
+    opacity:0.011;
+    z-index:100;
 }
 
 .donate-now input[type="radio"]:checked + label {
-    background:yellow; 
+    background:yellow;
 }
 
 .donate-now label {
-    padding:5px; 
-    border:1px solid #CCC;  
-    cursor:pointer; 
-    z-index:90; 
+    padding:5px;
+    border:1px solid #CCC;
+    cursor:pointer;
+    z-index:90;
 }
 
 .donate-now label:hover {
-    background:#DDD; 
+    background:#DDD;
 }
 
 
@@ -378,4 +372,22 @@
 
 .border-radius-0{
   border-radius: 0px!important;
+}
+
+.frame {
+    height: 250px; /*can be anything*/
+    width: 250px; /*can be anything*/
+    position: relative;
+}
+.shop_img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+    margin: auto;
 }
