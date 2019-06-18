@@ -17,32 +17,32 @@
 
         <form role="form" action="{{ route('coin.make') }}" method="post">
         @csrf
-            <ul class="donate-now">
-                <li>
+            <ul class="donate-now row">
+                <li class="col-md-3">
                     <input type="radio" id="10p" name="coin" value="10" />
                     <label for="10p">10</label>
                 </li>
-                <li>
+                <li class="col-md-3">
                     <input type="radio" id="30p" name="coin" value="30" />
                     <label for="30p">30</label>
                 </li>
-                <li>
+                <li class="col-md-3">
                     <input type="radio" id="50p" name="coin" value="50" checked="checked" />
                     <label for="50p">50</label>
                 </li>
-                <li>
+                <li class="col-md-3">
                     <input type="radio" id="100p" name="coin" value="100" />
                     <label for="100p">100</label>
                 </li>
-                <li>
+                <li class="col-md-3">
                     <input type="radio" id="200p" name="coin" value="200" />
                     <label for="200p">200</label>
                 </li>
-                <li>
+                <li class="col-md-3">
                     <input type="radio" id="300p" name="coin" value="300" />
                     <label for="300p">300</label>
                 </li>
-            </ul>   
+            </ul>
 
 			<div class="row col-lg-10  mx-auto margin-top-50">
 			  <h5 class="col-lg-2 line-height-35">邀請碼：</h5>

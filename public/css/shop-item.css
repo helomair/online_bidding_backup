@@ -113,6 +113,14 @@
   height:250px;
 }
 
+.height-500{
+  height:500px;
+}
+
+.height-550{
+  height:550px;
+}
+
 .table td {
   vertical-align: middle!important;
 
@@ -283,15 +291,15 @@
 
 .donate-now {
     list-style-type:none;
-    margin:25px 0 0 0;
-    padding:0;
+
 }
 
 .donate-now li {
     float: left;
     margin: 0 5px 0 0;
-    width: 100px;
-    height: 40px;
+    font-size:45px;
+    text-align:center;
+    height: 150px;
     position: relative;
 }
 
@@ -384,6 +392,7 @@
     width: 250px; /*can be anything*/
     position: relative;
 }
+
 
 .frame-thumbnails {
     height: 150px;
