@@ -55,7 +55,7 @@ class Auto extends Command
                 {
                     $auto->update( ['times' => ($auto->times - 1) ] );
                     $product->update([
-                        'cur_cost' => ($product->cur_cost + 10),
+                        'cur_cost' => ($product->cur_cost + $product->cost),
                         'end_time' => $product->end_time->addMinutes(10)
                     ]);
                 }

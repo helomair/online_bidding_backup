@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'name', 'detail', 'cost', 'cur_cost', 'view_time', 'start_time', 'end_time', 'uid', 'discount', 'status'
+        'name', 'detail', 'cost', 'cur_cost', 
+        'view_time', 'start_time', 'end_time', 
+        'uid', 'discount', 'status', 'address', 
+        'message', 'origin_price'
     ]; 
     
     protected $dates = ['view_time', 'start_time', 'end_time']; 

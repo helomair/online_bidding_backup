@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Product;
 use App\User;
 use Carbon\Carbon;
+use Validator; 
 
 class BiddingController extends Controller
 {
@@ -23,11 +24,8 @@ class BiddingController extends Controller
     {
         $user = Auth::user();
         $userID = Auth::id(); 
+        $now_time = Carbon::now();
     	//$bid_cost = $request->input('bid_cost');
-    	$start_cost = $request->input('start_cost');
-    	$stop_cost = $request->input('stop_cost');
-    	$times = $request->input('times');
-    	$now_time = Carbon::now();
 
     	if( $user->balance > 0 )
     	{
@@ -43,18 +41,41 @@ class BiddingController extends Controller
             $count_down = $now_time->diffInSeconds($product->end_time,false);
             if( ($count_down < 0 && $count_down >= (-10)) && $now_time->gte($product->start_time) )
             	$product->update(['end_time' => $product->end_time->addSeconds(20)]);
-    	}
+        }
+        return redirect()->back()->with(['msg' => '下標成功']); 
+    }
 
-    	if($start_cost && $stop_cost && $start_cost < $stop_cost && $user->balance > $stop_cost)
+    public function storeAuto(Request $request, Product $product)
+    {
+        $message = [
+            'required' => '不能留空',
+            'integer' => '需為數字'
+
+        ];  
+        $validate = Validator::make($request->all(),[
+            'start_cost' => 'required|integer',
+            'stop_cost' => 'required|integer',
+            'times' => 'required|integer'
+        ],$message); 
+        
+        if($validate->fails())
+            return back()->witherrors($validate)->withInput(); 
+
+        $user = Auth::user();
+    	$start_cost = $request->input('start_cost');
+    	$stop_cost = $request->input('stop_cost');
+        $times = $request->input('times');
+
+    	if($start_cost && $stop_cost && $start_cost < $stop_cost)
     	{
     		$data_auto = [
     			'start_cost' => $start_cost,
     			'end_cost' 	 => $stop_cost,
     			'times' 	 => $times
     		];
-    		$product->users(true)->attach($userID,$data_auto);
-    	}
-
+    		$product->users(true)->attach($user->id,$data_auto);
+        }
+         
     	return redirect()->route('user_interface.show',$product->id);
     }
 }

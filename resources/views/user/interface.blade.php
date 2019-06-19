@@ -48,9 +48,10 @@
 
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
-            <h3 class="card-title">{{ $product->name }}</h3>
-            <h4>{{ $product->cost }}元</h4>
-            <p class="card-text">{{ $product->detail }}</p>
+            <h3 class="card-title">商品名稱： {{ $product->name }}</h3>
+            <h4>原價：{{ $product->origin_price }}元</h4>
+            <h4>每標價：{{ $product->cost}}</h4>
+            <p class="card-text">商品敘述： {{ $product->detail }}</p>
 
           </div>
         </div>
@@ -62,18 +63,40 @@
 			</div>
 			<div class="card-body height-100-px">
 					<div class="row">
-						<div class="col-lg-12 mx-auto margin-top-50">
-								<label for="exampleInputEmail1">開始價格</label>
-								<input type="text" class="form-control" placeholder="ex:5000元">
+                        <div class="col-lg-12 mx-auto margin-top-50">
+                            <form action="{{ route('bidding.auto', $product->id) }}" method="post">
+                            @csrf
+                              <div class="form-group"> 
+								<label for="start_cost">開始價格</label>
+                                <input type="text" class="form-control @error('start_cost') is-invalid @enderror " placeholder="ex:5000元" name="start_cost">
+                                @error('start_cost')
+						            <span class="invalid-feedback" role="alert">
+							            <strong>{{ $message }}</strong>
+						            </span>
+                                @enderror
+                              </div>
 
-								<label for="exampleInputEmail1">停止價格</label>
-								<input type="text" class="form-control" placeholder="ex:15000元">
-
-								<label for="exampleInputEmail1">次數</label>
-								<input type="text" class="form-control" placeholder="ex:10次">
-
-								<a href="bidding.html" class="btn btn-primary padding-05-2 margin-top-50 font-size-10">確定</a>
-						</div>
+                              <div class="form-group">
+								<label for="stop_cost">停止價格</label>
+								<input type="text" class="form-control @error('stop_cost') is-invalid @enderror " placeholder="ex:15000元" name="stop_cost">
+                                @error('stop_cost')
+						            <span class="invalid-feedback" role="alert">
+							            <strong>{{ $message }}</strong>
+						            </span>
+                                @enderror
+                              </div>
+                              <div class="form-group">
+								<label for="times">次數</label>
+								<input type="text" class="form-control @error('times') is-invalid @enderror " placeholder="ex:10次" name="times">
+                                @error('times')
+						            <span class="invalid-feedback" role="alert">
+							            <strong>{{ $message }}</strong>
+						            </span>
+                                @enderror
+                              </div>
+                                <input type="submit" class="btn btn-primary padding-05-2 margin-top-50 font-size-10">
+                            </form>
+                        </div>
 					</div>
 
 			</div>
@@ -83,7 +106,7 @@
 
     <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px;">
           <div class="card-header">
-            出價紀錄1
+            出價紀錄
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -116,9 +139,9 @@
 
 
 			<div class="card text-center  col-lg-5 height-250 margin-top-50" style="padding-left:0px; padding-right:0px;">
-				<div class="card-header">下標1</div>
+				<div class="card-header">下標</div>
 				<div class="card-body">
-					<h5 class="card-title">目前競標價：{{ $product->cur_cost }}P</h5>
+					<h5 class="card-title">目前競標價：{{ $product->cur_cost }}元</h5>
 					<p class="card-text">
 						目前最高出價者：
 						@if($top_auction->name == "")
@@ -128,7 +151,7 @@
 						@endif
 	                </p>
 	                @if( $product->end_time >= $nowtime)
-	                    <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2  font-size-10">下標</a>
+                        <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2 font-size-10" onclick="return confirm('確定下標？')">下標</a>
 	                @else
 	                    <div class="btn btn-primary padding-05-2  font-size-10">已結標</div>
 	                @endif
