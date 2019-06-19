@@ -28,6 +28,10 @@
   margin-top: 150px!important;
 }
 
+.margin-top-200 {
+  margin-top: 200px!important;
+}
+
 .margin-top-250 {
   margin-top: 250px!important;
 }
@@ -114,7 +118,11 @@
 }
 
 .height-250{
-  height:250px;
+  height:250px!important;
+}
+
+.height-350{
+  height:350px!important;
 }
 
 .height-500{

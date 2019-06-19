@@ -19,28 +19,29 @@
 			    </marquee>
             </div>
         <div/>
-        
+
         @foreach ($bulletins as $bulletin)
             <div class="modal fade" id="myModal{{$bulletin->id}}" role="dialog">
                 <div class="modal-dialog">
-    
+
                 <!-- Modal content-->
-                  <div class="modal-content">
+                  <div class="modal-content height-350 margin-top-200" >
                     <div class="modal-header">
+											<h4 class="modal-title">{{$bulletin->title}}</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; </button></br>
-                      <h4 class="modal-title">{{$bulletin->title}}</h4>
+
                     </div>
                     <div class="modal-body">
                       <p>{{$bulletin->content}}</p>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer" style="height:70px;">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
             </div>
           @endforeach
-        
+
 		<div class="container fix_content">
 		        <div class="col-12">
 		            <!--h2 align="center">歡迎光臨 {{ env('APP_NAME') }}</h2-->
