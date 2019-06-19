@@ -23,12 +23,22 @@
             </div>
             <div class="form-group">
               <label>原價</label>
-              <input name="cost" id="cost" id="text" type="text" class="form-control"value="{{ $product->cost }}">
+              <input name="origin_price" id="origin_price" id="text" type="text" class="form-control" value="{{ $product->origin_price }}">
 			 </div>
             <div class="form-group">
               <label>起標價</label>
-              <input name="cur_cost" id="cur_cost" id="text" type="text" class="form-control"value="{{ $product->cur_cost }}">
+              <input name="cur_cost" id="cur_cost" id="text" type="text" class="form-control" value="{{ $product->cur_cost }}">
             </div>
+            <div class="form-group" style="">
+				<label>標價</label><br>
+					<input type="radio" name="cost" value="1000">
+				<label style="">1000</label>
+					<input type="radio" name="cost" value="2000">
+				<label style="">2000</label>
+					<input type="radio" name="cost" value="3000">
+				<label style="">3000</label>
+			</div>
+
 			<div class="form-group">
 			  <label>公布時間</label>
               <input name="view_time" id="view_time" type="date" class="form-control" value="{{ $product->view_time->format('Y-m-d') }}">

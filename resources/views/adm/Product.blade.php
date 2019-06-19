@@ -20,6 +20,7 @@
                   <th width="10%">名稱</th>
                   <th width="10%">原價</th>
                   <th width="10%">起標價</th>
+                  <th width="10%">標價</th>
                   <th width="10%">公佈時間</th>
                   <th width="10%">開始時間</th>
                   <th width="10%">結束時間</th>
@@ -36,8 +37,9 @@
 										</div>
                   </td>
                   <td>{{ $product->name }}</td>
-                  <td>{{ $product->cost }}代幣</td>
-                  <td>{{ $product->cur_cost }}代幣</td>
+                  <td>{{ $product->origin_price }}</td>
+                  <td>{{ $product->cur_cost }}</td>
+                  <td>{{ $product->cost}}</td>
                   <td>{{ $product->view_time }}</td>
                   <td>{{ $product->start_time }}</td>
                   <td>{{ $product->end_time }}</td>

@@ -31,9 +31,9 @@ Route::get('/user/{product}/show', 'InterfaceController@show')->name('user_inter
 Route::get('/closed','ClosedController@index')->name('closed');
 ///////下標頁面
 ///表單
-Route::get('/bidding/{product}','BiddingController@index')->name('bidding');
+Route::get('/bidding/{product}','BiddingController@store')->name('bidding');
 ///儲存表單
-Route::post('/bidding/{product}/store','BiddingController@store')->name('bidding.store');
+Route::post('/bidding/{product}/auto','BiddingController@storeAuto')->name('bidding.auto');
 
 //帳號狀態
 Route::get('/account', 'UserAccountController@index')->name('account');

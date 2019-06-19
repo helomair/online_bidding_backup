@@ -22,7 +22,7 @@
             </div>
       <div class="form-group">
               <label>原價</label>
-              <input name="cost" id="cost" id="text" type="text" class="form-control">
+              <input name="origin_price" id="origin_price" id="text" type="text" class="form-control">
 			 </div>
       <div class="form-group">
         <label>起標價</label>
@@ -30,11 +30,11 @@
       </div>
 			<div class="form-group" style="">
 				<label>標價</label><br>
-					<input type="radio" name="gender" value="1000">
+					<input type="radio" name="cost" value="1000">
 					<label style="">1000</label>
-					 <input type="radio" name="gender" value="2000">
+					 <input type="radio" name="cost" value="2000">
 					 <label style="">2000</label>
-					 <input type="radio" name="gender" value="3000">
+					 <input type="radio" name="cost" value="3000">
 					 <label style="">3000</label>
 			</div>
 			<div class="form-group">

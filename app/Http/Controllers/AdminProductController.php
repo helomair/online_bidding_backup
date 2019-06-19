@@ -80,6 +80,7 @@ class AdminProductController extends Controller
 		$att['detail'] = $request->input('detail');
 		$att['cost'] = $request->input('cost');
 		$att['cur_cost'] = $request->input('cur_cost');
+        $att['origin_price'] = $request->input('origin_price');
 		
 		$product = Product::create($att);
 		
@@ -111,7 +112,8 @@ class AdminProductController extends Controller
     public function edit(Product $product)
     {
     	if($product->view_time <= Carbon::now())
-    		return redirect()->back()->with('has_begin', '已過公布時間，無法編輯');
+            return redirect()->back()->with('has_begin', '已過公布時間，無法編輯');
+
 		$files = get_files(storage_path('app/public/products/'.$product->id));
 		$pics[$product->id] = $files;
 		
@@ -138,7 +140,8 @@ class AdminProductController extends Controller
 		$att['view_time'] = $request->input('view_time');
 		$att['start_time'] = $request->input('start_time');
 		$att['end_time'] = $request->input('end_time');
-		$att['detail'] = $request->input('detail');
+        $att['detail'] = $request->input('detail');
+        $att['origin_price'] = $request->input('origin_price'); 
 		
 		$product->update($att);
 		
