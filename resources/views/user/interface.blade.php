@@ -63,38 +63,38 @@
 			</div>
 			<div class="card-body height-100-px">
 					<div class="row">
-                        <div class="col-lg-12 mx-auto margin-top-50">
+                        <div class="col-lg-12 mx-auto ">
                             <form action="{{ route('bidding.auto', $product->id) }}" method="post">
                             @csrf
-                              <div class="form-group"> 
-								<label for="start_cost">開始價格</label>
-                                <input type="text" class="form-control @error('start_cost') is-invalid @enderror " placeholder="ex:5000元" name="start_cost">
+                              <div class="form-group margin-top-35 margin-bottom-0">
+																<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
+                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror " placeholder="ex:5000元" name="start_cost">
                                 @error('start_cost')
-						            <span class="invalid-feedback" role="alert">
-							            <strong>{{ $message }}</strong>
-						            </span>
+						            				<span class="invalid-feedback" role="alert">
+							            			<strong>{{ $message }}</strong>
+						            			</span>
                                 @enderror
                               </div>
 
-                              <div class="form-group">
-								<label for="stop_cost">停止價格</label>
-								<input type="text" class="form-control @error('stop_cost') is-invalid @enderror " placeholder="ex:15000元" name="stop_cost">
-                                @error('stop_cost')
-						            <span class="invalid-feedback" role="alert">
-							            <strong>{{ $message }}</strong>
-						            </span>
-                                @enderror
+                              <div class="form-group margin-top-35 margin-bottom-0">
+																<label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
+																<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " placeholder="ex:15000元" name="stop_cost">
+								                                @error('stop_cost')
+														            <span class="invalid-feedback" role="alert">
+															            <strong>{{ $message }}</strong>
+														            </span>
+								                                @enderror
                               </div>
-                              <div class="form-group">
-								<label for="times">次數</label>
-								<input type="text" class="form-control @error('times') is-invalid @enderror " placeholder="ex:10次" name="times">
-                                @error('times')
-						            <span class="invalid-feedback" role="alert">
-							            <strong>{{ $message }}</strong>
-						            </span>
-                                @enderror
+                              <div class="form-group margin-top-35 margin-bottom-0">
+																	<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
+																	<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " placeholder="ex:10次" name="times">
+									                                @error('times')
+															            <span class="invalid-feedback" role="alert">
+																            <strong>{{ $message }}</strong>
+															            </span>
+									                                @enderror
                               </div>
-                                <input type="submit" class="btn btn-primary padding-05-2 margin-top-50 font-size-10">
+                                <input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
                             </form>
                         </div>
 					</div>

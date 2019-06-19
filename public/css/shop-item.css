@@ -12,6 +12,10 @@
   margin-top:0px!important;
 }
 
+.margin-top-35 {
+  margin-top: 35px!important;
+}
+
 .margin-top-50 {
   margin-top: 50px!important;
 }
@@ -358,6 +362,7 @@
     border:1px solid #34abff;
     border-radius: 99em;
 }
+
 
 
 .try-300 {
