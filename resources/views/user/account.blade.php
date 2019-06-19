@@ -133,9 +133,9 @@
                                                 <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">資料填寫</a>
                                                 <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
                                                 @if ($winner->status == '0')
-                                                  <p class="finished padding-05-16">未出貨</p> 
+                                                  <span class="finished padding-05-16">未出貨</span> 
                                                 @else 
-                                                  <p class="finished padding-05-16">已出貨</p>
+                                                  <span class="finished padding-05-16">已出貨</span>
                                                 @endif
                                               </td>
                                             </tr>
