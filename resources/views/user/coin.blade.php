@@ -17,32 +17,32 @@
 
         <form role="form" action="{{ route('coin.make') }}" method="post">
         @csrf
-            <ul class="donate-now row">
-                <li class="col-md-3">
+            <div class="donate-now row margin-top-100 justify-content-center" style="padding-left:0px;">
+                <div class="try-10">
                     <input type="radio" id="10p" name="coin" value="10" />
-                    <label for="10p">10</label>
-                </li>
-                <li class="col-md-3">
+                    <label class="label-10" for="10p">10</label>
+                </div>
+                <div class="try-30">
                     <input type="radio" id="30p" name="coin" value="30" />
-                    <label for="30p">30</label>
-                </li>
-                <li class="col-md-3">
+                    <label class="label-30"  for="30p">30</label>
+                </div>
+                <div class="try-50">
                     <input type="radio" id="50p" name="coin" value="50" checked="checked" />
-                    <label for="50p">50</label>
-                </li>
-                <li class="col-md-3">
+                    <label class="label-50"  for="50p">50</label>
+                </div>
+                <div class="try-100">
                     <input type="radio" id="100p" name="coin" value="100" />
-                    <label for="100p">100</label>
-                </li>
-                <li class="col-md-3">
+                    <label class="label-100" for="100p">100</label>
+                </div>
+                <div class="try-200">
                     <input type="radio" id="200p" name="coin" value="200" />
-                    <label for="200p">200</label>
-                </li>
-                <li class="col-md-3">
+                    <label class="label-200" for="200p">200</label>
+                </div>
+                <div class="try-300">
                     <input type="radio" id="300p" name="coin" value="300" />
-                    <label for="300p">300</label>
-                </li>
-            </ul>
+                    <label class="label-300" for="300p">300</label>
+                </div>
+            </div>
 
 			<div class="row col-lg-10  mx-auto margin-top-50">
 			  <h5 class="col-lg-2 line-height-35">邀請碼：</h5>
@@ -50,8 +50,8 @@
 			</div>
 
 			<div class="row col-lg-10 col-md-8 mx-auto margin-top-150">
-			  <input type="submit" value="提交" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary" >
-			  <input type="button" value="取消" onclick="window.location='/account'" class="col-lg-3 col-md-3 col-xs-3 btn btn-primary" >
+			  <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" >
+			  <input type="button" value="取消" onclick="window.location='/account'" class="btn btn-danger padding-05-2 font-size-10" >
             </div>
 		</form>
     </div>
