@@ -18,29 +18,29 @@
         <form role="form" action="{{ route('coin.make') }}" method="post">
         @csrf
             <div class="donate-now row margin-top-100 justify-content-center" style="padding-left:0px;">
-                <div class="try">
+                <div class="try-10">
                     <input type="radio" id="10p" name="coin" value="10" />
-                    <label for="10p">10</label>
+                    <label class="label-10" for="10p">10</label>
                 </div>
-                <div class="try">
+                <div class="try-30">
                     <input type="radio" id="30p" name="coin" value="30" />
-                    <label for="30p">30</label>
+                    <label class="label-30"  for="30p">30</label>
                 </div>
-                <div class="try">
+                <div class="try-50">
                     <input type="radio" id="50p" name="coin" value="50" checked="checked" />
-                    <label for="50p">50</label>
+                    <label class="label-50"  for="50p">50</label>
                 </div>
-                <div class="try">
+                <div class="try-100">
                     <input type="radio" id="100p" name="coin" value="100" />
-                    <label for="100p">100</label>
+                    <label class="label-100" for="100p">100</label>
                 </div>
-                <div class="try">
+                <div class="try-200">
                     <input type="radio" id="200p" name="coin" value="200" />
-                    <label for="200p">200</label>
+                    <label class="label-200" for="200p">200</label>
                 </div>
-                <div class="try">
+                <div class="try-300">
                     <input type="radio" id="300p" name="coin" value="300" />
-                    <label for="300p">300</label>
+                    <label class="label-300" for="300p">300</label>
                 </div>
             </div>
 
