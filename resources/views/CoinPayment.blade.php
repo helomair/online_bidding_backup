@@ -17,6 +17,14 @@
           <form method="post" action="{{ route('coin.pay', $payment->id) }}" role="form" class="width-75-percent padding-left-50">
 		    @csrf
             <div class="form-group">
+              <span>銀行名稱：</span>
+              <span>{{ $bank_account->bank_name }}</span>
+            </div>
+            <div class="form-group">
+              <span>帳戶人名稱：</span>
+              <span>{{ $bank_account->holder_name }}</span>
+            </div>
+            <div class="form-group">
               <span>官方帳戶：</span>
               <span>{{ $bank_account->account }}</span>
             </div>

@@ -9,39 +9,38 @@
 @endsection
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
-		<div class="panel-group margin-top-100" id="accordion">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion"
-							 href="#collapseOne">
-							 <div class="container">
-								 <div class="row">
-									<marquee>
-										 <p style="font-family: Impact; font-size: 18pt">測試！測試！123!~~~ 測試！測試！123!~~~ 測試！測試！123!~~~</p>
-									 </marquee>
-								 </div>
-						 </div>
-						</a>
-					</h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse in text-align-center">
-					<div class="panel-body">
-						<div class="font-size-20">
-							公告一
-						</div>
-						とろさば料理専門店SABAR（サバー）では、とろさばフルコースや鯖寿司など、<br>「とろさば」の美味しさを世界各国の伝統料理で堪能いただく「とろさば情報発信基地」です。
-					</div><br>
-					<div class="panel-body">
-						<div class="font-size-20">
-							公告二
-						</div>
-						とろさば料理専門店SABAR（サバー）では、とろさばフルコースや鯖寿司など、<br>「とろさば」の美味しさを世界各国の伝統料理で堪能いただく「とろさば情報発信基地」です。
-					</div>
-				</div>
-			</div>
-
-		</div>
+		<div class="container margin-top-100">
+			<div class="row font-size-40">
+                  <marquee>
+                    @foreach ($bulletins as $bulletin)
+                        <span style="margin-right: 100px; cursor:pointer;" data-toggle="modal" data-target="#myModal{{$bulletin->id}}">{{ $bulletin->title }}</span>
+                    @endforeach
+										 <!--p style="font-family: Impact; font-size: 18pt">測試！測試！123!~~~ 測試！測試！123!~~~ 測試！測試！123!~~~</p-->
+			    </marquee>
+            </div>
+        <div/>
+        
+        @foreach ($bulletins as $bulletin)
+            <div class="modal fade" id="myModal{{$bulletin->id}}" role="dialog">
+                <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; </button></br>
+                      <h4 class="modal-title">{{$bulletin->title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>{{$bulletin->content}}</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          @endforeach
+        
 		<div class="container fix_content">
 		        <div class="col-12">
 		            <!--h2 align="center">歡迎光臨 {{ env('APP_NAME') }}</h2-->

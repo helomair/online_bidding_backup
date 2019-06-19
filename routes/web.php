@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+
 #登入
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -99,6 +100,9 @@ Route::get('/adm/bulletin/{bulletin}/edit', 'BulletinController@edit')->name('ad
 Route::patch('/adm/bulletin/{bulletin}', 'BulletinController@update')->name('adm_Bulletin.update');
 //刪除
 Route::delete('/adm/bulletin/{bulletin}', 'BulletinController@destroy')->name('adm_Bulletin.destroy');
+//首頁顯示詳細 彈出式視窗連結
+Route::get('/adm/bulletin/{bulletin}/content', 'BulletinController@contents')->name('adm_Bulletin.content'); 
+
 
 //加值紀錄
 //首頁

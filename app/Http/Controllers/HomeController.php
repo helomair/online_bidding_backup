@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Bulletin; 
 use Illuminate\Support\Facades\File;
 use Carbon\Carbon; 
 
@@ -17,6 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
+        $bulletins = Bulletin::all();
 
         foreach($products as $product){
 			//先取得商品名
@@ -29,7 +31,7 @@ class HomeController extends Controller
 			  $file_path[$product->id] = '';
 		  //echo $file_path[$product->id]."\n";
 		}
-        return view('index', compact('products','file_path')); 
+        return view('index', compact('products','file_path','bulletins')); 
     }
 
 	public function getImg($file_path)
