@@ -269,7 +269,6 @@
 }
 
 
-
 .finished{
   color:#59d659;
   vertical-align: middle;
@@ -294,13 +293,16 @@
 
 }
 
-.donate-now li {
-    float: left;
-    margin: 0 5px 0 0;
-    font-size:45px;
+.try {
+    font-size:25px;
     text-align:center;
-    height: 150px;
+    height: 100px;
+    width: 100px;
     position: relative;
+    margin:10px;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 99em;
 }
 
 .donate-now label, .donate-now input {
@@ -318,18 +320,21 @@
 }
 
 .donate-now input[type="radio"]:checked + label {
-    background:yellow;
+    background:#149dcc;
+    border-radius: 99em;
 }
 
 .donate-now label {
     padding:5px;
-    border:1px solid #CCC;
     cursor:pointer;
     z-index:90;
+    line-height:85px;
+    margin-bottom:0px;
 }
 
 .donate-now label:hover {
     background:#DDD;
+    border-radius: 99em;
 }
 
 
