@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '管理者主頁') <!-- 單行記錄 -->
+@section('title', '結標頁面') <!-- 單行記錄 -->
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -8,6 +8,10 @@
 	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+<!-- 結標頁面上方卡到，多加nav將頁面撐回來 -->
+<nav class="nav nav-pills nav-fill margin-top-100 cursor-pointer" style="background-color:#e1f4ff;">
+</nav>
+<!-- /.結標頁面上方卡到，多加nav將頁面撐回來 -->
 <div class="container fix_content">
 
     <div class="row">
