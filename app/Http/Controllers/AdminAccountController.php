@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema; 
 use App\User; 
 use App\Product;
 use Auth; 
@@ -59,11 +60,12 @@ class AdminAccountController extends Controller
         $where = $user;
         //搜詢條件判斷
         foreach($columns as $column) 
-        {
-            $where = $where->orWhere($column,'LIKE','%'.$search.'%');
+        { 
+            $where = $where->orWhere($column,'LIKE','%'.$search.'%'); 
         }
         //分頁
-        $users = $where->paginate(3);
+        $users = $where->paginate(2);
+
         return view('adm.Account', compact('users'));
     }
 
@@ -89,9 +91,9 @@ class AdminAccountController extends Controller
     {
         if($id == Auth::id() && Auth::user()->is_adm)
             return redirect()->back()->withErrors(['delete user error : 不可刪除自己']); 
-//        $user = User::find($id)->update(['on' => 0]);
-        echo "error"; 
-        //return redirect('/adm/account');
+        $user = User::find($id)->update(['on' => 0]);
+        //echo "error"; 
+        return redirect('/adm/account');
     }
 
 }

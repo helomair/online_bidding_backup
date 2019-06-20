@@ -81,6 +81,7 @@ class UserAccountController extends Controller
         }
         else
         {
+            $user->update(['recommand_code' => 'nothing']);
             $first_code = false;
         }
         
@@ -98,9 +99,12 @@ class UserAccountController extends Controller
 
     public function PaymentPay(Request $request, Payment $payment)
     {
+        $v = Validator::make(
+            $request->all(),
+            ['user_account' => 'required'],
+            ['required' => '不可留空']); 
+        
         $user_account = $request->input('user_account');
-        if( $user_account == NULL )
-            return redirect()->back()->withError('帳戶不可為空');
         
         $payment->update([ 'user_account' => $user_account ]);
 

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers; 
 use Illuminate\Http\Request; 
+use App\User; 
 use Session;
+
 
 class LoginController extends Controller
 {
@@ -48,4 +50,25 @@ class LoginController extends Controller
             Session::put('adm_on', 0);
         return redirect()->intended($this->redirectPath());
     }
+
+
+    /**
+     * Attempt to log the user into the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return bool
+     */
+    protected function attemptLogin(Request $request)
+    {
+        $active_user = User::where($this->username(), $request[$this->username()])
+            ->where('on','1')->first(); 
+        if($active_user !== NULL)
+        {
+            return $this->guard()->attempt(
+                $this->credentials($request), $request->filled('remember')
+            );
+        }
+        return false; 
+    }
+
 }

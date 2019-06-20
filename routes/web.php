@@ -45,6 +45,7 @@ Route::post('/winner/{product}/end', 'UserAccountController@EndBidding')->name('
 Route::get('/coin', 'UserAccountController@createCoin')->name('coin');
 //儲值 建立帳單
 Route::post('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.make');
+Route::get('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.make');
 //儲值 用戶填寫帳戶資料
 Route::post('/coin/{payment}/pay', 'UserAccountController@PaymentPay')->name('coin.pay');
 //儲值 管理員確認
@@ -77,7 +78,7 @@ Route::get('img/{file_path}', 'HomeController@getImg')->name('img');
 //首頁
 Route::get('/adm/account','AdminAccountController@index' )->name('adm_Account');
 //搜尋
-Route::post('/adm/account','AdminAccountController@search' )->name('adm_Search');
+Route::post('/adm/account/search','AdminAccountController@search' )->name('adm_Search');
 //顯示
 Route::get('/adm/account/{user}/show', 'AdminAccountController@show' )->name('adm_Account.show');
 //以使用者身份登入
