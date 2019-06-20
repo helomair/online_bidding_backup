@@ -37,7 +37,7 @@
                 <td style="text-align:center;"><a href="{{ route('adm_Account.info',$user->id)}}">{{ $user->name }}</a></td>
                 <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger padding-05-2 font-size-10">檢視</a></td>
                 <td style="text-align:center;">
-				  <a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
+				  <a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="confirm('確定刪除？'); document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
 				  <form method="post" action="{{ route('adm_Account.destroy',$user->id) }}" id="delete_{{$user->id}}">
 					@csrf
 					{{ method_field('DELETE') }}

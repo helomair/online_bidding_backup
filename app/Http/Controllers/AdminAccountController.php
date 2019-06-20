@@ -91,9 +91,9 @@ class AdminAccountController extends Controller
     {
         if($id == Auth::id() && Auth::user()->is_adm)
             return redirect()->back()->withErrors(['delete user error : 不可刪除自己']); 
-//        $user = User::find($id)->update(['on' => 0]);
-        echo "error"; 
-        //return redirect('/adm/account');
+        $user = User::find($id)->update(['on' => 0]);
+        //echo "error"; 
+        return redirect('/adm/account');
     }
 
 }

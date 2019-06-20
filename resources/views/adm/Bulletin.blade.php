@@ -27,7 +27,7 @@
               <tr>
                 <td>
                   <span class="margin-bottom-04-rem">{{ $bulletin->title }}</span>
-                    <img onclick="document.getElementById('delete_{{$bulletin->id}}').submit()" src="{{ asset('images/delete.png') }}" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
+                    <img onclick="confirm('確定刪除？');  document.getElementById('delete_{{$bulletin->id}}').submit()" src="{{ asset('images/delete.png') }}" class="cursor-pointer" style="float:right; width:20px; height:20px;" />
                     <img onclick="window.location='{{ route('adm_Bulletin.edit',$bulletin->id) }}'" src="{{ asset('images/edit.png') }}" class="cursor-pointer margin-right-5" style="float:right; width:20px; height:20px;" />
                 </td>
 				<form method="post" action="{{ route('adm_Bulletin.destroy',$bulletin->id) }}" id="delete_{{$bulletin->id}}">
