@@ -23,8 +23,8 @@ class EndBiddingController extends Controller
         $address = $request->input('address'); 
         $message = $request->input('message');
         $data = [
-            'message' = $message,
-            'address' = $address
+            'message' => $message,
+            'address' => $address
         ]; 
         $product->winner()->attach($userID,$data);
     }

@@ -35,7 +35,10 @@ class BiddingController extends Controller
             ];
 
     		$product->users()->attach($userID,$data);
-            $product->update(['cur_cost' => $data['lasted_cost'] ]);
+            $product->update( [
+                'cur_cost' => $data['lasted_cost'] ,
+                'uid'      => $user->id
+            ]);
             $user->update(['balance' => $user->balance - 1 ]); 
 
             $count_down = $now_time->diffInSeconds($product->end_time,false);

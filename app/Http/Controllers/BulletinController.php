@@ -16,7 +16,7 @@ class BulletinController extends Controller
 
     public function index()
     {
-        $bulletins = Bulletin::where('on','1')->paginate(2); 
+        $bulletins = Bulletin::where('on','1')->paginate(3); 
         return view('adm.Bulletin', compact('bulletins'));
     }
 

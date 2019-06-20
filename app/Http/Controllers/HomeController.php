@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
-        $bulletins = Bulletin::all();
+        $bulletins = Bulletin::where('on','1')->get();
 
         foreach($products as $product){
 			//先取得商品名

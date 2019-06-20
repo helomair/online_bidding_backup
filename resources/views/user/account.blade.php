@@ -113,6 +113,7 @@
                                           @endforeach
                                         </tbody>
                                       </table>
+                                      {{ $auctions->links() }}
                                     </div>
                                     <div class="tab-pane fade" id="getBind" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <table class="table">
