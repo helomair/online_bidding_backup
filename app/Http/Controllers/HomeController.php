@@ -31,6 +31,8 @@ class HomeController extends Controller
 			  $file_path[$product->id] = '';
 		  //echo $file_path[$product->id]."\n";
 		}
+		//如果沒有進行中拍賣，給file_path一個null防error
+		if(!isset($file_path)) $file_path='';
         return view('index', compact('products','file_path','bulletins')); 
     }
 

@@ -163,8 +163,9 @@
 <!-- 倒數計時器js -->
 <script type="text/javascript">
 	var product = @json($product->toArray());
+	var nowdate = new Date();    		//取得現在時間
 	var endtime = product.end_time;
-	var now=new Date();
+	var enddate = new Date(endtime);	//取得結束時間，轉成js的Date模式才能做比較
 	var end_year = endtime.substr(0,4);
 	var end_month = endtime.substr(5,2);
 	var end_day = endtime.substr(8,2);
@@ -172,7 +173,6 @@
 	var end_minutes = endtime.substr(14,2);
 	var end_second = endtime.substr(17,2);
 	//alert(end_year+end_month+end_day+end_hour+end_minutes+end_second);
-	//alert(endtime);
 	var interval=1000;
 	function ShowTimer(endYear,endMonth,endDay,endHour,endMinute,endSecond,divId) {
 		var now=new Date();
@@ -193,10 +193,9 @@
 		var second = Math.floor(leftSecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
 		console.log("second="+second);
 		var htmlElement=document.getElementById(divId);
-		htmlElement.innerHTML =
-		"<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>时<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
+		htmlElement.innerHTML = "<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>时<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
 	}
-	if(endtime >= now){
+	if(enddate >= nowdate){
 	window.setInterval(function () { ShowTimer(end_year, end_month, end_day, end_hour, end_minutes, end_second, 'andy timer'); }, interval);
 	}
 </script>
