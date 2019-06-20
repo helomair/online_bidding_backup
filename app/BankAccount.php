@@ -9,7 +9,7 @@ class BankAccount extends Model
     protected $table = 'bank_accounts';
 
     protected $fillable = [
-        'account'
+        'account', 'bank_name', 'holder_name'
     ]; 
 
     public function payments()
