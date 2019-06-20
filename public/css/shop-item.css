@@ -515,6 +515,47 @@
     margin: auto;
 }
 
+.custom-nav-a{
+  background-color:#149dcc;
+  color: white;
+  height:40px;
+  line-height:39px;
+}
+
+.custom-nav-a:hover{
+  background-color: white;
+  color: black;
+}
+
+.custom-nav-a:active{
+  background-color: black;
+  color: white;
+}
+
+.custom-nav-b{
+  background-color: #1477cc;
+  color: white;
+  height:40px;
+  line-height:39px;
+}
+
+.custom-nav-b:hover{
+  background-color: white;
+  color: black;
+}
+
+.custom-nav-c{
+  background-color: #0170f9d4;
+  color: white;
+  height:40px;
+  line-height:39px;
+}
+
+.custom-nav-c:hover{
+  background-color: white;
+  color: black;
+}
+
 @media screen and (max-width: 414px) {
   .add-coin-invite{
     width:105px!important;
