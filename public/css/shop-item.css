@@ -443,18 +443,6 @@
     margin-bottom:0px;
 }
 
-
-
-
-@media screen and (max-width: 992px) {
-  .width-75-percent-nav {
-    width: 45%;
-  }
-  .coin-box{
-    margin-top: 1.5rem;
-  }
-}
-
 .black{
   color: black!important;
 }
@@ -476,7 +464,7 @@
 }
 
 .fix_content{
-  min-height: 500px;
+  min-height: 700px;
 }
 
 .coin-box input[type="radio"] {
@@ -525,4 +513,52 @@
     left: 0;
     right: 0;
     margin: auto;
+}
+
+@media screen and (max-width: 414px) {
+  .add-coin-invite{
+    width:105px!important;
+  }
+  .add-coin-input{
+    width:200px!important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .add-coin-invite{
+    width:105px!important;
+  }
+  .add-coin-input{
+    width:250px!important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .width-75-percent-nav {
+    width: 45%;
+  }
+  .coin-box{
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .add-coin-invite{
+    width:115px!important;
+  }
+  .add-coin-input{
+    width:300px!important;
+  }
+}
+
+@media screen and (min-height: 1366px) {
+  .fix_content{
+    min-height: 1000px;
+  }
+  .add-coin-invite{
+    width:115px!important;
+  }
+  .add-coin-input{
+    width:300px!important;
+  }
 }

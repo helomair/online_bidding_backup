@@ -16,7 +16,7 @@
   <div class="container my-4">
         <div class="row">
             <div class="col-12">
-                <div class="card">
+                <div class="card margin-top-100" style="height:500px;">
                   <div class="card-body">
                         <div class="card-title mb-4">
                             <div class="d-flex justify-content-start">
@@ -133,8 +133,8 @@
                                                 <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">資料填寫</a>
                                                 <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
                                                 @if ($winner->status == '0')
-                                                  <p class="finished padding-05-16">未出貨</p> 
-                                                @else 
+                                                  <p class="finished padding-05-16">未出貨</p>
+                                                @else
                                                   <p class="finished padding-05-16">已出貨</p>
                                                 @endif
                                               </td>
