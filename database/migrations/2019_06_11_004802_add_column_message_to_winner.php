@@ -14,7 +14,8 @@ class AddColumnMessageToWinner extends Migration
     public function up()
     {
         Schema::table('winner', function (Blueprint $table) {
-            $table->string('message');
+            if (!Schema::hasColumn('winner', 'message'))
+                $table->string('message');
         });
     }
 

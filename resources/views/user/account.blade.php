@@ -16,7 +16,7 @@
   <div class="container my-4">
         <div class="row">
             <div class="col-12">
-                <div class="card margin-top-100" style="height:500px;">
+                <div class="card margin-top-100" style="height:700px;">
                   <div class="card-body">
                         <div class="card-title mb-4">
                             <div class="d-flex justify-content-start">
@@ -113,6 +113,7 @@
                                           @endforeach
                                         </tbody>
                                       </table>
+                                      {{ $auctions->links() }}
                                     </div>
                                     <div class="tab-pane fade" id="getBind" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <table class="table">

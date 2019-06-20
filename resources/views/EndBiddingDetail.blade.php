@@ -15,10 +15,10 @@
 <div class="container fix_content">
 
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-8 mx-auto">
         <div id="products" class="table-responsive margin-top-50">
             <h1>結標時的頁面</h1>
-          <form method="post" action="{{ route('winner.endbidding', 3) }}" role="form" class="width-75-percent padding-left-50">
+          <form method="post" action="{{ route('winner.endbidding', $product->id) }}" role="form" class=" ">
 		    @csrf
             <div class="form-group">
               <label>姓名</label>
@@ -30,14 +30,24 @@
             </div>
             <div class="form-group">
               <label>地址</label>
-              <input id="address" name="address" type="text" class="form-control">
+              <input id="address" name="address" type="text" class="form-control @error('address') is-invalid @enderror">
+              @error('address')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
             <div class="form-group">
               <label>留言</label>
-              <textarea id="message" name="message" style="width:100%; height: 100px;"></textarea>
+              <input type="text" id="message" name="message" style="width:100%; height: 100px;" class="form-control @error('message') is-invalid @enderror"></input>
+              @error('message')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
-            <input type="submit" value="提交" class="form-control my-4" style="width:15%; float:left;">
-            <input type="button" value="取消" onclick="window.location='/account'"  class="form-control my-4" style="width:15%; float:left;">
+            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" style="">
+            <input type="button" value="取消" onclick="window.location='/account'"  class="btn btn-danger padding-05-2 font-size-10" style="">
           </form>
         </div>
       </div>

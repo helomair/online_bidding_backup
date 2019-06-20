@@ -21,28 +21,35 @@ class UserAccountController extends Controller
     public function index()
     {
         $user = Auth::user(); 
-        $auctions = $user->products()->orderBy('auction.created_at', 'desc')->paginate(3);
+        $auctions = $user->products()->orderBy('auction.created_at', 'desc')->paginate(2);
         $winners = $user->winner_product()->orderBy('created_at', 'desc')->paginate(3);
         //dd($winners);
 		return view('user.account', compact('user', 'auctions', 'winners') );
     }
 
-    public function create()
+    public function create(Product $product)
     {
-    	return view('EndBiddingDetail');
+    	return view('EndBiddingDetail', compact('product'));
     }
 
     public function EndBidding(Request $request, Product $product)
     {
+
+        $v = Validator::make($request->all(),[
+            'address' => 'required',
+            'message' => 'required'
+        ], [ 'required' => '不能留空' ]  );
+
+        if($v->fails())
+            return back()->withErrors($v)->withInput();
+
     	$user = Auth::user();
-    	$att['name'] = $request->input('name');
-    	$att['phone'] = $request->input('phone');
+//    	$att['name'] = $request->input('name');
+//    	$att['phone'] = $request->input('phone');
     	$att['address'] = $request->input('address');
     	$att['message'] = $request->input('message');
-        if($product->winner()->count() > 0)
-    	    $user->winner_product()->updateExistingPivot($product->id,$att);
-        else 
-            $user->winner_product()->attach($product->id,$att);
+
+        $product->update($att);
     	return redirect()->route('account');
     }
 

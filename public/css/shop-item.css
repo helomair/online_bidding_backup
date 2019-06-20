@@ -522,6 +522,9 @@
   .add-coin-input{
     width:200px!important;
   }
+  .footer-rwd{
+    min-width:250px;
+  }
 }
 
 @media screen and (max-width: 768px) {
