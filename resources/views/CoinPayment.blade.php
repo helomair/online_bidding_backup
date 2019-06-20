@@ -11,10 +11,10 @@
 <div class="container fix_content">
 
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="col-lg-8 mx-auto">
         <div id="products" class="table-responsive margin-top-150">
             <h1>繳費帳單</h1>
-          <form method="post" action="{{ route('coin.pay', $payment->id) }}" role="form" class="width-75-percent padding-left-50">
+          <form method="post" action="{{ route('coin.pay', $payment->id) }}" role="form" class="">
 		    @csrf
             <div class="form-group">
               <span>銀行名稱：</span>
@@ -40,7 +40,7 @@
               <label>轉帳帳戶</label>
               <textarea id="message" name="user_account" style="width:100%; height: 150px;"></textarea>
             </div>
-            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" style="width:15%; float:right;">
+            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" style="">
           </form>
         </div>
       </div>
