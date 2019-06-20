@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema; 
 use App\User; 
 use App\Product;
 use Auth; 
@@ -59,11 +60,13 @@ class AdminAccountController extends Controller
         $where = $user;
         //搜詢條件判斷
         foreach($columns as $column) 
-        {
-            $where = $where->orWhere($column,'LIKE','%'.$search.'%');
+        { 
+            $where = $where->orWhere($column,'LIKE','%'.$search.'%'); 
         }
         //分頁
-        $users = $where->paginate(3);
+        $users = $where->paginate(2);
+        echo "1\n"; 
+        echo $users; 
         return view('adm.Account', compact('users'));
     }
 

@@ -19,8 +19,8 @@
           <form method="post" action="{{ route('adm_Search') }}" role="form" >
 		    @csrf
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="請輸入關鍵字">
-					<a href="" class="btn btn-danger padding-05-2 font-size-10 margin-top-0 margin-bottom-0">搜尋</a>
+					<input type="text" name="keyword" class="form-control" placeholder="請輸入關鍵字">
+					<input type="submit" class="btn btn-danger padding-05-2 font-size-10 margin-top-0 margin-bottom-0" value="搜尋"></a>
 				</div>
           </form>
           <table class="table table-striped margin-top-50">

@@ -38,8 +38,13 @@
             </div>
             <div class="form-group">
               <label>轉帳帳戶</label>
-              <textarea id="message" name="user_account" style="width:100%; height: 100px;"></textarea>
+              <textarea id="user_account" name="user_account" style="width:100%; height: 100px;" class="@error('user_account') is-invalid @enderror"></textarea>
             </div>
+            @error('user_account') 
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror 
             <input type="submit" value="提交" class="form-control my-4" style="width:15%; float:right;">
           </form>
         </div>
