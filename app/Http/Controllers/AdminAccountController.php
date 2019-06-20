@@ -65,8 +65,7 @@ class AdminAccountController extends Controller
         }
         //分頁
         $users = $where->paginate(2);
-        echo "1\n"; 
-        echo $users; 
+
         return view('adm.Account', compact('users'));
     }
 
