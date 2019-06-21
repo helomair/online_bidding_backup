@@ -18,7 +18,7 @@
                     關於我們
                 </h2>
                 <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
-                    Shape your future web project with sharp design and refine coded functions.
+                  
                 </h3>
 
             </div>
