@@ -6,19 +6,19 @@ for($i=0;$i<2;$i++){
 }
 ?>
 
-<section class="cid-rsuhG4Y4Z6 margin-top-50 row space-around" id="footer1-f" style="background-color:white;">
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+<section class="cid-rsuhG4Y4Z6 margin-top-50 row col-lg-12 space-around" id="footer1-f" style="background-color:white;">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+		<a href="{{ route('user_interface') }}" class=" nav-font-a">
 			進行中拍賣
 		</a>
 	</div>
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+		<a href="{{ route('closed') }}" class=" nav-font-b">
 			已結標拍賣
 		</a>
 	</div>
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+		<a  href="{{ route('account') }}" class="nav-font-c">
 			帳戶狀態
 		</a>
 	</div>
