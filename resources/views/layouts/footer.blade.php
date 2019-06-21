@@ -5,28 +5,28 @@
             <div class="media-container-row">
                 <div class="col-lg-12 col-sm-12 row justify-content-center">
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-                    <a href="{{ route('aboutus') }}" class="pb-3" style="color:white;">
+                    <a href="{{ route('aboutus') }}" class="pb-3 footer-font">
                         關於我們
                     </a>
                   </div>
                   <div class="col-2  footer-rwd mbr-fonts-style display-7 text-align-center" >
-                    <a href="{{ route('service') }}" class="pb-3" style="color:white;">
+                    <a href="{{ route('service') }}" class="pb-3 footer-font">
                         服務條款
                     </a>
                   </div>
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
-                    <a href="{{ route('fq') }}" class="pb-3" style="color:white;">
+                    <a href="{{ route('fq') }}" class="pb-3 footer-font">
                         常見問題
                     </a>
                   </div>
 
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
-                    <a href="{{ route('privacy') }}" class="pb-3" style="color:white;">
+                    <a href="{{ route('privacy') }}" class="pb-3 footer-font">
                         隱私條款
                     </a>
                   </div>
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
-                    <a href="contact.html" class="pb-3" style="color:white;">
+                    <a href="contact.html" class="pb-3 footer-font">
                         聯繫我們
                     </a>
                   </div>
@@ -35,7 +35,7 @@
         </div>
     </div>
 </section>
-<section class="cid-rsuhG4Y4Z6 " id="footer1-f" style="background-color:white; padding:20px 0px;">
+<section class="cid-rsuhG4Y4Z6 my-4 " id="footer1-f" style="background-color:white; padding:20px 0px;">
     <div class="container">
         <div class="media-container-row content text-white">
 

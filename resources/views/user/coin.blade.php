@@ -18,17 +18,22 @@
         <form role="form" action="{{ route('coin.make') }}" method="post">
         @csrf
             <div class="donate-now row margin-top-100 justify-content-center" style="padding-left:0px;">
+
+                <div class="try-5">
+                    <input type="radio" id="5p" name="coin" value="5" />
+                    <label class="label-5" for="5p">5</label>
+                </div>
                 <div class="try-10">
                     <input type="radio" id="10p" name="coin" value="10" />
-                    <label class="label-10" for="10p">10</label>
+                    <label class="label-10"  for="10p">10</label>
                 </div>
                 <div class="try-30">
-                    <input type="radio" id="30p" name="coin" value="30" />
+                    <input type="radio" id="30p" name="coin" value="30" checked="checked" />
                     <label class="label-30"  for="30p">30</label>
                 </div>
                 <div class="try-50">
-                    <input type="radio" id="50p" name="coin" value="50" checked="checked" />
-                    <label class="label-50"  for="50p">50</label>
+                    <input type="radio" id="50p" name="coin" value="50" />
+                    <label class="label-50" for="50p">50</label>
                 </div>
                 <div class="try-100">
                     <input type="radio" id="100p" name="coin" value="100" />
@@ -38,7 +43,7 @@
                     <input type="radio" id="200p" name="coin" value="200" />
                     <label class="label-200" for="200p">200</label>
                 </div>
-                <div class="try-300">
+								<div class="try-300">
                     <input type="radio" id="300p" name="coin" value="300" />
                     <label class="label-300" for="300p">300</label>
                 </div>
@@ -49,7 +54,7 @@
 			   <input type="text" value="" class="col-lg-4  form-control add-coin-input bg-white" name="code" >
 			</div>
             @endif
-			<div class="row col-lg-8 col-md-8 mx-auto margin-top-50">
+			<div class="row col-lg-8 col-md-8 mx-auto margin-top-150" style="justify-content:center;">
 			  <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" >
 			  <input type="button" value="取消" onclick="window.location='/account'" class="btn btn-danger padding-05-2 font-size-10" >
             </div>
