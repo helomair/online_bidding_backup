@@ -82,22 +82,19 @@
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->email }}
-												<span style='color:red;'>尚未驗證</span>
-												<!--<span style='color:green;'>驗證通過</span>-->
-                                            </div>
+																						<span style='color:red;'>尚未驗證</span>
+																						<!--<span style='color:green;'>驗證通過</span>-->
+										                                            </div>
                                         </div>
                                         <hr />
 
                                     </div>
                                     <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <div class="row">
-                                          <div class="col-sm-3 col-md-2 col-5">
-                                              <label style="font-weight:bold;">剩餘代幣</label>
+                                          <div class="col-md-10 col-5 custom-margin-right-20">
+                                              <label style="font-weight:bold; line-height:45px; white-space:nowrap;">剩餘代幣: {{ $user->balance }}P</label>
                                           </div>
-                                          <div class="col-md-8 col-6">
-                                              {{ $user->balance }}P
-                                          </div>
-                                          <div class="col-md-2 col-6">
+                                          <div class="col-md-2 col-6 text-align-center">
                                               <a href="{{ route('coin') }}" class="btn btn-danger padding-05-16 font-size-12">儲值</a>
                                           </div>
                                       </div>
@@ -108,9 +105,9 @@
                                         <table class="table">
                                         <thead>
                                           <tr>
-                                            <th scope="col">商品</th>
-                                            <th scope="col">時間</th>
-                                            <th scope="col">額度</th>
+                                            <th style="min-width:100px;">商品</th>
+                                            <th>時間</th>
+                                            <th>額度</th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -130,7 +127,7 @@
                                         <table class="table">
                                         <thead>
                                           <tr>
-                                            <th scope="col">商品</th>
+                                            <th scope="col" style="min-width:100px;">商品</th>
                                             <th scope="col">金額</th>
                                             <th scope="col">操作</th>
                                           </tr>

@@ -4,7 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
  */
 
-
+body{
+  font-family: custom!important;
+}
 .thumbnails {
   height: 50px;
 }
@@ -305,7 +307,8 @@
 
 }
 
-.try-10 {
+
+.try-5 {
     font-size:25px;
     text-align:center;
     height: 100px;
@@ -319,7 +322,7 @@
 
 
 
-.try-30 {
+.try-10 {
     font-size:25px;
     text-align:center;
     height: 100px;
@@ -332,7 +335,7 @@
 }
 
 
-.try-50 {
+.try-30 {
     font-size:25px;
     text-align:center;
     height: 100px;
@@ -346,7 +349,7 @@
 
 
 
-.try-100 {
+.try-50 {
     font-size:25px;
     text-align:center;
     height: 100px;
@@ -359,7 +362,7 @@
 }
 
 
-.try-200 {
+.try-100 {
     font-size:25px;
     text-align:center;
     height: 100px;
@@ -373,7 +376,7 @@
 
 
 
-.try-300 {
+.try-200 {
     font-size:25px;
     text-align:center;
     height: 100px;
@@ -382,6 +385,18 @@
     margin:10px;
     background-color: white;
     border:1px solid #d26bfd;
+    border-radius: 99em;
+}
+
+.try-300 {
+    font-size:25px;
+    text-align:center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin:10px;
+    background-color: white;
+    border:1px solid #816bfd;
     border-radius: 99em;
 }
 
@@ -399,39 +414,45 @@
     z-index:100;
 }
 
-.donate-now input[type="radio"]:checked + .label-10{
+.donate-now input[type="radio"]:checked + .label-5{
   color:white;
   background-color: #dc3545;
   border-radius: 99em;
 }
 
-.donate-now input[type="radio"]:checked + .label-30{
+.donate-now input[type="radio"]:checked + .label-10{
   color:white;
   background-color: #ff9c07;
   border-radius: 99em;
 }
 
-.donate-now input[type="radio"]:checked + .label-50{
+.donate-now input[type="radio"]:checked + .label-30{
   color:white;
   background-color: #ffc107;
   border-radius: 99em;
 }
 
-.donate-now input[type="radio"]:checked + .label-100{
+.donate-now input[type="radio"]:checked + .label-50{
   color:white;
   background-color: #28a745;
   border-radius: 99em;
 }
 
-.donate-now input[type="radio"]:checked + .label-200{
+.donate-now input[type="radio"]:checked + .label-100{
   color:white;
   background-color: #34abff;
   border-radius: 99em;
 }
 
-.donate-now input[type="radio"]:checked + .label-300{
+.donate-now input[type="radio"]:checked + .label-200{
   color:white;
   background-color: #d26bfd;
+  border-radius: 99em;
+}
+
+.donate-now input[type="radio"]:checked + .label-300{
+  color:white;
+  background-color: #816bfd;
   border-radius: 99em;
 }
 
@@ -519,6 +540,94 @@
   white-space: nowrap!important;
 }
 
+.custom-nav{
+
+  width:50%!important;
+  padding: 30px 0px!important;
+  border-radius: 7px 0px 0px 7px;
+  background-color: #434343!important;
+
+}
+
+
+.custom-footer{
+  width:70%;
+  padding: 30px 0px!important;
+  border-radius: 0 7px 7px 0;
+  background-color: #434343!important;
+  box-shadow: 4px 3px 10px #43434373;
+}
+
+.nav-font{
+  color: #434343!important;
+  margin-top:30px;
+  text-decoration: none;
+}
+
+.nav-font:hover{
+  color:black!important;
+}
+
+.nav-font:after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 80px;
+width: 0%;
+border-bottom: 1px solid black;
+transition: 0.4s;
+}
+
+.nav-font:hover:after {
+  width: 35%;
+  color:white!important;
+}
+
+.footer-font{
+  color:#a1a1a1!important;
+  text-decoration: none;
+}
+
+.footer-font:hover{
+  color:white!important;
+}
+
+.footer-font:after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 48px;
+width: 0%;
+border-bottom: 1px solid white;
+transition: 0.4s;
+}
+
+.footer-font:hover:after {
+  width: 39%;
+  color:white!important;
+}
+
+.font-line {
+text-decoration: none;
+color:#333333;
+}
+
+
+.font-line:after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 0;
+width: 0%;
+border-bottom: 2px solid #333333;
+transition: 0.4s;
+}
+
+.font-line:hover:after {
+  width: 100%;
+  color:white!important;
+}
+
 @media screen and (max-width: 414px) {
   .add-coin-invite{
     width:105px!important;
@@ -529,7 +638,12 @@
   .footer-rwd{
     min-width:250px;
   }
-}
+
+  .custom-margin-right-20{
+    margin-right: 20px!important;
+  }
+
+!important}
 
 @media screen and (max-width: 768px) {
   .add-coin-invite{
@@ -568,4 +682,9 @@
   .add-coin-input{
     width:300px!important;
   }
+}
+
+@font-face {
+  font-family: 'custom';
+  src: url('../fonts/GenJyuuGothic-Monospace-ExtraLight.ttf') format("ttf");
 }
