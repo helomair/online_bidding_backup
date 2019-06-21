@@ -568,7 +568,7 @@ body{
   color:#dc3545!important;
 }
 
-.nav-font-a:after {
+.nav-font-a::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -595,7 +595,7 @@ transition: 0.4s;
   color:#ff8507!important;
 }
 
-.nav-font-b:after {
+.nav-font-b::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -622,7 +622,7 @@ transition: 0.4s;
   color:#ffc107!important;
 }
 
-.nav-font-c:after {
+.nav-font-c::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -649,7 +649,7 @@ transition: 0.4s;
   color:#28a745!important;
 }
 
-.nav-font-d:after {
+.nav-font-d::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -675,7 +675,7 @@ transition: 0.4s;
   color:#dc3545!important;
 }
 
-.footer-font-a:after {
+.footer-font-a::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -699,7 +699,7 @@ transition: 0.4s;
   color:#ff8507!important;
 }
 
-.footer-font-b:after {
+.footer-font-b::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -723,7 +723,7 @@ transition: 0.4s;
   color:#ffc107!important;
 }
 
-.footer-font-c:after {
+.footer-font-c::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -747,7 +747,7 @@ transition: 0.4s;
   color:#28a745!important;
 }
 
-.footer-font-d:after {
+.footer-font-d::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -771,7 +771,7 @@ transition: 0.4s;
   color:#34abff!important;
 }
 
-.footer-font-e:after {
+.footer-font-e::after {
 content: '';
 position: absolute;
 bottom: -2px;
@@ -866,4 +866,13 @@ transition: 0.4s;
 @font-face {
   font-family: 'custom';
   src: url('../fonts/GenJyuuGothic-Monospace-ExtraLight.ttf') format("ttf");
+}
+
+.try{
+   transition: background-color 3.2s linear, color .5s ease-in!important;
+}
+
+.try:hover{
+  background-color: white!important;
+  color:black!important;
 }
