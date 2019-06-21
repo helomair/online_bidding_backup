@@ -572,7 +572,7 @@ body{
 content: '';
 position: absolute;
 bottom: -2px;
-left: 80px;
+left: 70px;
 width: 0%;
 border-bottom: 1px solid #dc3545;
 transition: 0.4s;
@@ -581,7 +581,7 @@ transition: 0.4s;
 
 
 .nav-font-a:hover:after {
-  width: 35%;
+  width: 40%;
   color:white!important;
 }
 
@@ -599,7 +599,7 @@ transition: 0.4s;
 content: '';
 position: absolute;
 bottom: -2px;
-left: 80px;
+left: 70px;
 width: 0%;
 border-bottom: 1px solid #ff8507;
 transition: 0.4s;
@@ -608,7 +608,7 @@ transition: 0.4s;
 
 
 .nav-font-b:hover:after {
-  width: 35%;
+  width: 40%;
   color:white!important;
 }
 
@@ -662,6 +662,34 @@ transition: 0.4s;
 
 
 .nav-font-d:hover:after {
+  width: 35%;
+  color:white!important;
+}
+
+
+.nav-font-e{
+  color: #000000!important;
+  margin-top:30px;
+  text-decoration: none;
+}
+
+.nav-font-e:hover{
+  color: #34abff!important;
+}
+
+.nav-font-e::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 80px;
+width: 0%;
+border-bottom: 1px solid #34abff;
+transition: 0.4s;
+}
+
+
+
+.nav-font-e:hover:after {
   width: 35%;
   color:white!important;
 }
@@ -875,4 +903,19 @@ transition: 0.4s;
 .try:hover{
   background-color: white!important;
   color:black!important;
+}
+
+.pagination {
+  display: inline-block;
+  margin-top:100px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
 }

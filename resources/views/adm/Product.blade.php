@@ -63,7 +63,7 @@
                                 未出貨
                         </a>
                         @else
-                            <p class="finished">已出貨</p>
+                            <span class="finished">已出貨</span>
                         @endif
                     @endif
 

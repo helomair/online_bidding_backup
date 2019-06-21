@@ -19,6 +19,16 @@ for($i=0;$i<2;$i++){
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
 		<a  href="{{ route('account') }}" class="nav-font-c">
+			拍賣規則
+		</a>
+	</div>
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+		<a  href="{{ route('account') }}" class="nav-font-d">
+			分享區
+		</a>
+	</div>
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+		<a  href="{{ route('account') }}" class="nav-font-e">
 			帳戶狀態
 		</a>
 	</div>
