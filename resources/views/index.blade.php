@@ -25,14 +25,14 @@
                 <div class="modal-dialog">
 
                 <!-- Modal content-->
-                  <div class="modal-content height-350 margin-top-200" >
+                  <div class="modal-content margin-top-100" style="height:400px" >
                     <div class="modal-header">
 											<h4 class="modal-title">{{$bulletin->title}}</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; </button></br>
 
                     </div>
                     <div class="modal-body">
-                      <p>{{$bulletin->content}}</p>
+                      <span style="white-space:pre-line">{{$bulletin->content}}</span>
                     </div>
                     <div class="modal-footer" style="height:70px;">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

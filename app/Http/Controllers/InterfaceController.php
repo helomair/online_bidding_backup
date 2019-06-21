@@ -6,15 +6,12 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Product;
 use App\Auction;
+use App\AuctionAuto; 
 use Auth;
 use Session; 
 
 class InterfaceController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');  
-    }
 	public function index()
     {
 		//dd("cc"); 
@@ -39,6 +36,7 @@ class InterfaceController extends Controller
     {
         $nowtime = Carbon::now(); 
         $auctions = $product->users()->orderBy('auction.created_at', 'desc')->paginate(3);
+        $auction_auto =  AuctionAuto::where('uid',Auth::id())->where('pid',$product->id)->get(); 
 		//dd($auctions);
 		//print_r($auctions);
         if($this->check_auction_exist($product))  {
@@ -58,8 +56,8 @@ class InterfaceController extends Controller
 		else
 		  $file_path = '';
 		//dd($top_auction);
-        //echo $top_auction;
-    	return view('user.interface', compact('product','top_auction','auctions','file_path','nowtime'));
+        //echo $auction_auto;
+    	return view('user.interface', compact('product','top_auction','auctions','file_path','nowtime','auction_auto'));
     }
 
     private function check_auction_exist(Product $product)

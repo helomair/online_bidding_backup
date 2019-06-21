@@ -8,11 +8,6 @@ use App\Product;
 
 class ClosedController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth'); 
-    }
     public function index()
     {
     	$now_time = Carbon::now();

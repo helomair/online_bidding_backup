@@ -67,8 +67,8 @@
                             <form action="{{ route('bidding.auto', $product->id) }}" method="post">
                             @csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
-																<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
-                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror " placeholder="ex:5000元" name="start_cost">
+									<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
+                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror "  placeholder="ex:5000元" name="start_cost">
                                 @error('start_cost')
 						            				<span class="invalid-feedback" role="alert">
 							            			<strong>{{ $message }}</strong>

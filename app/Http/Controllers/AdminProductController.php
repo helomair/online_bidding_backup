@@ -134,7 +134,7 @@ class AdminProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-    	if($product->view_time >= Carbon::now())
+    	if($product->view_time <= Carbon::now())
     		return redirect()->back()->with('has_begin', '已過公布時間，無法編輯');
 		$att['name'] = $request->input('name');
 		$att['view_time'] = $request->input('view_time');
