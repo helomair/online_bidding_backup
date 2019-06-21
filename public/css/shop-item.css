@@ -4,7 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
  */
 
-
+body{
+  font-family: custom!important;
+}
 .thumbnails {
   height: 50px;
 }
@@ -519,6 +521,12 @@
   white-space: nowrap!important;
 }
 
+.custom-footer{
+  width:70%;
+  padding: 30px 0px!important;
+  border-radius: 0 7px 7px 0;
+}
+
 @media screen and (max-width: 414px) {
   .add-coin-invite{
     width:105px!important;
@@ -529,7 +537,12 @@
   .footer-rwd{
     min-width:250px;
   }
-}
+
+  .custom-margin-right-20{
+    margin-right: 20px!important;
+  }
+
+!important}
 
 @media screen and (max-width: 768px) {
   .add-coin-invite{
@@ -568,4 +581,9 @@
   .add-coin-input{
     width:300px!important;
   }
+}
+
+@font-face {
+  font-family: 'custom';
+  src: url('../fonts/GenJyuuGothic-Monospace-ExtraLight.ttf') format("ttf");
 }
