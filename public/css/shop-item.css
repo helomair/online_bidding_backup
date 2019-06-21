@@ -908,8 +908,9 @@ transition: 0.4s;
 .pagination {
   display: inline-block;
   margin-top:100px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  justify-content: center;
 
 }
 
