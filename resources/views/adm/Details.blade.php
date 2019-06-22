@@ -83,7 +83,7 @@
 				<hr>
 			</div>
 
-			<div class="title col-lg-12 margin-top-50" style="border-left:6px solid green; border-radius:5px;">
+			<div class="title col-lg-12 margin-top-50" style="border-left:6px solid #44ab44; border-radius:5px;">
 					<h2 class="text-align-center mbr-fonts-style display-5 font-size-40">
 					得 標 者 資 訊
 					</h2>
