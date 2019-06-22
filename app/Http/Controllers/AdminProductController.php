@@ -74,13 +74,17 @@ class AdminProductController extends Controller
         Carbon::createFromFormat('Y/m/d','1970/01/01')->timestamp;
 		$att['name'] = $request->input('name');
         $att['view_time'] = $request->input('view_time');
-        //$att['view_time'] = Carbon::createFromFormat('Y/m/d', '2016/05/05')->timestamp;
 		$att['start_time'] = $request->input('start_time');
 		$att['end_time'] = $request->input('end_time');
 		$att['detail'] = $request->input('detail');
 		$att['cost'] = $request->input('cost');
 		$att['cur_cost'] = $request->input('cur_cost');
         $att['origin_price'] = $request->input('origin_price');
+
+        //更改型別
+        $att['view_time'] = Carbon::parse($att['view_time'])->toDateTimeString();
+        $att['start_time'] = Carbon::parse($att['start_time'])->toDateTimeString();
+        $att['end_time'] = Carbon::parse($att['end_time'])->toDateTimeString();
 		
 		$product = Product::create($att);
 		
@@ -142,7 +146,12 @@ class AdminProductController extends Controller
 		$att['end_time'] = $request->input('end_time');
         $att['detail'] = $request->input('detail');
         $att['origin_price'] = $request->input('origin_price'); 
-		
+        
+        //更改型別
+        $att['view_time'] = Carbon::parse($att['view_time'])->toDateTimeString();
+        $att['start_time'] = Carbon::parse($att['start_time'])->toDateTimeString();
+        $att['end_time'] = Carbon::parse($att['end_time'])->toDateTimeString(); 
+
 		$product->update($att);
 		
 		//處理圖片上傳

@@ -129,6 +129,7 @@
                                           <tr>
                                             <th scope="col" style="min-width:100px;">商品</th>
                                             <th scope="col">金額</th>
+                                            <th scope="col">運費</th>
                                             <th scope="col">操作</th>
                                           </tr>
                                         </thead>
@@ -137,12 +138,11 @@
                                             <tr>
                                               <td>{{ $winner->name }}</td>
                                               <td>{{ $winner->cur_cost }}</td>
+                                              <td>10</td>
                                               <td>
                                                 <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">資料填寫</a>
                                                 <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
                                                 @if ($winner->status == '0')
-
-
                                                   <span class="finished padding-05-16">未出貨</span>
                                                 @else
                                                   <span class="finished padding-05-16">已出貨</span>

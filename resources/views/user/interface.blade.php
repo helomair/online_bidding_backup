@@ -40,7 +40,11 @@
 		商品倒數計時：
 		<div id="andy timer" class="andy timer">
 		</div>
-	</div>
+    </div>
+    @else
+    <div align="center">
+        <h2>拍賣已結束</h2>
+    </div>
 	@endif
     <div class="row space-between" style="padding:0px 10px;">
 			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
@@ -49,6 +53,9 @@
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
             <h3 class="card-title">商品名稱： {{ $product->name }}</h3>
+            <h4>
+                {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
+            </h4>
             <h4>原價：{{ $product->origin_price }}元</h4>
             <h4>每標價：{{ $product->cost}}</h4>
             <p class="card-text">商品敘述： {{ $product->detail }}</p>
@@ -70,38 +77,35 @@
 									<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
                                 <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror "  placeholder="ex:5000元" name="start_cost">
                                 @error('start_cost')
-						            				<span class="invalid-feedback" role="alert">
-							            			<strong>{{ $message }}</strong>
-						            			</span>
+						          <span class="invalid-feedback" role="alert">
+							        <strong>{{ $message }}</strong>
+						          </span>
                                 @enderror
                               </div>
 
                               <div class="form-group margin-top-35 margin-bottom-0">
-																<label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
-																<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " placeholder="ex:15000元" name="stop_cost">
-								                                @error('stop_cost')
-														            <span class="invalid-feedback" role="alert">
-															            <strong>{{ $message }}</strong>
-														            </span>
-								                                @enderror
+							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
+								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " placeholder="ex:15000元" name="stop_cost">
+								@error('stop_cost')
+								  <span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								  </span>
+								@enderror
                               </div>
                               <div class="form-group margin-top-35 margin-bottom-0">
-																	<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
-																	<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " placeholder="ex:10次" name="times">
-									                                @error('times')
-															            <span class="invalid-feedback" role="alert">
-																            <strong>{{ $message }}</strong>
-															            </span>
-									                                @enderror
+								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
+								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " placeholder="ex:10次" name="times">
+								@error('times')
+								  <span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								  </span>
+								@enderror
                               </div>
-                                <input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
+                              <input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
                             </form>
                         </div>
 					</div>
-
 			</div>
-
-
 		</div>
 
     <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px;">
@@ -124,7 +128,7 @@
 					@else
 						@foreach($auctions as $auction)
 							<tr>
-							  <td>{{ $auction->name }}</td>
+							  <td>{{ $auction->nickname }}</td>
 							  <td>{{ $auction->pivot->lasted_cost }}</td>
 							  <td>{{ $auction->pivot->created_at }}</td>
 							</tr>
@@ -140,10 +144,12 @@
 
 			<div class="card text-center  col-lg-5 height-250 margin-top-50" style="padding-left:0px; padding-right:0px;">
 				<div class="card-header">下標</div>
-				<div class="card-body">
-					<h5 class="card-title">目前競標價：{{ $product->cur_cost }}元</h5>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元 
+                    </h5>
 					<p class="card-text">
-						目前最高出價者：
+						{{ ($product->end_time >= $nowtime) ? "目前最高出價者" : "得標者" }}：
 						@if($top_auction->name == "")
 							無人出價
 						@else
