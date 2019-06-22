@@ -558,6 +558,46 @@ body{
   box-shadow: 8px 7px 5px #43434373;
 }
 
+.hover-a{
+  color:black;
+}
+
+.hover-a:hover{
+  color:#dc3545;
+}
+
+.hover-b{
+  color:black;
+}
+
+.hover-b:hover{
+  color:#ff8507;
+}
+
+.hover-c{
+  color:black;
+}
+
+.hover-c:hover{
+  color:#ffc107;
+}
+
+.hover-d{
+  color:black;
+}
+
+.hover-d:hover{
+  color:#28a745;
+}
+
+.hover-e{
+  color:black;
+}
+
+.hover-e:hover{
+  color:#34abff;
+}
+
 .nav-font-a{
   color: #000000!important;
   margin-top:30px;
@@ -894,15 +934,6 @@ transition: 0.4s;
 @font-face {
   font-family: 'custom';
   src: url('../fonts/GenJyuuGothic-Monospace-ExtraLight.ttf') format("ttf");
-}
-
-.try{
-   transition: background-color 3.2s linear, color .5s ease-in!important;
-}
-
-.try:hover{
-  background-color: white!important;
-  color:black!important;
 }
 
 .pagination {
