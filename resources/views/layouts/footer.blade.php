@@ -38,13 +38,12 @@
 <section class="cid-rsuhG4Y4Z6 my-4 " id="footer1-f" style="background-color:white; padding:20px 0px;">
     <div class="container">
         <div class="media-container-row content text-white">
-
             <div class="col-12 col-md-9 mbr-fonts-style display-7 text-align-center">
                 <h5 style="color:black; margin-bottom:0px; font-family:monospace; font-size:10px;">
                   本系統由以思科技開發 Powered by AS Tech.
                 </h5>
 
             </div>
-		        </div>
+		</div>
     </div>
 </section>
