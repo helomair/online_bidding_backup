@@ -16,17 +16,7 @@
 }
 
 #btn_login {
-  font-size: 14px;
-  width: 90px;
-  height: 28px;
-  line-height: 28px;
-  text-align: center;
-  color: white;
-  background-color: #0066cc;
-  border-radius: 6px;
-  border: 0;
-  float: right;
-  cursor:pointer;
+  float:right;
 }
 
 
@@ -37,7 +27,7 @@
   line-height: 28px;
   text-align: center;
   color: white;
-  background-color: #0066cc;
+  background-color: #1477cc;
   border: 0;
   cursor:pointer;
   margin-top:50px;
@@ -56,15 +46,14 @@
 }
 
 #forget_pwd:hover {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
+  color: orange;
+
 }
 
 #login_control {
   cursor: pointer;
   padding: 0 28px;
-  line-height: 18px;
+  line-height: 38px;
 }
 
 #register {
@@ -77,10 +66,10 @@
 }
 
 #register:hover {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
+  color: red;
+  text-decoration: none;
 }
+
 
 
 .form-control_login {

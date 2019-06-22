@@ -62,7 +62,7 @@
             <div class="row col-lg-8 col-md-8 mx-auto margin-top-150" style="justify-content:center;">
               <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" >
               <input type="button" value="取消" onclick="window.location='/account'" class="btn btn-danger padding-05-2 font-size-10" >
-      </div>
+            </div>
         </form>
     </div>
 </div>
@@ -73,8 +73,8 @@
 @section ('script')
 <script >
 $("input[name='coin']").click(function (){
-    $("#coin_price").html( $(this).val()*30000 + '元' ); 
-    //console.log($(this).val()); 
+    $("#coin_price").html( $(this).val()*30000 + '元' );
+    //console.log($(this).val());
   });
 </script>
-@endsection 
+@endsection

@@ -7,14 +7,13 @@
 
 	<!-- Custom styles for this template -->
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/shop-item.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
-  <div class="container container-fluid_login fix_content">
+  <div class="container fix_content margin-top-150">
 	<div class="row">
-		<div class="col-md-12">
-			<img title="register_logo" src="{{ asset('images/booked.png') }}"/>
-
+		<div class="col-md-6 mx-auto">
         <form method="POST" action="{{ route('register') }}">
             @csrf
 			<div class="form-group">
@@ -78,7 +77,11 @@
             </div>
 -->
 
-			<button type="submit" class="btn btn-primary register_button">註冊</button>
+				<div class="row col-lg-8 col-md-8 mx-auto margin-top-50" style="justify-content:center;">
+					<button type="submit" class="btn btn-danger padding-05-2 font-size-10 ">註冊</button>
+				</div>
+
+
 		</form>
 		</div>
 	</div>
