@@ -5,7 +5,7 @@
  */
 
 body{
-  font-family: custom!important;
+  font-family: m!important;
 }
 .thumbnails {
   height: 50px;
@@ -554,55 +554,262 @@ body{
   width:70%;
   padding: 30px 0px!important;
   border-radius: 0 7px 7px 0;
-  background-color: #434343!important;
-  box-shadow: 4px 3px 10px #43434373;
+  background-color: white!important;
+  box-shadow: 8px 7px 5px #43434373;
 }
 
-.nav-font{
-  color: #434343!important;
+.nav-font-a{
+  color: #000000!important;
   margin-top:30px;
   text-decoration: none;
 }
 
-.nav-font:hover{
-  color:black!important;
+.nav-font-a:hover{
+  color:#dc3545!important;
 }
 
-.nav-font:after {
+.nav-font-a::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 70px;
+width: 0%;
+border-bottom: 1px solid #dc3545;
+transition: 0.4s;
+}
+
+
+
+.nav-font-a:hover:after {
+  width: 40%;
+  color:white!important;
+}
+
+.nav-font-b{
+  color: #000000!important;
+  margin-top:30px;
+  text-decoration: none;
+}
+
+.nav-font-b:hover{
+  color:#ff8507!important;
+}
+
+.nav-font-b::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 70px;
+width: 0%;
+border-bottom: 1px solid #ff8507;
+transition: 0.4s;
+}
+
+
+
+.nav-font-b:hover:after {
+  width: 40%;
+  color:white!important;
+}
+
+.nav-font-c{
+  color: #000000!important;
+  margin-top:30px;
+  text-decoration: none;
+}
+
+.nav-font-c:hover{
+  color:#ffc107!important;
+}
+
+.nav-font-c::after {
 content: '';
 position: absolute;
 bottom: -2px;
 left: 80px;
 width: 0%;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #ffc107;
 transition: 0.4s;
 }
 
-.nav-font:hover:after {
+
+
+.nav-font-c:hover:after {
   width: 35%;
   color:white!important;
 }
 
-.footer-font{
+.nav-font-d{
+  color: #000000!important;
+  margin-top:30px;
+  text-decoration: none;
+}
+
+.nav-font-d:hover{
+  color:#28a745!important;
+}
+
+.nav-font-d::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 80px;
+width: 0%;
+border-bottom: 1px solid #28a745;
+transition: 0.4s;
+}
+
+
+
+.nav-font-d:hover:after {
+  width: 35%;
+  color:white!important;
+}
+
+
+.nav-font-e{
+  color: #000000!important;
+  margin-top:30px;
+  text-decoration: none;
+}
+
+.nav-font-e:hover{
+  color: #34abff!important;
+}
+
+.nav-font-e::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 80px;
+width: 0%;
+border-bottom: 1px solid #34abff;
+transition: 0.4s;
+}
+
+
+
+.nav-font-e:hover:after {
+  width: 35%;
+  color:white!important;
+}
+
+.footer-font-a{
   color:#a1a1a1!important;
   text-decoration: none;
 }
 
-.footer-font:hover{
-  color:white!important;
+.footer-font-a:hover{
+  color:#dc3545!important;
 }
 
-.footer-font:after {
+.footer-font-a::after {
 content: '';
 position: absolute;
 bottom: -2px;
 left: 48px;
 width: 0%;
-border-bottom: 1px solid white;
+border-bottom: 1px solid #dc3545;
 transition: 0.4s;
 }
 
-.footer-font:hover:after {
+.footer-font-a:hover:after {
+  width: 39%;
+  color:black!important;
+}
+
+.footer-font-b{
+  color:#a1a1a1!important;
+  text-decoration: none;
+}
+
+.footer-font-b:hover{
+  color:#ff8507!important;
+}
+
+.footer-font-b::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 48px;
+width: 0%;
+border-bottom: 1px solid #ff8507;
+transition: 0.4s;
+}
+
+.footer-font-b:hover:after {
+  width: 39%;
+  color:white!important;
+}
+
+.footer-font-c{
+  color:#a1a1a1!important;
+  text-decoration: none;
+}
+
+.footer-font-c:hover{
+  color:#ffc107!important;
+}
+
+.footer-font-c::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 48px;
+width: 0%;
+border-bottom: 1px solid #ffc107;
+transition: 0.4s;
+}
+
+.footer-font-c:hover:after {
+  width: 39%;
+  color:white!important;
+}
+
+.footer-font-d{
+  color:#a1a1a1!important;
+  text-decoration: none;
+}
+
+.footer-font-d:hover{
+  color:#28a745!important;
+}
+
+.footer-font-d::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 48px;
+width: 0%;
+border-bottom: 1px solid #28a745;
+transition: 0.4s;
+}
+
+.footer-font-d:hover:after {
+  width: 39%;
+  color:white!important;
+}
+
+.footer-font-e{
+  color:#a1a1a1!important;
+  text-decoration: none;
+}
+
+.footer-font-e:hover{
+  color:#34abff!important;
+}
+
+.footer-font-e::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 48px;
+width: 0%;
+border-bottom: 1px solid #34abff;
+transition: 0.4s;
+}
+
+.footer-font-e:hover:after {
   width: 39%;
   color:white!important;
 }
@@ -687,4 +894,29 @@ transition: 0.4s;
 @font-face {
   font-family: 'custom';
   src: url('../fonts/GenJyuuGothic-Monospace-ExtraLight.ttf') format("ttf");
+}
+
+.try{
+   transition: background-color 3.2s linear, color .5s ease-in!important;
+}
+
+.try:hover{
+  background-color: white!important;
+  color:black!important;
+}
+
+.pagination {
+  display: inline-block;
+  margin-top:100px;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  justify-content: center;
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
 }

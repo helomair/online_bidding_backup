@@ -6,24 +6,24 @@ for($i=0;$i<3;$i++){
 }
 ?>
 
-<section class="cid-rsuhG4Y4Z6 margin-top-50 row space-around" id="footer1-f" style="background-color:white;">
+<section class="cid-rsuhG4Y4Z6 margin-top-50 row col-lg-12 space-around" id="footer1-f" style="background-color:white;">
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+		<a href="{{ route('adm_Product') }}" class="pb-3 nav-font-a">
 			商品管理
 		</a>
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+		<a href="{{ route('adm_Account') }}" class="pb-3 nav-font-b">
 			會員管理
 		</a>
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+		<a href="{{ route('adm_Bulletin') }}" class="pb-3 nav-font-c">
 			公告管理
 		</a>
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-		<a href="{{ route('aboutus') }}" class="pb-3 nav-font">
+		<a  href="{{ route('adm_Save') }}" class="pb-3 nav-font-d">
 			加值紀錄
 		</a>
 	</div>

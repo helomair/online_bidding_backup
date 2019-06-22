@@ -5,28 +5,28 @@
             <div class="media-container-row">
                 <div class="col-lg-12 col-sm-12 row justify-content-center">
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
-                    <a href="{{ route('aboutus') }}" class="pb-3 footer-font">
+                    <a href="{{ route('aboutus') }}" class="pb-3 footer-font-a">
                         關於我們
                     </a>
                   </div>
                   <div class="col-2  footer-rwd mbr-fonts-style display-7 text-align-center" >
-                    <a href="{{ route('service') }}" class="pb-3 footer-font">
+                    <a href="{{ route('service') }}" class="pb-3 footer-font-b">
                         服務條款
                     </a>
                   </div>
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
-                    <a href="{{ route('fq') }}" class="pb-3 footer-font">
+                    <a href="{{ route('fq') }}" class="pb-3 footer-font-c">
                         常見問題
                     </a>
                   </div>
 
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
-                    <a href="{{ route('privacy') }}" class="pb-3 footer-font">
+                    <a href="{{ route('privacy') }}" class="pb-3 footer-font-d">
                         隱私條款
                     </a>
                   </div>
                   <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
-                    <a href="contact.html" class="pb-3 footer-font">
+                    <a href="contact.html" class="pb-3 footer-font-e">
                         聯繫我們
                     </a>
                   </div>

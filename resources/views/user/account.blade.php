@@ -140,7 +140,7 @@
                                               <td>{{ $winner->cur_cost }}</td>
                                               <td>10</td>
                                               <td>
-                                                <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">資料填寫</a>
+                                                <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12" style="white-space:nowrap;">資料填寫</a>
                                                 <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
                                                 @if ($winner->status == '0')
                                                   <span class="finished padding-05-16">未出貨</span>
