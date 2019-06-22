@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\AuctionAuto; 
-use App\Product;
 use Carbon\Carbon;
 use DB;
 
@@ -47,19 +46,25 @@ class Auto extends Command
         $time = Carbon::now();
         foreach($autos as $auto)
         {
-            $product = Product::find($auto->pid);
-            $auto_start = $time->diffInSeconds($product->end_time,false);
-            if( ($auto_start < 0 && $auto_start >= (-10)) && $time->gte($product->start_time) )
-            {
+            $product = $auto->product;  
+            $user = $auto->user; 
+            $auto_start = $product->end_time->diffInSeconds($time,false);
+
+            if( ($auto_start < 0 && $auto_start >= (-10)) && ($time >= $product->start_time) && ($user->balance > 0) )
                 if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost <= $auto->end_cost) )
                 {
+                    print($product->name . " => " . $auto_start . "  ,  " . $product->end_time . "  ,  " . $time . "\n" ); 
                     $auto->update( ['times' => ($auto->times - 1) ] );
+                    $product->users()->attach($user->id, [
+                        'cost' => $product->cost,
+                        'lasted_cost' => $product->cur_cost + $product->cost 
+                    ]);
                     $product->update([
                         'cur_cost' => ($product->cur_cost + $product->cost),
                         'end_time' => $product->end_time->addMinutes(10)
                     ]);
+                    $user->update([ 'balance' => $user->balance - 1 ]);
                 }
-            }
         }
     }
 

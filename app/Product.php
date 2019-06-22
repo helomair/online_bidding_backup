@@ -10,7 +10,7 @@ class Product extends Model
         'name', 'detail', 'cost', 'cur_cost', 
         'view_time', 'start_time', 'end_time', 
         'uid', 'discount', 'status', 'address', 
-        'message', 'origin_price'
+        'message', 'origin_price', 'nickname_changed'
     ]; 
     
     protected $dates = ['view_time', 'start_time', 'end_time']; 

@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('auction:auto')->withoutOverlapping();
+        //$schedule->command('bidding:end')->withoutOverlapping(); 
         // $schedule->command('inspire')
         //          ->hourly();
     }
