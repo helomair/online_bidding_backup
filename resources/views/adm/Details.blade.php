@@ -71,8 +71,8 @@
 			</div>
 
 			<div class="col-lg-6 col-md-6 margin-top-50">
-
-					<img src="" style="width:100%; margin-top:50px;"/>
+    
+                    <img src="{{ route('img',$file_path )}}" style="width:100%; margin-top:50px;"/>
 			</div>
 
 <!--			<div class="row col-md-12 margin-top-50 " style="justify-content: flex-end;">
