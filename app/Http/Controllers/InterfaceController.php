@@ -53,6 +53,7 @@ class InterfaceController extends Controller
 			$auction_auto->start_cost = 'ex: 5000元';
 			$auction_auto->end_cost = 'ex: 15000元';
 			$auction_auto->times = 'ex: 10次';
+			$auction_auto->on = null;
 		}
 
 		//取得圖片
