@@ -101,7 +101,6 @@
                                       <hr />
 
                                       <p class="font-size-25 font-weight-500 margin-top-50 text-align-center">出價紀錄</p>
-                                      <table class="table">
                                         <table class="table">
                                         <thead>
                                           <tr>
@@ -120,7 +119,6 @@
                                           @endforeach
                                         </tbody>
                                       </table>
-                                      {{ $auctions->links() }}
                                     </div>
                                     <div class="tab-pane fade" id="getBind" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <table class="table">
@@ -143,7 +141,7 @@
                                                 <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12" style="white-space:nowrap;">資料填寫</a>
                                                 <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
                                                 @if ($winner->status == '0')
-                                                  <span class="finished padding-05-16">未出貨</span>
+                                                  <span class="padding-05-16" style="color: red;">未出貨</span>
                                                 @else
                                                   <span class="finished padding-05-16">已出貨</span>
 
