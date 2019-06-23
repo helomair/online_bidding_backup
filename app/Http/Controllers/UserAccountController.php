@@ -57,7 +57,15 @@ class UserAccountController extends Controller
     // 以下為使用者儲值
     public function createCoin()
     {
-        return view('user.coin');
+        $payment = Auth::user()->payments()->where('user_bankname',"")->orWhere('user_name',"")->orWhere('user_account',"")->get()->first(); 
+        //echo $payment; 
+        if($payment->count() == 0) 
+            return view('user.coin');
+        else
+        {
+            $bank_account = $payment->bank_account;
+            return view('CoinPayment', compact('bank_account','payment')); 
+        }
     }
 
     public function makeCoinPayment(Request $request)
@@ -105,8 +113,14 @@ class UserAccountController extends Controller
             ['required' => '不可留空']); 
         
         $user_account = $request->input('user_account');
+        $user_bankname = $request->input('user_bankname');
+        $user_name = $request->input('user_name');
         
-        $payment->update([ 'user_account' => $user_account ]);
+        $payment->update([ 
+            'user_account' => $user_account,
+            'user_bankname' => $user_bankname,
+            'user_name' => $user_name
+        ]);
 
         return redirect()->route('account');
     }

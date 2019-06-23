@@ -21,6 +21,7 @@
                   <th style="text-align:center;">圖片</th>
                   <th>名稱</th>
                   <th>結標金額</th>
+                  <th>折扣</th>
                   <th>得標人</th>
                 </tr>
               </thead>
@@ -29,13 +30,14 @@
                 <tr>
                   <td style="text-align:center;">
                     <a href="{{ route('user_interface.show', $closed_product->id ) }}">
-										 	<div class="frame-thumbnails">
+					  <div class="frame-thumbnails">
                         <img class="shop_img" src=" {{ route('img', $file_path[$closed_product->id])}} " />
-											</div>
+					  </div>
                     </a>
                   </td>
                   <td>{{ $closed_product->name }}</td>
                   <td>{{ $closed_product->cur_cost }}</td>
+                  <td>{{ $closed_product->discount}}%</td>
                   <td>{{ $winners[$closed_product->id] }}</td>
                 </tr>
 			@endforeach

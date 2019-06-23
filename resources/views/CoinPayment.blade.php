@@ -33,14 +33,40 @@
               <span>{{ $payment->coins }}</span>
             </div>
             <div class="form-group">
-              <span>應付金額:</span>
+              <span>應付金額：</span>
               <span>{{ $payment->amount }}</span>
             </div>
-            <div class="form-group">
-              <label>轉帳帳戶</label>
-              <textarea id="message" name="user_account" style="width:100%; height: 150px;"></textarea>
+            <div>
+              <label>付款人名稱</label>
+              <input id="user_name" name="user_name" type="text" class="form-control">
+              @error('user_name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
             </div>
-            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" style="">
+
+            <div>
+              <label>銀行名稱</label>
+              <input id="user_bankname" name="user_bankname" type="text" class="form-control">
+              @error('user_bankname')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+
+            <div class="form-group">
+              <label>付款人帳戶</label>
+              <input type="text" id="user_account" name="user_account" class="form-control @error('user_account') is-invalid @enderror"></input>
+              @error('user_account')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10">
+            <input type="button" value="取消" onclick="window.location='/account'" class="btn btn-danger padding-05-2 font-size-10">
           </form>
         </div>
       </div>

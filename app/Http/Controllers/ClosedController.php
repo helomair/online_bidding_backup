@@ -35,7 +35,6 @@ class ClosedController extends Controller
 		  //echo $file_path[$product->id]."\n";
 		}
 
-
     	return view('user.closed', compact('closed_products','winners','file_path'));
     }
 }
