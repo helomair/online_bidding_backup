@@ -48,7 +48,7 @@
 	@endif
     <div class="row space-between" style="padding:0px 10px;">
 			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
-        <div class="card margin-top-50">
+        <div class="card margin-top-50" style="border:1px solid black;">
 
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
@@ -64,8 +64,8 @@
         </div>
 			</div>
 		<!-- /.card -->
-		<div class="card text-center  col-lg-5 margin-top-50 height-500 " style="padding-left:0px; padding-right:0px;">
-			<div class="card-header">
+		<div class="card text-center  col-lg-5 margin-top-50 height-500 " style="padding-left:0px; padding-right:0px; border:1px solid black;">
+			<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background-color:white;">
 				自動下標設定
 			</div>
 			<div class="card-body height-100-px">
@@ -108,23 +108,23 @@
                               @endif
                             </form>
                           @else
-                            <table>
+                            <table class="table table-striped" style="margin-top:70px;">
                             	<tbody>
-                            		<tr>
-                            			<td>商品原價</td>
-                            			<td>{{$product->origin_price}}</td>
+                            		<tr style="background-color:white;">
+                            			<td style="border-bottom:1px solid #696969; border-top:1px solid white;">商品原價</td>
+                            			<td style="border-bottom:1px solid #696969; border-top:1px solid white;">{{$product->origin_price}}</td>
                             		</tr>
                             		<tr>
-                            			<td>出價次數</td>
-                            			<td>{{$product->users()->where('uid',Auth::id())->count()}}</td>
+                            			<td style="border-bottom:1px solid #696969;">出價次數</td>
+                            			<td style="border-bottom:1px solid #696969;">{{$product->users()->where('uid',Auth::id())->count()}}</td>
+                            		</tr>
+                            		<tr  style="background-color:white;">
+                            			<td style="border-bottom:1px solid #696969;">結標價格</td>
+                            			<td style="border-bottom:1px solid #696969;">{{$product->cur_cost}}</td>
                             		</tr>
                             		<tr>
-                            			<td>結標價格</td>
-                            			<td>{{$product->cur_cost}}</td>
-                            		</tr>
-                            		<tr>
-                            			<td>折扣</td>
-                            			<td>{{$product->discount}}%</td>
+                            			<td style="border-bottom:1px solid #696969;">折扣</td>
+                            			<td style="border-bottom:1px solid #696969;">{{$product->discount}}%</td>
                             		</tr>
                             	</tbody>
                             </table>
@@ -134,8 +134,8 @@
 			</div>
 		</div>
 
-    <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px;">
-          <div class="card-header">
+    <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px; border:1px solid black;">
+          <div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background-color:white;">
             出價紀錄
           </div>
           <div class="card-body">
@@ -168,11 +168,11 @@
       </div>
 
 
-			<div class="card text-center  col-lg-5 height-250 margin-top-50" style="padding-left:0px; padding-right:0px;">
-				<div class="card-header">下標</div>
+			<div class="card text-center  col-lg-5 height-250 margin-top-50" style="padding-left:0px; padding-right:0px; border:1px solid black;">
+				<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background-color:white;">下標</div>
                 <div class="card-body">
                     <h5 class="card-title">
-                        {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元 
+                        {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
                     </h5>
 					<p class="card-text">
 						{{ ($product->end_time >= $nowtime) ? "目前最高出價者" : "得標者" }}：
