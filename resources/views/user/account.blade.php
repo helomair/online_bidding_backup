@@ -207,6 +207,7 @@ if(ca == "connectedServices"){ //如果按的是 競標操作
 //alert(ca); //將cookie印出來
 
 //如果上一頁為儲值頁面，返回時需要跳回競標操作的標籤
+/*因為會記錄原本你所在標籤的cookie，這個部分暫時先拿掉
 lasturl = document.referrer;
 lastpara = lasturl.split("/");
 var i = 2;   					//因為用'/'切割，http:// 被切成[0]=http: [1]='' 所以直接從2開始
@@ -224,5 +225,6 @@ if(find == 1){
 	document.getElementById("basicInfo").className = "tab-pane fade";
 	document.getElementById("connectedServices").className = "tab-pane fade show active";
 }
+*/
 </script>
 @endsection
