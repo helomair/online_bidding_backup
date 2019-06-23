@@ -2,6 +2,10 @@
 @section('title', '使用者主頁') <!-- 單行記錄 -->
 
 @section('css')
+	<!-- For auto reload per 15s-->
+	@if($product->end_time >= $nowtime)
+	<meta http-equiv="refresh" content="15">
+	@endif
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -77,7 +81,7 @@
                             @csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
 								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
-                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}" @if($auction_auto != NULL) disabled @endif >
+                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}" @if($auction_auto->on != NULL) disabled @endif >
                                 @error('start_cost')
 						          <span class="invalid-feedback" role="alert">
 							        <strong>{{ $message }}</strong>
@@ -87,7 +91,7 @@
 
                               <div class="form-group margin-top-35 margin-bottom-0">
 							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
-								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}" @if($auction_auto != NULL) disabled @endif >
+								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}" @if($auction_auto->on != NULL) disabled @endif >
 								@error('stop_cost')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
@@ -96,14 +100,14 @@
                               </div>
                               <div class="form-group margin-top-35 margin-bottom-0">
 								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
-								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}" @if($auction_auto != NULL) disabled @endif >
+								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}" @if($auction_auto->on != NULL) disabled @endif >
 								@error('times')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								  </span>
 								@enderror
                               </div>
-                              @if($auction_auto == NULL)
+                              @if($auction_auto->on == NULL)
                               	<input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
                               @endif
                             </form>
