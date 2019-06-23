@@ -31,6 +31,9 @@ Route::post('register', 'Auth\RegisterController@register')->name('register.post
 //Route::get('user', 'PostsController@index')->name('posts.index'); 
 Route::get('/user', 'InterfaceController@index')->name('user_interface');
 Route::get('/user/{product}/show', 'InterfaceController@show')->name('user_interface.show');
+//使用者資料更新
+Route::post('/user/{user}/update', 'AdminAccountController@update')->name('user.update');
+
 //已結標
 Route::get('/closed','ClosedController@index')->name('closed');
 ///////下標頁面

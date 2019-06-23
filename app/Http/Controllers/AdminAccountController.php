@@ -80,6 +80,16 @@ class AdminAccountController extends Controller
         return redirect()->route('account'); 
     }
 
+    public function update(Request $request, User $user)
+    {
+        $att = array(
+            'name' => $request->input('name'),
+            'realname' => $request->input('realname'),
+            'phone' => $request->input('phone')
+        );
+        $user->update($att);
+        return back()->with(['msg' => '更新成功']);
+    }
 
 
     /*
