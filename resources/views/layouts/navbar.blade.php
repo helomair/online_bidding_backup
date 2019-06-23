@@ -15,7 +15,7 @@
                 </span>
             </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height:50px; background-color:white; border-radius:5px 0 0 5px; box-shadow:12px 7px 2px #b7b7b7; width:100%;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height:50px; background-color:#f3f3f3; border-radius:5px 0 0 5px; box-shadow:12px 7px 2px #b7b7b7; width:100%;">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
 				@guest
                 <li class="nav-item" style="border-right:5px solid #dc3545; border-radius:5px;">

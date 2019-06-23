@@ -555,7 +555,7 @@ a.text-black:focus {
   box-shadow: none;
 }
 .nav-tabs .nav-link {
-  border-radius: 100px !important;
+  border-radius: 0px ;
 }
 .btn-form {
   border-radius: 0;
