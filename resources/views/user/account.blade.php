@@ -33,13 +33,13 @@
                             <div class="col-12">
                                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false" >基本資料</a>
+                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false" onclick="getTab(this.id);">基本資料</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true">競標操作</a>
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true" onclick="getTab(this.id);">競標操作</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false">得標區</a>
+                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false" onclick="getTab(this.id);">得標區</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -166,6 +166,47 @@
 </div>
 <script>
 //alert(document.referrer);
+//判定按下哪個tab, 記錄到cookie裡面
+function getTab(this_id){
+	//alert(this_id);
+	if(this_id == "basicInfo-tab"){
+		document.cookie="tab=basicInfo";
+	}else if(this_id == "connectedServices-tab"){
+		document.cookie="tab=connectedServices";
+	}else if(this_id == "getBind-tab"){
+		document.cookie="tab=getBind";
+	}
+}
+//取得cookie的方式
+function getCookie(cname)
+{
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) 
+  {
+    var c = ca[i].trim();
+    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+  return "";
+}
+
+var ca = getCookie("tab");  //取得cookie
+if(ca == "connectedServices"){ //如果按的是 競標操作
+	document.getElementById("basicInfo").className = "tab-pane fade";
+	document.getElementById("connectedServices").className = "tab-pane fade show active";
+	document.getElementById("getBind").className = "tab-pane fade";
+}else if(ca == "getBind"){ //如果按的是 得標區
+	document.getElementById("basicInfo").className = "tab-pane fade";
+	document.getElementById("connectedServices").className = "tab-pane fade";
+	document.getElementById("getBind").className = "tab-pane fade show active";
+}else{
+	document.getElementById("basicInfo").className = "tab-pane fade show active";
+	document.getElementById("connectedServices").className = "tab-pane fade";
+	document.getElementById("getBind").className = "tab-pane fade";
+}
+//alert(ca); //將cookie印出來
+
+//如果上一頁為儲值頁面，返回時需要跳回競標操作的標籤
 lasturl = document.referrer;
 lastpara = lasturl.split("/");
 var i = 2;   					//因為用'/'切割，http:// 被切成[0]=http: [1]='' 所以直接從2開始
