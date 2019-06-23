@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('BidRule', function(){
+	return view('Rule');
+})->name('bid.rule');
 
 #登入
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
