@@ -36,7 +36,7 @@ class InterfaceController extends Controller
     {
         $nowtime = Carbon::now(); 
         $auctions = $product->users()->orderBy('auction.created_at', 'desc')->paginate(3);
-        $auction_auto =  AuctionAuto::where('uid',Auth::id())->where('pid',$product->id)->get(); 
+        $auction_auto = AuctionAuto::where('uid',Auth::id())->where('pid',$product->id)->get()->first();
 		//dd($auctions);
 		//print_r($auctions);
         if($this->check_auction_exist($product))  {
@@ -47,6 +47,14 @@ class InterfaceController extends Controller
             $top_auction->name = '';
         }
 		
+		if($auction_auto == null)
+		{
+			$auction_auto = new \stdClass();
+			$auction_auto->start_cost = 'ex: 5000元';
+			$auction_auto->end_cost = 'ex: 15000元';
+			$auction_auto->times = 'ex: 10次';
+		}
+
 		//取得圖片
 		$files = get_files(storage_path('app/public/products/'.$product->id));
 		//$pics[$product->id] = $files;

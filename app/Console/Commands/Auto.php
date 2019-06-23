@@ -50,7 +50,7 @@ class Auto extends Command
             $user = $auto->user; 
             $auto_start = $product->end_time->diffInSeconds($time,false);
 
-            if( ($auto_start < 0 && $auto_start >= (-10)) && ($time >= $product->start_time) && ($user->balance > 0) )
+            if( ($auto_start < 0 && $auto_start >= (-30)) && ($time >= $product->start_time) && ($user->balance > 0) )
                 if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost <= $auto->end_cost) )
                 {
                     print($product->name . " => " . $auto_start . "  ,  " . $product->end_time . "  ,  " . $time . "\n" ); 
@@ -61,7 +61,7 @@ class Auto extends Command
                     ]);
                     $product->update([
                         'cur_cost' => ($product->cur_cost + $product->cost),
-                        'end_time' => $product->end_time->addMinutes(10)
+                        'end_time' => $product->end_time->addSeconds(20)
                     ]);
                     $user->update([ 'balance' => $user->balance - 1 ]);
                 }

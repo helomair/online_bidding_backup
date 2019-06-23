@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Product;
+use App\User;
 
 class Auction extends Model
 {
@@ -18,4 +19,10 @@ class Auction extends Model
     {
         return $this->belongsTo('App\Product','pid');
     }
+
+    public function user()
+    {
+    	return $this->brlongsTo('App\User','uid');
+    }
+
 }

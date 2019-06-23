@@ -71,11 +71,13 @@
 			<div class="card-body height-100-px">
 					<div class="row">
                         <div class="col-lg-12 mx-auto ">
+                          @if($product->end_time >= $nowtime)
+                        	<!-- 進行中拍賣 自動下標表單 -->
                             <form action="{{ route('bidding.auto', $product->id) }}" method="post">
                             @csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
-									<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
-                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror "  placeholder="ex:5000元" name="start_cost">
+								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
+                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}" @if($auction_auto != NULL) disabled @endif >
                                 @error('start_cost')
 						          <span class="invalid-feedback" role="alert">
 							        <strong>{{ $message }}</strong>
@@ -85,7 +87,7 @@
 
                               <div class="form-group margin-top-35 margin-bottom-0">
 							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
-								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " placeholder="ex:15000元" name="stop_cost">
+								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}" @if($auction_auto != NULL) disabled @endif >
 								@error('stop_cost')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
@@ -94,15 +96,39 @@
                               </div>
                               <div class="form-group margin-top-35 margin-bottom-0">
 								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
-								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " placeholder="ex:10次" name="times">
+								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}" @if($auction_auto != NULL) disabled @endif >
 								@error('times')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								  </span>
 								@enderror
                               </div>
-                              <input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
+                              @if($auction_auto == NULL)
+                              	<input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
+                              @endif
                             </form>
+                          @else
+                            <table>
+                            	<tbody>
+                            		<tr>
+                            			<td>商品原價</td>
+                            			<td>{{$product->origin_price}}</td>
+                            		</tr>
+                            		<tr>
+                            			<td>出價次數</td>
+                            			<td>{{$product->users()->where('uid',Auth::id())->count()}}</td>
+                            		</tr>
+                            		<tr>
+                            			<td>結標價格</td>
+                            			<td>{{$product->cur_cost}}</td>
+                            		</tr>
+                            		<tr>
+                            			<td>折扣</td>
+                            			<td>{{$product->discount}}%</td>
+                            		</tr>
+                            	</tbody>
+                            </table>
+                          @endif
                         </div>
 					</div>
 			</div>
