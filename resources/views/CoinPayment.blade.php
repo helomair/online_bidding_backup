@@ -66,8 +66,13 @@
               @enderror
             </div>
             <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10">
-            <input type="button" value="取消" onclick="window.location='/account'" class="btn btn-danger padding-05-2 font-size-10">
+            <a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="confirm('確定取消？'); document.getElementById('delete_{{$payment->id}}').submit()">取消</a>
           </form>
+		  <form method="post" action="{{ route('coin.cancel', $payment->id) }}" id="delete_{{$payment->id}}">
+		    @csrf
+		    {{ method_field('DELETE') }}
+		  </form>
+
         </div>
       </div>
 
