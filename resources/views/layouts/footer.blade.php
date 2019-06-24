@@ -1,5 +1,5 @@
 <!-- Footer -->
-<section class="cid-rsuhG4Y4Z6 custom-footer margin-top-50" id="footer1-f">
+<section class="cid-rsuhG4Y4Z6 custom-footer margin-top-150" id="footer1-f">
     <div class="container">
         <div class="footer-lower">
             <div class="media-container-row">
