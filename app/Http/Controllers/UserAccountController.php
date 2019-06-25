@@ -59,7 +59,7 @@ class UserAccountController extends Controller
     {
         $payment = Auth::user()->payments()->where('user_bankname',"")->orWhere('user_name',"")->orWhere('user_account',"")->get()->first(); 
         //echo $payment; 
-        if($payment->count() == 0) 
+        if($payment == null) 
             return view('user.coin');
         else
         {
