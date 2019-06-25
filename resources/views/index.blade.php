@@ -10,7 +10,7 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 		<div class="container fix-content">
-			<div class="row font-size-40 margin-top-100">
+			<div class="row font-size-25 margin-top-100">
                   <marquee data-toggle="modal" data-target="#myModal" style="cursor: pointer;">
                     @foreach ($bulletins as $bulletin)
                         <span style="margin-right: 100px; cursor:pointer;" >{{ $bulletin->title }}</span>
@@ -25,7 +25,7 @@
               <div class="modal-content margin-top-100" style="height: auto;">
 			  	@foreach ($bulletins as $bulletin)
                 <div class="modal-header">
-				  <h4 class="modal-title">{{$bulletin->title}}</h4>
+				  			<h4 class="modal-title">{{$bulletin->title}}</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; </button></br>
                 </div>
 
@@ -39,7 +39,7 @@
               </div>
             </div>
         </div>
-      
+
 
 		<div class="container fix_content">
 		    <div class="col-12">
