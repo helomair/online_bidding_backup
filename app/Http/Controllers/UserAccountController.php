@@ -125,4 +125,11 @@ class UserAccountController extends Controller
         return redirect()->route('account');
     }
 
+    public function CoinCancel(Payment $payment)
+    {
+        //echo $payment; 
+        $payment->delete();
+        return redirect()->route('account'); 
+    }
+
 }

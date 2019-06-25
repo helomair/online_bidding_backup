@@ -55,7 +55,9 @@ Route::get('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.ma
 //儲值 用戶填寫帳戶資料
 Route::post('/coin/{payment}/pay', 'UserAccountController@PaymentPay')->name('coin.pay');
 //儲值 管理員確認
-Route::get('/coin/{payment}/submit', 'SaveController@PaymentSubmit')->name('coin.submit'); 
+Route::get('/coin/{payment}/submit', 'SaveController@PaymentSubmit')->name('coin.submit');
+//儲值 刪除
+Route::delete('/coin/{payment}/delete', 'UserAccountController@CoinCancel')->name('coin.cancel');
 
 //////顯示管理者頁面
 ////商品管理

@@ -6,28 +6,28 @@ for($i=0;$i<2;$i++){
 }
 ?>
 
-<section class="cid-rsuhG4Y4Z6 margin-top-50 row col-lg-12 space-around" id="footer1-f" style="background-color:white;">
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+<section class="cid-rsuhG4Y4Z6 margin-top-50 row col-lg-12 justify-content-center" id="footer1-f" style="background-color:white;">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
 		<a href="{{ route('user_interface') }}" class=" nav-font-a">
 			進行中拍賣
 		</a>
 	</div>
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
 		<a href="{{ route('closed') }}" class=" nav-font-b">
 			已結標拍賣
 		</a>
 	</div>
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
 		<a  href="{{ route('bid.rule') }}" class="nav-font-c">
 			拍賣規則
 		</a>
 	</div>
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
 		<a onclick="alert('功能尚未完成，敬請期待');" class="nav-font-d">
 			分享區
 		</a>
 	</div>
-	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px;">
+	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
 		<a  href="{{ route('account') }}" class="nav-font-e">
 			帳戶狀態
 		</a>
