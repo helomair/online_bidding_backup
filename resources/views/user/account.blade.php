@@ -141,7 +141,7 @@
                                                 <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12" style="white-space:nowrap;">資料填寫</a>
                                                 <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
                                                 @if ($winner->status == '0')
-                                                  <span class="padding-05-16" style="color: red;">未出貨</span>
+                                                  <span class="padding-05-16" style="color: #d02b2b;">未出貨</span>
                                                 @else
                                                   <span class="finished padding-05-16">已出貨</span>
 
@@ -182,7 +182,7 @@ function getCookie(cname)
 {
   var name = cname + "=";
   var ca = document.cookie.split(';');
-  for(var i=0; i<ca.length; i++) 
+  for(var i=0; i<ca.length; i++)
   {
     var c = ca[i].trim();
     if (c.indexOf(name)==0) return c.substring(name.length,c.length);
