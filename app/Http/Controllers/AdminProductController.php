@@ -38,6 +38,8 @@ class AdminProductController extends Controller
 			else
 			  $file_path[$product->id] = '';
 		}
+        if($products->count() == 0)
+            $file_path = '';
         //先假設路徑為admin/index.blade.php
         return view('adm.Product', compact('products','file_path','nowtime')); 
     }

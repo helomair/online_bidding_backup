@@ -41,7 +41,7 @@ class BiddingController extends Controller
             ]);
             $user->update(['balance' => $user->balance - 1 ]); 
 
-            $count_down = $now_time->diffInSeconds($product->end_time,false);
+            $count_down = $product->end_time->diffInSeconds($now_time, false);
             if( ($count_down < 0 && $count_down >= (-30)) && $now_time->gte($product->start_time) )
             	$product->update(['end_time' => $product->end_time->addSeconds(20)]);
         }

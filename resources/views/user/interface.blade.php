@@ -62,7 +62,7 @@
             </h4>
             <h4>原價：{{ $product->origin_price }}元</h4>
             <h4>每標價：{{ $product->cost}}</h4>
-            <p class="card-text">商品敘述： {{ $product->detail }}</p>
+            <p class="card-text">{{ $product->detail }}</p>
 
           </div>
         </div>
@@ -70,7 +70,11 @@
 		<!-- /.card -->
 		<div class="card text-center  col-lg-5 margin-top-50 height-500 " style="padding-left:0px; padding-right:0px; border:1px solid black;">
 			<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
-				自動下標設定
+				@if($product->end_time >= $nowtime)
+					自動下標設定
+				@else
+					折扣詳細
+				@endif
 			</div>
 			<div class="card-body height-100-px">
 					<div class="row">

@@ -55,6 +55,8 @@ class InterfaceController extends Controller
 			$auction_auto->times = 'ex: 10次';
 			$auction_auto->on = null;
 		}
+		else
+			$auction_auto->on = true;
 
 		//取得圖片
 		$files = get_files(storage_path('app/public/products/'.$product->id));

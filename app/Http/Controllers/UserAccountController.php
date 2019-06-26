@@ -23,7 +23,7 @@ class UserAccountController extends Controller
     {
         $user = Auth::user();  
         $auctions = $user->products()->orderBy('auction.created_at', 'desc')->get();
-        $winners = $user->winner_product()->where('end_time','>',Carbon::now())->orderBy('created_at', 'desc')->get();
+        $winners = $user->winner_product()->where('end_time','<',Carbon::now())->orderBy('created_at', 'desc')->get();
         //dd($winners);
 		return view('user.account', compact('user', 'auctions', 'winners') );
     }

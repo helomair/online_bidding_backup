@@ -45,17 +45,12 @@
                   <td>{{ $product->end_time }}</td>
                   <td style="text-align:center;">
 
-					@if($product->view_time >= $nowtime )
-				    <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger padding-05-2 white-space-nowrap font-size-10">編輯</a>
+					        @if($product->view_time >= $nowtime )
+				            <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger padding-05-2 white-space-nowrap font-size-10">編輯</a>
                     <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-delete white-space-nowrap padding-05-2 font-size-10">刪除</a>
-                    @endif
+                   @endif
 
                     @if($product->end_time < $nowtime )
-
-                        @if($product->winner()->count() != 0)
-                            <div>{{ $product->winner->name }}</div>
-                        @endif
-
                         <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger white-space-nowrap padding-05-2 font-size-10">詳細</a>
 
                         @if ($product->status == 0)

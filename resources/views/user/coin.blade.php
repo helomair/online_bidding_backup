@@ -61,7 +61,7 @@
             </div>
             <div class="row col-lg-8 col-md-8 mx-auto margin-top-150" style="justify-content:center;">
               <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" >
-              <input type="button" value="取消" onclick="window.location('/account')" class="btn btn-danger padding-05-2 font-size-10" >
+              <a onclick="window.history.back()" class="btn btn-danger padding-05-2 font-size-10" >取消</a>
             </div>
         </form>
     </div>
