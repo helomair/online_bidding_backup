@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth; 
+use Carbon\Carbon;
 use App\User;
 use App\Product;
 use App\Payment;
@@ -20,9 +21,9 @@ class UserAccountController extends Controller
 
     public function index()
     {
-        $user = Auth::user(); 
+        $user = Auth::user();  
         $auctions = $user->products()->orderBy('auction.created_at', 'desc')->get();
-        $winners = $user->winner_product()->orderBy('created_at', 'desc')->get();
+        $winners = $user->winner_product()->where('end_time','>',Carbon::now())->orderBy('created_at', 'desc')->get();
         //dd($winners);
 		return view('user.account', compact('user', 'auctions', 'winners') );
     }
