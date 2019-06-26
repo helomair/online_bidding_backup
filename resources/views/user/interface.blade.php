@@ -69,7 +69,7 @@
 			</div>
 		<!-- /.card -->
 		<div class="card text-center  col-lg-5 margin-top-50 height-500 " style="padding-left:0px; padding-right:0px; border:1px solid black;">
-			<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background-color:white;">
+			<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
 				自動下標設定
 			</div>
 			<div class="card-body height-100-px">
@@ -139,7 +139,7 @@
 		</div>
 
     <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px; border:1px solid black;">
-          <div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background-color:white;">
+          <div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
             出價紀錄
           </div>
           <div class="card-body">
@@ -173,7 +173,7 @@
 
 
 			<div class="card text-center  col-lg-5 height-250 margin-top-50" style="padding-left:0px; padding-right:0px; border:1px solid black;">
-				<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background-color:white;">下標</div>
+				<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">下標</div>
                 <div class="card-body">
                     <h5 class="card-title">
                         {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
