@@ -11,7 +11,6 @@
 @include('layouts.adm_left_button')
 <div class="container fix_content">
     <div class="row">
-	<div class="col-lg-12">
         <div class="table-responsive margin-top-50">
           <table class="table table-striped ">
             <thead>
@@ -21,6 +20,8 @@
                 <th style="text-align:center;">購買數量</th>
                 <th style="text-align:center;">應付金額</th>
                 <th style="text-align:center;">轉入帳戶</th>
+                <th style="text-align:center;">轉帳人名稱</th>
+                <th style="text-align:center;">銀行名稱</th>
                 <th style="text-align:center;">轉帳帳戶</th>
                 <th style="text-align:center;">邀請碼</th>
                 <th style="text-align:center;">發放</th>
@@ -34,6 +35,8 @@
                   <td style="text-align:center;">{{ $payment->coins }}</td>
                   <td style="text-align:center;">{{ $payment->amount }}</td>
                   <td style="text-align:center;">{{ $payment->bank_account->account }}</td>
+                  <td style="text-align:center;">{{ $payment->user_name }}</td>
+                  <td style="text-align:center;">{{ $payment->user_bankname }}</td>
                   <td style="text-align:center;">{{ $payment->user_account }}</td>
                   @if ($payment->first_code)
                     <td style="text-align:center;">yes</td>
@@ -55,7 +58,6 @@
           </table>
 		  {{ $payments->links() }}
         </div>
-	</div>
 	<!-- /.col-lg-9 -->
     </div>
 </div>
