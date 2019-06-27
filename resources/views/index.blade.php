@@ -9,8 +9,9 @@
 @endsection
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.left_button')
 		<div class="container fix-content">
-			<div class="row font-size-25 margin-top-100">
+			<div class="row font-size-25 margin-top-50">
                   <marquee data-toggle="modal" data-target="#myModal" style="cursor: pointer;">
                     @foreach ($bulletins as $bulletin)
                         <span style="margin-right: 100px; cursor:pointer;" >{{ $bulletin->title }}</span>
@@ -22,7 +23,7 @@
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
             <!-- Modal content-->
-              <div class="modal-content margin-top-100" style="height: auto;">
+              <div class="modal-content margin-top-50" style="height: auto;">
 			  	@foreach ($bulletins as $bulletin)
                 <div class="modal-header">
 				  			<h4 class="modal-title">{{$bulletin->title}}</h4>
@@ -55,22 +56,27 @@
 					</div>
 				</div>
 			</div>
-
+			<hr class="style-eight"/>
 
 			<div class="container">
-                 <div class="media-container-row margin-top-100">
+                 <div class="media-container-row margin-top-50">
                     @foreach ($products as $product)
-						<div class="card p-3 col-12 col-md-6 col-lg-4" style="border:1px solid white;">
-							<a href="{{ route('user_interface.show', $product->id) }}">
-								<div class="frame">
-									<img class="shop_img" src="{{ route('img', $file_path[$product->id]) }}" alt="Mobirise" title="" >
-								</div>
-						    </a>
-
+					<div class="col-lg-4 col-md-4 margin-top-35">
+				      <a href="{{ route('user_interface.show',$product->id) }}">
+				        <div class="card border-none" style="padding-left:30px;">
+							<div class=" frame text-align-center">
+				            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
+								<p class="card-text" style="margin-top:270px;">
+									商品名：{{ $product->name }}<br>
+									目前競標價位：{{ $product->cur_cost }}元
+								</p>
+							</div>
 						</div>
+					  </a>
+			      	</div>
                     @endforeach
                     @for ($i = $products->count(); $i < 3; $i++)
-                        <div class="card p-3 col-12 col-md-6 col-lg-4" style="border:1px solid white;"></div>
+                        <div class="col-lg-4 col-md-4 margin-top-50"></div>
                     @endfor
                 </div>
                 <div class="text-center margin-top-100 col-lg-3 mx-auto">

@@ -955,3 +955,21 @@ transition: 0.4s;
 .table-striped tr{
   background-color: white!important;
 }
+
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+hr.style-eight:after {
+    content: "拍賣中商品";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}

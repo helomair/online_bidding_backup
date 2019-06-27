@@ -17,18 +17,17 @@
       <div class="row col-lg-12 space-around mx-auto">
 	  @foreach ($products as $product)
       <div class="col-lg-4 col-md-4 margin-top-50">
-      <a href="{{ route('user_interface.show',$product->id) }}">
-        <div class="card border-none" style="padding-left:30px;">
-					  <div class=" frame text-align-center">
-            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
-							<p class="card-text" style="margin-top:270px;">
-									商品名：{{ $product->name }}<br>
-								目前競標價位：{{ $product->cur_cost }}元
-							</p>
-						</div>
-
-		</div>
-	  </a>
+	      <a href="{{ route('user_interface.show',$product->id) }}">
+	        <div class="card border-none" style="padding-left:30px;">
+				<div class=" frame text-align-center">
+	            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
+					<p class="card-text" style="margin-top:270px;">
+						商品名：{{ $product->name }}<br>
+						目前競標價位：{{ $product->cur_cost }}元
+					</p>
+				</div>
+			</div>
+		  </a>
       </div>
       @endforeach
 
