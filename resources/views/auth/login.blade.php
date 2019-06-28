@@ -37,7 +37,7 @@
 				</div>
 				<div id="login_control">
 					<a id="register" href="{{ route('register') }}">註冊會員</a>
-					<a id="forget_pwd">忘記密碼？</a>
+					<a id="forget_pwd" href="{{ route('password.request')}}">忘記密碼？</a>
 					<input type="submit" id="btn_login" class="btn btn-danger padding-05-2 font-size-10 " value="登入"/>
 				</div>
 			</form>

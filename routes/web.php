@@ -16,15 +16,25 @@ Route::get('BidRule', function(){
 	return view('Rule');
 })->name('bid.rule');
 
-#登入
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-#登出
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+//////使用者登入驗證功能
+Auth::routes();
+// #登入
+// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+// Route::post('login', 'Auth\LoginController@login');
+// #登出
+// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-#註冊
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register')->name('register.post');
+// #註冊
+// Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+// Route::post('register', 'Auth\RegisterController@register')->name('register.post');
+
+// // Password Reset Routes...
+// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+// Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
 
 ////顯示使用者頁面，登入後直接導到這個頁面
 //之後改用controller來帶，順便帶資料進來
