@@ -17,7 +17,7 @@
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
                 <h2 class="align-center pb-3 mbr-fonts-style display-2">
-                    Giới thiệu dịch vụ
+                    服務介紹
                 </h2>
                 <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
 
@@ -28,14 +28,12 @@
     </div>
 </section>
 
-
-
 <section class="mbr-section article content10 cid-rsuhmjDo0X" id="content10-b">
     <div class="container">
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                   Giới thiệu cơ bản
+                   基本介紹
                </div>
                 <h3 class="mbr-section-subtitle align-center mbr-white mbr-light mbr-fonts-style font-size-20 display-5">
 
@@ -50,15 +48,54 @@
         <div class="media-container-row">
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
                 <ol>
-                  <li><strong>I-bid là gì ?</strong><br><br>
-                    -Toàn bộ sản phẩm đấu giá đều có giá khởi điểm là 0 Tệ<br>
-                    -Mức trúng thầu cần sử dụng số điểm<br>
-                    -Mỗi lần giá đấu giá trúng thầu là 1000-3000 Tệ<br>
-                    -Trong khi đếm ngược 30 giây mỗi khi người sử dụng cho giá thì tự động kéo dài thêm 20 giây<br>
-                    -Sản phẩm đều là sản phẩm mới <br>
-                    -Phí giải quyết trúng thầu là 100000 Tệ<br><br>
+                  <li>
+                    <strong>什麼是I-Bid?</strong><br><br>
+                    點拍賣商品全部0元起標。<br><br>
+                    下標需使用點數。<br><br>
+                    每一次下標拍賣價格1000~3000元。<br><br>
+                    倒數30秒內每當使用者下標自動延長20秒。<br><br>
+                    商品皆為全新商品。<br><br>
+                    得標處理費100000元。
+                    <br><br>
                   </li>
 
+									<li>
+                    <strong>服務基本介紹</strong><br><br>
+                    使用本競標服務，須先購買下標所需點數（1點 = 越南盾30000元）。<br><br>
+                    每下標一次需消費1個點數。下標所消費的點數，不論得標與否，均不會退還。<br><br>
+                    每成功得標一次，系統將會配您一組新的暱稱顯示，供下回競標使用。<br><br>
+                    同一時間每位用戶僅能參加兩場拍賣。<br><br>
+                    每當用戶下標，競標時間將再延長20秒，商品結標時間不固定，由會員競標狀況動態決定。<br><br>
+
+                    <br><br>
+                  </li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content10 cid-rsuhmjDo0X" id="content10-b">
+    <div class="container">
+        <div class="inner-container" style="width: 66%;">
+            <hr class="line" style="width: 25%;">
+            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                   基本用法
+               </div>
+                <h3 class="mbr-section-subtitle align-center mbr-white mbr-light mbr-fonts-style font-size-20 display-5">
+
+                </h3>
+            <hr class="line" style="width: 25%;">
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                <ol>
                   <li>
                     <strong>免費加入會員</strong><br><br>
                     -點選上方「免費加入會員」<br>
@@ -203,26 +240,64 @@
                     <br><br>
 
                   </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
 
-                  <li>
-                    <strong>競標小技巧</strong><br><br>
-                    熟悉遊戲規則:下標後點數均無法退還，結標時間依競標人數自動延長。
-                    <br>
-                    拜讀商品結標紀錄:結標價有高有低，慎選入場實機。
-                    <br>
-                    慎選入門競標商品:從簡單小物下手。留意即時競標動態調整策略:手動/自動/成本控制。
-                    <br><br>
-                    1.事前準備功課要做足建議新手會員只專注在你真正有需求的商品，並研究「已結標拍賣」中該商品過去的結標紀錄。了解目標商品的結標狀況與競爭強度，你可以在多次的觀察後，抓出其趨勢或最有利的時間點。
-                    <br><br>
-                    2.實際下標前,先觀察其他會員的即時競標狀況請先觀察每日15:00之後的即時線上競標狀況，了解一般會員的下標方式。
-                    <br><br>
-                    3.從簡單的小物開始新手會員最好從低價商品入門學習競標技巧，透過參與小物競標，可有效增加競拍經驗與得標機會喔。
-                    <br><br>
-                    4.小心使用「自動出價」同樣價格區間中，如有多人同時使用「自動出價」，每標20秒的時間會同時累積增加，點數也會在瞬間消耗。可避免於熱門時段中使用，以節省點數的消耗。
-                    <br><br>
-                    5.聰明設定停損一開始就要設定預期成本(得標價+支出點數)，尤其是在競拍熱門商品時，一路瘋狂追價，這樣容易得不償失，由於同樣的商品均會持續推出，因此適時設定停損，未來也會有更高的機會得標。
-                    <br><br>
-                  </li>
+<section class="mbr-section article content10 cid-rsuhmjDo0X" id="content10-b">
+    <div class="container">
+        <div class="inner-container" style="width: 66%;">
+            <hr class="line" style="width: 25%;">
+            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                    競標小技巧
+            </div>
+
+            <hr class="line" style="width: 25%;">
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+							<h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5 font-size-20" style="color:#767676; text-align:left;">
+								<strong>熟悉遊戲規則:</strong>     下標後點數均無法退還，結標時間依競標人數自動延長。
+								<br><br>
+								<strong>拜讀商品結標紀錄:</strong>     結標價有高有低，慎選入場實機。
+								<br><br>
+								<strong>慎選入門競標商品:</strong>     從簡單小物下手。
+								<br><br>
+								<strong>留意即時競標動態調整策略:</strong>      手動/自動/成本控制。
+								<br><br>
+							</h3>
+                <ol>
+									<li>
+										<strong>事前準備功課要做足</strong><br><br>
+										建議新手會員只專注在你真正有需求的商品，並研究「已結標拍賣」中該商品過去的結標紀錄。了解目標商品的結標狀況與競爭強度，你可以在多次的觀察後，抓出其趨勢或最有利的時間點。
+									</li>
+
+									<li>
+										<strong>實際下標前,先觀察其他會員的即時競標狀況</strong><br><br>
+										請先觀察每日15:00之後的即時線上競標狀況，了解一般會員的下標方式。
+									</li>
+
+									<li>
+											<strong>從簡單的小物開始</strong><br><br>
+												新手會員最好從低價商品入門學習競標技巧，透過參與小物競標，可有效增加競拍經驗與得標機會喔。
+									</li>
+
+									<li>
+											<strong>小心使用「自動出價」</strong><br><br>
+										同樣價格區間中，如有多人同時使用「自動出價」，每標20秒的時間會同時累積增加，點數也會在瞬間消耗。可避免於熱門時段中使用，以節省點數的消耗。
+									</li>
+
+									<li>
+											<strong>聰明設定停損</strong><br><br>
+												一開始就要設定預期成本(得標價+支出點數)，尤其是在競拍熱門商品時，一路瘋狂追價，這樣容易得不償失，由於同樣的商品均會持續推出，因此適時設定停損，未來也會有更高的機會得標。
+									</li>
 
                 </ol>
             </div>
