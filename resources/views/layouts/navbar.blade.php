@@ -20,12 +20,12 @@
 				@guest
                 <li class="nav-item" style="border-right:5px solid #dc3545; border-radius:5px;">
                     <a class=" display-7 hover-a" href="{{ route('login') }}">
-                        登入
+                        Đăng nhập
                     </a>
                 </li>
                 <li class="nav-item" style="border-right:5px solid #ff8507; border-radius:5px;">
-                    <a class=" display-7 hover-b" href="{{ route('register') }}" >
-                          註冊
+                    <a class=" display-7 hover-b" href="{{ route('register.confirm') }}" >
+                        Đăng ký
                     </a>
                 </li>
 				@endguest
@@ -37,16 +37,16 @@
                     <a href="" class=" display-7 hover-b" >{{ Auth::user()->balance }}代幣</a>
                 </li>
 				        <li class="nav-item" style="border-right:5px solid #ffc107; border-radius:5px;">
-					             <a class=" hover-c display-7" href="{{ route('user_interface') }}" >會員專區</a>
+					             <a class=" hover-c display-7" href="{{ route('user_interface') }}" >Khu dành riêng cho hội viên</a>
                 </li>
                 @if(Session::get('adm_on') != 0)
 				        <li class="nav-item" style="border-right:5px solid #28a745; border-radius:5px;">
-					             <a class=" hover-d display-7" href="{{ route('adm_Product') }}" >管理</a>
+					             <a class=" hover-d display-7" href="{{ route('adm_Product') }}" >Quản lý</a>
                 </li>
                 @endif
 				<!--比較安全的登出方式不然直接把Route裡面logout從POST改成GET就好了-->
 				<li class="nav-item" style="border-right:5px solid #34abff; border-radius:5px;">
-					<a class="hover-e display-7"  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">登出</a>
+					<a class="hover-e display-7"  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Thoát ra</a>
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 					@csrf
 					</form>

@@ -56,11 +56,11 @@
 
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
-            <h3 class="card-title">商品名稱： {{ $product->name }}</h3>
+            <h3 class="card-title">Tên sản phẩm ： {{ $product->name }}</h3>
             <h4>
-                {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
+                {{ ($product->end_time >= $nowtime) ? "Giá hiện tại" : "Mức tiền trúng thầu"}}：{{ $product->cur_cost }}Tệ
             </h4>
-            <h4>原價：{{ $product->origin_price }}元</h4>
+            <h4>原價：{{ $product->origin_price }}Tệ</h4>
             <h4>每標價：{{ $product->cost}}</h4>
             <p class="card-text">{{ $product->detail }}</p>
 
@@ -71,7 +71,7 @@
 		<div class="card text-center  col-lg-5 margin-top-50 height-500 " style="padding-left:0px; padding-right:0px; border:1px solid black;">
 			<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
 				@if($product->end_time >= $nowtime)
-					自動下標設定
+					Thiết lập tự động cho giá 
 				@else
 					折扣詳細
 				@endif
@@ -84,7 +84,7 @@
                             <form action="{{ route('bidding.auto', $product->id) }}" method="post">
                             @csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
-								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
+								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">Giá bắt đầu :</label>
                                 <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}" @if($auction_auto->on != NULL) disabled @endif >
                                 @error('start_cost')
 						          <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
                               </div>
 
                               <div class="form-group margin-top-35 margin-bottom-0">
-							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
+							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">Giá đình chỉ:</label>
 								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}" @if($auction_auto->on != NULL) disabled @endif >
 								@error('stop_cost')
 								  <span class="invalid-feedback" role="alert">
@@ -103,13 +103,13 @@
 								@enderror
                               </div>
                               <div class="form-group margin-top-35 margin-bottom-0">
-								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
+								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">Số lần :</label>
 								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}" @if($auction_auto->on != NULL) disabled @endif >
 								@error('times')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								  </span>
-								@enderror
+								@enderror 
                               </div>
                               @if($auction_auto->on == NULL)
                               	<input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
@@ -127,7 +127,7 @@
                             			<td style="border-bottom:1px solid #696969;">{{$product->users()->where('uid',Auth::id())->count()}}</td>
                             		</tr>
                             		<tr  style="background-color:white;">
-                            			<td style="border-bottom:1px solid #696969;">結標價格</td>
+                            			<td style="border-bottom:1px solid #696969;">Mức tiền trúng thầu</td>
                             			<td style="border-bottom:1px solid #696969;">{{$product->cur_cost}}</td>
                             		</tr>
                             		<tr>
@@ -144,7 +144,7 @@
 
     <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px; border:1px solid black;">
           <div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
-            出價紀錄
+            Hồ sơ cho giá 
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -180,7 +180,7 @@
 				<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">下標</div>
                 <div class="card-body">
                     <h5 class="card-title">
-                        {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
+                        {{ ($product->end_time >= $nowtime) ? "Giá hiện tại " : "Mức tiền trúng thầu"}}：{{ $product->cur_cost }}Tệ
                     </h5>
 					<p class="card-text">
 						{{ ($product->end_time >= $nowtime) ? "目前最高出價者" : "得標者" }}：
@@ -191,7 +191,7 @@
 						@endif
 	                </p>
 	                @if( $product->end_time >= $nowtime)
-                        <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2 font-size-10" onclick="return confirm('確定下標？')">下標</a>
+                        <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2 font-size-10" onclick="return confirm('確定下標？')">Mức trúng thầu </a>
 	                @else
 	                    <div class="btn btn-primary padding-05-2  font-size-10">已結標</div>
 	                @endif

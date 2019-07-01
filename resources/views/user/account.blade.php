@@ -48,7 +48,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">姓名</label>
+                                                <label style="font-weight:bold;">Họ tên </label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->name }}
@@ -58,7 +58,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">電話</label>
+                                                <label style="font-weight:bold;">Số điện thoại</label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->phone }}
@@ -68,7 +68,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">推荐碼</label>
+                                                <label style="font-weight:bold;">Mã đề cử</label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->code }}
@@ -78,7 +78,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">信箱</label>
+                                                <label style="font-weight:bold;">Email</label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->email }}
@@ -100,11 +100,11 @@
                                       </div>
                                       <hr />
 
-                                      <p class="font-size-25 font-weight-500 margin-top-50 text-align-center">出價紀錄</p>
+                                      <p class="font-size-25 font-weight-500 margin-top-50 text-align-center">Hồ sơ cho giá</p>
                                         <table class="table">
                                         <thead>
                                           <tr>
-                                            <th style="min-width:100px;">商品</th>
+                                            <th style="min-width:100px;">Tên sản phẩm</th>
                                             <th>時間</th>
                                             <th>額度</th>
                                           </tr>
@@ -125,8 +125,8 @@
                                         <table class="table">
                                         <thead>
                                           <tr>
-                                            <th scope="col" style="min-width:100px;">商品</th>
-                                            <th scope="col">金額</th>
+                                            <th scope="col" style="min-width:100px;">Tên sản phẩm </th>
+                                            <th scope="col">Mức tiền trúng thầu</th>
                                             <th scope="col">運費</th>
                                             <th scope="col">操作</th>
                                           </tr>

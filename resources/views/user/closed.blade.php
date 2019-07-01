@@ -19,8 +19,8 @@
             <thead>
               <tr>
                   <th style="text-align:center;">圖片</th>
-                  <th>名稱</th>
-                  <th>結標金額</th>
+                  <th>Tên sản phẩm </th>
+                  <th>Mức tiền trúng thầu</th>
                   <th>折扣</th>
                   <th>得標人</th>
                 </tr>

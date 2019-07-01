@@ -17,19 +17,19 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <div id="products" class="table-responsive margin-top-50">
-            <h1>結標時的頁面</h1>
+            <h1>結標表單</h1>
           <form method="post" action="{{ route('winner.endbidding', $product->id) }}" role="form" class=" ">
 		    @csrf
             <div class="form-group">
-              <label>姓名</label>
+              <label><p style="color: red;display: inline-block;">*</p>Họ tên </label>
               <input id="name" name="name" type="text" class="form-control">
             </div>
             <div class="form-group">
-              <label>電話</label>
+              <label><p style="color: red;display: inline-block;">*</p>Số điện thoại </label>
               <input id="phone" name="phone" type="text" class="form-control">
             </div>
             <div class="form-group">
-              <label>地址</label>
+              <label><p style="color: red;display: inline-block;">*</p>Địa chỉ </label>
               <input id="address" name="address" type="text" class="form-control @error('address') is-invalid @enderror">
               @error('address')
                 <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
               @enderror
             </div>
             <div class="form-group">
-              <label>留言</label>
+              <label><p style="color: red;display: inline-block;">*</p>留言</label>
               <input type="text" id="message" name="message" style="width:100%; height: 100px;" class="form-control @error('message') is-invalid @enderror"></input>
               @error('message')
                 <span class="invalid-feedback" role="alert">
@@ -46,7 +46,7 @@
                 </span>
               @enderror
             </div>
-            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" style="">
+            <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" onclick="return confirm('Sau khi xác nhận trích xuất thì không thể thay đổi')">
             <input type="button" value="取消" onclick="window.location='/account'"  class="btn btn-danger padding-05-2 font-size-10" style="">
           </form>
         </div>

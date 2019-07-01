@@ -18,7 +18,7 @@
 			<form method="POST" action="{{ route('login') }}">
 				@csrf
 				<div class="form-group">
-					<label for="email">帳號</label>
+					<label for="email">Email</label>
 					<input type="email" class="form-control @error('email') is-invalid @enderror form-control_login" id="email" name="email">
 					@error('email')
 						<span class="invalid-feedback" role="alert">
@@ -27,7 +27,7 @@
 					@enderror
 				</div>
 				<div class="form-group">
-					<label for="password">密碼</label>
+					<label for="password">Mật khẩu </label>
 					<input type="password" class="form-control @error('password') is-invalid @enderror form-control_login" id="password" name="password">
 					@error('password')
 						<span class="invalid-feedback" role="alert">
@@ -36,20 +36,16 @@
 					@enderror
 				</div>
 				<div id="login_control">
-					<a id="register" href="{{ route('register') }}">註冊會員</a>
-					<a id="forget_pwd" href="{{ route('password.request')}}">忘記密碼？</a>
-					<input type="submit" id="btn_login" class="btn btn-danger padding-05-2 font-size-10 " value="登入"/>
+					<a id="register" href="{{ route('register') }}">Tham gia hội viên miễn phí</a>
+					<a id="forget_pwd" href="{{ route('password.request')}}">Quên mật khẩu </a>
+					<input type="submit" id="btn_login" class="btn btn-danger padding-05-2 font-size-10 " value="Đăng nhập"/>
 				</div>
 			</form>
       <div class="or_line">
           <div class="line">
           </div>
-          <div class="or">或
-          </div>
-          <div class="line">
-          </div>
       </div>
-      <input type="button" id="btn_login_fb" value="Facebook快速登入"/>
+      <input type="button" id="btn_login_fb" value="Đăng nhập bằng tài khoản Facebook"/>
 		</div>
 	</div>
 </div>

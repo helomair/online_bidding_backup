@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.left_button')
 <section class="mbr-section content4 cid-rsuhXIuUWX margin-top-100" id="content4-g">
 
 
