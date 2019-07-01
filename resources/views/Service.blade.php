@@ -17,7 +17,7 @@
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
                 <h2 class="align-center pb-3 mbr-fonts-style display-2">
-                    服務介紹
+                    Giới thiệu dịch vụ
                 </h2>
                 <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
 
@@ -33,7 +33,7 @@
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                   基本介紹
+                   Giới thiệu cơ bản
                </div>
                 <h3 class="mbr-section-subtitle align-center mbr-white mbr-light mbr-fonts-style font-size-20 display-5">
 
@@ -49,23 +49,23 @@
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
                 <ol>
                   <li>
-                    <strong>什麼是I-Bid?</strong><br><br>
-                    點拍賣商品全部0元起標。<br><br>
-                    下標需使用點數。<br><br>
-                    每一次下標拍賣價格1000~3000元。<br><br>
-                    倒數30秒內每當使用者下標自動延長20秒。<br><br>
-                    商品皆為全新商品。<br><br>
-                    得標處理費100000元。
+                    <strong>I-bid là gì ?</strong><br><br>
+                    Toàn bộ sản phẩm đấu giá đều có giá khởi điểm là 0 Tệ<br><br>
+                    Mức trúng thầu cần sử dụng số điểm<br><br>
+                    Mỗi lần giá đấu giá trúng thầu là 1000-3000 Tệ<br><br>
+                    Trong khi đếm ngược 30 giây mỗi khi người sử dụng cho giá thì tự động kéo dài thêm 20 giây<br><br>
+                    Sản phẩm đều là sản phẩm mới <br><br>
+                    Phí giải quyết trúng thầu là 100000 Tệ
                     <br><br>
                   </li>
-
-									<li>
-                    <strong>服務基本介紹</strong><br><br>
-                    使用本競標服務，須先購買下標所需點數（1點 = 越南盾30000元）。<br><br>
-                    每下標一次需消費1個點數。下標所消費的點數，不論得標與否，均不會退還。<br><br>
-                    每成功得標一次，系統將會配您一組新的暱稱顯示，供下回競標使用。<br><br>
-                    同一時間每位用戶僅能參加兩場拍賣。<br><br>
-                    每當用戶下標，競標時間將再延長20秒，商品結標時間不固定，由會員競標狀況動態決定。<br><br>
+                    
+                  <li>
+                    <strong>Giới thiệu cơ bản dịch vụ</strong><br><br>
+                    Sử dụng dịch vụ đấu thầu này, cần phải mua điểm số cần cho việc cho giá ( 1 điểm = 30000 VNĐ )<br><br>
+                    Mỗi lần ra giá thì tiêu tốn 1 điểm. Điểm số tiêu tốn cho việc ra giá, bất kể có trúng thầu hay không, đều không được trả lại.<br><br>
+                    Mỗi 1 lần trúng thầu thành công, hệ thống sẽ trang bị cho quý vị 1 tổ hợp hiển thị tên khác mới, để sử dụng việc đấu thầu tiếp theo<br><br>
+                    Cùng 1 thời gian người dùng chỉ được tham gia 2 phiên đấu giá <br><br>
+                    Mỗi lần người dùng ra giá, thời gian đấu thầu sẽ kèo dài them 20 giây, thời gian sản phẩm kết thúc đấu giá không cố định, do tình hình động thái của hội viên đấu giá mà quyết định.<br><br>
 
                     <br><br>
                   </li>
@@ -81,7 +81,7 @@
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                   基本用法
+                   Cách sử dụng cơ bản
                </div>
                 <h3 class="mbr-section-subtitle align-center mbr-white mbr-light mbr-fonts-style font-size-20 display-5">
 
@@ -97,82 +97,82 @@
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
                 <ol>
                   <li>
-                    <strong>免費加入會員</strong><br><br>
-                    -點選上方「免費加入會員」<br>
-                    -輸入基本資料後，按「確認」鍵<br>
-                    -確認所輸入的內容<br>
-                    -完成會員註冊作業<br>
-                    -輸入電子郵件地址後，按「寄出」鍵<br>
-                    -收到驗證通知信後，點選認證用的URL連結
+                    <strong>Miễn phí tham gia hội viên</strong><br><br>
+                    -Click vào “ miễn phí tham gia hội viên” trên<br>
+                    -Sau khi nhập các thông tin cơ bản, nhấn “ xác nhận”<br>
+                    -Xác nhận nội dung đã nhập <br>
+                    -Hoàn thành bước đăng ký hội viên<br>
+                    -Sau khi nhập địa chỉ Email, ấn “gửi đi”<br>
+                    -Sau khi nhận được thư thông báo xác nhận, click vào đường link liên kết URL để xác nhận 
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>購買點數</strong><br><br>
-                    -點選購買點數<br>
-                    -確認付款方式<br>
-                    -購買完成<br>
-                    -正常支付費用後,下次登入會員時，網頁右上方即會顯示目前結餘的點數值。
+                    <strong>Mua điểm</strong><br><br>
+                    -Click vào mua điểm <br>
+                    -Xác nhận cách thức thanh toán<br>
+                    -Mua hoàn tất<br>
+                    -Sau khi chi trả phí bình thường, lần tiếp theo đăng nhập hội viên, bên góc phải phía trên trang web sẽ hiển thị mục điểm số còn lại.
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>出價</strong><br><br>
-                    -尋找想下標物品
+                    <strong>Ra giá</strong><br><br>
+                    -Tìm kiếm vật phẩm muốn cho giá
                     <br><br>
-                    (在首頁及開標中的拍賣裡,尋找到想下標的商品後,點選下標!＊未登入或非會員者，請先登入或註冊為會員後再下標。)
+                    ( Trong trang chủ và trong phiên đấu giá khi bắt đầu, sau khi tìm kiếm sản phẩm muốn ra giá, click vào cho giá.   Chưa đăng ký hoặc không phải thành viên, vui lòng đăng nhập trước hoặc đăng ký trở thành thành viên rồi mới cho giá )
                     <br><br>
-                    -進行下標
+                    -Tiến hành cho giá
                     <br><br>
-                    每下標一次需消費1個點數(1點=30000元越南盾)
+                    Mỗi 1 lần cho giá cần tiêu tốn 1 điểm ( 1 điểm 30.000 VNĐ )
                     <br>
-                    同時商品得標價將跟著累加1000元、2000元或3000元(視拍賣種類而有所不同)
+                    Đồng thời sản phẩm trúng thầu giá cả sẽ tích lũy 1000 VMĐ, 2000 VNĐ hoặc 3000 VNĐ ( xem loại sản phẩm đấu giá mà có sự khác nhau )
                     <br><br>
-                    你可選擇使用手動下標或自動下標參與競標，端看用戶個人需求。
+                    Quý vị có thể lựa chọn cho giá bằng thủ công hoặc tự động, xem nhu cầu của người dùng.
                     <br>
-                    倒數30秒內每當用戶下標，競標時間將再延長20秒，商品結標時間不固定，由會員競標狀況動態決定。
+                    Trong vòng 30 giây đếm ngược khi người dùng ra giá, thời gian đấu giá sẽ kéo dài thêm 20 giây, thời gian kết thúc đấu giá sản phẩm không cố định, do tình hình động thái của hội viên tham gia đấu giá mà quyết định. 
                     <br>
-                    通常熱門商品競標時間會拉長很多，在進入競標倒數30秒的時候即是競標的開始。
+                    Thông thường sản phẩm hot trong thời gian đấu giá sẽ kéo thời gian rất dài, khi bước vào thời gian 30 giấy đếm ngược của phiên đấu giá tức là lúc bắt đầu đấu giá.
                     <br><br>
-                    ＊提醒您，同一時間僅能參與兩場拍賣。)
+                    ＊Nhắc nhở quý vị, cùng 1 thời gian chỉ được tham gia 2 phiên đấu giá. 
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>得標</strong>
+                    <strong>Trúng đấu giá</strong>
                     <br><br>
-                    當結標時間一到，而你所下標的金額為最高時，畫面則會顯示「競標成功」，即可確認得標，恭禧您標中商品!
-                    成功得標後，系統將會隨機配發您一組新的"暱稱"顯示，供下回競標使用。
+                    Khi đến thời gian kết thúc đấu giá, mà quý vị là người cho giá cao nhất, màn hình sẽ hiển thị “ đấu giá thành công” . Chúc mừng quý vị trúng đấu giá sản phẩm !<br>
+                    Sau khi trúng đấu giá thành công, hệ thống sẽ trang bị cho quý vị 1 tổ hợp hiển thị “ tên khác” mới, để dùng cho việc đấu giá tiếp theo. 
                     <br><br>
-                    ※提醒您，每成功得標一次，系統將同時更換您的暱稱顯示。
+                    ※Nhắc nhở quý vị, mỗi lần trúng đấu giá thành công, hệ thống sẽ đồng thời thay đổi biệt danh của quý vị
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>購買得標商品</strong>
+                    <strong>Mua sản phẩm trúng đấu giá</strong>
                     <br><br>
-                    確認得標商品購買內容
+                    Nội dung mua sản phẩm xác nhận trúng đấu giá 
                     <br>
-                    至會員專區進入「已得標」頁面，並在得標商品上點選「購買」。
+                    Tới khu dành riêng cho hội viên vào trang “ đã trúng đấu giá” , đồng thời bấm vào “ mua” sản phẩm trúng đấu giá.
                     <br><br>
-                    -得標商品資料填寫
+                    -Điền thông tin sản phẩm trúng đấu giá
                     <br><br>
-                    提醒您，得標商品需在得標後14天內完成購買填寫，若超過時間未購買將喪失得標商品購買資格；即使您決定不購買得標商品，您在參與競標時所花費的點數均將不會退還。
+                    Nhắc nhở quý vị, sản phẩm trúng đấu giá cần phải trong vòng 14 ngày sau khi trúng đấu giá hoàn thành việc điền thông tin mua, nếu quá thời gian chưa mua sẽ đánh mất tư cách mua sản phẩm trúng đấu giá;  cho dù quý vị quyết định không mua sản phẩm trúng đấu giá, số điểm mà quý vị xài trong việc đấu giá đều không được trả lại.
                     <br><br>
-                    -寄送商品
+                    -Sản phẩm gửi đi
                     <br><br>
-                    恭喜您完成相關得標商品購買手續，得標商品將於7~14天內完成配送，請耐心等候。 提醒您，若遇商品缺貨或屬預購商品，配送時間均將可能超過14天，請會員務必了解。
+                    Chúc mừng quý vị hoàn thành thủ tục liên quan mua sản phẩm trúng đấu giá, sản phẩm trúng đấu giá sẽ gửi đến trong vòng 7 -14 ngày, vui lòng kiễn nhẫn chờ đợi, nhắc nhở quý vị, nếu gặp trường hợp sản phẩm cháy hàng hoặc sản phẩm thuộc hàng bán chạy, thời gian gửi đến có thể vượt quá 14 ngày, vui lòng hội viên phải hiểu rõ.
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>拍賣種類</strong>
+                    <strong>Các loại đấu giá</strong>
                     <br><br>
-                    -1000元拍賣:每次下標，價格增加1000元。
+                    -Đấu giá 1000 VNĐ : mỗi lần cho giá, giá cả tăng 1000 VNĐ.
                     <br><br>
-                    -2000元拍賣:每次下標，價格增加2000元。
+                    -Đấu giá 2000 VNĐ : mỗi lần cho giá, giá cả tăng 2000 VNĐ.
                     <br><br>
-                    -3000元拍賣:每次下標，價格增加3000元。
+                    -Đấu giá 3000 VNĐ : mỗi lần cho giá, giá cả tăng 3000 VNĐ.
                     <br><br>
 
                   </li>
@@ -188,11 +188,12 @@
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                    自動投標功能說明
+                    Giải thích tính năng tự động đấu giá
                 </div>
                 <h3 class="mbr-section-subtitle align-center mbr-white mbr-light mbr-fonts-style display-5 font-size-20">
-                  自動下標功能，是讓系統代替您進行下標的競標好幫手。不需時時盯著賣場，就算有事暫離、
-                  未登入賣場也不用擔心。只要事先設定好，在符合您下標的條件期間，系統即會自動進行下標。
+                  Tính năng tự động cho giá , là trợ thủ đắc lực để cho hệ thống thay thế quý vị tiến hành đấu giá.<br>
+                  Không cần phải lúc nào cũng phải chăm chú vào thị trường đấu giá, cho dù có việc phải tạm thời rời đi, không đăng nhập thị trường đấu giá cũng không cần phải lo lắng.<br>
+                  Chỉ cần thiết lặp tốt, trong thời gian phù hợp điều kiện cho giá của quý vị, hệ thống sẽ tự động tiến hành cho giá.
                 </h3>
             <hr class="line" style="width: 25%;">
         </div>
@@ -205,40 +206,38 @@
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
                 <ol>
                   <li>
-                    <strong>未設定自動下標的畫面狀態</strong><br><br>
-                     未設定自動下標時，畫面如左方圖示。在「起價」的欄位，輸入要啓動自動下標的價格。當標價達到設定的價格時，系統就會開始自動下標。而「上限」的 欄位，輸入要停止下標的最高價格後，標價達到所設定的價格，系統即會停止自動下標。
-                     在「下標次數」的地方，可輸入要自動下標的次數。當標價落入所設定的起標價及上限價區間，並已執行完所預設的下標次數，系統也會停止自動下標。
+                    <strong>Trạng thái hiển thị khi chưa thiết lặp tự động cho giá</strong><br><br>
+                     Khi chưa thiết lặp tự động cho giá, hình ảnh sẽ giống như hình ảnh hiển thị bên trái. Tại cột “giá khởi điểm”, nhập vào giá muốn khởi động cho giá, khi giá thầu đạt đến mức giá thiết lập, hệ thống sẽ bắt đầu tự động cho giá. Với lại ở cột “giới hạn cao nhất”, sau khi nhập mức giá cao nhất cho việc ngưng cho giá, giá thầu đạt đến mức giá đã thiết lập, hệ thống sẽ ngưng việc tự động cho giá, tại vị trí “ số lần cho giá”, có thể nhập vào số lần tự động cho giá. Khi giá thầu rơi vào giữa mức giá khởi điểm đã và thiết lập và khu giá giới hạn cao nhất, đồng thời đã hoàn thành số lần cho giá đã thiết lập, hệ thống sẽ ngưng tự động cho giá.
                      <br><br>
-                     ・「下標次數」至少要設定10次(消費10個點數)以上。
+                     ・“ Số lần cho giá ” ít nhất phải thiết lập 10 lần trở lên ( tiêu hao 10 điểm ))
                      <br>
-                     ・「上限」需設定比目前出價再高30000元以上的金額。
+                     ・“ giới hạn cao nhất ” cần phải thiết lặp mức tiền cao hơn mức cho giá hiện tại là 30.000 VNĐ trở lên
+
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>自動下標規則</strong><br><br>
-                    1.當拍賣結標時間在倒數10秒內，而拍賣價格到達您設定的自動下標下限價位，自動下標系統即會為您隨機下標，每下一標，拍賣時間就再延長20秒。 當然，若您已是最高價下標者的話，系統就不會再執行下標。
+                    <strong>Quy tắc tự động cho giá</strong><br><br>
+                    1.Khi thời gian đếm ngược còn 10 giây kết thúc phiên đấu giá, mà giá đấu giá đạt đến vị trí giới hạn thấp nhất của tự động cho giá mà quý vị thiết lập, hệ thống tự động cho giá sẽ giúp bạn cho giá ngẫu nhiên, mỗi lần cho giá, thời gian đấu giá sẽ kéo dài thêm 20 giây. Đương nhiên, nếu quý vị là người đã cho giá cao nhất, hệ thống sẽ không tiến hành cho giá nữa.
                     <br><br>
-                    2.自動下標設定需在結標時間尚未進入倒數10秒設定，一旦進入結標時間倒數10秒即無法設定自動下標。
+                    2.Thiết lặp tự động cho giá cần phải thiết lặp trong thời gian kết thúc đấu giá mà chưa bước vào thời gian đếm ngược 10 giây, một khi bước vào thời gian đếm ngược 10 giây của kết thúc đấu giá thì không thể thiết lặp tự động cho giá.
                     <br><br>
-                    3.每次設定自動下標的最高次數為100次。
+                    3.Số lần cao nhất cho mỗi lần thiết lặp tự động cho giá là 100 lần. 
                     <br><br>
-                    4.請留意 上限金額的設定，因拍賣中的下標金額是固定增加的數值。例如：3000元拍賣中，得標價一定會是3的倍數。上限金額即使設定為1000000元，自動下標只會運作到999000元(3的倍數)。
+                    4.Vui lòng lưu ý thiết lặp cho mức tiền giới hạn cao nhất, do là mức tiền cho giá trong lúc đấu giá là mức tăng cố định <br>Ví dụ : trong lúc đấu giá của phiên 3000 VNĐ, mức giá trúng đấu già nhất định là bội số của 3, mức giới hạn cao nhất mà quý vị thiết lặp là 1.000.000 VNĐ thì tự động cho giá chỉ có tiến hành tiến mức 999.0000 VNĐ ( bội số của 3 )
                     <br><br>
-                    5.高價商品的競標，會有許多會員使用自動下標功能。當同一價格區間，同時有2人以上都設 定了自動下標，系統將進入互相競標的自動循環，在瞬間完成相同價位內的所有自動標，
-                    點數因此可能瞬間用完，結標時間也同時大量累計且延後(相同價位內所有自動標次數*20秒)。建議您慎選使用自動下標的時機。
+                    5.Đấu giá sản phẩm có giá trị cao, sẽ có rất nhiều hội viện sử dụng tính năng cho giá tự động. Khi trong cùng khu có mức giá giống nhau, đồng thời có 2 người đều thiết lặp tự động cho giá, hệ thống sẽ tiến hành tuần hoàn tự động đấu giá với nhau, hoàn thành tự động cho giá trong chớp mắt, điểm số có thể xài hết trong chớp mắt, thời gian kết thúc đấu giá cũng là lúc tích lũy 1 lượng lớn và kéo dài ( tất cả số lần tự động cho giá trong việc giá tương đồng* 20 giây ) đề nghị quý vị cẩn thận khi lựa chọn sử dụng cho giá cho đúng thời điểm.
                     <br><br>
-                    6.在自動下標結束後，未用完的點數會再退還給使用者。
+                    6.Sau khi kết thúc tự động cho giá, điểm số chưa sử dụng hết sẽ trả lại cho người dùng.
                     <br><br>
-                    7.提醒您，自動下標的所有紀錄，可在物件結標後的頁面中查詢 。
+                    7.Nhắc nhở quý vị, tất cả lịch sử tự động cho giá, có thể tra cứu trong trang hiển thị của phiên đấu giá kết thúc.
                     <br><br>
                   </li>
 
                   <li>
-                    <strong>如何有效利用自動下標</strong><br><br>
-                     當此商品沒有人設定自動下標時就是使用的好時機。建議可以檢查商品的下標歷史，再思考設定自動下標的時間點，活用自動下標功能。
+                    <strong>Làm sao để sử dụng tốt chức năng tự động cho giá</strong><br><br>
+                     Khi mà sản phẩm chưa có ai thiết lặp tự động cho giá là thời điểm tốt nhất để thiết lặp tự động cho giá, đề nghị là có thể tra cứu lịch sử cho giá của sản phẩm, sau đó suy nghĩ xem thời gian thiết lặp tự động cho giá, hoặc sử dụng chức năng tự động cho giá.
                     <br><br>
-
                   </li>
                 </ol>
             </div>
@@ -251,7 +250,7 @@
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                    競標小技巧
+                Mẹo nhỏ khi đấu giá
             </div>
 
             <hr class="line" style="width: 25%;">
@@ -264,40 +263,39 @@
         <div class="media-container-row">
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
 							<h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5 font-size-20" style="color:#767676; text-align:left;">
-								<strong>熟悉遊戲規則:</strong>     下標後點數均無法退還，結標時間依競標人數自動延長。
+								<strong>Nắm rõ nguyên tắc trò chơi : </strong>     sau khi cho giá thì điểm số sẽ không được trả lại, thời gian kết thúc đấu giá căn cứ số người đấu giá tự động kéo dài.
 								<br><br>
-								<strong>拜讀商品結標紀錄:</strong>     結標價有高有低，慎選入場實機。
+								<strong>Đọc lịch sử kết thúc đấu giá của sản phẩm : </strong>     giá kết thúc đấu giá có cao có thấp, cẩn thận lựa chọn.
 								<br><br>
-								<strong>慎選入門競標商品:</strong>     從簡單小物下手。
+								<strong>Cẩn thận khi lựa chọn sản phẩm đấu giá cho người mới bắt đầu : </strong>bắt đầu với sản phẩm đơn giản.
 								<br><br>
-								<strong>留意即時競標動態調整策略:</strong>      手動/自動/成本控制。
+								<strong>Lưu ý cho dù động thái đấu giá thay đổi chiến lược : t</strong>hủ công/ tự động/ kiểm soát vốn
 								<br><br>
 							</h3>
                 <ol>
-									<li>
-										<strong>事前準備功課要做足</strong><br><br>
-										建議新手會員只專注在你真正有需求的商品，並研究「已結標拍賣」中該商品過去的結標紀錄。了解目標商品的結標狀況與競爭強度，你可以在多次的觀察後，抓出其趨勢或最有利的時間點。
+							<li>
+							<strong>Phải chuẩn bị thật tốt trước khi đấu giá</strong><br><br>
+							Đề nghị hội viên mới chỉ chuyên tập trung vào sản phẩm mình thực sự muốn, đồng thời nghiên cứu lịch sử đấu giá của sản phẩm đã qua trong “ đã kết thúc đấu giá”. Tìm hiểu tình trạng kết thúc đấu giá và cường độ cạnh tranh của mục tiêu sản phẩm. 
+							</li>
+
+							<li>
+							<strong>Trước khi cho giá thực tế, trước tiên nên quan sát tình trạng cạnh tranh đấu giá tức thời của các hội viên khác</strong><br><br>
+								Vui lòng trước tiên quan sát tình trạng đấu giá online lúc 15 giờ trở về sau mỗi ngày, tìm hiểu cách thức cho giá của 1 số hội viên 							</li>
+
+							<li>
+							   <strong>Bắt đầu với sản phẩm đơn giản</strong><br><br>
+						       Hội viên mới tốt nhất nên bắt đầu học tập kỹ năng đấu giá từ các sản phẩm có mức giá chạm đáy, thông qua tham gia đấu giá các vật phẩm nhỏ, để gia tăng hiệu quả kinh nghiệm đấu giá và cơ hội trúng đấu giá.
 									</li>
 
-									<li>
-										<strong>實際下標前,先觀察其他會員的即時競標狀況</strong><br><br>
-										請先觀察每日15:00之後的即時線上競標狀況，了解一般會員的下標方式。
-									</li>
+							<li>
+								<strong>cẩn thẩn khi sử dụng “ tự động cho giá “ </strong><br><br>
+								Khi cùng giống nhau về giá cả, nếu như đồng thời có nhiều người sử dụng “ tự động cho giá”, mỗi 20 giây của thời gian cho giá sẽ đồng thời tăng tích lũy, điểm số cũng đồng thời tiêu hao trong chớp mắt. Có thể tránh sử dụng trong thời gian cao điểm, để tiết kiệm tiêu hao điểm số. 
+							</li>
 
-									<li>
-											<strong>從簡單的小物開始</strong><br><br>
-												新手會員最好從低價商品入門學習競標技巧，透過參與小物競標，可有效增加競拍經驗與得標機會喔。
-									</li>
-
-									<li>
-											<strong>小心使用「自動出價」</strong><br><br>
-										同樣價格區間中，如有多人同時使用「自動出價」，每標20秒的時間會同時累積增加，點數也會在瞬間消耗。可避免於熱門時段中使用，以節省點數的消耗。
-									</li>
-
-									<li>
-											<strong>聰明設定停損</strong><br><br>
-												一開始就要設定預期成本(得標價+支出點數)，尤其是在競拍熱門商品時，一路瘋狂追價，這樣容易得不償失，由於同樣的商品均會持續推出，因此適時設定停損，未來也會有更高的機會得標。
-									</li>
+							<li>
+							    <strong>Thông minh thiết lặp dừng lỗ</strong><br><br>
+				                Lúc bắt đầu thì phải thiết lặp vốn dự tính ( giá trúng đấu giá + điểm số đã chi ), nhất là trong lúc đấu giá với các sản phẩm hot, một mực theo đuổi giá điên cuồng, như vậy dễ dàng rơi vào tình trạng “ được không bằng mất”, do là sản phẩm cùng loại đều sẽ duy trì đưa ra sàn đấu giá, do đó thiết lặp dừng lỗ hợp lý, về sau cũng sẽ có nhiều cơ hội trúng đấu giá.
+							</li>
 
                 </ol>
             </div>
