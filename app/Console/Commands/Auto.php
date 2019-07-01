@@ -51,7 +51,7 @@ class Auto extends Command
             $auto_start = $product->end_time->diffInSeconds($time,false); //時間相差
 
             if( ($auto_start < 0 && $auto_start >= (-30)) && ($time >= $product->start_time) && ($user->balance > 0) )
-                if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost <= $auto->end_cost) )
+                if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost + $product->cost <= $auto->end_cost) )
                 {
                     $auto->update( ['times' => ($auto->times - 1) ] ); //次數-1
                     $product->users()->attach($user->id, [
