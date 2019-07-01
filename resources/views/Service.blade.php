@@ -17,7 +17,7 @@
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
                 <h2 class="align-center pb-3 mbr-fonts-style display-2">
-                    服務條款
+                    Giới thiệu dịch vụ
                 </h2>
                 <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
 
@@ -35,8 +35,8 @@
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                    基本介紹
-                </div>
+                   Giới thiệu cơ bản
+               </div>
                 <h3 class="mbr-section-subtitle align-center mbr-white mbr-light mbr-fonts-style font-size-20 display-5">
 
                 </h3>
@@ -50,14 +50,14 @@
         <div class="media-container-row">
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
                 <ol>
-                  <li><strong>什麼是I-Bid?</strong><br><br>
-                    -拍賣商品全部0元起標<br>
-                    -下標需使用點數<br>
-                    -每一次下標拍賣價格1000~3000元<br>
-                    -倒數30秒內每當使用者下標自動延長20秒<br>
-                    -商品皆為全新商品<br>
-                    -得標處理費100000元<br><br>
-                    </li>
+                  <li><strong>I-bid là gì ?</strong><br><br>
+                    -Toàn bộ sản phẩm đấu giá đều có giá khởi điểm là 0 Tệ<br>
+                    -Mức trúng thầu cần sử dụng số điểm<br>
+                    -Mỗi lần giá đấu giá trúng thầu là 1000-3000 Tệ<br>
+                    -Trong khi đếm ngược 30 giây mỗi khi người sử dụng cho giá thì tự động kéo dài thêm 20 giây<br>
+                    -Sản phẩm đều là sản phẩm mới <br>
+                    -Phí giải quyết trúng thầu là 100000 Tệ<br><br>
+                  </li>
 
                   <li>
                     <strong>免費加入會員</strong><br><br>
