@@ -202,10 +202,23 @@
 </div>
 <!-- 倒數計時器js -->
 <script type="text/javascript">
+	var nowdateformat = new Date();  //現在時間的date型態
+	var localtimezone = nowdateformat.getTimezoneOffset();  //取得當地的偏差值
+	var servertimezone = -480;  //台灣區 gmt+8 -480
+	//alert(timezone);
 	var product = @json($product->toArray());
-	var nowdate = new Date();    		//取得現在時間
+	var nowtimestamp = nowdateformat.getTime();    		//取得現在時間(毫秒)
+	var nowdate = new Date(nowtimestamp + localtimezone*1000*60); //本地現在時間date型態 以GMT+0 為基準 (local)
+	//alert(nowdate);
+	//alert(nowtimestamp + " vs " + nowdate);
+	//alert(nowdate +" vs "+ zonenow);
 	var endtime = product.end_time;
-	var enddate = new Date(endtime);	//取得結束時間，轉成js的Date模式才能做比較
+	var endtimestamp = new Date(endtime).getTime();	    //取得結束時間(毫秒)
+	//alert(endtimestamp);
+	var enddate = new Date(endtimestamp + servertimezone*1000*60); //系統結束時間date型態 以GMT+0 為基準 (sever)
+	//alert(enddate);
+	//alert(endtimestamp +" vs "+ nowtimestamp );
+	//alert(enddate + " vs " + nowdate);
 	var end_year = endtime.substr(0,4);
 	var end_month = endtime.substr(5,2);
 	var end_day = endtime.substr(8,2);
@@ -215,12 +228,14 @@
 	//alert(end_year+end_month+end_day+end_hour+end_minutes+end_second);
 	var interval=1000;
 	function ShowTimer(endYear,endMonth,endDay,endHour,endMinute,endSecond,divId) {
+		var servertimezone = -480;  //台灣區 gmt+8 -480
 		var now=new Date();
+		var localtimezone = now.getTimezoneOffset();  //本地電腦系統時間的gmt差值
 		console.log("now="+now);
 		var endDate=new Date(endYear,endMonth-1,endDay,endHour,endMinute,endSecond);
 		console.log("endDate="+endDate);
 		//getTime()获取的值/1000=秒数
-		var leftTime=endDate.getTime() - now.getTime();
+		var leftTime=(endDate.getTime() + servertimezone*1000*60) - (now.getTime() + localtimezone*1000*60) ;//結束基準時間-現在基準時間
 		console.log("leftTime="+leftTime);
 		var leftSecond=parseInt(leftTime/1000);
 		console.log("leftSecond="+leftSecond);
