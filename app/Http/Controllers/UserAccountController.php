@@ -40,6 +40,8 @@ class UserAccountController extends Controller
     {
 
         $v = Validator::make($request->all(),[
+            'name' => 'required',
+            'phone' => 'required',
             'address' => 'required',
             'message' => 'required'
         ], [ 'required' => '不能留空' ]  );
@@ -48,8 +50,8 @@ class UserAccountController extends Controller
             return back()->withErrors($v)->withInput();
 
     	$user = Auth::user();
-//    	$att['name'] = $request->input('name');
-//    	$att['phone'] = $request->input('phone');
+    	$att['name'] = $request->input('name');
+    	$att['phone'] = $request->input('phone');
     	$att['address'] = $request->input('address');
     	$att['message'] = $request->input('message');
 

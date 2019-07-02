@@ -60,6 +60,9 @@
             <h4>
                 {{ ($product->end_time >= $nowtime) ? "Giá hiện tại" : "Mức tiền trúng thầu"}}：{{ $product->cur_cost }}Tệ
             </h4>
+            @if ($product->start_time > $nowtime)
+                <h4>開始時間：{{ $product->start_time }}</h4>
+            @endif
             <h4>原價：{{ $product->origin_price }}Tệ</h4>
             <h4>每標價：{{ $product->cost}}</h4>
             <p class="card-text">{{ $product->detail }}</p>
@@ -111,7 +114,7 @@
 								  </span>
 								@enderror 
                               </div>
-                              @if($auction_auto->on == NULL)
+                              @if($auction_auto->on == NULL && $product->start_time < $nowtime )
                               	<input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
                               @endif
                             </form>
@@ -189,10 +192,10 @@
 						@else
 							{{ $top_auction->name }}
 						@endif
-	                </p>
-	                @if( $product->end_time >= $nowtime)
+                    </p>
+	                @if ( $product->end_time >= $nowtime && $product->start_time < $nowtime)
                         <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2 font-size-10" onclick="return confirm('確定下標？')">Mức trúng thầu </a>
-	                @else
+	                @elseif ($product->end_time < $nowtime)
 	                    <div class="btn btn-primary padding-05-2  font-size-10">已結標</div>
 	                @endif
 				</div>
