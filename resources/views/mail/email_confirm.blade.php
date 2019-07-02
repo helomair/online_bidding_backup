@@ -8,12 +8,12 @@
 
 </head>
 <body>
-<h1>報名系統確認信</h1>
-<p>{{$user_name}}（{{$user_email}}）您好，</p>
+<h1>Email Verification</h1>
+<p>{{$user_name}}（{{$user_email}}）</p>
 <p>感謝您註冊本系統，請按以下連結進行帳號確認</p>
-<p><a href="{{env('APP_URL')}}/activation/{{$link}}" target="_blank">{{env('APP_URL')}}/activation/{{$link}}</a></p>
+<p><a href="{{env('APP_URL')}}/activation/{{$token}}" target="_blank">{{env('APP_URL')}}/activation/{{$token}}</a></p>
 <p></p>
-<p>國立中正大學創新創業基地</p>
+<p>I-Bid</p>
 </body>
 
 

@@ -11,6 +11,12 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
+
+@if (session()->has('msg'))
+    <script>
+        alert('{{ session()->get('msg') }}');
+    </script>
+@endif
 <div class="container fix_content">
     <div class="row">
   <div class="container my-4">
@@ -82,9 +88,12 @@
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->email }}
-																						<span style='color:red;'>尚未驗證</span>
-																						<!--<span style='color:green;'>驗證通過</span>-->
-										                                            </div>
+                                                @if ($user->email_confirm == '0')
+                                                    <a id="email_confirm" href="{{ route('send_mail') }}" class="btn btn-delete padding-05-2 font-size-10">尚未驗證</a>
+                                                @else 
+											        <span style='color:green;'>驗證通過</span>
+                                                @endif
+										    </div>
                                         </div>
                                         <hr />
 
@@ -164,7 +173,17 @@
 	<!-- /.col-lg-9 -->
     </div>
 </div>
+@endsection 
+
+@section('script')
 <script>
+
+$('#email_confirm').click(function (){
+    $('#confirm_form').show(); 
+}); 
+
+
+
 //alert(document.referrer);
 //判定按下哪個tab, 記錄到cookie裡面
 function getTab(this_id){

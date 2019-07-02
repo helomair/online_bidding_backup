@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail; 
 use Carbon\Carbon;
 use App\User;
 use App\Product;
 use App\Payment;
 use App\BankAccount;
+use App\EmailConfirm; 
 use Validator;
 
 class UserAccountController extends Controller
@@ -124,6 +127,49 @@ class UserAccountController extends Controller
         ]);
 
         return redirect()->route('account');
+    }
+
+    public function SendConfirmMail()
+    {
+        $token = Str::random(20);
+        $user = Auth::user();
+        $confirm_new = new EmailConfirm;
+        $confirm_new->uid = $user->id;
+        $confirm_new->confirm_token = $token;
+        $confirm_new->expired = Carbon::tomorrow();
+        $confirm_new->save();
+
+        $subject = "Email Verification";
+        $receiver = $user->email;
+        $content = [
+            "token" => $token,
+            "user_name" => $user->name,
+            "user_email" => $user->email,
+        ];
+
+        Mail::send('mail.email_confirm', $content, function($message) use ($subject, $receiver)
+        {
+            $message->from("very860112@gmail.com", 'I-Bid');
+            $message->to($receiver)
+                    ->subject($subject);
+        });
+        return redirect()->back()->with('msg', 'Mail Sended!');
+    }
+
+    public function EmailTokenConfirm($token)
+    {
+        $user = Auth::user(); 
+        $email = EmailConfirm::where('confirm_token', $token)
+            ->where('expired', '>=', Carbon::now())
+            ->where('uid', $user->id)
+            ->first();
+        if($email != null)
+        {
+            $user->update(['email_confirm' => true]);
+            $email->delete(); 
+            return redirect('account')->with('msg', 'Verification Done!');
+        }    
+        return redirect('account');
     }
 
     public function CoinCancel(Payment $payment)

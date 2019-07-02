@@ -23,6 +23,9 @@ Auth::routes();
 Route::get('register/confirm', function(){
 	return view('RegisterConfirm');
 })->name('register.confirm');
+//Email驗證功能
+Route::get('send_mail', 'UserAccountController@SendConfirmMail')->name('send_mail'); 
+Route::get('/activation/{token}', 'UserAccountController@EmailTokenConfirm')->name('confirm'); 
 // #登入
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 // Route::post('login', 'Auth\LoginController@login');
