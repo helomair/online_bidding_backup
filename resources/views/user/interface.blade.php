@@ -204,7 +204,7 @@
 <script type="text/javascript">
 	var nowdateformat = new Date();  //現在時間的date型態
 	var localtimezone = nowdateformat.getTimezoneOffset();  //取得當地的偏差值
-	var servertimezone = -480;  //台灣區 gmt+8 -480
+	var servertimezone = -420;  //越南區 gmt+7 -420
 	//alert(timezone);
 	var product = @json($product->toArray());
 	var nowtimestamp = nowdateformat.getTime();    		//取得現在時間(毫秒)
@@ -228,7 +228,7 @@
 	//alert(end_year+end_month+end_day+end_hour+end_minutes+end_second);
 	var interval=1000;
 	function ShowTimer(endYear,endMonth,endDay,endHour,endMinute,endSecond,divId) {
-		var servertimezone = -480;  //台灣區 gmt+8 -480
+		var servertimezone = -420;  //越南區 gmt+7 -420
 		var now=new Date();
 		var localtimezone = now.getTimezoneOffset();  //本地電腦系統時間的gmt差值
 		console.log("now="+now);
