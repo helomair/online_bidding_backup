@@ -33,13 +33,13 @@
                             <div class="col-12">
                                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false" onclick="getTab(this.id);">基本資料</a>
+                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false" onclick="getTab(this.id);">Dữ liệu cơ bản</a> <!-- 基本資料 -->
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true" onclick="getTab(this.id);">競標操作</a>
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true" onclick="getTab(this.id);">競標操作</a> <!-- 基本資料 -->
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false" onclick="getTab(this.id);">得標區</a>
+                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false" onclick="getTab(this.id);">得標區</a> <!-- 基本資料 -->
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -82,7 +82,7 @@
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->email }}
-																						<span style='color:red;'>尚未驗證</span>
+																						<span style='color:red;'>尚未驗證</span> 
 																						<!--<span style='color:green;'>驗證通過</span>-->
 										                                            </div>
                                         </div>
