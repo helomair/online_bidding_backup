@@ -34,7 +34,7 @@
                     <a href="" class=" display-7 hover-a" >{{ Auth::user()->name }}</a>
                 </li>
                 <li class="nav-item" style="border-right:5px solid #ff8507; border-radius:5px;">
-                    <a href="" class=" display-7 hover-b" >{{ Auth::user()->balance }}代幣</a>
+                    <a href="" class=" display-7 hover-b" >{{ Auth::user()->balance }}cái đồng xu</a>
                 </li>
 				        <li class="nav-item" style="border-right:5px solid #ffc107; border-radius:5px;">
 					             <a class=" hover-c display-7" href="{{ route('user_interface') }}" >Khu dành riêng cho hội viên</a>

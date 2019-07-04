@@ -22,8 +22,8 @@
 				<div class=" frame text-align-center">
 	            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
 					<p class="card-text" style="margin-top:270px;">
-						商品名：{{ $product->name }}<br>
-						目前競標價位：{{ $product->cur_cost }}元
+						Tên sản phẩm：{{ $product->name }}<br> <!-- 商品名稱 -->
+						Giá thầu hiện tại：{{ $product->cur_cost }}Tệ <!-- 目前競標價位 -->
 					</p>
 				</div>
 			</div>

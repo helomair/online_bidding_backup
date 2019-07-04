@@ -42,15 +42,27 @@ class Auto extends Command
     public function handle()
     {
     //    DB::table('temp_log')->insert(['echos' => 'Begins']); 
-        $autos = AuctionAuto::where('times','>','0')->get();
+        $autos = AuctionAuto::where('times','>','0')->get(); 
         $time = Carbon::now();
+        $diff_this_time = array();
         foreach($autos as $auto)
         {
             $product = $auto->product;  //產品
+            
+            if($product == null || $product->end_time < $time)
+            {
+                $auto->delete();
+                continue; 
+            }
+
             $user = $auto->user; //使用者
             $auto_start = $product->end_time->diffInSeconds($time,false); //時間相差
+            
+            $diff_this_time = array_add($diff_this_time, $product->id, $auto_start); 
 
-            if( ($auto_start < 0 && $auto_start >= (-30)) && ($time >= $product->start_time) && ($user->balance > 0) )
+            if( ($diff_this_time[$product->id] < 0 && $diff_this_time[$product->id] >= (-30)) && ($time >= $product->start_time) && ($user->balance > 0) )
+            {
+                echo $product->id . "  " . $diff_this_time[$product->id] . "\n";
                 if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost + $product->cost <= $auto->end_cost) )
                 {
                     $auto->update( ['times' => ($auto->times - 1) ] ); //次數-1
@@ -64,7 +76,9 @@ class Auto extends Command
                     ]);
                     $user->update([ 'balance' => $user->balance - 1 ]);        //代幣-1
                 }
+            }
         }
+
     }
 
 }
