@@ -11,6 +11,12 @@
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
+
+@if (session()->has('msg'))
+    <script>
+        alert('{{ session()->get('msg') }}');
+    </script>
+@endif
 <div class="container fix_content">
     <div class="row">
   <div class="container my-4">
@@ -33,13 +39,13 @@
                             <div class="col-12">
                                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false" onclick="getTab(this.id);">基本資料</a>
+                                        <a class="nav-link" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="false" onclick="getTab(this.id);">Dữ liệu cơ bản</a> <!-- 基本資料 -->
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true" onclick="getTab(this.id);">競標操作</a>
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="true" onclick="getTab(this.id);">Thao tác đấu thầu</a> <!-- 競標操作 -->
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false" onclick="getTab(this.id);">得標區</a>
+                                        <a class="nav-link" id="getBind-tab" data-toggle="tab" href="#getBind" role="tab" aria-controls="getBind" aria-selected="false" onclick="getTab(this.id);">Khu đã được thầu</a> <!-- 得標區 -->
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -48,7 +54,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">姓名</label>
+                                                <label style="font-weight:bold;">Họ tên </label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->name }}
@@ -58,7 +64,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">電話</label>
+                                                <label style="font-weight:bold;">Số điện thoại</label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->phone }}
@@ -68,7 +74,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">推荐碼</label>
+                                                <label style="font-weight:bold;">Mã đề cử</label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->code }}
@@ -78,35 +84,38 @@
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
-                                                <label style="font-weight:bold;">信箱</label>
+                                                <label style="font-weight:bold;">Email</label>
                                             </div>
                                             <div class="col-md-8 col-6">
                                                 {{ $user->email }}
-																						<span style='color:red;'>尚未驗證</span>
-																						<!--<span style='color:green;'>驗證通過</span>-->
-										                                            </div>
+                                                @if ($user->email_confirm == '0')
+                                                    <a id="email_confirm" href="{{ route('send_mail') }}" class="btn btn-delete padding-05-2 font-size-10">Chưa được xác minh</a> <!-- 尚未驗證-->
+                                                @else 
+											                           <span style='color:green;'>Đã được xác minh</span> <!-- 驗證通過-->
+                                                @endif
+										                        </div>
                                         </div>
                                         <hr />
 
                                     </div>
                                     <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <div class="row">
-                                          <div class="col-md-10 col-5 custom-margin-right-20">
-                                              <label style="font-weight:bold; line-height:45px; white-space:nowrap;">剩餘代幣: {{ $user->balance }}P</label>
+                                          <div class="col-md-8 col-5 custom-margin-right-20">
+                                              <label style="font-weight:bold; line-height:45px; white-space:nowrap;">Số dư thay thế bằng tiền: {{ $user->balance }}P</label> <!-- 剩餘代幣 -->
                                           </div>
-                                          <div class="col-md-2 col-6 text-align-center">
-                                              <a href="{{ route('coin') }}" class="btn btn-danger padding-05-16 font-size-12">儲值</a>
+                                          <div class="col-md-4 col-6 text-align-center">
+                                              <a href="{{ route('coin') }}" class="btn btn-danger font-size-12" style="">Nạp tiền</a> <!-- 儲值 -->
                                           </div>
                                       </div>
                                       <hr />
 
-                                      <p class="font-size-25 font-weight-500 margin-top-50 text-align-center">出價紀錄</p>
+                                      <p class="font-size-25 font-weight-500 margin-top-50 text-align-center">Hồ sơ cho giá</p>
                                         <table class="table">
                                         <thead>
                                           <tr>
-                                            <th style="min-width:100px;">商品</th>
-                                            <th>時間</th>
-                                            <th>額度</th>
+                                            <th style="min-width:100px;">Tên sản phẩm</th>
+                                            <th>Thời gian</th> <!-- 時間 -->
+                                            <th>Số tiền</th> <!-- 額度 -->
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -125,10 +134,10 @@
                                         <table class="table">
                                         <thead>
                                           <tr>
-                                            <th scope="col" style="min-width:100px;">商品</th>
-                                            <th scope="col">金額</th>
-                                            <th scope="col">運費</th>
-                                            <th scope="col">操作</th>
+                                            <th scope="col" style="min-width:100px;">Tên sản phẩm </th>
+                                            <th scope="col">Mức tiền trúng thầu</th>
+                                            <th scope="col">Phí vận chuyển</th> <!-- 運費 -->
+                                            <th scope="col">Thao tác</th> <!-- 操作 -->
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -136,14 +145,14 @@
                                             <tr>
                                               <td>{{ $winner->name }}</td>
                                               <td>{{ $winner->cur_cost }}</td>
-                                              <td>10</td>
+                                              <td>10</td> 
                                               <td>
-                                                <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12" style="white-space:nowrap;">資料填寫</a>
-                                                <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">檢視</a>
+                                                <a href="{{ route('winner.create', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12" style="white-space:nowrap;">Ghi dữ liệu</a> <!-- 資料填寫 -->
+                                                <a href="{{ route('user_interface.show', $winner->id) }}" class="btn btn-danger padding-05-16 font-size-12">Xem duyệt</a> <!-- 檢視 -->
                                                 @if ($winner->status == '0')
-                                                  <span class="padding-05-16" style="color: #d02b2b;">未出貨</span>
+                                                  <span class="padding-05-16" style="color: #d02b2b;">Chưa xuất hàng</span> <!-- 未出貨 -->
                                                 @else
-                                                  <span class="finished padding-05-16">已出貨</span>
+                                                  <span class="finished padding-05-16">Đã xuất hàng</span> <!-- 已出貨-->
 
                                                 @endif
                                               </td>
@@ -164,7 +173,17 @@
 	<!-- /.col-lg-9 -->
     </div>
 </div>
+@endsection 
+
+@section('script')
 <script>
+
+$('#email_confirm').click(function (){
+    $('#confirm_form').show(); 
+}); 
+
+
+
 //alert(document.referrer);
 //判定按下哪個tab, 記錄到cookie裡面
 function getTab(this_id){

@@ -40,14 +40,14 @@
 <div class="container fix_content">
 	<br>
 	@if( $product->end_time >= $nowtime)
-	<div align='center'>
-		商品倒數計時：
+	<div align='center'><!--商品倒數計時-->
+		hàng hóa đếm ngược thời gian：
 		<div id="andy timer" class="andy timer">
 		</div>
     </div>
     @else
     <div align="center">
-        <h2>拍賣已結束</h2>
+        <h2>Đấu giá đã kết thúc</h2><!--拍賣已結束-->
     </div>
 	@endif
     <div class="row space-between" style="padding:0px 10px;">
@@ -56,13 +56,16 @@
 
           <img class="card-img-top img-fluid" src="{{ url('img',$file_path) }}" alt="">
           <div class="card-body">
-            <h3 class="card-title">商品名稱： {{ $product->name }}</h3>
-            <h4>
-                {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
+            <h3 class="card-title">Tên sản phẩm ： {{ $product->name }}</h3> <!--商品名-->
+            <h4> <!-- 商品競標價 -->
+                {{ ($product->end_time >= $nowtime) ? "Giá hiện tại" : "Mức tiền trúng thầu"}}：{{ $product->cur_cost }}Tệ
             </h4>
-            <h4>原價：{{ $product->origin_price }}元</h4>
-            <h4>每標價：{{ $product->cost}}</h4>
-            <p class="card-text">{{ $product->detail }}</p>
+            @if ($product->start_time > $nowtime)
+                <h4>開始時間：{{ $product->start_time }}</h4> <!--開始時間-->
+            @endif
+            <h4>giá niêm yết：{{ $product->origin_price }}Tệ</h4><!--原價-->
+            <h4>Mỗi giá đấu thầu：{{ $product->cost}}</h4><!--每標價-->
+            <p class="card-text">{{ $product->detail }}</p><!--詳細-->
 
           </div>
         </div>
@@ -71,9 +74,9 @@
 		<div class="card text-center  col-lg-5 margin-top-50 height-500 " style="padding-left:0px; padding-right:0px; border:1px solid black;">
 			<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
 				@if($product->end_time >= $nowtime)
-					自動下標設定
+					Thiết lập tự động cho giá 
 				@else
-					折扣詳細
+					Danh sách chiết khấu <!--折扣詳細-->
 				@endif
 			</div>
 			<div class="card-body height-100-px">
@@ -84,7 +87,7 @@
                             <form action="{{ route('bidding.auto', $product->id) }}" method="post">
                             @csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
-								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">開始價格:</label>
+								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">Giá bắt đầu :</label>
                                 <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}" @if($auction_auto->on != NULL) disabled @endif >
                                 @error('start_cost')
 						          <span class="invalid-feedback" role="alert">
@@ -94,7 +97,7 @@
                               </div>
 
                               <div class="form-group margin-top-35 margin-bottom-0">
-							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">停止價格:</label>
+							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">Giá đình chỉ:</label>
 								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}" @if($auction_auto->on != NULL) disabled @endif >
 								@error('stop_cost')
 								  <span class="invalid-feedback" role="alert">
@@ -103,15 +106,15 @@
 								@enderror
                               </div>
                               <div class="form-group margin-top-35 margin-bottom-0">
-								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">次數:</label>
+								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">Số lần :</label>
 								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}" @if($auction_auto->on != NULL) disabled @endif >
 								@error('times')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								  </span>
-								@enderror
+								@enderror 
                               </div>
-                              @if($auction_auto->on == NULL)
+                              @if($auction_auto->on == NULL && $product->start_time < $nowtime )
                               	<input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
                               @endif
                             </form>
@@ -119,20 +122,20 @@
                             <table class="table table-striped" style="margin-top:70px;">
                             	<tbody>
                             		<tr style="background-color:white;">
-                            			<td style="border-bottom:1px solid #696969; border-top:1px solid white;">商品原價</td>
+                            			<td style="border-bottom:1px solid #696969; border-top:1px solid white;">giá niêm yết</td><!--原價-->
                             			<td style="border-bottom:1px solid #696969; border-top:1px solid white;">{{$product->origin_price}}</td>
                             		</tr>
                             		<tr>
-                            			<td style="border-bottom:1px solid #696969;">出價次數</td>
+                            			<td style="border-bottom:1px solid #696969;">Số lần ra giá</td><!--出價次數-->
                             			<td style="border-bottom:1px solid #696969;">{{$product->users()->where('uid',Auth::id())->count()}}</td>
                             		</tr>
                             		<tr  style="background-color:white;">
-                            			<td style="border-bottom:1px solid #696969;">結標價格</td>
-                            			<td style="border-bottom:1px solid #696969;">{{$product->cur_cost}}</td>
+                            			<td style="border-bottom:1px solid #696969;">Mức tiền trúng thầu</td>
+                            			<td style="border-bottom:1px solid #696969;">{{$product->cur_cost}}</td> <!--結標價-->
                             		</tr>
                             		<tr>
-                            			<td style="border-bottom:1px solid #696969;">折扣</td>
-                            			<td style="border-bottom:1px solid #696969;">{{$product->discount}}%</td>
+                            			<td style="border-bottom:1px solid #696969;">Chiết khấu</td>
+                            			<td style="border-bottom:1px solid #696969;">{{$product->discount}}%</td><!--折扣-->
                             		</tr>
                             	</tbody>
                             </table>
@@ -144,20 +147,20 @@
 
     <div class="card text-center margin-top-50 col-lg-6" style="padding-left:0px; padding-right:0px; border:1px solid black;">
           <div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">
-            出價紀錄
+            Hồ sơ cho giá 
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped">
                 <tbody>
                     <tr>
-                      <td>出價者</td>
-                      <td>金額</td>
-                      <td>日期</td>
+                      <td>Người ra giá</td><!--出價者-->
+                      <td>Số tiền</td><!--金額-->
+                      <td>ngày tháng</td><!--日期-->
                     </tr>
 					@if(!$auctions)
 						<tr>
-							<td colspan="3">無人出價</td>
+							<td colspan="3">Hiện chưa có người ra giá</td><!--無人出價-->
 						</tr>
 					@else
 						@foreach($auctions as $auction)
@@ -177,23 +180,24 @@
 
 
 			<div class="card text-center  col-lg-5 height-250 margin-top-50" style="padding-left:0px; padding-right:0px; border:1px solid black;">
-				<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">下標</div>
+				<div class="card-header" style="border-bottom:1px solid rgb(53, 57, 60); background:linear-gradient(to bottom, #52bffd 0%, #61bdf3 66%, #71d1ff 100%); color:white;">Đăng ký đấu thầu</div><!--下標-->
                 <div class="card-body">
-                    <h5 class="card-title">
-                        {{ ($product->end_time >= $nowtime) ? "目前競標價" : "結標價"}}：{{ $product->cur_cost }}元
+                    <h5 class="card-title"><!--當前標價-->
+                        {{ ($product->end_time >= $nowtime) ? "Giá hiện tại " : "Mức tiền trúng thầu"}}：{{ $product->cur_cost }}Tệ
                     </h5>
-					<p class="card-text">
-						{{ ($product->end_time >= $nowtime) ? "目前最高出價者" : "得標者" }}：
+					<p class="card-text"><!--最高出價者 : 得標者-->
+						{{ ($product->end_time >= $nowtime) ? "Người ra giá cao nhất hiện tại" : "Người được đấu thầu" }}：
 						@if($top_auction->name == "")
-							無人出價
+							Hiện chưa có người ra giá <!--無人出價-->
 						@else
 							{{ $top_auction->name }}
 						@endif
-	                </p>
-	                @if( $product->end_time >= $nowtime)
-                        <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2 font-size-10" onclick="return confirm('確定下標？')">下標</a>
-	                @else
-	                    <div class="btn btn-primary padding-05-2  font-size-10">已結標</div>
+                    </p>
+	                @if ( $product->end_time >= $nowtime && $product->start_time < $nowtime)
+                        <a href="{{ route('bidding',$product->id) }}" class="btn btn-primary padding-05-2 font-size-10" onclick="return confirm('Xác định Đăng ký đấu thầu？')">Mức trúng thầu </a>
+	                @elseif ($product->end_time < $nowtime)
+	                	<!--已結標-->
+	                    <div class="btn btn-primary padding-05-2  font-size-10">Đã đóng</div>
 	                @endif
 				</div>
 			</div>
@@ -248,7 +252,7 @@
 		var second = Math.floor(leftSecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
 		console.log("second="+second);
 		var htmlElement=document.getElementById(divId);
-		htmlElement.innerHTML = "<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>时<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
+		htmlElement.innerHTML = "<span class='day'><b class='timer'>" + day + "</b>ngày<b class='timer'>" + hour + "</b>giờ<b class='timer'>" + minute + "</b>phút<b class='timer'>" + second + "</b>giây</span>";
 	}
 	if(enddate >= nowdate){
 	window.setInterval(function () { ShowTimer(end_year, end_month, end_day, end_hour, end_minutes, end_second, 'andy timer'); }, interval);

@@ -15,13 +15,13 @@
         <div id="products" class="table-responsive margin-top-50">
           <form method="post" action="{{ route('adm_Bulletin.store') }}" role="form" class="">
 			@csrf
-            <h2>新增公告</h2>
-			<label>標題</label>
+            <h2>Thông báo mới</h2> <!-- 新增公告 -->
+			<label>Tiêu đề</label> <!-- 標題 -->
             <input id="title" name="title" type="text" class="form-control">
-			<label>內容</label>
+			<label>Nội dung</label> <!-- 內容 -->
             <textarea id="content" name="content" style="width:100%; height: 250px;"></textarea>
-            <button type="submit">提交</button>
-            <button type="button" onclick="window.location='{{ route('adm_Bulletin') }}'">取消</button>
+            <button type="submit">Đã giao dịch</button> <!-- 提交 -->
+            <button type="button" onclick="window.location='{{ route('adm_Bulletin') }}'">Hủy bỏ</button> <!-- 取消 -->
 		  </form>
         </div>
 	</div>

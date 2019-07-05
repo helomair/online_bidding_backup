@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.left_button')
 <section class="mbr-section content4 cid-rsuhXIuUWX margin-top-100" id="content4-g">
 
 
@@ -17,7 +18,7 @@
         <div class="media-container-row">
             <div class="title col-12 col-md-8">
                 <h2 class="align-center pb-3 mbr-fonts-style display-2">
-                    常見問題
+                    Vấn đề thường gặp
                 </h2>
                 <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
 
@@ -45,7 +46,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                     <li><strong>Làm thế nào để cho giá đấu giá ?</strong><br><br>
                       1.Đầu tiên quý vị phải đăng ký trở thành hội viên I-Bid, đăng ký hội viên là hoàn toàn miễn phí.
@@ -165,7 +166,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>Tự động cho giá là gì ?</strong><br><br>
@@ -204,7 +205,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>Trên mạng có người nói I-Bid lừa gạt ?</strong><br><br>
@@ -275,7 +276,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>Cách thức mua điểm số I-Bid?</strong><br><br>
@@ -375,7 +376,7 @@ Hễ hội viên thành công đấu trúng giá sản phẩm, sau khi nhận đ
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>Quy trình về sau sau khi trúng đấu giá</strong><br><br>
@@ -443,7 +444,7 @@ Hễ hội viên thành công đấu trúng giá sản phẩm, sau khi nhận đ
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>Quên ID tài khoản</strong><br><br>
