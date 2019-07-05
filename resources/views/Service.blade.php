@@ -47,7 +47,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>I-bid là gì ?</strong><br><br>
@@ -95,7 +95,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                   <li>
                     <strong>Miễn phí tham gia hội viên</strong><br><br>
@@ -204,7 +204,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style ">
                 <ol>
                   <li>
                     <strong>Trạng thái hiển thị khi chưa thiết lặp tự động cho giá</strong><br><br>
@@ -262,7 +262,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
 							<h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5 font-size-20" style="color:#767676; text-align:left;">
 								<strong>Nắm rõ nguyên tắc trò chơi : </strong>     sau khi cho giá thì điểm số sẽ không được trả lại, thời gian kết thúc đấu giá căn cứ số người đấu giá tự động kéo dài.
 								<br><br>

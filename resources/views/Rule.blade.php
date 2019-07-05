@@ -14,7 +14,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                <ol>
                   <li>
                     <strong>Miễn phí tham gia hội viên</strong><br><br>

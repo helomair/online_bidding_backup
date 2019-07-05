@@ -621,7 +621,7 @@ transition: 0.4s;
 
 
 .nav-font-a:hover:after {
-  width: 40%;
+  width: 70%;
   color:white!important;
 }
 
@@ -639,7 +639,7 @@ transition: 0.4s;
 content: '';
 position: absolute;
 bottom: -2px;
-left: 70px;
+left: 53px;
 width: 0%;
 border-bottom: 1px solid #ff8507;
 transition: 0.4s;
@@ -648,7 +648,7 @@ transition: 0.4s;
 
 
 .nav-font-b:hover:after {
-  width: 40%;
+  width: 67%;
   color:white!important;
 }
 
@@ -666,7 +666,7 @@ transition: 0.4s;
 content: '';
 position: absolute;
 bottom: -2px;
-left: 80px;
+left: 50px;
 width: 0%;
 border-bottom: 1px solid #ffc107;
 transition: 0.4s;
@@ -675,7 +675,7 @@ transition: 0.4s;
 
 
 .nav-font-c:hover:after {
-  width: 35%;
+  width: 68%;
   color:white!important;
 }
 
@@ -693,7 +693,7 @@ transition: 0.4s;
 content: '';
 position: absolute;
 bottom: -2px;
-left: 80px;
+left: 45px;
 width: 0%;
 border-bottom: 1px solid #28a745;
 transition: 0.4s;
@@ -702,7 +702,7 @@ transition: 0.4s;
 
 
 .nav-font-d:hover:after {
-  width: 35%;
+  width: 71%;
   color:white!important;
 }
 
@@ -730,7 +730,7 @@ transition: 0.4s;
 
 
 .nav-font-e:hover:after {
-  width: 35%;
+  width: 50%;
   color:white!important;
 }
 

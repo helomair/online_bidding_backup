@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
+@include('layouts.left_button')
 <section class="mbr-section content4 cid-rsuhXIuUWX margin-top-100" id="content4-g">
 
 
@@ -120,7 +121,7 @@
 <section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
                 <ol>
                     <li><strong>Tình hình công ty chúng tôi trực tiếp có được</strong><br><br>
                       Công ty chúng tôi sẽ căn cứ cách thức hợp lý và hợp pháp để có được thông tin cá nhân, sẽ không vi phạm ý muốn bản thân tiến hành hành vi phạm pháp mà có được. Khi có nhu cầu lấy thông tin cá nhân, về thu thập thông tin cá nhân và mục đích sử dụng, công ty chúng tôi thông báo trên trang web cung cấp hoặc có được sự đồng ý của bản thân người dùng<br><br>

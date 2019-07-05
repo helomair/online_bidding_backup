@@ -4,7 +4,7 @@
         <div class="footer-lower">
             <div class="media-container-row">
                 <div class="col-lg-12 col-sm-12 row justify-content-center">
-                  <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" >
+                  <div class="col-3 footer-rwd mbr-fonts-style display-7 text-align-center" >
                     <a href="{{ route('aboutus') }}" class="pb-3 footer-font-a">
                         Liên quan tới chúng tôi
                     </a>
@@ -25,7 +25,7 @@
                         Chính sách riêng tư 
                     </a>
                   </div>
-                  <div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center">
+                  <div class="col-3 footer-rwd mbr-fonts-style display-7 text-align-center">
                     <a href="{{ route('contact_us')}}" class="pb-3 footer-font-e">
                         Liên hệ với chúng tôi
                     </a>
