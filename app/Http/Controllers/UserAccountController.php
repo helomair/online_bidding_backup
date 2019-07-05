@@ -50,8 +50,8 @@ class UserAccountController extends Controller
             return back()->withErrors($v)->withInput();
 
     	$user = Auth::user();
-    	$att['name'] = $request->input('name');
-    	$att['phone'] = $request->input('phone');
+    	$att['winner_name'] = $request->input('name');
+    	$att['winner_phone'] = $request->input('phone');
     	$att['address'] = $request->input('address');
     	$att['message'] = $request->input('message');
 

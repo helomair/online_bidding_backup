@@ -19,25 +19,25 @@
           <form method="post" action="{{ route('adm_Search') }}" role="form" >
 		    @csrf
 				<div class="input-group">
-					<input type="text" name="keyword" class="form-control" placeholder="請輸入關鍵字">
-					<input type="submit" class="btn btn-danger padding-05-2 font-size-10 margin-top-0 margin-bottom-0" value="搜尋"></a>
+					<input type="text" name="keyword" class="form-control" placeholder="xin nhập những từ có liên quan"> <!-- 請輸入關鍵字 -->
+					<input type="submit" class="btn btn-danger padding-05-2 font-size-10 margin-top-0 margin-bottom-0" value="Tìm kiếm"></a> <!-- 搜尋 -->
 				</div>
           </form>
           <table class="table table-striped margin-top-50">
             <thead>
               <tr>
-                <th style="text-align:center;">會員名稱</th>
-                <th style="text-align:center;">會員資料</th>
-                <th style="text-align:center;">操作</th>
+                <th style="text-align:center;">Tên hội viên</th> <!-- 會員名稱 -->
+                <th style="text-align:center;">Thông tin hội viên</th> <!-- 會員資料 -->
+                <th style="text-align:center;">Thao tác</th> <!-- 操作 -->
               </tr>
             </thead>
             <tbody>
 			    @foreach($users as $user)
             <tr>
               <td style="text-align:center;"><a href="{{ route('adm_Account.info',$user->id)}}">{{ $user->name }}</a></td>
-              <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger padding-05-2 font-size-10">檢視</a></td>
+              <td style="text-align:center;"><a href="{{ route('adm_Account.show',$user->id) }}" class="btn btn-danger padding-05-2 font-size-10">Xem duyệt</a></td> <!-- 檢視 -->
               <td style="text-align:center;">
-			          <a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="confirm('確定刪除？'); document.getElementById('delete_{{$user->id}}').submit()">刪除</a>
+			          <a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="confirm('Xác nhận xóa？'); document.getElementById('delete_{{$user->id}}').submit()">Xóa</a> <!-- 刪除 -->
 			          <form method="post" action="{{ route('adm_Account.destroy',$user->id) }}" id="delete_{{$user->id}}">
 				          @csrf
 				          {{ method_field('DELETE') }}

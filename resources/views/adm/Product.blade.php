@@ -9,6 +9,25 @@
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
+<style>
+.container.fix_content {
+    width: 83%;  
+    max-width: initial!important; 
+    
+}
+.container.fix_content table {
+    min-width: 1500px; 
+}
+.container.fix_content .table-responsive {
+    overflow-x: auto; 
+}
+@media (max-width:720px) {
+
+    .fix_content {
+        width: 100%!important; 
+    }
+}
+</style>
 <div class="container fix_content">
     <div class="row">
 	<div class="col-lg-12">
@@ -16,15 +35,15 @@
           <table class="table table-striped ">
             <thead>
               <tr>
-                <th style="text-align:center;">圖片</th>
-                  <th width="10%">名稱</th>
-                  <th width="10%">原價</th>
-                  <th width="10%">起標價</th>
-                  <th width="10%">標價</th>
-                  <th width="10%">公佈時間</th>
-                  <th width="10%">開始時間</th>
-                  <th width="10%">結束時間</th>
-                  <th style="text-align:center;">狀態</th>
+                <th style="text-align:center;">Hình ảnh</th> <!-- 圖片 -->
+                  <th width="10%">tên</th><!-- 名稱 -->
+                  <th width="10%">giá niêm yết</th><!-- 原價 -->
+                  <th width="10%">Giá bắt đầu đấu thầu</th><!-- 起標價 -->
+                  <th width="10%">Mỗi giá đấu thầu</th><!-- 標價 -->
+                  <th width="10%">Thời gian công bố</th><!-- 公佈時間 -->
+                  <th width="10%">Thời gian bắt đầu</th><!-- 開始時間 -->
+                  <th width="10%">Thời gian kết thúc</th><!-- 結束時間 -->
+                  <th style="text-align:center;">Nhà nước</th><!-- 狀態 -->
                   <th><a href="{{ route('adm_Product.create') }}"><img src="{{ asset('images/add.png') }}" class="button cursor-pointer" style="width:20px; height:20px;" /></a></th>
                 </tr>
               </thead>
@@ -46,19 +65,19 @@
                   <td style="text-align:center;">
 
 					        @if($product->view_time >= $nowtime )
-				            <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger padding-05-2 white-space-nowrap font-size-10">編輯</a>
-                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-delete white-space-nowrap padding-05-2 font-size-10">刪除</a>
+				            <a href="{{ route('adm_Product.edit',$product->id) }}" class="btn btn-danger padding-05-2 white-space-nowrap font-size-10">Chỉnh sửa</a><!-- 編輯 -->
+                    <a href="#" onclick="document.getElementById('delete_{{$product->id}}').submit()" class="btn btn-delete white-space-nowrap padding-05-2 font-size-10">Xóa</a><!-- 刪除 -->
                    @endif
 
                     @if($product->end_time < $nowtime )
-                        <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger white-space-nowrap padding-05-2 font-size-10">詳細</a>
+                        <a href="{{ route('adm_Product.details', $product->id) }}" class="btn btn-danger white-space-nowrap padding-05-2 font-size-10">Chi tiết</a><!-- 詳細 -->
 
                         @if ($product->status == 0)
                         <a href="{{ route('adm_Product.status', $product->id)}}" class="btn btn-danger white-space-nowrap padding-05-16 font-size-10">
-                                未出貨
+                                Chưa xuất hàng   <!-- 未出貨 -->
                         </a>
                         @else
-                            <span class="finished">已出貨</span>
+                            <p class="finished">Đã xuất hàng</p><!-- 已出貨 -->
                         @endif
                     @endif
 
