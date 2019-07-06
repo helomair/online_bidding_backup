@@ -16,10 +16,10 @@
           <form  method="post" action="{{ route('adm_Bulletin.update',$bulletin->id) }}" role="form" class="width-75-percent padding-left-50">
 			@csrf
 			{{ method_field('PATCH') }}
-            <h2>修改公告</h2>
-			<label>標題</label>
+            <h2>Thông báo sửa đổi</h2> <!-- 修改公告 -->
+			<label>Tiêu đề</label> <!-- 標題 -->
             <input id="title" name="title" type="text" class="form-control" value="{{ $bulletin->title }}">
-			<label>內容</label>
+			<label>Nội dung</label> <!-- 內容 -->
             <textarea id="content" name="content" style="width:100%; height: 150px;">{{ $bulletin->content }}</textarea>
             <button type="submit">submit</button>
             <button type="button" onclick="window.location='{{ route('adm_Bulletin') }}'">cancel</button>

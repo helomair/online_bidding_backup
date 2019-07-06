@@ -12,12 +12,20 @@
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+//拍賣規則
 Route::get('BidRule', function(){
 	return view('Rule');
 })->name('bid.rule');
 
 //////使用者登入驗證功能
 Auth::routes();
+//註冊確認，使用者同意書
+Route::get('register/confirm', function(){
+	return view('RegisterConfirm');
+})->name('register.confirm');
+//Email驗證功能
+Route::get('send_mail', 'UserAccountController@SendConfirmMail')->name('send_mail'); 
+Route::get('/activation/{token}', 'UserAccountController@EmailTokenConfirm')->name('confirm'); 
 // #登入
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 // Route::post('login', 'Auth\LoginController@login');
@@ -144,7 +152,10 @@ Route::get('/service', function () {
 Route::get('/privacy', function () {
     return view('Privacy');
 })->name('privacy');
-
+//聯繫我們
+Route::get('ContactUs', function(){
+	return view('ContactUs');
+})->name('contact_us');
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

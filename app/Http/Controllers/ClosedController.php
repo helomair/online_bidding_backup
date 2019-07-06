@@ -19,7 +19,7 @@ class ClosedController extends Controller
 			if($winner){
 				$winners[$closed_product->id] = $winner->name;
 			}else{
-				$winners[$closed_product->id] = "未有得標者";
+				$winners[$closed_product->id] = "Người chưa được đấu thầu"; //未有得標者
 			}
         }
 

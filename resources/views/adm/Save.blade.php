@@ -9,22 +9,41 @@
 @endsection
 @section('content')		  <!-- 多行記錄，後面要加endsection -->
 @include('layouts.adm_left_button')
-<div class="container fix_content">
+<style>
+.container.fix_content {
+    width: 83%;  
+    max-width: initial!important; 
+    
+}
+.container.fix_content table {
+    min-width: 1500px; 
+}
+.container.fix_content .table-responsive {
+    overflow-x: auto; 
+}
+@media (max-width:720px) {
+
+    .fix_content {
+        width: 100%!important; 
+    }
+}
+</style>
+<div class="container fix_content" >
     <div class="row">
         <div class="table-responsive margin-top-50">
           <table class="table table-striped ">
             <thead>
               <tr>
-                <th style="text-align:center;">會員名稱</th>
-                <th style="text-align:center;">加值時間</th>
-                <th style="text-align:center;">購買數量</th>
-                <th style="text-align:center;">應付金額</th>
-                <th style="text-align:center;">轉入帳戶</th>
-                <th style="text-align:center;">轉帳人名稱</th>
-                <th style="text-align:center;">銀行名稱</th>
-                <th style="text-align:center;">轉帳帳戶</th>
-                <th style="text-align:center;">邀請碼</th>
-                <th style="text-align:center;">發放</th>
+                <th style="text-align:center;">Tên hội viên</th> <!-- 會員名稱 -->
+                <th style="text-align:center;">Thời gian nạp tiền</th> <!-- 加值時間 -->
+                <th style="text-align:center;">Thời gian mua</th> <!-- 購買數量 -->
+                <th style="text-align:center;">Số tiền thanh toán</th> <!-- 應付金額 -->
+                <th style="text-align:center;">Chuyển vào tài khoản</th> <!-- 轉入帳戶 -->
+                <th style="text-align:center;">Tên người chuyển khoản </th> <!-- 轉帳人名稱 -->
+                <th style="text-align:center;">Tên ngân hàng</th> <!-- 銀行名稱 -->
+                <th style="text-align:center;">Tài khoản chuyển tiền</th> <!-- 轉帳帳戶 -->
+                <th style="text-align:center;">Mã mời</th> <!-- 邀請碼 -->
+                <th style="text-align:center;">Trạng thái phát hành</th> <!-- 發放狀態 -->
                 </tr>
             </thead>
             <tbody>
@@ -46,9 +65,9 @@
                   <td style="text-align:center;">
 
                     @if ($payment->on)
-                        <a href=" {{ route('coin.submit', $payment->id) }} " class="btn btn-danger">發放</a>
+                        <a href=" {{ route('coin.submit', $payment->id) }} " class="btn btn-danger">Đang xem xét</a> <!-- 審核中 -->
                     @else
-                        <p class="finished">發放完畢</p>
+                        <p class="finished">ban hành</p> <!-- 發放完畢 -->
                     @endif
 
                   </td>

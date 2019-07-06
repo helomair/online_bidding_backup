@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="name">使用者名稱</label>
+				<label for="name">User Name</label>
 				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="name" name="name">
 				@error('name')
 					<span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="realname">姓名</label>
+				<label for="realname">Họ tên</label>
 				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="realname" name="realname">
 				@error('realname')
 					<span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="password">密碼</label>
+				<label for="password">Mật khẩu</label>
 				<input type="password" class="form-control @error('password') is-invalid @enderror form-control-register" id="password" name="password">
 				@error('password')
 					<span class="invalid-feedback" role="alert">
@@ -57,12 +57,12 @@
             </div>
 
 			<div class="form-group">
-				<label for="pasword-confirm">確認密碼</label>
+				<label for="pasword-confirm">Xác nhận mật khẩu</label>
 				<input id="pasword-confirm" type="password" class="form-control form-control-register" name="password_confirmation">
 			</div>
 
 			<div class="form-group">
-				<label for="phone">手機號碼</label>
+				<label for="phone">Số điện thoại</label>
 				<input type="text" class="form-control @error('phone') is-invalid @enderror form-control-register" id="phone" name="phone">
                 @error('phone')
 					<span class="invalid-feedback" role="alert">
@@ -78,7 +78,7 @@
 -->
 
 				<div class="row col-lg-8 col-md-8 mx-auto margin-top-50" style="justify-content:center;">
-					<button type="submit" class="btn btn-danger padding-05-2 font-size-10 ">註冊</button>
+					<button type="submit" class="btn btn-danger padding-05-2 font-size-10 ">Đăng ký</button>
 				</div>
 
 
