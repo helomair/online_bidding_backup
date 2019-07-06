@@ -25,7 +25,7 @@
 		height: 88px;
 		line-height: 88px;
 		text-align: center;
-		width: 240px;
+		width: 480px;
 		border: dotted 3px gainsboro;
 		border-radius: 5px;
 		box-shadow: 5px 5px 5px #888888;
@@ -248,7 +248,7 @@
 		var second = Math.floor(leftSecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
 		console.log("second="+second);
 		var htmlElement=document.getElementById(divId);
-		htmlElement.innerHTML = "<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>时<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
+		htmlElement.innerHTML = "<span class='day'><b class='timer'>" + day + "</b>天<b class='timer'>" + hour + "</b>時<b class='timer'>" + minute + "</b>分<b class='timer'>" + second + "</b>秒</span>";
 	}
 	if(enddate >= nowdate){
 	window.setInterval(function () { ShowTimer(end_year, end_month, end_day, end_hour, end_minutes, end_second, 'andy timer'); }, interval);
