@@ -49,7 +49,7 @@ class Auto extends Command
         {
             $product = $auto->product;  //產品
             
-            if($product == null || $product->end_time < $time)
+            if($product == null || $product->end_time < $time || $auto->end_cost < $product->cur_cost)
             {
                 $auto->delete();
                 continue; 
@@ -62,7 +62,6 @@ class Auto extends Command
 
             if( ($diff_this_time[$product->id] < 0 && $diff_this_time[$product->id] >= (-30)) && ($time >= $product->start_time) && ($user->balance > 0) )
             {
-                echo $product->id . "  " . $diff_this_time[$product->id] . "\n";
                 if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost + $product->cost <= $auto->end_cost) )
                 {
                     $auto->update( ['times' => ($auto->times - 1) ] ); //次數-1

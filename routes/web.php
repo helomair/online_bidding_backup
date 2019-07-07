@@ -17,31 +17,21 @@ Route::get('BidRule', function(){
 	return view('Rule');
 })->name('bid.rule');
 
-//////使用者登入驗證功能
+//使用者登入驗證功能
 Auth::routes();
+
 //註冊確認，使用者同意書
 Route::get('register/confirm', function(){
 	return view('RegisterConfirm');
 })->name('register.confirm');
+
 //Email驗證功能
 Route::get('send_mail', 'UserAccountController@SendConfirmMail')->name('send_mail'); 
 Route::get('/activation/{token}', 'UserAccountController@EmailTokenConfirm')->name('confirm'); 
-// #登入
-// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-// Route::post('login', 'Auth\LoginController@login');
-// #登出
-// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-// #註冊
-// Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-// Route::post('register', 'Auth\RegisterController@register')->name('register.post');
-
-// // Password Reset Routes...
-// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-// Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-
+//FB登入功能
+Route::get('/auth/redirect/{provider}', 'FBSocialController@redirect'); 
+Route::get('/callback/{provider}', 'FBSocialController@callback');
 
 
 ////顯示使用者頁面，登入後直接導到這個頁面
