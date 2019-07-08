@@ -46,8 +46,8 @@
     <div class="container">
         <div class="inner-container" style="width: 66%;">
             <hr class="line" style="width: 25%;">
-            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                    Điều 1 : Phạm vi sử dụng của chính sách riêng tư này 
+            <div class="section-text align-center mbr-white mbr-fonts-style">
+                  Điều 1 : Phạm vi sử dụng của chính sách riêng tư này
                 </div>
             <hr class="line" style="width: 25%;">
         </div>

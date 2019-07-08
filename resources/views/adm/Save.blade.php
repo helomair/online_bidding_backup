@@ -65,7 +65,7 @@
                   <td style="text-align:center;">
 
                     @if ($payment->on)
-                        <a href=" {{ route('coin.submit', $payment->id) }} " class="btn btn-danger">Đang xem xét</a> <!-- 審核中 -->
+                        <a href=" {{ route('coin.submit', $payment->id) }} " class="btn btn-danger padding-05-2 font-size-10">Đang xem xét</a> <!-- 審核中 -->
                     @else
                         <p class="finished">ban hành</p> <!-- 發放完畢 -->
                     @endif

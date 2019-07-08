@@ -51,7 +51,7 @@
 				<div class="card-wrapper">
 					<div class="card-img">
 						<a href="">
-						<img src="images/DSCF2069.jpg" alt="Mobirise" title="">
+						<img src="images/1409806_0701_logo.svg" alt="Mobirise" title="">
 						</a>
 					</div>
 				</div>

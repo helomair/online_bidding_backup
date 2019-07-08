@@ -13,7 +13,7 @@
     <div class="row">
 	<div class="col-lg-10 mx-auto">
         <div id="products" class="table-responsive margin-top-50">
-          <h2>修改商品</h2>
+          <h2>Sửa đổi sản phẩm</h2>
           <form  method="post" action="{{ route('adm_Product.update',$product->id) }}" role="form" class="" enctype="multipart/form-data">
 			@csrf
 			{{ method_field('PATCH') }}
@@ -66,12 +66,12 @@
 			    <button type="button" onclick="hide_graph();">Xóa</button> <!-- 刪除 -->
 			  </div>
 			  <div id="editgraph" style="display:none;" >
-			    <label>圖片 (沒上傳新的，還是以舊的為主)</label><br>
+			    <label>Hình ảnh</label><br>
 			    <input type="file" class="form-group" name="pics[]" id="pics" multipart>
 			  </div>
 			  @endif
     		</div>
-			<button type="submit" class="btn-primary btn-sm">修改</button>
+			<button type="submit" class="btn-primary btn-sm">Sửa đổi</button>
 			<button type="button"  onclick="window.location='{{ route('adm_Product') }}'" class="btn-primary btn-sm">Hủy bỏ</button> <!-- 取消 -->
 			</form>
         </div>

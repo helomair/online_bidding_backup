@@ -42,7 +42,7 @@
               <input type="text" class="form-control" value="{{$user->code}}" disabled>
             </div>
             <div class="form-group">
-              <label>代幣量</label>
+              <label>cái đồng xu</label> <!-- 代幣 -->
               <input type="text" class="form-control" value="{{$user->balance}}" disabled>
             </div>
             <div align="center">

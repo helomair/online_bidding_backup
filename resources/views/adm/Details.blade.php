@@ -109,7 +109,7 @@
 								Họ tên： <!-- 姓名 -->
 						</h5>
 						<h5 class="text-align-center mbr-fonts-style display-1 col-md-8 padding-top-30 font-size-25">
-                                {{ ( $product->winner ) ? ($product->winner_name) : "無得標者" }} <!-- 無得標者 -->
+                                {{ ( $product->winner ) ? ($product->winner_name) : "Người chưa được đấu thầu" }} <!-- 無得標者 -->
 
 						</h5>
 					</div>
