@@ -245,9 +245,9 @@
                     <li>Tiến hành liên tục cho giá hoặc đấu giá trong thời gian dài, chi phí mà bạn chi trả có thể vượt quá giá cả thị trường
                     </li>
                 </ul><br><br>
-                確認以上競標注意事項<br><br>
+                Xác nhận các cân nhắc đấu thầu ở trên<br><br>
 
-                <a href="{{route('register')}}" class="btn btn-danger padding-05-2 font-size-10" style="margin:0px auto;">我同意以上使用者規範</a>
+                <a href="{{route('register')}}" class="btn btn-danger padding-05-2 font-size-10" style="margin:0px auto;">Tôi đồng ý các quy tắc trên của người sử dụng</a>
             </div>
         </div>
     </div>

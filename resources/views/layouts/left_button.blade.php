@@ -23,7 +23,7 @@ for($i=0;$i<2;$i++){
 		</a>
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
-		<a onclick="alert('功能尚未完成，敬請期待');" class="nav-font-d">
+		<a onclick="alert('Tính năng chưa hoàn thành');" class="nav-font-d">
 			Chia sẻ của người trúng thầu <!--分享區-->
 		</a>
 	</div>
