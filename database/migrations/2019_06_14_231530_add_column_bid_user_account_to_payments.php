@@ -29,7 +29,7 @@ class AddColumnBidUserAccountToPayments extends Migration
     {
         Schema::table('payments', function (Blueprint $table) {
             $table->dropColumn('user_account');
-            $table->dopColumn('bid');
+            $table->dropColumn('bid');
             $table->string('method');
         });
     }
