@@ -14,7 +14,7 @@ class SaveController extends Controller
     }
     public function index()
     {
-    	$payments = Payment::paginate(2);
+    	$payments = Payment::paginate(10);
     	return view('adm.Save', compact('payments'));
     }
 

@@ -50,11 +50,6 @@ class BiddingController extends Controller
 
     public function storeAuto(Request $request, Product $product)
     {
-        $message = [
-            'required' => '不能留空',
-            'integer' => '需為數字'
-
-        ];  
         $validate = Validator::make($request->all(),[
             'start_cost' => 'required|integer',
             'stop_cost' => 'required|integer',
@@ -69,7 +64,7 @@ class BiddingController extends Controller
     	$stop_cost = $request->input('stop_cost');
         $times = $request->input('times');
 
-    	if($start_cost && $stop_cost && $start_cost < $stop_cost)
+    	if($start_cost >= 0 && $stop_cost && $start_cost < $stop_cost)
     	{
     		$data_auto = [
     			'start_cost' => $start_cost,
@@ -77,8 +72,8 @@ class BiddingController extends Controller
     			'times' 	 => $times
     		];
     		$product->users(true)->attach($user->id,$data_auto);
+            //echo $data_auto;
         }
-         
     	return redirect()->route('user_interface.show',$product->id);
     }
 }
