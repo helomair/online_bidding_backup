@@ -91,7 +91,7 @@ class UserAccountController extends Controller
                 $first_code = true;
             }
             else 
-                return redirect()->back()->withError(['邀請碼不正確 或 此帳號已使用過邀請碼']);
+                return redirect()->back()->with('msg','Mã đến không chính xác');
         }
         else
         {

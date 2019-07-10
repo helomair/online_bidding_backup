@@ -50,16 +50,11 @@ class BiddingController extends Controller
 
     public function storeAuto(Request $request, Product $product)
     {
-        $message = [
-            'required' => 'Required',
-            'integer' => 'Should be Integer'
-
-        ];  
         $validate = Validator::make($request->all(),[
             'start_cost' => 'required|integer',
             'stop_cost' => 'required|integer',
             'times' => 'required|integer'
-        ],$message); 
+        ]); 
         
         if($validate->fails())
             return back()->witherrors($validate)->withInput(); 
@@ -77,8 +72,8 @@ class BiddingController extends Controller
     			'times' 	 => $times
     		];
     		$product->users(true)->attach($user->id,$data_auto);
+            //echo $data_auto;
         }
-         
     	return redirect()->route('user_interface.show',$product->id);
     }
 }
