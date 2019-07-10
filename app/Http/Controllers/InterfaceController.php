@@ -50,9 +50,9 @@ class InterfaceController extends Controller
 		if($auction_auto == null)
 		{
 			$auction_auto = new \stdClass();
-			$auction_auto->start_cost = 'ex: 5000元';
-			$auction_auto->end_cost = 'ex: 15000元';
-			$auction_auto->times = 'ex: 10次';
+			$auction_auto->start_cost = 'ex: 5000';
+			$auction_auto->end_cost = 'ex: 15000';
+			$auction_auto->times = 'ex: 10';
 			$auction_auto->on = null;
 		}
 		else

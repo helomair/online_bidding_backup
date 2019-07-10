@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '首頁') <!-- 單行記錄 -->
+@section('title', 'Liên quan đến chúng tôi') <!-- 單行記錄 -->
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -38,12 +38,12 @@
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 15px">Số điện thoại liên lạc：</strong> <!-- 聯絡電話 -->
-                ian210425@gmail.com 
+                (+886) 988397679
               </p>
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 140px">Hộp thư：</strong> <!-- 聯絡信箱 -->
-                (+886) 988397679
+                ian210425@gmail.com 
               </p>
             </div>
         </div>

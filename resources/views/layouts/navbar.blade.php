@@ -11,7 +11,9 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 <span class="navbar-logo black font-size-40">
-                    <a href="{{ route('index') }}">{{ env('APP_NAME') }}</a>
+                    <a href="{{ route('index') }}">
+                        <img src="{{ URL::to('/') }}/images/1409806_0701_logo.svg" alt="Mobirise" title="">
+                    </a>
                 </span>
             </div>
         </div>

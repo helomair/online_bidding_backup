@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '使用者主頁') <!-- 單行記錄 -->
+@section('title', $product->name ) <!-- 單行記錄 -->
 
 @section('css')
 	<!-- For auto reload per 15s-->

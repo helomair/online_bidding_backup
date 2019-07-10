@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '已結標拍賣') <!-- 單行記錄 -->
+@section('title', 'Nạp tiền') <!-- 單行記錄 -->
 
 @section('css')
     <!-- Bootstrap core CSS -->
@@ -12,6 +12,11 @@
 @section('content')       <!-- 多行記錄，後面要加endsection -->
 @include('layouts.left_button')
 
+@if (session()->has('msg'))
+    <script>
+        alert('{{ session()->get('msg') }}');
+    </script>
+@endif
 <div class="container fix_content">
     <div class="row">
       <div class="col-lg-12">
@@ -52,16 +57,16 @@
 
             @if (Auth::user()->recommand_code == NULL)
             <div class="row col-lg-8 col-md-8  mx-auto margin-top-200">
-              <h5 class="col-lg-2 add-coin-invite line-height-35" style="font-size:18px;">邀請碼：</h5>
+              <h5 class="col-lg-2 add-coin-invite line-height-35" style="font-size:18px;">Mã mời：</h5>
                <input type="text" value="" class="col-lg-4  form-control add-coin-input bg-white" name="code" >
             </div>
             @endif
             <div class="row col-lg-8 col-md-8  mx-auto margin-top-50">
-              <h5 class="col-lg-6 add-coin-invite line-height-35" style="font-size:18px; min-width:500px!important;">應付金額： <span id="coin_price" style="font-size:20px; ">900000元</span></h5>
+              <h5 class="col-lg-6 add-coin-invite line-height-35" style="font-size:18px; min-width:500px!important;">Số tiền thanh toán： <span id="coin_price" style="font-size:20px; ">900000元</span></h5>
             </div>
             <div class="row col-lg-8 col-md-8 mx-auto margin-top-150" style="justify-content:center;">
-              <input type="submit" value="提交" class="btn btn-danger padding-05-2 font-size-10" >
-              <a onclick="window.history.back()" class="btn btn-danger padding-05-2 font-size-10" >取消</a>
+              <input type="submit" value="Đã giao dịch" class="btn btn-danger padding-05-2 font-size-10" >
+              <a href="{{ route('account') }}" class="btn btn-danger padding-05-2 font-size-10" >Hủy bỏ</a>
             </div>
         </form>
     </div>

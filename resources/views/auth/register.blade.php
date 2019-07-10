@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '註冊會員') <!-- 單行記錄 -->
+@section('title', 'Đăng ký') <!-- 單行記錄 -->
 
 @section('css')
 	<!-- Bootstrap core CSS -->
@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="name">User Name</label>
+				<label for="name">Tên hội viên</label>
 				<input type="text" class="form-control @error('name') is-invalid @enderror form-control-register" id="name" name="name">
 				@error('name')
 					<span class="invalid-feedback" role="alert">

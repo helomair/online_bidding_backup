@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '結標頁面') <!-- 單行記錄 -->
+@section('title', 'Chốt đơn đấu thầu') <!-- 單行記錄 -->
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '登入帳戶') <!-- 單行記錄 -->
+@section('title', 'Đăng nhập') <!-- 單行記錄 -->
 
 @section('css')
 	<!-- Bootstrap core CSS -->
@@ -45,7 +45,7 @@
           <div class="line">
           </div>
       </div>
-      <input type="button" id="btn_login_fb" value="Đăng nhập bằng tài khoản Facebook"/>
+      <a class="btn btn-danger padding-05-2 font-size-10" id="btn_login_fb" onclick="alert('Tính năng chưa hoàn thành')">Đăng nhập bằng tài khoản Facebook</a>
 		</div>
 	</div>
 </div>
