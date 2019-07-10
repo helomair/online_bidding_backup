@@ -38,12 +38,12 @@
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 15px">Số điện thoại liên lạc：</strong> <!-- 聯絡電話 -->
-                ian210425@gmail.com 
+                (+886) 988397679
               </p>
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 140px">Hộp thư：</strong> <!-- 聯絡信箱 -->
-                (+886) 988397679
+                ian210425@gmail.com
               </p>
             </div>
         </div>
