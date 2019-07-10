@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '首頁') <!-- 單行記錄 -->
+@section('title') <!-- 單行記錄 -->
 @section('css')
 	<!-- Bootstrap core CSS -->
 	<link href="{{ asset('vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -51,7 +51,7 @@
 				<div class="card-wrapper">
 					<div class="card-img">
 						<a href="">
-						<img src="images/1409806_0701_logo.svg" alt="Mobirise" title="">
+						<img src="images/i-bid.png" alt="Mobirise" title="">
 						</a>
 					</div>
 				</div>

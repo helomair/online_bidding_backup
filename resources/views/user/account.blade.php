@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '帳戶狀態') <!-- 單行記錄 -->
+@section('title', 'Trạng thái tài khoản') <!-- 單行記錄 -->
 
 @section('css')
 	<!-- Bootstrap core CSS -->
