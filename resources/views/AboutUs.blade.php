@@ -43,7 +43,7 @@
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 140px">Hộp thư：</strong> <!-- 聯絡信箱 -->
-                ian210425@gmail.com
+                ian210425@gmail.com 
               </p>
             </div>
         </div>

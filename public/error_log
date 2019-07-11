@@ -1,0 +1,6 @@
+[09-Jul-2019 18:15:31 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected '?' in /home/ibidcomv/public_html/online_bidding/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[09-Jul-2019 18:15:41 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected '?' in /home/ibidcomv/public_html/online_bidding/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[09-Jul-2019 18:15:43 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected '?' in /home/ibidcomv/public_html/online_bidding/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[09-Jul-2019 18:18:11 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected '?' in /home/ibidcomv/public_html/online_bidding/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[09-Jul-2019 19:47:03 Asia/Taipei] PHP Fatal error:  Cannot use Illuminate\Foundation\Auth\User as Authenticatable because the name is already in use in /home/ibidcomv/public_html/online_bidding/app/User.php on line 8
+[09-Jul-2019 19:47:54 Asia/Taipei] PHP Fatal error:  Class App\User cannot extend from interface Illuminate\Contracts\Auth\Authenticatable in /home/ibidcomv/public_html/online_bidding/app/User.php on line 10

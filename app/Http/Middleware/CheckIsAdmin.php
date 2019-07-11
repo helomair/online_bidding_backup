@@ -18,7 +18,8 @@ class CheckIsAdmin
      */
     public function handle($request, Closure $next)
     { 
-        $admId = Session::get('adm_on'); 
+        $admId = Session::get('adm_on');
+        
         if( $admId != 0 )
         {
             $adm = User::find($admId); 
