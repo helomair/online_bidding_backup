@@ -42,7 +42,7 @@ class Auto extends Command
     public function handle()
     {
     //    DB::table('temp_log')->insert(['echos' => 'Begins']); 
-        $autos = AuctionAuto::where('times','>','0')->get(); 
+        $autos = AuctionAuto::where('times','>','0')->orderBy('id', 'asc')->get(); 
         $time = Carbon::now();
         $diff_this_time = array();
         foreach($autos as $auto)

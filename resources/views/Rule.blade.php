@@ -32,7 +32,7 @@
                     -Click vào mua điểm <br>
                     -Xác nhận cách thức thanh toán<br>
                     -Mua hoàn tất<br>
-                    -Sau khi chi trả phí bình thường, lần tiếp theo đăng nhập hội viên, bên góc phải phía trên trang web sẽ hiển thị mục điểm số còn lại.
+                    -Sau khi đã thanh toán ,hãy đợi chúng tôi thẩm duyệt xong, các đồng tiền còn lại sẽ được hiển thị ở góc trên bên phải của trang web.
                     <br><br>
                   </li>
 

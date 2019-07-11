@@ -38,7 +38,7 @@
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 15px">Số điện thoại liên lạc：</strong> <!-- 聯絡電話 -->
-                (+886) 988397679
+                (+84) 988397679
               </p>
               <br>
               <p>

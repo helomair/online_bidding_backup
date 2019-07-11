@@ -29,7 +29,7 @@
               <span>{{ $bank_account->account }}</span>
             </div>
             <div class="form-group">
-              <span>Thời gian mua：</span> <!-- 購買數量 -->
+              <span>Mua số lượng xu：</span> <!-- 購買數量 -->
               <span>{{ $payment->coins }}</span>
             </div>
             <div class="form-group">

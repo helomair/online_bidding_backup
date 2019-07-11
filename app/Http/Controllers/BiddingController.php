@@ -54,7 +54,7 @@ class BiddingController extends Controller
             'start_cost' => 'required|integer',
             'stop_cost' => 'required|integer',
             'times' => 'required|integer'
-        ],$message); 
+        ]); 
         
         if($validate->fails())
             return back()->witherrors($validate)->withInput(); 

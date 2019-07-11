@@ -14,12 +14,12 @@ for($i=0;$i<3;$i++){
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="border-right:5px solid #941f1fa3;">
 		<a href="{{ route('adm_Account') }}" class="pb-3 nav-font-b">
-			Quản lý công bố  <!-- 會員管理 -->
+			Quản lý hội viên  <!-- 會員管理 -->
 		</a>
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="border-right:5px solid #941f1fa3;">
 		<a href="{{ route('adm_Bulletin') }}" class="pb-3 nav-font-c">
-			Quản lý hội viên  <!-- 公告管理 -->
+			Quản lý công bố  <!-- 公告管理 -->
 		</a>
 	</div>
 	<div class="col-2 footer-rwd mbr-fonts-style display-7 text-align-center" style="border-right:5px solid #941f1fa3;">
