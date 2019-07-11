@@ -88,7 +88,7 @@
                             @csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
 								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">Giá bắt đầu :</label>
-                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}" @if($auction_auto->on != NULL) disabled @endif >
+                                <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}">
                                 @error('start_cost')
 						          <span class="invalid-feedback" role="alert">
 							        <strong>{{ $message }}</strong>
@@ -98,7 +98,7 @@
 
                               <div class="form-group margin-top-35 margin-bottom-0">
 							    <label for="stop_cost" style="float:left; line-height:30px; margin-right:10px;">Giá đình chỉ:</label>
-								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}" @if($auction_auto->on != NULL) disabled @endif >
+								<input style="width:70%;" type="text" class="form-control @error('stop_cost') is-invalid @enderror " name="stop_cost" value="{{ $auction_auto->end_cost }}">
 								@error('stop_cost')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
@@ -107,15 +107,15 @@
                               </div>
                               <div class="form-group margin-top-35 margin-bottom-0">
 								<label for="times" style="float:left; line-height:30px; margin-right:41.5px;">Số lần :</label>
-								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}" @if($auction_auto->on != NULL) disabled @endif >
+								<input style="width:70%;" type="text" class="form-control @error('times') is-invalid @enderror " name="times" value="{{ $auction_auto->times}}">
 								@error('times')
 								  <span class="invalid-feedback" role="alert">
 									<strong>{{ $message }}</strong>
 								  </span>
 								@enderror 
                               </div>
-                              @if($auction_auto->on == NULL && $product->start_time < $nowtime )
-                              	<input type="submit" class="btn btn-primary padding-05-2 my-4 font-size-10">
+                              @if($product->start_time < $nowtime )
+                              	<input type="submit" value="Đã giao dịch" class="btn btn-primary padding-05-2 my-4 font-size-10">
                               @endif
                             </form>
                           @else

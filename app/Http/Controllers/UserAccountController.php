@@ -79,7 +79,7 @@ class UserAccountController extends Controller
         $user  = Auth::user();
         $coins = $request->input('coin') ;
         $code  = $request->input('code');
-        $amount = $coins * 10000; 
+        $amount = $coins * 30000; 
         $first_code = false;
         $bank_account = BankAccount::find(rand(1,BankAccount::count()));
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Product;
 use App\User;
+use App\AuctionAuto;
 use Carbon\Carbon;
 use Validator; 
 
@@ -60,19 +61,22 @@ class BiddingController extends Controller
             return back()->witherrors($validate)->withInput(); 
 
         $user = Auth::user();
+        $auto = $product->users(true)->where('uid', $user->id)->first();
     	$start_cost = $request->input('start_cost');
     	$stop_cost = $request->input('stop_cost');
         $times = $request->input('times');
 
-    	if($start_cost >= 0 && $stop_cost && $start_cost < $stop_cost)
-    	{
-    		$data_auto = [
-    			'start_cost' => $start_cost,
-    			'end_cost' 	 => $stop_cost,
-    			'times' 	 => $times
-    		];
-    		$product->users(true)->attach($user->id,$data_auto);
-            //echo $data_auto;
+        $data_auto = [
+                'start_cost' => $start_cost,
+                'end_cost'   => $stop_cost,
+                'times'      => $times
+        ];
+        if($start_cost >= 0 && $stop_cost && $start_cost < $stop_cost)
+        {
+        	if($auto == null)
+        		$product->users(true)->attach($user->id,$data_auto);
+            else
+                $auto->pivot->update($data_auto);
         }
     	return redirect()->route('user_interface.show',$product->id);
     }

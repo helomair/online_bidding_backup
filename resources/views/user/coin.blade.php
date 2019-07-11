@@ -25,7 +25,7 @@
         @csrf
             <div class="donate-now row margin-top-100 justify-content-center" style="padding-left:0px;">
 
-                <div class="try-5" id="5ppp">
+                <div class="try-5">
                     <input type="radio" id="5p" name="coin" value="5" />
                     <label class="label-5" for="5p">5</label>
                 </div>
@@ -49,7 +49,7 @@
                     <input type="radio" id="200p" name="coin" value="200" />
                     <label class="label-200" for="200p">200</label>
                 </div>
-                                <div class="try-300">
+                <div class="try-300">
                     <input type="radio" id="300p" name="coin" value="300" />
                     <label class="label-300" for="300p">300</label>
                 </div>
@@ -62,7 +62,7 @@
             </div>
             @endif
             <div class="row col-lg-8 col-md-8  mx-auto margin-top-50">
-              <h5 class="col-lg-6 add-coin-invite line-height-35" style="font-size:18px; min-width:500px!important;">Số tiền thanh toán： <span id="coin_price" style="font-size:20px; ">900000元</span></h5>
+              <h5 class="col-lg-6 add-coin-invite line-height-35" style="font-size:18px; min-width:500px!important;">Số tiền thanh toán： <span id="coin_price" style="font-size:20px; ">900000Tệ</span></h5>
             </div>
             <div class="row col-lg-8 col-md-8 mx-auto margin-top-150" style="justify-content:center;">
               <input type="submit" value="Đã giao dịch" class="btn btn-danger padding-05-2 font-size-10" >
@@ -78,7 +78,7 @@
 @section ('script')
 <script >
 $("input[name='coin']").click(function (){
-    $("#coin_price").html( $(this).val()*30000 + '元' );
+    $("#coin_price").html( $(this).val()*30000 + 'Tệ' );
     //console.log($(this).val());
   });
 </script>
