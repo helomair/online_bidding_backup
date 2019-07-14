@@ -93,10 +93,15 @@ class UserAccountController extends Controller
             else 
                 return redirect()->back()->with('msg','Mã đến không chính xác');
         }
-        else
+        else if ($user->recommand_code === '')
         { 
-            $user->update(['recommand_code' => 'nothing']);
+            $user->update(['recommand_code' => 'first_nothing']);
             $first_code = false;
+        }
+        else
+        {
+            $user->update(['recommand_code' => 'nothing']); 
+            $first_code = false; 
         }
         
         $payment = Payment::create([
@@ -177,7 +182,8 @@ class UserAccountController extends Controller
     {
         //echo $payment; 
         $payment->delete();
-        Auth::user()->update(['recommand_code' => '']);
+        if( Auth::user()->recommand_code === 'first_nothing' )
+            Auth::user()->update(['recommand_code' => '']);
         return redirect()->route('account'); 
     }
 
