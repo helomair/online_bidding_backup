@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ModifyColumnNameAsUniqueInUsers extends Migration
+class SetColumnPhoneAsNotUniqueForUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class ModifyColumnNameAsUniqueInUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unique('name');
+            $table->dropUnique('users_phone_unique');
         });
     }
 
@@ -26,7 +26,7 @@ class ModifyColumnNameAsUniqueInUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropUnique('users_name_unique');
+            $table->unique('phone');
         });
     }
 }

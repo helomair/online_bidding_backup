@@ -31,7 +31,6 @@ class FBSocialController extends Controller
             $user = User::create([
                 'name'     => $getInfo->name,
                 'email'    => $getInfo->email,
-                'phone'    => Str::random(12),
                 'password' => Hash::make($provider . $getInfo->name),
                 'fblogin_provider' => $provider,
                 'fblogin_providerId' => $getInfo->id,
