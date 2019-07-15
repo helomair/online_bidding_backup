@@ -45,8 +45,9 @@
           <div class="line">
           </div>
       </div>
-      <a class="btn btn-danger padding-05-2 font-size-10" id="btn_login_fb" onclick="alert('Tính năng chưa hoàn thành')">Đăng nhập bằng tài khoản Facebook</a>
-		</div>
+      <!-- onclick="alert('Tính năng chưa hoàn thành')" -->
+      <a href="{{ route('fb.redirect', 'facebook') }}" class="btn btn-danger padding-05-2 font-size-10" id="btn_login_fb">Đăng nhập bằng tài khoản Facebook</a>
+	  </div>
 	</div>
 </div>
 

@@ -30,8 +30,8 @@ Route::get('send_mail', 'UserAccountController@SendConfirmMail')->name('send_mai
 Route::get('/activation/{token}', 'UserAccountController@EmailTokenConfirm')->name('confirm'); 
 
 //FB登入功能
-Route::get('/auth/redirect/{provider}', 'FBSocialController@redirect'); 
-Route::get('/callback/{provider}', 'FBSocialController@callback');
+Route::get('/redirect/{provider}', 'FBSocialController@redirect')->name('fb.redirect');
+Route::get('/callback/{provider}', 'FBSocialController@callback')->name('fb.callback');
 
 
 ////顯示使用者頁面，登入後直接導到這個頁面
