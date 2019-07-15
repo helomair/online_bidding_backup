@@ -24,6 +24,7 @@
 					<p class="card-text" style="margin-top:270px;">
 						Tên sản phẩm：{{ $product->name }}<br> <!-- 商品名稱 -->
 						Giá thầu hiện tại：{{ $product->cur_cost }}Tệ <!-- 目前競標價位 -->
+						Thời gian bắt đầu：{{ $product->start_time }} <!-- 開始時間 -->
 					</p>
 				</div>
 			</div>

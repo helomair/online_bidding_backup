@@ -39,7 +39,7 @@
 @include('layouts.left_button')
 <div class="container fix_content">
 	<br>
-	@if( $product->end_time >= $nowtime)
+	@if( $product->end_time >= $nowtime && $product->start_time <= $nowtime)
 	<div align='center'><!--商品倒數計時-->
 		hàng hóa đếm ngược thời gian：
 		<div id="andy timer" class="andy timer">
@@ -61,7 +61,7 @@
                 {{ ($product->end_time >= $nowtime) ? "Giá hiện tại" : "Mức tiền trúng thầu"}}：{{ $product->cur_cost }}Tệ
             </h4>
             @if ($product->start_time > $nowtime)
-                <h4>開始時間：{{ $product->start_time }}</h4> <!--開始時間-->
+                <h4>Thời gian bắt đầu：{{ $product->start_time }}</h4> <!--開始時間-->
             @endif
             <h4>giá niêm yết：{{ $product->origin_price }}Tệ</h4><!--原價-->
             <h4>Mỗi giá đấu thầu：{{ $product->cost}}</h4><!--每標價-->
