@@ -23,7 +23,7 @@ class FBSocialController extends Controller
 
     function createUser($getInfo,$provider)
     {
-        $user = User::where('provider_id', $getInfo->id)->first(); 
+        $user = User::where('fblogin_providerId', $getInfo->id)->first(); 
         if (!$user) 
         {
             $nickname = Str::random(8);
