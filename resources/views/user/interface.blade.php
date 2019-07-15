@@ -42,10 +42,9 @@
 	@if( $product->end_time >= $nowtime && $product->start_time <= $nowtime)
 	<div align='center'><!--商品倒數計時-->
 		hàng hóa đếm ngược thời gian：
-		<div id="andy timer" class="andy timer">
-		</div>
+		<div id="andy timer" class="andy timer"> </div>
     </div>
-    @else
+    @elseif($product->end_time < $nowtime)
     <div align="center">
         <h2>Đấu giá đã kết thúc</h2><!--拍賣已結束-->
     </div>
