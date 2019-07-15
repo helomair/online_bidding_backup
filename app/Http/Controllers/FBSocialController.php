@@ -28,16 +28,15 @@ class FBSocialController extends Controller
         $user = User::where('fblogin_providerId', $getInfo->id)->first(); 
         if (!$user) 
         {
-            $nickname = Str::random(8);
-            $new_code = Str::random(6);
             $user = User::create([
                 'name'     => $getInfo->name,
                 'email'    => $getInfo->email,
+                'phone'    => Str::random(12),
                 'password' => Hash::make($provider . $getInfo->name),
                 'fblogin_provider' => $provider,
                 'fblogin_providerId' => $getInfo->id,
-                'nickname' => $nickname,
-                'code' => $new_code,
+                'nickname' => Str::random(12),
+                'code' => Str::random(6),
             ]); 
         }
         return $user; 
