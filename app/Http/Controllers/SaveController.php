@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Payment;
+use App\User; 
 
 class SaveController extends Controller
 {
@@ -24,7 +25,12 @@ class SaveController extends Controller
         $coins = $payment->coins;
 
         if($payment->first_code)
+        {
             $coins = $coins + 10;
+            $giver = User::where('code', $user->recommand_code)->get()->first();
+            echo $giver; 
+            $giver->update(['balance' => $giver->balance + 10]); 
+        }
 
         $payment->update(['on' => false]);
         $user->update(['balance' => $user->balance + $coins]);

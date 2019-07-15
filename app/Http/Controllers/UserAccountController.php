@@ -44,7 +44,7 @@ class UserAccountController extends Controller
             'phone' => 'required',
             'address' => 'required',
             'message' => 'required'
-        ], [ 'required' => '不能留空' ]  );
+        ]);
 
         if($v->fails())
             return back()->withErrors($v)->withInput();
@@ -93,10 +93,15 @@ class UserAccountController extends Controller
             else 
                 return redirect()->back()->with('msg','Mã đến không chính xác');
         }
+        else if ($user->recommand_code === '')
+        { 
+            $user->update(['recommand_code' => 'first_nothing']);
+            $first_code = false;
+        }
         else
         {
-            $user->update(['recommand_code' => 'nothing']);
-            $first_code = false;
+            $user->update(['recommand_code' => 'nothing']); 
+            $first_code = false; 
         }
         
         $payment = Payment::create([
@@ -104,7 +109,7 @@ class UserAccountController extends Controller
             'uid' => $user->id,
             'coins' => $coins,
             'amount' => $amount,
-            'user_account' => '尚未轉帳',
+            'user_account' => 'Not Yet',
             'first_code' => $first_code
         ]);
         //echo $payment->coins . "   " . $coins;
@@ -113,10 +118,9 @@ class UserAccountController extends Controller
 
     public function PaymentPay(Request $request, Payment $payment)
     {
-        $v = Validator::make(
-            $request->all(),
-            ['user_account' => 'required'],
-            ['required' => '不可留空']); 
+        $v = Validator::make($request->all(),
+            ['user_account' => 'required']
+        ); 
         
         $user_account = $request->input('user_account');
         $user_bankname = $request->input('user_bankname');
@@ -151,7 +155,7 @@ class UserAccountController extends Controller
 
         Mail::send('mail.email_confirm', $content, function($message) use ($subject, $receiver)
         {
-            $message->from("very860112@gmail.com", 'I-Bid');
+            $message->from("ian210425@gmail.com", 'I-Bid');
             $message->to($receiver)
                     ->subject($subject);
         });
@@ -178,6 +182,8 @@ class UserAccountController extends Controller
     {
         //echo $payment; 
         $payment->delete();
+        if( Auth::user()->recommand_code === 'first_nothing' )
+            Auth::user()->update(['recommand_code' => '']);
         return redirect()->route('account'); 
     }
 
