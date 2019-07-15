@@ -190,7 +190,7 @@
 						@if($top_auction->name == "")
 							Hiện chưa có người ra giá <!--無人出價-->
 						@else
-							{{ $top_auction->name }}
+							{{ ($product->end_time >= $nowtime) ? $top_auction->nickname : $top_auction->name }} 
 						@endif
                     </p>
 	                @if ( $product->end_time >= $nowtime && $product->start_time < $nowtime)
