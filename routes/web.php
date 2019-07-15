@@ -59,7 +59,6 @@ Route::post('/winner/{product}/end', 'UserAccountController@EndBidding')->name('
 Route::get('/coin', 'UserAccountController@createCoin')->name('coin');
 //儲值 建立帳單
 Route::post('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.make');
-Route::get('/coin/make', 'UserAccountController@makeCoinPayment')->name('coin.make');
 //儲值 用戶填寫帳戶資料
 Route::post('/coin/{payment}/pay', 'UserAccountController@PaymentPay')->name('coin.pay');
 //儲值 管理員確認
