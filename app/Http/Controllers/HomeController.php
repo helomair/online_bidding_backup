@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
         $bulletins = Bulletin::where('on','1')->get();
-
+        $now_time = Carbon::now();
         foreach($products as $product){
 			//先取得商品名
 			$files = get_files(storage_path('app/public/products/'.$product->id));
@@ -33,7 +33,7 @@ class HomeController extends Controller
 		}
 		//如果沒有進行中拍賣，給file_path一個null防error
 		if(!isset($file_path)) $file_path='';
-        return view('index', compact('products','file_path','bulletins')); 
+        return view('index', compact('products','file_path','bulletins','now_time')); 
     }
 
 	public function getImg($file_path)

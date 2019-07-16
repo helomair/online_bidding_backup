@@ -69,7 +69,11 @@
 								<p class="card-text" style="margin-top:270px;">
 									Tên sản phẩm：{{ $product->name }}<br> <!-- 商品名稱 -->
 									Giá thầu hiện tại：{{ $product->cur_cost }}Tệ<br>  <!-- 目前競標價位 -->
-									Thời gian bắt đầu：{{ $product->start_time }} <!-- 開始時間 -->
+									@if ($product->start_time > $now_time)
+										Thời gian bắt đầu：{{ $product->start_time }} <!-- 開始時間 -->
+									@else 
+										Thời gian kết thúc：{{ $product->end_time }} <!-- 結束時間 -->
+									@endif
 								</p>
 							</div>
 						</div>
