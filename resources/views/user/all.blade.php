@@ -19,11 +19,11 @@
       <div class="col-lg-4 col-md-4 margin-top-50">
 	      <a href="{{ route('user_interface.show',$product->id) }}">
 	        <div class="card border-none" style="padding-left:30px;">
-				<div class=" frame text-align-center">
+				<div class=" frame text-align-center" style="width:300px">
 	            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
 					<p class="card-text" style="margin-top:270px;">
 						Tên sản phẩm：{{ $product->name }}<br> <!-- 商品名稱 -->
-						Giá thầu hiện tại：{{ $product->cur_cost }}Tệ <!-- 目前競標價位 -->
+						Giá thầu hiện tại：{{ $product->cur_cost }}Tệ<br> <!-- 目前競標價位 -->
 						Thời gian bắt đầu：{{ $product->start_time }} <!-- 開始時間 -->
 					</p>
 				</div>
