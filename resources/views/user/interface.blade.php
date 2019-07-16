@@ -48,6 +48,10 @@
     <div align="center">
         <h2>Đấu giá đã kết thúc</h2><!--拍賣已結束-->
     </div>
+    @else
+    <div align="center">
+    	<h2>Thời gian bắt đầu：{{ $product->start_time }}</h2>
+    </div>
 	@endif
     <div class="row space-between" style="padding:0px 10px;">
 			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">

@@ -23,7 +23,7 @@ class AdminProductController extends Controller
     {
 		//$products = Product::all();
 		//為了自動切分頁，更改了controller
-        $products = Product::paginate(3);
+        $products = Product::orderBy('created_at', 'desc')->paginate(3);
 		//取出現在時間
 		$nowtime = Carbon::now();
 		//將所有圖片取出
