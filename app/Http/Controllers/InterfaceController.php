@@ -32,6 +32,7 @@ class InterfaceController extends Controller
 		if(!isset($file_path)) $file_path='';
         return view('user.all', compact('products','file_path')); 
 	}
+	
     public function show(Product $product)
     {
         $nowtime = Carbon::now(); 

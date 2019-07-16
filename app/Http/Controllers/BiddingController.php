@@ -80,4 +80,12 @@ class BiddingController extends Controller
         }
     	return redirect()->route('user_interface.show',$product->id);
     }
+
+    public function deleteAuto(Product $product)
+    {
+        $user = Auth::user();
+        $auto = AuctionAuto::where('uid',Auth::id())->where('pid',$product->id)->get()->first();
+        $auto->delete();
+        return redirect()->route('user_interface.show',$product->id);
+    }
 }

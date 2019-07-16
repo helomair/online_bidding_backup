@@ -49,6 +49,7 @@ Route::get('/closed','ClosedController@index')->name('closed');
 Route::get('/bidding/{product}','BiddingController@store')->name('bidding');
 ///儲存表單
 Route::post('/bidding/{product}/auto','BiddingController@storeAuto')->name('bidding.auto');
+Route::delete('/bidding/{product}/delete', 'BiddingController@deleteAuto')->name('bidauto.cancel');
 
 //帳號狀態
 Route::get('/account', 'UserAccountController@index')->name('account');

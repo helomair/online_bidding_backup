@@ -79,12 +79,12 @@
 				@endif
 			</div>
 			<div class="card-body height-100-px">
-					<div class="row">
-                        <div class="col-lg-12 mx-auto ">
-                          @if($product->end_time >= $nowtime)
-                        	<!-- 進行中拍賣 自動下標表單 -->
-                            <form action="{{ route('bidding.auto', $product->id) }}" method="post">
-                            @csrf
+				<div class="row">
+                    <div class="col-lg-12 mx-auto ">
+                    	@if($product->end_time >= $nowtime)
+                        <!-- 進行中拍賣 自動下標表單 -->
+                        <form action="{{ route('bidding.auto', $product->id) }}" method="post">
+                        	@csrf
                               <div class="form-group margin-top-35 margin-bottom-0">
 								<label for="start_cost" style="float:left; line-height:30px; margin-right:10px;">Giá bắt đầu :</label>
                                 <input style="width:70%;" type="text" class="form-control @error('start_cost') is-invalid @enderror" name="start_cost" value="{{ $auction_auto->start_cost }}">
@@ -115,8 +115,15 @@
                               </div>
                               @if($product->start_time < $nowtime )
                               	<input type="submit" value="Đã giao dịch" class="btn btn-primary padding-05-2 my-4 font-size-10">
+                              	@if($auction_auto->on)
+                              		<a href="#" class="btn btn-delete padding-05-2 font-size-10" onclick="confirm('Ok hủy bỏ?'); document.getElementById('delete_auto').submit()">Hủy bỏ</a>
+                              	@endif
                               @endif
                             </form>
+                            <form method="post" action="{{ route('bidauto.cancel', $product->id) }}" id="delete_auto">
+							  @csrf
+							 {{ method_field('DELETE') }}
+							</form>
                           @else
                             <table class="table table-striped" style="margin-top:70px;">
                             	<tbody>
