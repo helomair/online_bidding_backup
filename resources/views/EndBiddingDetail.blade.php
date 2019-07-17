@@ -49,7 +49,7 @@
             <!--提交-->
             <input type="submit" value="Đã giao dịch" class="btn btn-danger padding-05-2 font-size-10" onclick="return confirm('Sau khi xác nhận trích xuất thì không thể thay đổi')">
             <!--取消-->
-            <input type="button" value="Đã giao dịch" onclick="window.location='/account'"  class="btn btn-danger padding-05-2 font-size-10" style="">
+            <a href="{{ route('account') }}" class="btn btn-danger padding-05-2 font-size-10" >Đã giao dịch</a>
           </form>
         </div>
       </div>
