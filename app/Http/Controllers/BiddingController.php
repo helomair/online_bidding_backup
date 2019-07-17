@@ -85,7 +85,8 @@ class BiddingController extends Controller
     {
         $user = Auth::user();
         $auto = AuctionAuto::where('uid',Auth::id())->where('pid',$product->id)->get()->first();
-        $auto->delete();
+        if($auto != null)
+            $auto->delete();
         return redirect()->route('user_interface.show',$product->id);
     }
 }
