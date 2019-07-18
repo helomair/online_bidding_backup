@@ -47,8 +47,8 @@ class BiddingController extends Controller
             	$product->update(['end_time' => $product->end_time->addSeconds(20)]);
         }
         else
-            redirect()->back()->with(['msg' => '下標失敗']); 
-        return redirect()->back()->with(['msg' => '下標成功']); 
+            redirect()->back()->with(['msg' => 'Failed']); 
+        return redirect()->back()->with(['msg' => 'Success']); 
     }
 
     public function storeAuto(Request $request, Product $product)
