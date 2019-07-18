@@ -39,6 +39,7 @@
 @include('layouts.left_button')
 <div class="container fix_content">
 	<br>
+
 	@if( $product->end_time >= $nowtime && $product->start_time <= $nowtime)
 	<div align='center'><!--商品倒數計時-->
 		hàng hóa đếm ngược thời gian：
@@ -53,6 +54,13 @@
     	<h2>Thời gian bắt đầu：{{ $product->start_time }}</h2>
     </div>
 	@endif
+
+	@if (session()->has('msg'))
+    <script>
+        alert('{{ session()->get('msg') }}');
+    </script>
+	@endif
+
     <div class="row space-between" style="padding:0px 10px;">
 			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
         <div class="card margin-top-50" style="border:1px solid black;">
@@ -264,7 +272,8 @@
 		var htmlElement=document.getElementById(divId);
 		htmlElement.innerHTML = "<span class='day'><b class='timer'>" + day + "</b>ngày<b class='timer'>" + hour + "</b>giờ<b class='timer'>" + minute + "</b>phút<b class='timer'>" + second + "</b>giây</span>";
 	}
-	if(enddate >= nowdate){
+
+	if(enddate >= nowdate) {
 	window.setInterval(function () { ShowTimer(end_year, end_month, end_day, end_hour, end_minutes, end_second, 'andy timer'); }, interval);
 	}
 </script>

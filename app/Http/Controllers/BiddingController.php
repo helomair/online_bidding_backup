@@ -28,7 +28,7 @@ class BiddingController extends Controller
         $now_time = Carbon::now();
     	//$bid_cost = $request->input('bid_cost');
 
-    	if( $user->balance > 0 )
+    	if( $user->balance > 0 && $product->end_time >= $now_time )
     	{
             $data = [
                 'cost' => $product->cost, 
@@ -46,6 +46,8 @@ class BiddingController extends Controller
             if( ($count_down < 0 && $count_down >= (-30)) && $now_time->gte($product->start_time) )
             	$product->update(['end_time' => $product->end_time->addSeconds(20)]);
         }
+        else
+            redirect()->back()->with(['msg' => '下標失敗']); 
         return redirect()->back()->with(['msg' => '下標成功']); 
     }
 
