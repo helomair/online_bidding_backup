@@ -91,12 +91,6 @@
                     </li>
 
                     <li>
-                      <strong>Được rút khỏi đấu giá đã tham gia, chuyển sang đấu giá sản phẩm khác được không ?</strong><br><br>
-                      Không được, vì duy trì tính công bằng của cuộc đấu giá, cùng 1 thời gian mỗi người dùng chỉ có thể tham gia 2 sàn đấu giá, cần phải đợi đến 1 trong 2 sàn đấu giá kết thúc, thì mới được tiến hành tham gia sàn tiếp theo, sau khi đấu giá thành công thì hệ thống vẫn thiết lặp 1 tổ hợp biệt danh tiếp tục tham gia đấu giá.
-                        <br><br>
-                    </li>
-
-                    <li>
                       <strong>Tôi có thể tra cứu toàn bộ lịch sử mà tôi đã từng đấu giá ?</strong><br><br>
                       Quý vị có tra cứu toàn bộ lịch sử mà quý vị đã từng đấu giá tại “ lịch sử cho giá” trong “ khu dành riêng cho hội viên” 
                       <br><br>
@@ -178,7 +172,7 @@
                     <strong>Sử dụng tự động cho giá, tại sao mới cho giá thì điểm số đã xài hết ?</strong><br><br>
                     Trong cuộc đấu giá sản phẩm có giá trị cao, rất nhiều hội viên sẽ sử dụng tự động cho giá. Khi cùng 1 giá cả, khi rất nhiều người đều thiết lặp tự động cho giá, hệ thống sẽ tiến hành cho giá với nhau giữa các hội viên trong vòng 1 giây , quý vị có thể tra cứu trong lịch sử cho giá khi kết thúc đấu giá.
                     <br><br>
-                    Thời gian còn dư kết thúc đấu giá tức là thời gian kéo dài mà tự động cho giá đã thiết lặp số điểm * 20 giây, điểm số của quý vị cũng do đó mà xài hết trong thời gian ngắn, đề nghị quý vị cẩn thận lựa chọn sử dụng tự động cho giá cho đúng thời điểm
+                    Thời gian còn dư kết thúc đấu giá tức là thời gian kéo dài mà tự động cho giá đã thiết lặp số điểm * 20 giây.
                     <br><br>
                   </li>
                 </ol>
@@ -380,19 +374,13 @@ Hễ hội viên thành công đấu trúng giá sản phẩm, sau khi nhận đ
                 <ol>
                   <li>
                     <strong>Quy trình về sau sau khi trúng đấu giá</strong><br><br>
-                    Trong [ khu dành riêng cho hội viên], lựa chọn [ đã trúng đấu giá] thì sẽ hiển thị cách thức mua hàng của sản phẩm trúng đấu giá đó. Nhắc nhở quý vị, công ty chúng tôi chỉ cung cấp chủ thể sản phẩm đấu giá, còn lại trung tâm mua sắm hoặc nhà xưởng khác cung cấp vật phẩm tặng kèm không nằm trong nội dung sản phẩm đấu giá.
+                    Trong [ Trạng thái tài khoản ], lựa chọn [ Khu đã được thầu ] thì sẽ hiển thị cách thức mua hàng của sản phẩm trúng đấu giá đó. Nhắc nhở quý vị, công ty chúng tôi chỉ cung cấp chủ thể sản phẩm đấu giá, còn lại trung tâm mua sắm hoặc nhà xưởng khác cung cấp vật phẩm tặng kèm không nằm trong nội dung sản phẩm đấu giá.
                     <br><br>
                   </li>
 
                   <li>
                     <strong>Có bao nhiêu cách thức thanh toán của sản phẩm ?</strong><br><br>
                     Nhằm phòng chống người có tâm sử dụng không thỏa đáng dịch vụ này, mua sản phẩm trúng đấu giá chỉ được sử dụng cách thức thanh toán duy nhất là nhận hàng trả tiền trực tiếp.
-                    <br><br>
-                  </li>
-
-                  <li>
-                    <strong>Có viết hóa đơn hay không ?</strong><br><br>
-                    Sản phẩm hay điểm số mà hội viên đã mua tại trang web này, chúng tôi đều cung cấp hóa đơn bằng giấy cho hội viên, hóa đơn sẽ gửi cố định 2 tuần 1 lần cho hội viên.
                     <br><br>
                   </li>
 
@@ -437,53 +425,6 @@ Hễ hội viên thành công đấu trúng giá sản phẩm, sau khi nhận đ
 
                 </h3>
             <hr class="line" style="width: 25%;">
-        </div>
-    </div>
-</section>
-
-<section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style">
-                <ol>
-                  <li>
-                    <strong>Quên ID tài khoản</strong><br><br>
-                    Vui lòng ấn “ quên tài khoản mật khẩu “ để được cấp bổ sung
-                    <br><br>
-                  </li>
-
-                  <li>
-                    <strong>Quên mật khẩu</strong><br><br>
-                    Vui lòng ấn “ quên tài khoản mật khẩu “ để được cấp bổ sung.
-                    <br><br>
-                  </li>
-
-                  <li>
-                    <strong>Muốn thay đổi ID tài khoản</strong><br><br>
-                    Xin lỗi, tài khoản ID của I-Bid không thể thay đổi.
-                    <br><br>
-                  </li>
-
-                  <li>
-                    <strong>Muốn thay đổi mật khẩu</strong><br><br>
-                    Vui lòng vào “ khu vực dành riêng cho hội viên” mục “ thông tin cơ bản” tiến hành thay đổi.
-                    <br><br>
-                  </li>
-
-                  <li>
-                    <strong>Muốn thay đổi thông tin cơ bản</strong><br><br>
-                    Vui lòng tới “ liên hệ chúng tôi” đưa ra yêu cầu tiến hành thay đổi.
-                    <br><br>
-                  </li>
-
-                  <li>
-                    <strong>Chưa nhận được thư thông báo xác nhận</strong><br><br>
-                    1 số hộp thư có thể chuyển thư thông báo xuống hộp thư rác, khiến cho thư thông báo không thể nhận được 1 cách bình thường, nếu vẫn không thể nhận được thư thông báo xác nhận, đề nghị quý vị thử bằng hộp thư khác .
-                    <br><br>
-                  </li>
-
-                </ol>
-            </div>
         </div>
     </div>
 </section>

@@ -129,13 +129,10 @@
                     </li>
                 </ul>
 
-                <strong>Điều 8 : ( hóa đơn )</strong><br><br>
-                    Hội viên mua điểm số và sản phẩm trong trang web này, chúng tôi đều lập hóa đơn chính thức, nếu muốn lấy hóa đơn giấy, sẽ trong tháng mà quý vị mua điểm số hoặc là sau khi nhận được sản phẩm, gửi riêng cho quý vị.<br><br>
-
-                <strong>Điều 9 ( đổi trả )</strong><br><br>
+                <strong>Điều 8 ( đổi trả )</strong><br><br>
                     Trong vòng 7 ngày sau khi hội viên mua điểm số, có thể yêu cầu công ty đổi tiền lại, nhưng điểm số miễn phí hoặc là số điểm đã sử dụng trong đấu giá thì không nằm trong giới hạn này, trong lúc yêu cầu đổi trả, vui lòng quý vị cung cấp các thông tin liên quan đến tài khoản ngân hàng nhận số tiền đổi trả.<br><br>
 
-                <strong>Điều 10 ( Sản phẩm )</strong><br><br>
+                <strong>Điều 9 ( Sản phẩm )</strong><br><br>
                 <ul>
                     <li>Đối với sản phẩm mua trong dịch vụ này, ngoài trừ bảo hành của nhà sản xuất, thì công ty chúng tôi không cam kết gì thêm.</li><br>
                     <li>Các vấn đề liên quan đến mặt tư vấn và kỹ thuật của sản phẩm đã mua ở dịch vụ chúng tôi, người trúng đấu giá nên trực tiếp liên hệ nhà sản xuất sản phẩm.
@@ -143,13 +140,13 @@
                     <li>Phạm vi dịch vụ gửi sản phẩm chỉ giới hạn tại nước Việt Nam. Ngoài trừ có các đặc tính đặc biệt, vật phẩm sẽ trực tiếp do nhà cung cấp của chúng tôi hoặc bên kho gửi đến cho địa chỉ email mà quý vị cung cấp. Thời gian gửi hàng không cố định; thời gian giao hàng được cung cấp chỉ mang tính tham khảo. Khi dịch vụ chúng tôi không cần thông báo trước cho quý vị, có quyền để bên thứ 3 thực hiện nghĩa vụ, trong quá trình gửi hàng hoặc do đóng gói mà khiến cho vật phẩm bị hư hại nghiêm trọng, trong lúc nhân hàng nên kịp thời thông báo cho dịch vụ chúng tôi.</li>
                 </ul>
 
-                <strong>Điều 11 ( Trả hàng và hủy bỏ mua hàng )</strong><br><br>
+                <strong>Điều 10 ( Trả hàng và hủy bỏ mua hàng )</strong><br><br>
                 <ul>
                     <li>Người trúng đấu giá trong vòng 7 ngày sau khi nhận được sản phẩm, có thể căn cứ cách chỉ định của công ty chúng tôi xin hủy bỏ mua hàng hoặc yêu cầu trả hàng.</li><br>
                     <li>Sản phẩm trúng đấu giá nếu xin trả hàng, có thể đổi trả bằng mức tiền sản phẩm trúng đấu giá, nhưng sẽ không trả lại phí vận chuyển và điểm số đã sử dụng cho đấu giá. </li>
                 </ul>
 
-                <strong>Điều 12 ( Điều cấm )</strong><br><br>
+                <strong>Điều 11 ( Điều cấm )</strong><br><br>
                     Thành viên trong khi đang sử dụng dịch vụ này, không được có những hành vi sau đây . Nếu không công ty chúng tôi sẽ tạm thời hoặc vĩnh viễn cấm thành viên này sử dụng tiếp dịch vụ này . Trong tình thế này, công ty chúng tôi không phụ trách bất cứ bồi thường hoặc trách nhiệm gì<br><br>
                 <ul>
                     <li>Giả mạo người khác, nếu không có quyền đại diện hoặc quyền đại lý mà giả mạo người khác, hoặc giả xưng hô với cá nhân người khác hoặc tổ chức có liên quan đến quan hệ hợp tác</li><br>
@@ -164,7 +161,7 @@
                     <li>Những hành vi khác làm trở ngại đến hoạt động của dịch vụ này</li>
                 </ul>
 
-                <strong>Điều 13 (Tạm ngưng sữ dụng của hội viên, hủy bỏ tư cách hội viên)</strong><br><br>
+                <strong>Điều 12 (Tạm ngưng sữ dụng của hội viên, hủy bỏ tư cách hội viên)</strong><br><br>
                     Nếu hội viên xảy ra những trường hợp như sau, công ty có thể tạm ngưng quyền lợi sử dụng dịch vụ này của hội viên, hoặc hủy bỏ tư cách hội viên của hội viên này. Những hành vi mà do hội viên này sinh ra những tổn thất, công ty sẽ không chịu trách nhiệm bù lại hoặc bồi thường<br><br>
                 <ul>
                     <li>
@@ -183,10 +180,10 @@
                     <li>Những hành vi không đúng của hội viên trong lúc lợi dụng dịch vụ này</li>
                 </ul>
 
-                <strong>Điều 14 (gián đoạn cung cấp dịch vụ này)</strong><br><br>
+                <strong>Điều 13 (gián đoạn cung cấp dịch vụ này)</strong><br><br>
                 Để duy trì cung cấp tốt dịch vụ này, công ty có thể định kỳ bảo trì, khẩn cấp bảo trì hệ thống, hệ thống tập trung tải trọng, hoạt động dịch vụ xuất hiện sự cố hoặc những tình trạng bất đắc dĩ để đảm bảo an toàn tài khoản, gián đoạn cung cấp dịch vụ này hoặc bộ phận dịch vụ mà không báo trước<br><br>
 
-                <strong>Điều 15 (Chấm dứt dịch vụ này)</strong><br><br>
+                <strong>Điều 14 (Chấm dứt dịch vụ này)</strong><br><br>
                 <ul>
                     <li>Sau một thời gian thông báo trước cho hội viên, dưới tiền đề không ảnh hưởng đến việc tiến hành đấu giá, có thể chấm dứt toàn bộ hoặc bộ phận dịch vụ
                     </li><br>
@@ -194,10 +191,10 @@
                     </li>
                 </ul>
 
-                <strong>Điều 16 (Những việc cần chú ý)</strong><br><br>
+                <strong>Điều 15 (Những việc cần chú ý)</strong><br><br>
                 Thường xuyên hoặc lặp đi lặp lại với tài khoản của các bạn tiến hành và cho giá online tới dịch vụ này sẽ phát sinh chi phí rất lớn, chúng tôi khuyến nghị toàn bộ người sử dụng giám sát theo dõi hành vi cho giá của cá nhân, đồng thời vui lòng chịu trách nhiệm về hành vi cho giá của bạn.<br><br>
 
-                <strong>Điều 17 (Những việc miễn trách nhiệm)</strong><br><br>
+                <strong>Điều 16 (Những việc miễn trách nhiệm)</strong><br><br>
                 <ul>
                     <li>Những tổn thất gây ra cho hội viên hoặc người thứ ba từ việc sử dụng của hội viên, tự chịu trách nhiệm bồi thường, công ty này không chịu trách nhiệm nào
                     </li><br>
@@ -207,16 +204,16 @@
                     <li>Những chi phí truyền thông hoặc phí kết nối  trong lúc sử dụng dịch vụ này đều do hội viên tự chịu trách nhiệm, công ty này không đảm bảo hoặc bồi thường</li>
                 </ul>
 
-                <strong>Điều 18 (Thay đổi quy định)</strong><br><br>
+                <strong>Điều 17 (Thay đổi quy định)</strong><br><br>
                 Nếu quy tắc này có thay đổi và có liên quan tới lợi ích của hội viên, công ty chúng tôi sẽ gửi email thông báo cho quý vị, đồng thời khi hội viên đăng nhập sẽ gửi cho hội viên đọc quy định thay đổi bằng phương thức pop-up, nếu như hội viên không đồng ý bản nguyên tắc sau khi thay đổi, công ty chúng tôi đồng ý cho hội viên rời nhóm đồng thời trả lại số điểm mà hội viên đó chưa sử dụng.<br><br>
 
-                <strong>Điều 19 ( Bồi thường tổn thất )</strong><br><br>
+                <strong>Điều 18 ( Bồi thường tổn thất )</strong><br><br>
                 <ul>
                     <li>Do hội viên vi phạm nguyên tắc này hoặc vi phạm điều khoản sử dụng mà dẫn đến thiệt hại công ty, công ty chúng tôi được yêu cầu hội viên bồi thường tổn thất bao gồm chi phí luật sư.</li><br>
                     <li>Do những sự việc đặc biệt khác mà dẫn đến tổn thất cho hội viên, công ty sẽ dùng cách bồi thường khác để bồi thường cho hội viên.</li>
                 </ul>
 
-                <strong>Điều 20 (Bổ sung)</strong><br><br>
+                <strong>Điều 19 (Bổ sung)</strong><br><br>
                 Quy định này bắt đầu có hiệu lực từ ngày 01/07/2019 <br><br>
                 <p style="background-color: #fbadad;display: inline-block;"><strong>Nhắc nhở bạn , I-Bid nghiêm cấm hội viên tiến hành những việc như sau :
                 </strong></p>

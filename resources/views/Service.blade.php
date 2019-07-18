@@ -65,7 +65,6 @@
                     Sử dụng dịch vụ đấu thầu này, cần phải mua điểm số cần cho việc cho giá ( 1 điểm = 30000 VNĐ )<br><br>
                     Mỗi lần ra giá thì tiêu tốn 1 điểm. Điểm số tiêu tốn cho việc ra giá, bất kể có trúng thầu hay không, đều không được trả lại.<br><br>
                     Mỗi 1 lần trúng thầu thành công, hệ thống sẽ trang bị cho quý vị 1 tổ hợp hiển thị tên khác mới, để sử dụng việc đấu thầu tiếp theo<br><br>
-                    Cùng 1 thời gian người dùng chỉ được tham gia 2 phiên đấu giá <br><br>
                     Mỗi lần người dùng ra giá, thời gian đấu thầu sẽ kèo dài them 20 giây, thời gian sản phẩm kết thúc đấu giá không cố định, do tình hình động thái của hội viên đấu giá mà quyết định.<br><br>
 
                     <br><br>
@@ -103,8 +102,8 @@
                     -Sau khi nhập các thông tin cơ bản, nhấn “ xác nhận”<br>
                     -Xác nhận nội dung đã nhập <br>
                     -Hoàn thành bước đăng ký hội viên<br>
-                    -Sau khi nhập địa chỉ Email, ấn “gửi đi”<br>
-                    -Sau khi nhận được thư thông báo xác nhận, click vào đường link liên kết URL để xác nhận 
+                    Sau khi đã hoàn tất đăng ký tài khoản “Trạng thái tài khoản” Nhấn “ gửi ” <br>
+                    - Sau khi nhận được email xác nhận, nhấp vào liên kết URL để xác nhận 
                     <br><br>
                   </li>
 
@@ -113,7 +112,7 @@
                     -Click vào mua điểm <br>
                     -Xác nhận cách thức thanh toán<br>
                     -Mua hoàn tất<br>
-                    -Sau khi chi trả phí bình thường, lần tiếp theo đăng nhập hội viên, bên góc phải phía trên trang web sẽ hiển thị mục điểm số còn lại.
+                    -Sau khi đã thanh toán ,hãy đợi chúng tôi thẩm duyệt xong, các đồng tiền còn lại sẽ được hiển thị ở góc trên bên phải của trang web. 
                     <br><br>
                   </li>
 
@@ -135,14 +134,12 @@
                     <br>
                     Thông thường sản phẩm hot trong thời gian đấu giá sẽ kéo thời gian rất dài, khi bước vào thời gian 30 giấy đếm ngược của phiên đấu giá tức là lúc bắt đầu đấu giá.
                     <br><br>
-                    ＊Nhắc nhở quý vị, cùng 1 thời gian chỉ được tham gia 2 phiên đấu giá. 
-                    <br><br>
                   </li>
 
                   <li>
                     <strong>Trúng đấu giá</strong>
                     <br><br>
-                    Khi đến thời gian kết thúc đấu giá, mà quý vị là người cho giá cao nhất, màn hình sẽ hiển thị “ đấu giá thành công” . Chúc mừng quý vị trúng đấu giá sản phẩm !<br>
+                    Khi cuộc đấu giá kết thúc, nhấp vào vật phẩm để xác nhận người chiến thắng. Nếu bạn là người trả giá cao nhất, xin chúc mừng bạn đã thắng cuộc đấu giá sản phẩm.<br>
                     Sau khi trúng đấu giá thành công, hệ thống sẽ trang bị cho quý vị 1 tổ hợp hiển thị “ tên khác” mới, để dùng cho việc đấu giá tiếp theo. 
                     <br><br>
                     ※Nhắc nhở quý vị, mỗi lần trúng đấu giá thành công, hệ thống sẽ đồng thời thay đổi biệt danh của quý vị
@@ -154,7 +151,7 @@
                     <br><br>
                     Nội dung mua sản phẩm xác nhận trúng đấu giá 
                     <br>
-                    Tới khu dành riêng cho hội viên vào trang “ đã trúng đấu giá” , đồng thời bấm vào “ mua” sản phẩm trúng đấu giá.
+                    Tới khu dành riêng cho hội viên vào trang “ Trạng thái tài khoản ” , đồng thời bấm vào “ Khu đã được thầu ” sản phẩm trúng đấu giá.
                     <br><br>
                     -Điền thông tin sản phẩm trúng đấu giá
                     <br><br>
@@ -219,7 +216,7 @@
 
                   <li>
                     <strong>Quy tắc tự động cho giá</strong><br><br>
-                    1.Khi thời gian đếm ngược còn 10 giây kết thúc phiên đấu giá, mà giá đấu giá đạt đến vị trí giới hạn thấp nhất của tự động cho giá mà quý vị thiết lập, hệ thống tự động cho giá sẽ giúp bạn cho giá ngẫu nhiên, mỗi lần cho giá, thời gian đấu giá sẽ kéo dài thêm 20 giây. Đương nhiên, nếu quý vị là người đã cho giá cao nhất, hệ thống sẽ không tiến hành cho giá nữa.
+                    1.Khi thời gian đếm ngược còn 30 giây kết thúc phiên đấu giá, mà giá đấu giá đạt đến vị trí giới hạn thấp nhất của tự động cho giá mà quý vị thiết lập, hệ thống tự động cho giá sẽ giúp bạn cho giá ngẫu nhiên, mỗi lần cho giá, thời gian đấu giá sẽ kéo dài thêm 20 giây. Đương nhiên, nếu quý vị là người đã cho giá cao nhất, hệ thống sẽ không tiến hành cho giá nữa.
                     <br><br>
                     2.Thiết lặp tự động cho giá cần phải thiết lặp trong thời gian kết thúc đấu giá mà chưa bước vào thời gian đếm ngược 10 giây, một khi bước vào thời gian đếm ngược 10 giây của kết thúc đấu giá thì không thể thiết lặp tự động cho giá.
                     <br><br>
@@ -227,11 +224,7 @@
                     <br><br>
                     4.Vui lòng lưu ý thiết lặp cho mức tiền giới hạn cao nhất, do là mức tiền cho giá trong lúc đấu giá là mức tăng cố định <br>Ví dụ : trong lúc đấu giá của phiên 3000 VNĐ, mức giá trúng đấu già nhất định là bội số của 3, mức giới hạn cao nhất mà quý vị thiết lặp là 1.000.000 VNĐ thì tự động cho giá chỉ có tiến hành tiến mức 999.0000 VNĐ ( bội số của 3 )
                     <br><br>
-                    5.Đấu giá sản phẩm có giá trị cao, sẽ có rất nhiều hội viện sử dụng tính năng cho giá tự động. Khi trong cùng khu có mức giá giống nhau, đồng thời có 2 người đều thiết lặp tự động cho giá, hệ thống sẽ tiến hành tuần hoàn tự động đấu giá với nhau, hoàn thành tự động cho giá trong chớp mắt, điểm số có thể xài hết trong chớp mắt, thời gian kết thúc đấu giá cũng là lúc tích lũy 1 lượng lớn và kéo dài ( tất cả số lần tự động cho giá trong việc giá tương đồng* 20 giây ) đề nghị quý vị cẩn thận khi lựa chọn sử dụng cho giá cho đúng thời điểm.
-                    <br><br>
-                    6.Sau khi kết thúc tự động cho giá, điểm số chưa sử dụng hết sẽ trả lại cho người dùng.
-                    <br><br>
-                    7.Nhắc nhở quý vị, tất cả lịch sử tự động cho giá, có thể tra cứu trong trang hiển thị của phiên đấu giá kết thúc.
+                    5.Nhắc nhở quý vị, tất cả lịch sử tự động cho giá, có thể tra cứu trong trang hiển thị của phiên đấu giá kết thúc.
                     <br><br>
                   </li>
 
@@ -290,7 +283,7 @@
 
 							<li>
 								<strong>cẩn thẩn khi sử dụng “ tự động cho giá “ </strong><br><br>
-								Khi cùng giống nhau về giá cả, nếu như đồng thời có nhiều người sử dụng “ tự động cho giá”, mỗi 20 giây của thời gian cho giá sẽ đồng thời tăng tích lũy, điểm số cũng đồng thời tiêu hao trong chớp mắt. Có thể tránh sử dụng trong thời gian cao điểm, để tiết kiệm tiêu hao điểm số. 
+								Khi cùng giống nhau về giá cả, nếu như đồng thời có nhiều người sử dụng “ tự động cho giá”, mỗi 20 giây của thời gian cho giá sẽ đồng thời tăng tích lũy.
 							</li>
 
 							<li>
