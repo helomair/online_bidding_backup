@@ -26,7 +26,7 @@ class AdminAccountController extends Controller
     {
         //$users = User::all();
 		//為了自動切分頁，更改了controller
-        $users = User::where('on','1')->paginate(2);
+        $users = User::where('on','1')->paginate(10);
         return view('adm.Account', compact('users'));
     }
 

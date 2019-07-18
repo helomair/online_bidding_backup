@@ -191,7 +191,7 @@
 					@endif
                 </tbody>
               </table>
-				{{ $auctions->links() }}
+				{{ $auctions->onEachSide(8)->links() }}
             </div>
           </div>
       </div>
