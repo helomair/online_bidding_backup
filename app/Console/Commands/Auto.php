@@ -62,7 +62,7 @@ class Auto extends Command
 
             if( ($diff_this_time[$product->id] < 0 && $diff_this_time[$product->id] >= (-30)) && ($time >= $product->start_time) && ($user->balance > 0) )
             {
-                if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost + $product->cost <= $auto->end_cost) )
+                if ( ($product->cur_cost >= $auto->start_cost) && ($product->cur_cost + $product->cost <= $auto->end_cost) && ($product->uid !== $user->id) )
                 {
                     $auto->update( ['times' => ($auto->times - 1) ] ); //次數-1
                     $product->users()->attach($user->id, [
@@ -70,6 +70,7 @@ class Auto extends Command
                         'lasted_cost' => $product->cur_cost + $product->cost   //後標後金額
                     ]);
                     $product->update([
+                        'uid' => $user->id,
                         'cur_cost' => ($product->cur_cost + $product->cost),   //目前最高金額
                         'end_time' => $product->end_time->addSeconds(20)       //倒數階段加時
                     ]);

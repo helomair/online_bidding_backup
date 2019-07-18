@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Carbon\Carbon; 
 use App\Product; 
+use App\Auction;
 use Illuminate\Support\Str;
 
 class CheckEndBidding extends Command
@@ -45,6 +46,11 @@ class CheckEndBidding extends Command
         foreach($products as $product)
         {
             $user = $product->winner;
+            $top_auction = $product->users()->orderBy('auction.created_at', 'desc')->get()->first();
+
+            if($user->id != $top_auction->id)
+                $product->update(['uid' => $top_auction->id]);
+
             $coins = $user->products()->where('pid',$product->id)->get()->count();
             $new_nickname = Str::random(8);
             //折扣公式 (原價 - 結標價 - 代幣數*30000) / 原價
