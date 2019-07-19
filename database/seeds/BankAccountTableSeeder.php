@@ -7,9 +7,9 @@ class BankAccountTableSeeder extends Seeder {
     public function run()
     {
         $bank_default = [
-            'account' => '1111 1111 1111 1111',
-            'bank_name' => 'Bank Test',
-            'holder_name' => 'Bank Holder',
+			'account' => '261508408',
+            'bank_name' => 'ACB chi nhánh bình dương',
+            'holder_name' => 'Nguyễn Minh Cảnh',
         ];
         $bank_account = BankAccount::create($bank_default);
     }
