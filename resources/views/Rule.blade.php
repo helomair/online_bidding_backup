@@ -54,8 +54,6 @@
                     <br>
                     Thông thường sản phẩm hot trong thời gian đấu giá sẽ kéo thời gian rất dài, khi bước vào thời gian 30 giấy đếm ngược của phiên đấu giá tức là lúc bắt đầu đấu giá.
                     <br><br>
-                    ＊Nhắc nhở quý vị, cùng 1 thời gian chỉ được tham gia 2 phiên đấu giá. 
-                    <br><br>
                   </li>
 
                   <li>

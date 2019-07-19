@@ -414,6 +414,7 @@ Hễ hội viên thành công đấu trúng giá sản phẩm, sau khi nhận đ
     </div>
 </section>
 
+
 <section class="mbr-section article content10 cid-rsuhmjDo0X" id="content10-b">
     <div class="container">
         <div class="inner-container" style="width: 66%;">
@@ -425,6 +426,41 @@ Hễ hội viên thành công đấu trúng giá sản phẩm, sau khi nhận đ
 
                 </h3>
             <hr class="line" style="width: 25%;">
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content11 cid-rsuhsHcFHj" id="content11-d">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                <ol>
+                  <li>
+                    <strong>Quên mật khẩu</strong><br><br>
+                    Vui lòng ấn “ quên tài khoản mật khẩu “ để được cấp bổ sung.
+                    <br><br>
+                  </li>
+
+                  <li>
+                    <strong>Muốn thay đổi ID tài khoản</strong><br><br>
+                    Xin lỗi, tài khoản ID của I-Bid không thể thay đổi.
+                    <br><br>
+                  </li>
+
+                  <li>
+                    <strong>Muốn thay đổi thông tin cơ bản</strong><br><br>
+                    Vui lòng tới “ liên hệ chúng tôi” đưa ra yêu cầu tiến hành thay đổi.
+                    <br><br>
+                  </li>
+
+                  <li>
+                    <strong>Chưa nhận được thư thông báo xác nhận</strong><br><br>
+                    1 số hộp thư có thể chuyển thư thông báo xuống hộp thư rác, khiến cho thư thông báo không thể nhận được 1 cách bình thường, nếu vẫn không thể nhận được thư thông báo xác nhận, đề nghị quý vị thử bằng hộp thư khác .
+                    <br><br>
+                  </li>
+
+                </ol>
+            </div>
         </div>
     </div>
 </section>
