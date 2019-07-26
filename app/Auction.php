@@ -22,7 +22,7 @@ class Auction extends Model
 
     public function user()
     {
-    	return $this->brlongsTo('App\User','uid');
+    	return $this->belongsTo('App\User','uid');
     }
 
 }

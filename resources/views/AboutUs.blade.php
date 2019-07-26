@@ -37,13 +37,18 @@
               </p>
               <br>
               <p>
+                <strong style="font-size:20px; margin-right: 105px">Địa chỉ Công Ty：</strong> <!-- 公司地址 -->
+                Số nhà 49, đường số 7, khu dân cư hiệp thành 3, thủ dầu một
+              </p>
+              <br>
+              <p>
                 <strong style="font-size:20px; margin-right: 15px">Số điện thoại liên lạc：</strong> <!-- 聯絡電話 -->
-                (+84) 988397679
+                (+84) 976814178 (Zalo)
               </p>
               <br>
               <p>
                 <strong style="font-size:20px; margin-right: 140px">Hộp thư：</strong> <!-- 聯絡信箱 -->
-                ian210425@gmail.com 
+                ibid.ibidcompany@gmail.com
               </p>
             </div>
         </div>

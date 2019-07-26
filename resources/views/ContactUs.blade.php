@@ -33,8 +33,9 @@
                 <ul>
                     <li>Thời gian phục vụ : 08:00 – 17:00 ( Nghỉ ngày Chủ nhật )</li><br>
                     <li>Tên công ty：Bellwether Network Technology Co. Ltd.</li><br>
-                    <li>Số điện thoại liên lạc：(+84) 988397679</li><br>
-                    <li>Hộp thư：ian210425@gmail.com</li><br>
+                    <li>Địa chỉ Công Ty：Số nhà 49, đường số 7, khu dân cư hiệp thành 3, thủ dầu một</li><br>
+                    <li>Số điện thoại liên lạc：(+84) 976814178 (Zalo)</li><br>
+                    <li>Hộp thư：ibid.ibidcompany@gmail.com</li><br>
                     <li>Nhắm nhanh chóng giải quết vấn đề của quý vị, vui lòng phải ghi vấn đề sau đây vào đơn khiếu nại, để tiện cho việc xác minh nhận dạng và vấn đề, chúng tôi trả lời bằng văn bản thông qua Email</li><br>
                     <li>Thời gian xử lý thường thì khoảng 2 – 3 ngày làm việc, nếu do số lượng vấn đề mà xử lý không kịp, kéo dài thời gian hồi đáp vui lòng thông cảm.</li>
                 </ul>
