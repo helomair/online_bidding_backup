@@ -101,7 +101,7 @@
                                     <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                       <div class="row">
                                           <div class="col-md-8 col-5 custom-margin-right-20">
-                                              <label style="font-weight:bold; line-height:45px; white-space:nowrap;">Số dư thay thế bằng tiền: {{ $user->balance }}P</label> <!-- 剩餘代幣 -->
+                                              <div style="font-weight:bold; line-height:45px;">Số dư thay thế bằng tiền: {{ $user->balance }}P</div> <!-- 剩餘代幣 -->
                                           </div>
                                           <div class="col-md-4 col-6 text-align-center">
                                               <a href="{{ route('coin') }}" class="btn btn-danger font-size-12" style="">Nạp tiền</a> <!-- 儲值 -->
