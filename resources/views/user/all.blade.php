@@ -20,8 +20,9 @@
 	      <a href="{{ route('user_interface.show',$product->id) }}">
 	        <div class="card border-none" style="padding-left:30px;">
 				<div class=" frame text-align-center" style="width:300px">
-	            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
-					<p class="card-text" style="margin-top:270px;">
+	            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="Image Not Found">
+				</div>
+				<p class="card-text" style="margin-top: 30px">
 						Tên sản phẩm：{{ $product->name }}<br> <!-- 商品名稱 -->
 						Giá thầu hiện tại：{{ $product->cur_cost }}Tệ<br> <!-- 目前競標價位 -->
 						@if ($product->start_time > $now_time)
@@ -29,17 +30,14 @@
 						@else 
 							Thời gian kết thúc：{{ $product->end_time }} <!-- 結束時間 -->
 						@endif
-					</p>
-				</div>
+				</p>
 			</div>
 		  </a>
       </div>
       @endforeach
 
-      @for ($i = $products->count(); $i < 3; $i++)
-        <div class="col-lg-3 col-md-3 margin-top-50">
-
-	  </div>
+      @for ($i = $products->count(); $i < 6; $i++)
+        <div class="col-lg-3 col-md-3 margin-top-50"></div>
       @endfor
 	</div>
 	  {{ $products->links() }}

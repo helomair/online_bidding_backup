@@ -7,7 +7,7 @@ for($i=0;$i<2;$i++){
 ?>
 
 <section class="cid-rsuhG4Y4Z6 margin-top-50 row col-lg-12 justify-content-center" id="footer1-f" style="background-color:white;">
-	<div class="col-3 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;border-left: 5px solid #941f1fa3;">
+	<div class="col-3 footer-rwd mbr-fonts-style display-7 text-align-center" style="margin-top:10px; border-right:5px solid #941f1fa3;">
 		<a href="{{ route('user_interface') }}" class=" nav-font-a">
 			Bán đấu giá đang trong quá trình tiến hành <!--進行中-->
 		</a>

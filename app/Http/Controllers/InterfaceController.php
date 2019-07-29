@@ -15,7 +15,7 @@ class InterfaceController extends Controller
 	public function index()
     {
 		//dd("cc"); 
-        $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(3);
+        $products = Product::where('view_time','<=',Carbon::now())->where('end_time','>=',Carbon::now())->paginate(4);
         $now_time = Carbon::now();
 
         //先假設路徑為admin/index.blade.php

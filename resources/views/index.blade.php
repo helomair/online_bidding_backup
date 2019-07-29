@@ -66,7 +66,8 @@
 				        <div class="card border-none" style="padding-left:30px;">
 							<div class=" frame text-align-center" style="width:300px">
 				            	<img class="shop_img" src="{{ route('img',$file_path[$product->id]) }}" class="card-img-top" alt="...">
-								<p class="card-text" style="margin-top:270px;">
+							</div>
+							<p class="card-text" style="margin-top: 30px">
 									Tên sản phẩm：{{ $product->name }}<br> <!-- 商品名稱 -->
 									Giá thầu hiện tại：{{ $product->cur_cost }}Tệ<br>  <!-- 目前競標價位 -->
 									@if ($product->start_time > $now_time)
@@ -74,8 +75,7 @@
 									@else 
 										Thời gian kết thúc：{{ $product->end_time }} <!-- 結束時間 -->
 									@endif
-								</p>
-							</div>
+							</p>
 						</div>
 					  </a>
 			      	</div>
@@ -84,7 +84,7 @@
                         <div class="col-lg-4 col-md-4 margin-top-50"></div>
                     @endfor
                 </div>
-                <div class="text-center margin-top-100 col-lg-3 mx-auto">
+                <div class="text-center margin-top-50 col-lg-3 mx-auto">
 		            {{ $products->links() }}
 		        </div>
 			</div>
