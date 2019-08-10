@@ -63,8 +63,8 @@ class UserAccountController extends Controller
     // 以下為使用者儲值
     public function createCoin()
     {
-        $payment = Auth::user()->payments()->where('user_bankname',"")->orWhere('user_name',"")->orWhere('user_account',"")->get()->first(); 
-        //echo $payment; 
+        $payment = Auth::user()->payments()->where('user_bankname',"")->Where('user_name',"")->Where('user_account',"Not Done Yet")->get()->first(); 
+         
         if($payment == null) 
             return view('user.coin');
         else
@@ -109,7 +109,7 @@ class UserAccountController extends Controller
             'uid' => $user->id,
             'coins' => $coins,
             'amount' => $amount,
-            'user_account' => 'Not Yet',
+            'user_account' => 'Not Done Yet',
             'first_code' => $first_code
         ]);
         //echo $payment->coins . "   " . $coins;
@@ -117,14 +117,10 @@ class UserAccountController extends Controller
     }
 
     public function PaymentPay(Request $request, Payment $payment)
-    {
-        $v = Validator::make($request->all(),
-            ['user_account' => 'required']
-        ); 
-        
-        $user_account = $request->input('user_account');
-        $user_bankname = $request->input('user_bankname');
-        $user_name = $request->input('user_name');
+    {   
+        $user_account = $request->input('user_account') ? : 'NULL';
+        $user_bankname = $request->input('user_bankname') ? : 'NULL';
+        $user_name = $request->input('user_name') ? : 'NULL';
         
         $payment->update([ 
             'user_account' => $user_account,
