@@ -11,7 +11,7 @@ class ClosedController extends Controller
     public function index()
     {
     	$now_time = Carbon::now();
-        $closed_products = Product::where('end_time', '<', $now_time)->paginate(3);
+        $closed_products = Product::where('end_time', '<', $now_time)->orderBy('end_time', 'desc')->paginate(3);
         //dd($closed_products);
 		//$temp = ( $closed_products->count() === 0 ) ?  0:1;
 		foreach($closed_products as $closed_product){
