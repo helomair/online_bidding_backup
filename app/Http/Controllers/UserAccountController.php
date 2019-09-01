@@ -93,12 +93,12 @@ class UserAccountController extends Controller
             else 
                 return redirect()->back()->with('msg','Mã đến không chính xác');
         }
-        else if ($user->recommand_code === '')
+        else if ($user->recommand_code == '')
         { 
             $user->update(['recommand_code' => 'first_nothing']);
             $first_code = false;
         }
-        else
+        else if ($user->recommand_code == 'first_nothing')
         {
             $user->update(['recommand_code' => 'nothing']); 
             $first_code = false; 

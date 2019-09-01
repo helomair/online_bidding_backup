@@ -9,7 +9,7 @@ class AdminTableSeeder extends Seeder {
         $adm_default = [
             'name' => 'admin',
             'email' => 'admin@admin.com',
-            'password' => Hash::make('IB_Admin_'),
+            'password' => Hash::make('IBid_Admin_'),
             'phone' => '0988397679' 
         ];
         $admin = User::create($adm_default);

@@ -28,8 +28,10 @@ class SaveController extends Controller
         {
             $coins = $coins + 10;
             $giver = User::where('code', $user->recommand_code)->get()->first();
-            echo $giver; 
-            $giver->update(['balance' => $giver->balance + 10]); 
+
+            if ($giver != null) {
+                $giver->update(['balance' => $giver->balance + 10]); 
+            }
         }
 
         $payment->update(['on' => false]);
